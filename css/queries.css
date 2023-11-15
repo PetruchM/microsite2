@@ -1,0 +1,48 @@
+/* phone filters */
+@media (max-width: 726px) {
+    .slide-content img {
+        height: 350px !important;
+        object-fit: cover;
+    }
+
+    .carousel__filter-button img {
+        transform: translateX(6px);
+    }
+
+    .carousel__filter-button:hover .carousel__filter-button-detail {
+        max-width: 0px;
+        padding-left: 3px;
+        visibility: hidden;
+    }
+    
+    .carousel__filter-button.active-filter .carousel__filter-button-detail {
+        max-width: 0px;
+        padding: 0;
+        visibility: hidden;
+        padding-left: 3px;
+        margin: 5px;
+    }
+
+    .carousel__filter-label {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .carousel__filter-button:hover {
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+    }
+
+    .carousel__filter-button.active-filter {
+        background-color: grey;
+        cursor: pointer;
+    }
+
+    .carousel__slide-box:hover {
+        transform: scale(1);
+    }
+
+    .carousel__slide-info-container {
+        transition: max-height 0.5s, height 0.5s;
+    }
+}
