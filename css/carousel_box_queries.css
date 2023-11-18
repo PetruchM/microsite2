@@ -1,0 +1,70 @@
+@media (max-width: 726px) {
+    /* DISABLE CAROUSEL CONTROLS */
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+    }
+
+    .box-info1, .box-info2, .box-info3 {
+        position: absolute;
+        height: 200px;
+        width: 80vw;
+        top: 80%;
+        left: 10vw;
+        background-color: yellow;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .box-info1 {
+        padding: 30px 15px 15px 15px;
+    }
+
+    /* .box-info3 {
+        background-color: red;
+    } */
+
+    .slide_butt1 {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translate(50%, -50%);
+        z-index: 10;
+    }
+
+    .info_active1 {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    .info_active1, .info_active2 {
+        height: 70%;
+        top: 10%;
+    }
+
+    .box-info2.hide_left {
+        transform: translate(-100%, 0%);
+        opacity: 0;
+    }
+
+    .box-info2.hide_left > .slide_butt2 {
+        opacity: 1;
+    }
+
+    .box-info3.info_active1 {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .box-info3.info_active2 {
+        opacity: 1;
+        transform: translateX(0%);
+        z-index: 3;
+    }
+
+    .slide_butt3 {
+        display: block;
+    }
+
+    /* add hide box 2 state that fades it to the left */
+    /* add hide box 3 state so that it fades from the right when activated  */
+}

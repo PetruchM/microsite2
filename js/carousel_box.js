@@ -14,11 +14,24 @@ function slideRectangle1() {
 function slideRectangle2() {
     var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
     rectangle3.classList.toggle('info_active2');
+
+    // on phones hide rectangle2 to the left
+    var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
+    rectangle2.classList.toggle('hide_left');
+}
+
+function slideRectangle3() {
+    var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
+    rectangle2.classList.toggle('hide_left');
+    var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
+    rectangle3.classList.toggle('info_active2');
+
 }
 
 function hideAll() {
     var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
     rectangle2.classList.remove('info_active1');
+    rectangle2.classList.remove('hide_left');
     var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
     rectangle3.classList.remove('info_active1');
     rectangle3.classList.remove('info_active2');
