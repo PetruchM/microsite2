@@ -1,0 +1,39 @@
+.expandable-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .additional-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .show {
+    max-height: 250px; /* You can adjust this value based on your content */
+  }
+
+  @media (min-width: 726px) and (max-width: 900px) {
+    .show {
+        max-height: 550px;
+    }
+  }
+
+  @media (max-width: 726px) {
+    .show {
+        max-height: 650px;
+    }
+  }
+
+  .expand-button {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }

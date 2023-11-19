@@ -6,7 +6,7 @@
 
     .box-info1, .box-info2, .box-info3 {
         position: absolute;
-        height: 200px;
+        height: 50%;
         width: 80vw;
         top: 80%;
         left: 10vw;
@@ -17,10 +17,6 @@
     .box-info1 {
         padding: 30px 15px 15px 15px;
     }
-
-    /* .box-info3 {
-        background-color: red;
-    } */
 
     .slide_butt1 {
         position: absolute;
@@ -36,8 +32,8 @@
     }
 
     .info_active1, .info_active2 {
-        height: 70%;
-        top: 10%;
+        height: 67%;
+        top: 13.5%;
     }
 
     .box-info2.hide_left {
