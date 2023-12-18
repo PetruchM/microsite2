@@ -1,0 +1,105 @@
+#info-section {
+    width: 100%;
+    position: relative;
+}
+
+#info-cards-container {
+    display: flex; /* Use flex container for the cards */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.info-card {
+    width: 30%;
+    max-width: 400px;
+    min-width: 250px;
+    /* height: 800px; */
+    background-color: var(--blue-card);
+    position: relative;
+}
+
+.info-card-content h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.info-card-content {
+    padding: 20px;
+}
+
+#card2 {
+    margin-top: 70px;
+}
+
+
+#info-overlay {
+    z-index: 20;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+#info-overlay.slide-down {
+    z-index: 20;
+    position: absolute;
+    top: 650px;
+    width: 100%;
+}
+
+#info-overlay-container {
+    position: relative;
+}
+
+#info-overlay-container img {
+    pointer-events: none;
+}
+
+#show-info-butt {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 21;
+    padding: 10px;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+    pointer-events: all;   
+}
+
+#show-info-butt img {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+
+.expand-down-img {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.expand-down-img img {
+    width: 65px;
+    aspect-ratio: 1/1;
+}
+
+.info-card-text {
+    margin: 10px;
+    margin-top: 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.opacity1 {
+    opacity: 1;
+}

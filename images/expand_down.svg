@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="2.114039"
-     inkscape:cx="237.69666"
+     inkscape:cx="237.46014"
      inkscape:cy="255.67173"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -71,4 +71,7 @@
        inkscape:randomized="0"
        d="M 56.210893,52.940723 44.547245,59.674734 V 46.206713 Z"
        transform="rotate(90,40.277347,71.780183)"
-       inkscape:transform-center-y="1.9439412" /></g></svg>
+       inkscape:transform-center-y="1.9439412"
+       inkscape:export-filename="expand_down.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" /></g></svg>
