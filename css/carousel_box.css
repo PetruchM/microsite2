@@ -1,8 +1,8 @@
 .box-info1, .box-info2, .box-info3 {
   position: absolute;    
-  height: 70%;
+  height: 80%;
   width: 24vw;
-  top: 15%;
+  top: 14%;
   left: 14vw;
   transition: all 0.5s ease-in-out;
 }
@@ -17,9 +17,11 @@
   width: 100%;
   position: relative;
 }
-
 .box-info1-content {
   opacity: 1;
+}
+.box-info2-content, .box-info3-content {
+  opacity: 0;
 }
 
 .box-info1 {
@@ -66,7 +68,7 @@
   left: 0;
   transform: translate(-50%, -50%);
   padding: 10px;
-  background-color: #2ecc71;
+  background-color: rgba(0,0,0,0);
   color: #fff;
   border: none;
   cursor: pointer;

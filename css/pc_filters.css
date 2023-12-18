@@ -53,7 +53,7 @@
 }
 
 .carousel__filter-button:hover {
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
     cursor: pointer;
     border-radius: 50px;
 }
@@ -92,12 +92,12 @@
 }
 
 .carousel__filter-button.active-filter {
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
     cursor: pointer;
 }
 
 .carousel__filter-button.active-filter .carousel__filter-button-detail {
-    max-width: 230px;
+    max-width: 250px;
     /* padding: 1vh 0.4vw 1vh 1vw; */
     padding: 1vh 1vw 1vh 0.4vw;
     color: rgba(255, 255, 255, 1);

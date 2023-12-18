@@ -1,22 +1,39 @@
-@media (max-width: 726px) {
+/* @media (max-width: 726px) { */
+    @media (max-width: 1000px) {
     /* DISABLE CAROUSEL CONTROLS */
     .carousel-control-prev, .carousel-control-next {
         display: none;
+    }
+
+    .bg-img {
+        max-width: 88%;
+        margin: 0 auto; /* Center the image horizontally */
+        height: calc(100vh - 30px);
+        object-fit: cover;
     }
 
     .box-info1, .box-info2, .box-info3 {
         position: absolute;
         height: 50%;
         width: 80vw;
-        top: 80%;
+        max-width: 500px;
+        top: 71%;
         left: 10vw;
-        background-color: yellow;
         transition: all 0.5s ease-in-out;
     }
 
-    .box-info1 {
-        padding: 30px 15px 15px 15px;
-    }
+    .box-info1-content {
+        padding-top: 35px;
+        padding-left: 8%;
+        padding-right: 8%;
+      }
+    .box-info1-content h1 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        color: var(--blue-bg);
+      }
 
     .slide_butt1 {
         position: absolute;
@@ -31,8 +48,8 @@
         opacity: 1;
     }
 
-    .info_active1, .info_active2 {
-        height: 67%;
+    .info_active1, .info_active2, .info_ready2 {
+        height: 58%;
         top: 13.5%;
     }
 
@@ -41,7 +58,20 @@
         opacity: 0;
     }
 
+    .slide_butt2, .slide_butt3 {
+        opacity: 0;
+        transition: none;
+    }
+
+    .box-info2.info_active1 > .slide_butt2 {
+        opacity: 1;
+    }
+
     .box-info2.hide_left > .slide_butt2 {
+        opacity: 1;
+    }
+
+    .box-info3.info_active2 > .slide_butt3 {
         opacity: 1;
     }
 
@@ -61,6 +91,11 @@
         display: block;
     }
 
-    /* add hide box 2 state that fades it to the left */
-    /* add hide box 3 state so that it fades from the right when activated  */
+    #carousel-overlay {
+        z-index: 100;
+        position: absolute;
+        top: 77%;
+        width: 200%;
+        left: -50%;
+    }
 }
