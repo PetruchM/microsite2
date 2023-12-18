@@ -1,6 +1,6 @@
 #projectCarousel {
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -10,18 +10,18 @@
 }
 
 .carousel-control-next, .carousel-control-prev {
-    width: 10%;
+    width: 6%;
     padding: 0;
     margin: 0;
 }
-
-.carousel-control-next {
+/* TODO: fix this so that carousel works properly? */
+/* .carousel-control-next {
     transform: translateX(2vw);
-}
+} */
 
-.carousel-control-prev {
+/* .carousel-control-prev {
     transform: translateX(-2vw);
-}
+} */
 
 .bg-img {
     max-width: 88%;

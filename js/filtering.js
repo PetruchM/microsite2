@@ -1,4 +1,4 @@
-const myCarousel = document.getElementById('projectCarousel')
+const projectCarousel = document.getElementById('projectCarousel')
 
 const pcFilterContainer = document.querySelector('.carousel__filter-container');
 const pcFilterButtons = Array.from(pcFilterContainer.children);
@@ -11,9 +11,16 @@ pcFilterButtons.forEach((button, index) => {
 
 const filterLabel = document.querySelector('.carousel__filter-label');
 
+
 // --------------------NEW CODE------------------
 
 var currentCategory = 'all';
+
+// hack to enable scrolling on phone
+setTimeout(function() {
+    filterCarousel('tech');
+    filterCarousel('all');
+}, 100);
 
 function filterCarousel(category) {
     if (category == currentCategory) {
