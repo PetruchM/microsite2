@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/filters.css">
     <link rel="stylesheet" href="css/pc_filters.css">
     <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/foo.css">
 
     <title>O GAČR</title>
@@ -55,33 +56,62 @@
     <div id="projectCarousel" class="carousel slide">
         <div class="carousel-inner">
           <div class="item-flag carousel-item active tech">
-            <img src="images/novy1.png" class="d-block w-100" alt="...">
+            <img src="images/novy1.png" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
-                    TECHNICKÉ VĚDY<br>proj. 1
-                    <button class="slide_butt1" onclick="slideRectangle1()">Slide</button>
+                    <div class="box-info1-content">
+                        <h1>NOVÉ KVANTOVÉ JEVY NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY</h1>
+                    </div>
+                    <button class="slide_butt1" onclick="slideRectangle1()">
+                        <img src="images/expand_right.png" class="expand-right-img" alt="">
+                    </button>
                 </div>
                 <div class="box-info2">
-                    <button class="slide_butt2" onclick="slideRectangle2()">Slide</button>
+                    <div class="box-info2-content">
+                        BOX 2
+                    </div>
+                    <button class="slide_butt2" onclick="slideRectangle2()">
+                        <img src="images/expand_right.png" class="expand-right-img" alt="">
+                    </button>
                 </div>
-                <div class="box-info3"></div>
+                <div class="box-info3">
+                    <div class="box-info3-content">
+                        BOX 3
+                    </div>
+                </div>
             </div>
           </div>
           <div class="item-flag carousel-item unnat">
-            <img src="images/novy2.png" class="d-block w-100" alt="...">
+            <img src="images/novy2.png" class="d-block bg-img" alt="..."> 
             <div class="carousel__box">
                 <div class="box-info1">
-                    VĚDY O NEŽIVÉ PŘÍRODĚ<br>proj. 2
-                    <button class="slide_butt1" onclick="slideRectangle1()">Slide</button>
+                    <div class="box-info1-content">
+                        VĚDY O NEŽIVÉ PŘÍRODĚ<br>proj. 2
+                    </div>
+                    <button class="slide_butt1" onclick="slideRectangle1()">
+                        <img src="images/expand_right.png" class="expand-right-img" alt="">
+                    </button>
                 </div>
                 <div class="box-info2">
-                    <button class="slide_butt2" onclick="slideRectangle2()">Slide</button>
+                    <div class="box-info2-content">
+                        BOX 2
+                    </div>
+                    <button class="slide_butt2" onclick="slideRectangle2()">
+                        <img src="images/expand_right.png" class="expand-right-img" alt="">
+                    </button>
                 </div>
-                <div class="box-info3"></div>
+                <div class="box-info3">
+                    <div class="box-info3-content">
+                        BOX 3
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item-flag carousel-item tech unnat">
-            <img src="images/termit1.jpg" class="d-block w-100" alt="...">
+        </div>
+
+
+
+          <!-- <div class="item-flag carousel-item tech unnat">
+            <img src="images/termit1.jpg" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
                     TECHNICKÉ VĚDY a VĚDY O NEŽIVÉ PŘÍRODĚ<br>proj. 3
@@ -94,7 +124,7 @@
             </div>
           </div>
           <div class="item-flag carousel-item bio">
-            <img src="images/novy1.png" class="d-block w-100" alt="...">
+            <img src="images/novy1.png" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
                     LÉKAŘSKÉ A BIOLOGICKÉ VĚDY<br>proj. 4
@@ -107,7 +137,7 @@
             </div>
           </div>
           <div class="item-flag carousel-item socio">
-            <img src="images/novy2.png" class="d-block w-100" alt="...">
+            <img src="images/novy2.png" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
                     SPOLEČENSKÉ A HUMANITNÍ VĚDY<br>proj. 5
@@ -120,7 +150,7 @@
             </div>
           </div>
           <div class="item-flag carousel-item bio">
-            <img src="images/termit1.jpg" class="d-block w-100" alt="...">
+            <img src="images/termit1.jpg" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
                     LÉKAŘSKÉ A BIOLOGICKÉ VĚDY<br>proj. 6
@@ -133,7 +163,7 @@
             </div>
           </div>
           <div class="item-flag carousel-item socio">
-            <img src="images/novy1.png" class="d-block w-100" alt="...">
+            <img src="images/novy1.png" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
                     SPOLEČENSKÉ A HUMANITNÍ VĚDY<br>proj. 7
@@ -146,7 +176,7 @@
             </div>
           </div>
           <div class="item-flag carousel-item env">
-            <img src="images/novy2.png" class="d-block w-100" alt="...">
+            <img src="images/novy2.png" class="d-block bg-img" alt="...">
             <div class="carousel__box">
                 <div class="box-info1">
                     ZEMĚDĚLSKÉ A BIOLOGICKO-ENVIROMENTÁLNÍ VĚDY<br>proj. 8
@@ -156,7 +186,7 @@
                     <button class="slide_butt2" onclick="slideRectangle2()">Slide</button>
                 </div>
                 <div class="box-info3"></div>
-            </div>
+            </div> -->
           </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

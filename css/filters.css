@@ -1,6 +1,6 @@
 .filter-header {
     width: 100vw;
-    background-color: darkblue;
+    background-color: var(--blue-bg);
     z-index: 100;
     position: absolute;
     top: 0;

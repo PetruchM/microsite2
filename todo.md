@@ -5,4 +5,8 @@
 ## inspirace
 
 - <https://alvarotrigo.com/blog/css-page-transitions/>
-hlavne ta pata
+
+https://codepen.io/alvarotrigo/pen/mdpYaBB
+https://codepen.io/alvarotrigo/pen/wvpbRmE
+https://codepen.io/alvarotrigo/pen/XWVwoEb
+
