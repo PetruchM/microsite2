@@ -85,7 +85,7 @@
 }
 
 .carousel__filter-button:hover .carousel__filter-button-detail {
-    max-width: 230px;
+    max-width: 250px;
     padding: 1vh 1vw 1vh 0.4vw;
     color: rgb(255, 255, 255, 1);
     visibility: visible;

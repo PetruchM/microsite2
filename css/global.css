@@ -1,7 +1,15 @@
 :root {
     --yellow: #ffc20e;
+    --yellow80: rgba(255, 194, 14, 0.8);
     --blue-bg: #06274a;
     --blue-card: #4292b6;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: var(--blue-bg);
 }
 
 body {

@@ -28,13 +28,17 @@
         margin-left: 20px;
     }
 
+    .carousel__filter-button {
+        opacity: 0.5;
+    }
+
     .carousel__filter-button:hover {
-        background-color: rgba(0, 0, 0, 0);
+        opacity: 1;
         cursor: pointer;
     }
 
     .carousel__filter-button.active-filter {
-        background-color: grey;
+        opacity: 1;
         cursor: pointer;
     }
 

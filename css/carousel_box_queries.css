@@ -1,5 +1,5 @@
 /* @media (max-width: 726px) { */
-    @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     /* DISABLE CAROUSEL CONTROLS */
     .carousel-control-prev, .carousel-control-next {
         display: none;
@@ -98,4 +98,11 @@
         width: 200%;
         left: -50%;
     }
+}
+
+/* carusel box 2 */
+@media (max-width: 1000px) {
+    .project-info {
+        max-height: 420px;
+      }
 }
