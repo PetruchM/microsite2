@@ -80,8 +80,13 @@
   transform: translate(100%, 0%);
 }
 
-.opacity80 {
-  background-color: var(--yellow80);
+.opacity75 {
+  background-color: var(--yellow75);
+  opacity: 1;
+}
+
+.opacity85 {
+  background-color: var(--yellow85);
   opacity: 1;
 }
 

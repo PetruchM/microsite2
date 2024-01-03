@@ -6,6 +6,12 @@
 - filtry jsou polopruhledne na mobilu, bez podbarveni
 - vyresit ze je body sirsi nez mobil
 
+- button se zvetsi a zpruhledni - intro transition
+- karty na mobilu pod sebou
+- indikatory pripadne
+- jina pruhlednost u 3. karty
+- on hover animace
+
 ## Vaclav
 
 - ikonky na sliding

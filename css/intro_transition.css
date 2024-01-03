@@ -47,7 +47,7 @@
     background: linear-gradient(20deg, rgba(10,61,116,1) 0%, rgba(6,39,74,1) 45%, rgb(5, 31, 59) 100%);
     /* background-color: var(--blue-bg); */
 
-    transition: transform 0.7s ease-in;
+    transition: transform 0.3s ease-in;
 }
 
 .intro-header {
@@ -132,7 +132,53 @@
     transition: top 0.6s ease;
     margin-top: 20px;
     border: none;
+    position: relative;
 }
+
+.intro-button2-clone {
+    border-radius: 25px;
+    background-color: var(--yellow);
+    width: 270px;
+    height: 60px;
+    border-color: var(--yellow);
+    margin-top: 20px;
+    border: none;
+    position: absolute;
+    transition: all 1.5s ease-in-out;
+}
+
+
+/* new transition */
+
+.intro-button2 div {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.intro-button2.active div {
+    opacity: 0;
+}
+
+.intro-button2-clone.active {
+    width: 105vw;
+    height: 105vh;
+}
+
+.intro-overlay2.active {
+    opacity: 0;
+}
+
+.yellow-circle {
+    position: absolute;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    z-index: 999999;
+}
+
+
+
+
 
 @media screen and (max-width: 1850px) and (min-width: 1451px) {
     .intro-column {
