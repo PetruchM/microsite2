@@ -43,7 +43,9 @@
     z-index: 1000;
     display: flex;
     overflow: hidden;
-    background-color: var(--blue-bg);
+    background: rgb(10,61,116);
+    background: linear-gradient(20deg, rgba(10,61,116,1) 0%, rgba(6,39,74,1) 45%, rgb(5, 31, 59) 100%);
+    /* background-color: var(--blue-bg); */
 
     transition: transform 0.7s ease-in;
 }
