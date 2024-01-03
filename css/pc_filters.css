@@ -27,7 +27,7 @@
 }
 
 .carousel__filter-container {
-    width: 100%;
+    width: 100vw;
     height: 68px;
     display: flex;
     flex-direction: row;
@@ -35,7 +35,6 @@
     margin: 0px 0px;
     padding: 0px 0px;
     z-index: 20;
-    /* transform: translateY(); */
 }
 
 .carousel__filter-button {
