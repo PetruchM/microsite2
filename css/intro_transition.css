@@ -1,0 +1,37 @@
+.intro-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    overflow: hidden;
+    transition: opacity 10s ease; /* Add a transition for a smooth fade-out effect */
+}
+
+.intro-bar {
+    width: 12.5vw;
+    height: 105vh;
+    background-color: var(--blue-bg);
+    transition: transform 0.3s ease; /* Add a transition for smooth sliding down */
+}
+
+.intro-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: var(--yellow);
+    color: var(--blue-bg);
+    width: 150px;
+    height: 60px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-color: var(--yellow);
+    cursor: pointer;
+    transition: top 0.6s ease;
+}
+
+.no-overflow {
+    overflow: hidden;
+}

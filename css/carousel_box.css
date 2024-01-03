@@ -115,6 +115,10 @@
 
 /* box 2 */
 
+.box-info2-content{
+  padding-top: 20px;
+}
+
 .box-info2-content h1, .box-info3-content h1 {
   font-size: 1.6rem;
   padding-left: 25px;
@@ -134,6 +138,10 @@
 }
 
 /* box 3 */
+
+.box-info3-content{
+  padding-top: 20px;
+}
 
 .authors-info {
   display: flex;
