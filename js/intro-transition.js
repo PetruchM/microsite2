@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     introButton.addEventListener("click", function () {
         console.log("clicked");
         // Hide intro overlay
-        introOverlay.style.opacity = 0;
+        // introOverlay.style.opacity = 0;
 
         // Slide down intro bars one by one
         introBars.forEach((bar, index) => {
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Allow scrolling after the transition is finished
         setTimeout(() => {
             document.body.classList.remove("no-overflow");
-        }, introBars.length * delay + 100);
+            introOverlay.style.display = "none";
+        }, introBars.length * delay + 50);
     });
 });
