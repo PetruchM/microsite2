@@ -9,7 +9,7 @@
 }
 
 .intro-bar {
-    width: 12.5vw;
+    width: calc(12.5vw + 2px);
     height: 105vh;
     background-color: var(--blue-bg);
     transition: transform 0.3s ease; /* Add a transition for smooth sliding down */
