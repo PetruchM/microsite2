@@ -6,10 +6,18 @@
 #info-cards-container {
     display: flex; /* Use flex container for the cards */
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
     padding-left: 250px;
     padding-right: 250px;
+
+    transition: all 0.5s ease-in-out;
+    overflow-y: hidden;
+    max-height: 300px;
+}
+
+#info-cards-container.expand {
+    max-height: 1000px;
 }
 
 .info-card {
@@ -19,6 +27,42 @@
     /* height: 800px; */
     background-color: var(--blue-card);
     position: relative;
+
+    transition: all 0.5s ease-in-out;
+    max-height: 700px;
+}
+
+#card1.slide-down, #card3.slide-down {
+    margin-top: 600px;
+}
+#card2.slide-down {
+    margin-top: 650px;
+}
+
+.info-card-header {
+    display: flex;
+    align-items: left center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.expand-card {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+}
+
+.expand-card img {
+    width: 40px;
+    aspect-ratio: 1/1;
+    transform: translateY(-25%);
+}
+
+.info-card-content {
+    position: relative;
+    padding: 20px;
 }
 
 .info-card-content h1 {
@@ -26,29 +70,34 @@
     font-weight: 700;
 }
 
-.info-card-content {
-    padding: 20px;
+#card2 {
+    margin-top: 50px;
 }
 
-#card2 {
-    margin-top: 70px;
+.info-card-text {
+    margin: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    overflow-y: auto;
 }
 
 
 #info-overlay {
-    z-index: 20;
     position: absolute;
-    top: 50px;
+    top: 90px;
     width: 100%;
-    transition: all 0.5s ease-in-out;
     pointer-events: none;
+    max-height: 300px;
+    overflow-y: hidden;
+
+    transition: all 0.5s ease-in-out;
 }
 
 #info-overlay.slide-down {
-    z-index: 20;
     position: absolute;
     top: 650px;
-    width: 100%;
+    max-height: 500px;
 }
 
 #info-overlay-container {
@@ -59,7 +108,7 @@
     pointer-events: none;
 }
 
-#show-info-butt {
+#hide-cards-butt {
     position: absolute;
     top: 150px;
     left: 50%;
@@ -73,7 +122,7 @@
     pointer-events: all;   
 }
 
-#show-info-butt img {
+#hide-cards-butt img {
     width: 100px;
     aspect-ratio: 1/1;
 }
@@ -91,13 +140,6 @@
 .expand-down-img img {
     width: 65px;
     aspect-ratio: 1/1;
-}
-
-.info-card-text {
-    margin: 10px;
-    margin-top: 50px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
 }
 
 .opacity1 {

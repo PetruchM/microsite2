@@ -1,27 +1,22 @@
 #projectCarousel {
     overflow-x: hidden;
     width: 100%;
+    max-width: 100vw; /* Limit the width to the viewport width */
     padding: 0;
     margin: 0;
+    transform: translateX(-10px); /* TODO: this is shady */
 }
 
 .carousel-inner {
     background-color: var(--blue-bg);
+    /* background-color: red; */
 }
 
 .carousel-control-next, .carousel-control-prev {
-    width: 6%;
+    max-width: 6%;
     padding: 0;
     margin: 0;
 }
-/* TODO: fix this so that carousel works properly? */
-/* .carousel-control-next {
-    transform: translateX(2vw);
-} */
-
-/* .carousel-control-prev {
-    transform: translateX(-2vw);
-} */
 
 .bg-img {
     max-width: 88%;
@@ -34,6 +29,22 @@
 #carousel-overlay {
     z-index: 100;
     position: absolute;
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw; /* Limit the width to the viewport width */
     top: 80%;
-    width: 100%;
+}
+
+#carousel-overlay img {
+    animation: scrollImage 90s linear infinite alternate; /* Adjust the duration as needed */
+    animation-play-state: running; /* Initial state: running */
+}
+
+@keyframes scrollImage {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
 }

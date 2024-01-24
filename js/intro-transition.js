@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 600);
     }
 
+    // scroll to top of the page
+    window.scrollTo(0, 0);
+
     // Add click event listener to the button
     introButton.addEventListener("click", function (event) {
         // Trigger the yellow circle creation function on button click

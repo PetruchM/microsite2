@@ -19,6 +19,7 @@ body {
     padding: 0;
     width: 100vw;
     background-color: var(--blue-bg);
+    overflow-x: hidden;
 }
 
 * {
