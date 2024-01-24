@@ -19,7 +19,7 @@
 }
 
 .bg-img {
-    max-width: 88%;
+    max-width: 100%;
     margin: 0 auto; /* Center the image horizontally */
     height: calc(100vh - 100px);
     object-fit: cover;

@@ -1,6 +1,9 @@
 # TODOs and Notes
 
+## new notes
+
 - vyresit ze je body sirsi nez mobil
+- scroll aby čárky
 
 - karty na mobilu pod sebou
 - indikatory pripadne
