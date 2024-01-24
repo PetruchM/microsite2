@@ -1,0 +1,31 @@
+@media (max-width: 1000px) and (hover: none){
+    .bg-img {
+        max-width: 100%;
+        margin: 0 auto; /* Center the image horizontally */
+        height: calc(100vh - 30px);
+        object-fit: cover;
+    }
+
+    
+    /* DISABLE CAROUSEL CONTROLS */
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    #projectCarousel {
+        transform: translateX(0px); /* TODO: this is shady */
+    }
+
+    #carousel-overlay {
+        z-index: 100;
+        position: absolute;
+        top: 85%;
+    }
+
+    .bg-img {
+        max-width: 100%;
+    }
+}

@@ -1,17 +1,5 @@
 /* @media (max-width: 726px) { */
 @media (max-width: 1000px) {
-    /* DISABLE CAROUSEL CONTROLS */
-    .carousel-control-prev, .carousel-control-next {
-        display: none;
-    }
-
-    .bg-img {
-        max-width: 88%;
-        margin: 0 auto; /* Center the image horizontally */
-        height: calc(100vh - 30px);
-        object-fit: cover;
-    }
-
     .box-info1, .box-info2, .box-info3 {
         position: absolute;
         height: 50%;
@@ -89,14 +77,6 @@
 
     .slide_butt3 {
         display: block;
-    }
-
-    #carousel-overlay {
-        z-index: 100;
-        position: absolute;
-        top: 77%;
-        width: 200%;
-        left: -50%;
     }
 }
 
