@@ -4,6 +4,10 @@
 
 - vyresit ze je body sirsi nez mobil
 - scroll aby čárky
+- nova cara vic vlnita
+- gacr logo
+
+## old notes
 
 - karty na mobilu pod sebou
 - indikatory pripadne
