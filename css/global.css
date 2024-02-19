@@ -12,6 +12,7 @@ html {
     padding: 0;
     width: 100vw;
     background-color: var(--blue-bg);
+    box-sizing: border-box;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     width: 100vw;
     background-color: var(--blue-bg);
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 * {

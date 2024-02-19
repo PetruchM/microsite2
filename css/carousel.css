@@ -4,7 +4,8 @@
     max-width: 100%; /* Limit the width to the viewport width */
     padding: 0;
     margin: 0;
-    transform: translateX(-10px); /* TODO: this is shady */
+    height: 100%;
+    /*transform: translateX(-10px); /* TODO: this is shady */
 }
 
 .carousel-inner {
@@ -13,7 +14,7 @@
 }
 
 .carousel-control-next, .carousel-control-prev {
-    max-width: 6%;
+    width: 10%;
     padding: 0;
     margin: 0;
 }
@@ -30,9 +31,11 @@
     z-index: 100;
     position: absolute;
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100vw;
     max-width: 100vw; /* Limit the width to the viewport width */
-    top: 80%;
+    top: 82%;
+    height: 22%;
 }
 
 #carousel-overlay img {

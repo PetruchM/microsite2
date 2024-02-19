@@ -1,26 +1,48 @@
 /* @media (max-width: 726px) { */
-@media (max-width: 1000px) {
+@media (max-width: 1215px) {
+    .carousel__box {
+        position: absolute;
+        height: 82%;
+        top: 0%;
+      }
+
     .box-info1, .box-info2, .box-info3 {
         position: absolute;
-        height: 50%;
+        height: 60%;
         width: 80vw;
         max-width: 500px;
-        top: 71%;
-        left: 10vw;
+        margin: auto;
+        margin-bottom: 15px;
+        top: 82%;
+        left: 22vw;
         transition: all 0.5s ease-in-out;
     }
 
+    .box-info1-content, .box-info2-content, .box-info3-content {
+        padding-top: 40px;
+        padding-bottom: 15px;
+        overflow-y: hidden;
+    }
+
     .box-info1-content {
-        padding-top: 35px;
         padding-left: 8%;
         padding-right: 8%;
       }
     .box-info1-content h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         margin: 0;
         padding: 0;
+        padding-top: 10px;
         color: var(--blue-bg);
+      }
+
+      .author-img-div {
+        margin: 20px 0 0 0;
+      }
+
+      .project-info {
+        max-height: 93%;
       }
 
     .slide_butt1 {
@@ -37,7 +59,7 @@
     }
 
     .info_active1, .info_active2, .info_ready2 {
-        height: 58%;
+        height: 69%;
         top: 13.5%;
     }
 
@@ -80,9 +102,17 @@
     }
 }
 
-/* carusel box 2 */
-@media (max-width: 1000px) {
-    .project-info {
-        max-height: 420px;
-      }
+@media (max-width: 800px) {
+    .box-info1, .box-info2, .box-info3 {
+        max-width: 500px;
+        margin: auto;
+        top: 81%;
+        left: 12vw;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .info_active1, .info_active2, .info_ready2 {
+        height: 68%;
+        top: 13.5%;
+    }
 }
