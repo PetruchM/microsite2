@@ -1,0 +1,44 @@
+.indicators-section {
+    position: relative;
+    /* background-color: yellowgreen; */
+    margin: 0 auto;
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.indicator {
+    height: 150px;
+    color: white;
+    /* background-color: black; */
+    margin: 15px 25px 15px 25px;
+    min-width: 150px;
+    display: flex;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.indicator-svg {
+    width: 100px;
+    height: auto;
+    margin: auto;
+}
+
+.indicator-num {
+    font-size: 42px;
+    font-weight: bold;
+    margin: auto;
+    padding-left: 30px;
+}
+
+.indicator-text {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: auto;
+    padding-left: 15px;
+}
