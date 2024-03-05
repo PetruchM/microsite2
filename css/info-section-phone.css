@@ -1,0 +1,63 @@
+#info-section-phone {
+    width: 100%;
+    position: relative;
+}
+
+#card-section-one, #card-section-two, #card-section-three {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-height: 200px;
+    transition: all 0.5s ease-in-out;
+}
+
+.info-card-phone {
+    width: 30%;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: var(--blue-card);
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: all 0.5s ease-in-out;
+    max-height: 700px;
+}
+
+.info-overlay-phone {
+    width: 1920px;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0px;
+    left: 0;
+    transform: translateX(-25%);
+    transition: all 0.5s ease-in-out;
+}
+
+.info-overlay-phone.slide-down {
+    top: 550px;
+}
+
+
+#card-section-one.active, #card-section-two.active, #card-section-three.active {
+    height: 715px;
+    max-height: 715px;
+    margin-bottom: 70px;
+}
+
+.info-card-text-phone {
+    margin: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.info-card-text-phone.opacity1 {
+    opacity: 1;
+}

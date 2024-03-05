@@ -1,0 +1,18 @@
+#info-section-phone {
+    display: none;
+}
+
+@media (max-width: 1150px)
+{
+    #info-section {
+        display: none;
+    }
+
+    #info-section-phone {
+        display: block;
+    }
+
+    #card2 {
+        margin-top: 0px;
+    }
+}

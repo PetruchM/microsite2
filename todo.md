@@ -1,6 +1,6 @@
 # TODOs and Notes
 
-## 21.02.
+## 21.02. 
 
 - do léta
 - tuček 
@@ -11,17 +11,12 @@ https://stackoverflow.com/questions/2540277/jquery-counter-to-count-up-to-a-targ
 https://codepen.io/Vladim-r-Hok-/pen/qBvGWLg
 - pozastavit carousel, přehrát carousel
 
-## new notes
+## notes
 
 - vyresit ze je body sirsi nez mobil
-- scroll aby čárky
-
-## old notes
-
+- scroll aby seděly karty při zvětšování, zmenšování
 - karty na mobilu pod sebou
-- indikatory pripadne
-- jina pruhlednost u 3. karty
-- on hover animace
+- on hover animace u tlačítek, indikátorů?
 
 ## inspirace
 
