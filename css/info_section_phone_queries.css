@@ -2,7 +2,15 @@
     display: none;
 }
 
-@media (max-width: 1150px)
+@media (max-width: 1150px) and (min-width: 965px)
+{
+    #info-cards-container{
+        padding-left: max(1vw, 15px);
+        padding-right: max(1vw, 15px);
+    }
+}
+
+@media (max-width: 965px)
 {
     #info-section {
         display: none;
