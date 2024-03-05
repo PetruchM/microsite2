@@ -5,11 +5,11 @@
 
 #info-cards-container {
     display: flex; /* Use flex container for the cards */
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: top;
-    flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
-    padding-left: 250px;
-    padding-right: 250px;
+    flex-wrap: none; /* Allow items to wrap onto the next line if needed */
+    padding-left: max(7vw, 80px);
+    padding-right: max(7vw, 80px);
 
     transition: all 0.5s ease-in-out;
     overflow-y: hidden;
@@ -23,7 +23,7 @@
 .info-card {
     width: 30%;
     max-width: 400px;
-    min-width: 250px;
+    min-width: 300px;
     /* height: 800px; */
     background-color: var(--blue-card);
     position: relative;
