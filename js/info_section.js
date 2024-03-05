@@ -1,7 +1,6 @@
 const cardsNodeArr = document.querySelectorAll(".info-card");
 const cards = Array.from(cardsNodeArr);
 const allInfoText = document.getElementsByClassName("info-card-text");
-const hideCardsButt = document.getElementById("hide-cards-butt");
 
 function hideAllCards() {
     console.log("hide all cards");
@@ -21,8 +20,6 @@ function hideAllCards() {
     for (var i = 0; i < allInfoText.length; i++) {
         allInfoText[i].classList.remove("opacity1");
     }
-
-    hideCardsButt.classList.add("d-none");
 }
 
 function slideDownCard(cardIndex) {
@@ -54,8 +51,6 @@ function slideDownCard(cardIndex) {
             allInfoText[i].classList.remove("opacity1");
         }
     }
-
-    hideCardsButt.classList.remove("d-none");
 }
 
 function slideDownCard1() {
