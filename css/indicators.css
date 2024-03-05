@@ -13,10 +13,10 @@
 
 .indicator {
     height: 150px;
+    width: 500px;
     color: white;
     /* background-color: black; */
     margin: 15px 25px 15px 25px;
-    min-width: 150px;
     display: flex;
     text-align: left;
     box-sizing: border-box;
@@ -25,13 +25,15 @@
 .indicator-svg {
     width: 100px;
     height: auto;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .indicator-num {
     font-size: 42px;
     font-weight: bold;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     padding-left: 30px;
 }
 
@@ -39,6 +41,7 @@
     font-size: 20px;
     line-height: 1.2;
     font-weight: 600;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     padding-left: 15px;
 }
