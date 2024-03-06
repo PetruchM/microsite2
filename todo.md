@@ -1,5 +1,16 @@
 # TODOs and Notes
 
+## 6.3.
+
+- secondary carousel jako sloupecek vlevo
+    na mobilu NEBUDE
+- podklad na indikatory
+- podklad na footer dole
+- sirsi modre karticky na mobilu (stejna sirka jako zluty box?)
+- vyladit veci na ruzne obrazovky
+- postranni sipky carouselu redesign?
+- pozastavovani carouselu
+
 ## 21.02. 
 
 - do léta
