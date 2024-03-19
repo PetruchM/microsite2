@@ -1,4 +1,4 @@
-$('.carousel .vertical .item').each(function(){
+$('.vertical .carousel-inner .carousel-item').each(function(){
     var next = $(this).next();
     if (!next.length) {
       next = $(this).siblings(':first');

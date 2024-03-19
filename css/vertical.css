@@ -1,7 +1,8 @@
-.carousel-inner.vertical {
+.vertical > .carousel-inner {
     height: 100%; /*Note: set specific height here if not, there will be some issues with IE browser*/
   }
-  .carousel-inner.vertical > .item {
+
+  .vertical > .carousel-inner > .carousel-item {
     -webkit-transition: .6s ease-in-out top;
     -o-transition: .6s ease-in-out top;
     transition: .6s ease-in-out top;
@@ -9,7 +10,7 @@
   
   @media all and (transform-3d),
   (-webkit-transform-3d) {
-    .carousel-inner.vertical > .item {
+    .vertical > .carousel-inner > .carousel-item {
       -webkit-transition: -webkit-transform .6s ease-in-out;
       -o-transition: -o-transform .6s ease-in-out;
       transition: transform .6s ease-in-out;
@@ -18,66 +19,66 @@
       -webkit-perspective: 1000;
       perspective: 1000;
     }
-    .carousel-inner.vertical > .item.next,
-    .carousel-inner.vertical > .item.active.right {
+    .vertical > .carousel-inner > .carousel-item.next,
+    .vertical > .carousel-inner > .carousel-item.active.right {
       -webkit-transform: translate3d(0, 33.33%, 0);
       transform: translate3d(0, 33.33%, 0);
       top: 0;
     }
-    .carousel-inner.vertical > .item.prev,
-    .carousel-inner.vertical > .item.active.left {
+    .vertical > .carousel-inner > .carousel-item.prev,
+    .vertical > .carousel-inner > .carousel-item.active.left {
       -webkit-transform: translate3d(0, -33.33%, 0);
       transform: translate3d(0, -33.33%, 0);
       top: 0;
     }
-    .carousel-inner.vertical > .item.next.left,
-    .carousel-inner.vertical > .item.prev.right,
-    .carousel-inner.vertical > .item.active {
+    .vertical > .carousel-inner > .carousel-item.next.left,
+    .vertical > .carousel-inner > .carousel-item.prev.right,
+    .vertical > .carousel-inner > .carousel-item.active {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       top: 0;
     }
   }
   
-  .carousel-inner.vertical > .active {
+  .vertical > .carousel-inner > .active {
     top: 0;
   }
-  .carousel-inner.vertical > .next,
-  .carousel-inner.vertical > .prev {
+  .vertical > .carousel-inner > .next,
+  .vertical > .carousel-inner > .prev {
     top: 0;
     height: 100%;
     width: auto;
   }
-  .carousel-inner.vertical > .next {
+  .vertical > .carousel-inner > .next {
     left: 0;
     top: 33.33%;
     right:0;
   }
-  .carousel-inner.vertical > .prev {
+  .vertical > .carousel-inner > .prev {
     left: 0;
     top: -33.33%;
     right:0;
   }
-  .carousel-inner.vertical > .next.left,
-  .carousel-inner.vertical > .prev.right {
+  .vertical > .carousel-inner > .next.left,
+  .vertical > .carousel-inner > .prev.right {
     top: 0;
   }
-  .carousel-inner.vertical > .active.left {
+  .vertical > .carousel-inner > .active.left {
     left: 0;
     top: -33.33%;
     right:0;
   }
-  .carousel-inner.vertical > .active.right {
+  .vertical > .carousel-inner > .active.right {
     left: 0;
     top: 33.33%;
     right:0;
   }
   
-  #carousel-pager .carousel-control.left {
+  /* #carousel-pager .carousel-control-prev {
       bottom: initial;
       width: 100%;
   }
-  #carousel-pager .carousel-control.right {
+  #carousel-pager .carousel-control-next {
       top: initial;
       width: 100%;
-  }
+  } */
