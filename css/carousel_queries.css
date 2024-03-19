@@ -8,14 +8,14 @@
 
     
     /* DISABLE CAROUSEL CONTROLS */
-    .carousel-control-prev, .carousel-control-next {
+    #projectCarousel.carousel-control-prev, #projectCarousel.carousel-control-next {
         display: none;
     }
 }
 
 @media (max-width: 750px){
     /* DISABLE CAROUSEL CONTROLS */
-    .carousel-control-prev, .carousel-control-next {
+    #projectCarousel.carousel-control-prev, #projectCarousel.carousel-control-next {
         width: 5%;
     }
 }

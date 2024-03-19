@@ -7,9 +7,23 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/bootstrap_3-4-1.css">
+
+    <!-- <link rel="stylesheet" href="css/bs_5.3.3/bootstrap.css">
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap.rtl.css">
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap-reboot.rtl.css">    
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap-utilities.css">
+    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap-utilities.rtl.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/carousel_box.css">
+    <!-- <link rel="stylesheet" href="css/carousel_box.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/filters.css">
     <link rel="stylesheet" href="css/pc_filters.css">
@@ -24,395 +38,97 @@
     <link rel="stylesheet" href="css/foo.css">
 
     <link rel="stylesheet" href="css/info-section-phone.css">
-    <link rel="stylesheet" href="css/info_section_phone_queries.css">
+    <link rel="stylesheet" href="css/info_section_phone_queries.css"> -->
+
+    <link rel="stylesheet" href="css/vertical.css">
+
+    <!-- MDB -->
+    <!-- <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/multi-carousel.min.css" /> -->
 
     <title>O GAČR</title>
   </head>
 
   <body class="no-overflow">
-
-    <!-- <div class="intro-overlay1">
-        <button class="intro-button1">Vstupte</button>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-        <div class="intro-bar1"></div>
-    </div> -->
-
-    <div class="intro-overlay2">
-        <div class="intro-header">
-            <img class="intro-logo" src="images/gacr_logo.png"></img>
-        </div>
-        <div class="intro-column">
-            <h1>VYDEJTE SE S NÁMI AŽ NA<br>SAMOU HRANICI POZNÁNÍ</h1>
-            <button class="intro-button2">
-                <div>Už jdu!</div>
-            </button>
-            <!-- <div class="intro-button2-clone"></div> -->
-        </div>
-        <img src="images/intro-emblem.png" class="intro-image" alt="">
-    </div>
-
-    <div class="filter-header">
-        <div class="carousel__filter-label">
-            Soucasny filter
-        </div>
-        <div class="carousel__filter-container">
-            <div class="carousel__filter-button">                  
-                <img src="images\icons\TV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    TECHNICKÉ<br>VĚDY
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images\icons\VoNP_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    VĚDY O NEŽIVÉ<br>PŘÍRODĚ
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images\icons\LaBV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    LÉKAŘSKÉ<br>A BIOLOGICKÉ VĚDY
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images\icons\SaHV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    SPOLEČENSKÉ<br>A HUMANITNÍ VĚDY
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images\icons\ZaBEV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    ZEMĚDĚLSKÉ A BIOLOGICKO-<br>ENVIROMENTÁLNÍ VĚDY
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="projectCarousel" class="carousel slide carousel-fade">
+    <div id="carousel-main" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" data-wrap="true">
+        <!-- Carousel items -->
         <div class="carousel-inner">
-
-            <div class="item-flag carousel-item active tech">
-                <img src="images/slide_bg_sodium.png" class="d-block bg-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1>NOVÉ MATERIÁLY VHODNÉ NEJEN PRO ENERGETIKU</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()">
-                            <img src="images/expand_right.png" class="expand-right-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div class="project-motto-text">
-                                    „Sodík nebo draslík vmezeřené ve vrstevnatých materiálech by mohly nahradit nedostatkové lithium v bateriích. Jsou levné a všude dostupné.“
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-picture" src="images/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text">
-                                    <h3>prof. Ing. Zdeněk Sofer, Ph.D.</h3>
-                                    <p>Ústav anorganické chemie, Vysoká škola chemicko-technologická v Praze</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()">
-                            <img src="images/expand_right.png" class="expand-right-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <div class="project-info-text">
-                                    Grafen je pevný, extrémně lehký a výborně vede elektřinu. Proto se považuje za budoucí materiál pro elektroniku, 
-                                    kompozity a další aplikace. Profesoru Soferovi se podařilo syntetizoval absolutně čistý grafen bez přítomnosti 
-                                    kovových nečistot. Díky tomu prokázal zásadní vliv těchto nečistot na jeho vlastnosti.<br>
-                                    Jeho tým také vyvinul metodu, která umožňuje měnit vlastnosti grafenu a dalších materiálů. 
-                                    Zkoumá také další materiály a z nich vytvořené struktury, které obsahují například molybden, 
-                                    wolfram, chrom a další kovy ve spojení s nekovy, jako jsou síra, selen, chlor nebo brom. Zjistil, 
-                                    že by například sodík nebo draslík mohly nahradit lithium v bateriích nebo jak by další materiály 
-                                     mohly pomoci při rozkladu vody k získání vodíku pro energetické využití.
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()">
-                            <img src="images/expand_left.png" class="expand-right-img" alt="">
-                        </button>
-                    </div>
-                </div>
+            <div class="active item">
+                <img src="http://placehold.it/900/f44336/000000&amp;text=First+Slide" class="img-responsive">
             </div>
-
-            <div class="item-flag carousel-item unnat">
-                <img src="images/slide1.png" class="d-block bg-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1>TOTO je JINY NAZEV</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()">
-                            <img src="images/expand_right.png" class="expand-right-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div class="project-motto-text">
-                                    „Sodík nebo draslík vmezeřené ve vrstevnatých materiálech by mohly nahradit nedostatkové lithium v bateriích. Jsou levné a všude dostupné.“
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-picture" src="images/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text">
-                                    <h3>prof. Ing. Zdeněk Sofer, Ph.D.</h3>
-                                    <p>Ústav anorganické chemie, Vysoká škola chemicko-technologická v Praze</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()">
-                            <img src="images/expand_right.png" class="expand-right-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <div class="project-info-text">
-                                    Grafen je pevný, extrémně lehký a výborně vede elektřinu. Proto se považuje za budoucí materiál pro elektroniku, 
-                                    kompozity a další aplikace. Profesoru Soferovi se podařilo syntetizoval absolutně čistý grafen bez přítomnosti 
-                                    kovových nečistot. Díky tomu prokázal zásadní vliv těchto nečistot na jeho vlastnosti.<br>
-                                    Jeho tým také vyvinul metodu, která umožňuje měnit vlastnosti grafenu a dalších materiálů. 
-                                    Zkoumá také další materiály a z nich vytvořené struktury, které obsahují například molybden, 
-                                    wolfram, chrom a další kovy ve spojení s nekovy, jako jsou síra, selen, chlor nebo brom. Zjistil, 
-                                    že by například sodík nebo draslík mohly nahradit lithium v bateriích nebo jak by další materiály 
-                                     mohly pomoci při rozkladu vody k získání vodíku pro energetické využití.
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()">
-                            <img src="images/expand_left.png" class="expand-right-img" alt="">
-                        </button>
-                    </div>
-                </div>
+            <div class="item">
+                <img src="http://placehold.it/900/e91e63/000000&amp;text=Second+Slide" class="img-responsive">
             </div>
-
-            <div id="carousel-overlay">
-                <img src="images/overlay_medium.png" alt="">
+            <div class="item">
+                <img src="http://placehold.it/900/9c27b0/000000&amp;text=Third+Slide" class="img-responsive">
             </div>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div> 
 
-
-
-    <div id="info-section">
-        <div id="info-cards-container">
-            
-            <div id="card1" class="info-card">
-                <div class="info-card-content">
-                    <div class="info-card-header">
-                        <h1>O GAČR</h1>
-                        <button class="expand-card" onclick="slideDownCard1()">
-                            <img src="images/expand_down.png" alt="">
-                        </button>
-                    </div>
-                    <div class="info-card-text">
-                        <div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                            sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                            natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                            ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                            accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="card2" class="info-card">
-                <div class="info-card-content">
-                    <div class="info-card-header">
-                        <h1>ZÁKLADNÍ VÝZKUM</h1>
-                        <button class="expand-card" onclick="slideDownCard2()">
-                            <img src="images/expand_down.png" alt="">
-                        </button>
-                    </div>
-                    <div class="info-card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                        sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                        natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                        ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                        accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl. 
-                    </div>
-                </div>
-            </div>
-
-            <div id="card3" class="info-card">
-                <div class="info-card-content">
-                    <div class="info-card-header">
-                        <h1>VĚDA V ČR</h1>
-                        <button class="expand-card" onclick="slideDownCard3()">
-                            <img src="images/expand_down.png" alt="">
-                        </button>
-                    </div>
-                    <div class="info-card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                        sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                        natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                        ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                        accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl. 
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div id="info-overlay">
-            <div id="info-overlay-container">
-                <img class="w-100" src="images/overlay_old2.png" alt="">
-            </div>
-        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
-    <div id="info-section-phone">
-        <div id="card-section-one">            
-            <div id="card1" class="info-card-phone">
-                <div class="info-card-content">
-                    <div class="info-card-header">
-                        <h1>O GAČR</h1>
-                        <button class="expand-card" onclick="slideDownCard1Phone()">
-                            <img src="images/expand_down.png" alt="">
-                        </button>
-                    </div>
-                    <div class="info-card-text-phone">
-                        <div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                            sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                            natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                            ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                            accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
-                        </div>
-                    </div>
-                </div>
+    <div id="carousel-pager" class="carousel slide " data-ride="carousel" data-interval="500000000">
+        <!-- Carousel items -->
+        <div class="carousel-inner vertical">
+            <div class="active item">
+                <img src="http://placehold.it/600/f44336/000000&amp;text=First+Slide" data-target="#carousel-main" data-slide-to="0">
             </div>
-
-            <div class="info-overlay-phone">
-                <img class="w-100" src="images/overlay_old2.png" alt="">
+            <div class="item">
+                <img src="http://placehold.it/600/e91e63/000000&amp;text=Second+Slide" data-target="#carousel-main" data-slide-to="1">
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/600/9c27b0/000000&amp;text=Third+Slide" data-target="#carousel-main" data-slide-to="2">
             </div>
         </div>
-
-        <div id="card-section-two">            
-            <div id="card2" class="info-card-phone">
-                <div class="info-card-content">
-                    <div class="info-card-header">
-                        <h1>ZÁKLADNÍ VÝZKUM</h1>
-                        <button class="expand-card" onclick="slideDownCard2Phone()">
-                            <img src="images/expand_down.png" alt="">
-                        </button>
-                    </div>
-                    <div class="info-card-text-phone">
-                        <div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                            sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                            natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                            ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                            accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-overlay-phone">
-                <img class="w-100" src="images/overlay_old2.png" alt="">
-            </div>
-        </div>
-
-        <div id="card-section-three">            
-            <div id="card3" class="info-card-phone">
-                <div class="info-card-content">
-                    <div class="info-card-header">
-                        <h1>VĚDA V ČR</h1>
-                        <button class="expand-card" onclick="slideDownCard3Phone()">
-                            <img src="images/expand_down.png" alt="">
-                        </button>
-                    </div>
-                    <div class="info-card-text-phone">
-                        <div>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                            sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                            natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                            ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                            accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-overlay-phone">
-                <img class="w-100" src="images/overlay_old2.png" alt="">
-            </div>
-        </div>
-    </div>
-
-    
-    
-
-    <div class="indicators-section">
-        <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
-            <div class="indicator-num loading-effect" data-value="20 000">20 000</div>
-            <div class="indicator-text">Podpořených<br>myšlenek</div>
-        </div>
-
-        <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
-            <div class="indicator-num loading-effect" data-value="99%">99%</div>
-            <div class="indicator-text">Peněz pro univarzity<br>a AV ČR</div>
-        </div>
-
-        <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
-            <div class="indicator-num loading-effect" data-value="15%">15%</div>
-            <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
-        </div>
-
-        <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
-            <div class="indicator-num loading-effect" data-value="38%">38%</div>
-            <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
-        </div>
+        
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-pager" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-pager" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
     
   </body>
 
-  <!-- Bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <!-- JQuery js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Bootstrap js -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+  <script src="js/bootstrap_3-4-1.js"></script>
+    <!-- <script src="js/bs_5.3.3/bootstrap.js"></script>
+    <script src="js/bs_5.3.3/bootstrap.bundle.js"></script>
+    <script src="js/bs_5.3.3/bootstrap.esm.js"></script> -->
+
+
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <!-- <script src="js/npm.js"></script>   -->
     <!-- Hammer -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script> -->
+    <!-- vertical carousel -->
+    <!-- <script src="js/multi-carousel.min.js"></script> -->
   <!-- My js -->
-  <script src="js/carousel_box.js"></script>
+  <!-- <script src="js/carousel_box.js"></script>
   <script src="js/filtering.js"></script>
   <script src="js/swipe_detect.js"></script>
   <script src="js/expandable.js"></script>
   <script src="js/info_section.js"></script>
   <script src="js/intro-transition.js"></script>
   <script src="js/loading_effect.js"></script>
-  <script src="js/info_section_phone.js"></script>
+  <script src="js/info_section_phone.js"></script> -->
+
+  <script src="js/vertical.js"></script>
   
 </html>
