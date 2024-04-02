@@ -7,14 +7,14 @@
     }
 } */
 
-.vertical .card{
-    background-color: rgba(0, 0, 0, 0.8);
+.vertical .pager-card{
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .vertical .card-img{
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .vertical > .carousel-inner .carousel-item.active,
@@ -30,12 +30,12 @@
     
     .vertical > .carousel-inner .carousel-item-end.active,
     .vertical > .carousel-inner .carousel-item-next {
-      transform: translateY(25%);
+      transform: translateY(20%);
     }
     
     .vertical > .carousel-inner .carousel-item-start.active, 
     .vertical > .carousel-inner .carousel-item-prev {
-      transform: translateY(-25%);
+      transform: translateY(-20%);
     }
 }
 
@@ -55,11 +55,19 @@
     height: 600px;
   } */
 
+#pagerCarousel {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 
 
 .vertical.carousel {
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* .vertical.carousel .carousel-inner {
@@ -69,17 +77,17 @@
 
 .vertical.carousel .carousel-item {
     overflow: hidden;
-    width: 150px;
+    width: 100px;
 }
 
 .vertical.carousel .carousel-item-next:not(.carousel-item-start),
 .vertical.carousel .active.carousel-item-end {
-    transform: translateY(25%);
+    transform: translateY(20%);
 }
 
 .vertical.carousel .carousel-item-prev:not(.carousel-item-end),
 .vertical.carousel .active.carousel-item-start {
-    transform: translateY(-25%);
+    transform: translateY(-20%);
 }
 
 .vertical.carousel .carousel-indicators {
