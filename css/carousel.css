@@ -8,12 +8,12 @@
     /*transform: translateX(-10px); /* TODO: this is shady */
 }
 
-.carousel-inner {
+#projectCarousel .carousel-inner {
     background-color: var(--blue-bg);
     /* background-color: red; */
 }
 
-#projectCarousel.carousel-control-next, #projectCarousel.carousel-control-prev {
+#projectCarousel .carousel-control-next, #projectCarousel .carousel-control-prev {
     width: 10%;
     padding: 0;
     margin: 0;
