@@ -90,7 +90,7 @@
     <div id="projectCarousel" class="carousel slide carousel-fade">
         <div class="carousel-inner">
 
-            <div class="item-flag carousel-item active tech">
+            <div class="item-flag carousel-item active tech" data-filter-index="0">
                 <img src="images/slide_bgs/slide_bg_sodium.png" class="d-block bg-img" alt="...">
                 <div class="carousel__box">
                     <div class="box-info1">
@@ -142,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="item-flag carousel-item unnat">
+            <div class="item-flag carousel-item unnat" data-filter-index="1">
                 <img src="images/slide_bgs/electric.png" class="d-block bg-img" alt="...">
                 <div class="carousel__box">
                     <div class="box-info1">
@@ -194,7 +194,7 @@
                 </div>
             </div>
 
-            <div class="item-flag carousel-item socio">
+            <div class="item-flag carousel-item socio" data-filter-index="2">
                 <img src="images/slide_bgs/termit1.jpg" class="d-block bg-img" alt="...">
                 <div class="carousel__box">
                     <div class="box-info1">
@@ -246,7 +246,7 @@
                 </div>
             </div>
 
-            <div class="item-flag carousel-item env">
+            <div class="item-flag carousel-item env" data-filter-index="3">
                 <img src="images/slide_bgs/matter_string.png" class="d-block bg-img" alt="...">
                 <div class="carousel__box">
                     <div class="box-info1">
@@ -298,7 +298,7 @@
                 </div>
             </div>
 
-            <div class="item-flag carousel-item bio">
+            <div class="item-flag carousel-item bio" data-filter-index="4">
                 <img src="images/slide_bgs/electric.png" class="d-block bg-img" alt="...">
                 <div class="carousel__box">
                     <div class="box-info1">
@@ -350,7 +350,7 @@
                 </div>
             </div>
 
-            <div class="item-flag carousel-item unnat">
+            <div class="item-flag carousel-item unnat" data-filter-index="5">
                 <img src="images/slide_bgs/energy_balls.png" class="d-block bg-img" alt="...">
                 <div class="carousel__box">
                     <div class="box-info1">
@@ -418,61 +418,68 @@
 
     </div>
 
-    <div id="pagerCarousel" class="carousel slide vertical" data-bs-ride="carousel" data-bs-interval="500000000">
+    <div id="pagerCarousel" class="carousel slide vertical d-none" data-bs-ride="carousel" data-bs-interval="500000000">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0">
+            
+            <div class="pager-item-flag carousel-item active tech">
+                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
                     <div class="card-img">
-                        <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                        <img src="images/slide_minis/mini1.png" class="img-fluid">
                     </div>
                     <div class="card-img-overlay">Slide 1</div>
                 </button>
             </div>
-            <div class="carousel-item">
-                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1">
+
+            <div class="pager-item-flag carousel-item unnat">
+                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
                     <div class="card-img">
-                        <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
+                        <img src="images/slide_minis/mini2.png" class="img-fluid">
                     </div>
                     <div class="card-img-overlay">Slide 2</div>
                 </button>
             </div>
-            <div class="carousel-item">
-                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2">
+
+            <div class="pager-item-flag carousel-item socio">
+                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
                     <div class="card-img">
-                        <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
+                        <img src="images/slide_minis/mini3.png" class="img-fluid">
                     </div>
                     <div class="card-img-overlay">Slide 3</div>
                 </button>
             </div>
-            <div class="carousel-item">
-                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3">
+
+            <div class="pager-item-flag carousel-item env">
+                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-targer="3">
                     <div class="card-img">
-                        <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">
+                        <img src="images/slide_minis/mini4.png" class="img-fluid">
                     </div>
                     <div class="card-img-overlay">Slide 4</div>
                 </button>
             </div>
-            <div class="carousel-item">
-                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4">
+
+            <div class="pager-item-flag carousel-item bio">
+                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
                     <div class="card-img">
-                        <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">
+                        <img src="images/slide_minis/mini5.png" class="img-fluid">
                     </div>
                     <div class="card-img-overlay">Slide 5</div>
                 </button>
             </div>
-            <div class="carousel-item">
-                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5">
+
+            <div class="pager-item-flag carousel-item unnat">
+                <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" data-filter-target="5">
                     <div class="card-img">
-                        <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
+                        <img src="images/slide_minis/mini6.png" class="img-fluid">
                     </div>
                     <div class="card-img-overlay">Slide 6</div>
                 </button>
             </div>
+
         </div>
-        <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="prev">
+        <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarouselCopy" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </a>
-        <a class="carousel-control-next bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="next">
+        <a class="carousel-control-next bg-transparent w-aut" href="#pagerCarouselCopy" role="button" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
     </div>
@@ -626,25 +633,25 @@
 
     <div class="indicators-section">
         <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
+            <img src="images/indicators/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
             <div class="indicator-num loading-effect" data-value="20 000">20 000</div>
             <div class="indicator-text">Podpořených<br>myšlenek</div>
         </div>
 
         <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
+            <img src="images/indicators/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
             <div class="indicator-num loading-effect" data-value="99%">99%</div>
             <div class="indicator-text">Peněz pro univarzity<br>a AV ČR</div>
         </div>
 
         <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
+            <img src="images/indicators/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
             <div class="indicator-num loading-effect" data-value="15%">15%</div>
             <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
         </div>
 
         <div class="indicator">
-            <img src="images/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
+            <img src="images/indicators/indicator1.svg" alt="Indicator SVG" class="indicator-svg">
             <div class="indicator-num loading-effect" data-value="38%">38%</div>
             <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
         </div>

@@ -11,6 +11,9 @@ pcFilterButtons.forEach((button, index) => {
 
 const filterLabel = document.querySelector('.carousel__filter-label');
 
+// pager carousel
+const pagerCarousel = document.getElementById('pagerCarousel');
+
 
 // --------------------NEW CODE------------------
 
@@ -30,8 +33,10 @@ function filterCarousel(category) {
         console.log("showing all slides")
         showAllSlides();
         currentCategory = 'all';
+        generatePagerCarouselPlain();
         return;
     }
+
     showAllSlides();
     currentCategory = category; 
     console.log("Filtering with: " + currentCategory);
@@ -43,12 +48,13 @@ function filterCarousel(category) {
     var index = Array.from(firstGoodSlide.parentElement.children).indexOf(firstGoodSlide);
     $('#projectCarousel').carousel(index);
 
+    // MAIN CAROUSEL
     setTimeout(function() {
         // find all items with class item-flag
         var items = document.querySelectorAll('.item-flag');
 
         // does active slide have the category?
-        var active = document.querySelector('.carousel-item.active');
+        var active = projectCarousel.querySelector('.carousel-item.active');
         var activeHasCategory = active.classList.contains(category);
 
         // loop through each item
@@ -72,9 +78,10 @@ function filterCarousel(category) {
             var active = document.querySelector('.carousel-item');
             active.classList.add('active');
         }
+
+        generatePagerCarousel(category);
     }
     , 600);
-    
 }
 
 function showAllSlides() {
@@ -83,6 +90,11 @@ function showAllSlides() {
         items[i].classList.remove('d-none');
         items[i].classList.add('carousel-item');
     }
+    // var pager_items = document.querySelectorAll('.pager-item-flag');
+    // for (var i = 0; i < pager_items.length; i++) {
+    //     pager_items[i].classList.remove('d-none');
+    //     pager_items[i].classList.add('pager-item-flag');
+    // }
 }
 
 // -------- SELECTING A NEW FILTER (OLD CODE) --------
