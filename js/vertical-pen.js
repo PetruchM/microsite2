@@ -178,7 +178,7 @@ function synchronizePagerWithProjectCarousel() {
         }
         // Get data-filter-target value from pager item
         const filterTarget = parseInt(pagerItem.dataset.filterTarget);
-        console.log(filterTarget);
+        // console.log(filterTarget);
 
         // Find matching project carousel item
         const projectCarouselItem = projectCarousel.querySelector(`.carousel-item[data-filter-index="${filterTarget}"]`);
@@ -196,7 +196,7 @@ function synchronizePagerWithProjectCarousel() {
             // Set data-bs-slide-to attribute of pager item
             if (slideIndex !== -1) {
                 pagerItem.setAttribute('data-bs-slide-to', slideIndex);
-                console.log("Setting slide index to " + slideIndex);
+                // console.log("Setting slide index to " + slideIndex);
             }
         }
     }
