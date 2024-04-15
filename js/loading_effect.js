@@ -21,6 +21,10 @@ const observer = new IntersectionObserver((entries) => {
 
             const interval = setInterval(() => {
                 currentValue += targetValueNum / maxIterations;
+                if (currentValue > targetValueNum)
+                {
+                    currentValue = targetValueNum;
+                }
                 const formattedValue = currentValue.toFixed(0).padStart(targetValueStr.length - 1, "0");
                 
                 // init a new string newValue with the same length as targetValueStr
@@ -47,7 +51,7 @@ const observer = new IntersectionObserver((entries) => {
             // observer.unobserve(target);
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.9 });
 
 animationTargets.forEach((target) => {
     observer.observe(target);
