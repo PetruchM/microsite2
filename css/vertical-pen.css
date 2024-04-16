@@ -61,8 +61,8 @@
 
 #pagerCarousel, #pagerCarouselCopy {
     position: absolute;
-    top: 150px;
-    left: 150px;
+    top: 155px;
+    left: 170px;
     z-index: 50;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -138,5 +138,12 @@
     top: unset;
     bottom: 0;
 } */
+
+
+.card-img-overlay {
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+}
 
 
