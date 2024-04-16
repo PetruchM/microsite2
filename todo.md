@@ -1,5 +1,16 @@
 # TODOs and Notes
 
+## 16.4.
+
+- cernobile obrazky
+- popojizdeni na aktivni slide
+- scroll dolu kdyz rozbalis
+- nova vlnka na druhou stranu
+- navrh paticky dolu
+- jednoznakovky na konci radku NE
+
+- high DPI screens
+
 ## 6.3.
 
 - secondary carousel jako sloupecek vlevo

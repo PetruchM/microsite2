@@ -16,7 +16,7 @@ const observer = new IntersectionObserver((entries) => {
             const targetValueNum = parseInt(target_parsed, 10);
 
             const maxIterations = 20; // Total number of iterations
-            const durationPerIteration = 30; // Duration of one iteration in milliseconds
+            const durationPerIteration = 50; // Duration of one iteration in milliseconds
             let currentValue = 0;
 
             const interval = setInterval(() => {
