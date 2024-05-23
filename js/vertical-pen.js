@@ -110,61 +110,7 @@ function generatePagerCarouselPlain()
 {
     console.log("Generating plain pager carousel")
 
-    generatePagerCarousel('all');
-
-    // // Remove pagerCopy if it already exists in the HTML
-    // if (pagerCopy) {
-    //     pagerCopy.remove();
-    // }
-
-    // pagerCopy = pagerCarouselTemplate.cloneNode(true);
-    // pagerCopy.setAttribute('id', 'pagerCarouselCopy');
-    // pagerCopy.classList.remove('d-none');
-    // copyNum += 1;
-    // pagerCopy.classList.add(copyNum.toString());
-
-    // // Append pagerCopy right after pagerCarouselTemplate in the body
-    // pagerCarouselTemplate.insertAdjacentElement('afterend', pagerCopy);
-
-    // synchronizePagerWithProjectCarousel();
-
-    // var generated_items = pagerCopy.querySelectorAll('.carousel-item');
-
-    // for (var i=0; i<generated_items.length; i++) {
-    //     el = generated_items[i]
-
-    //     if (el.children[0].classList.contains('d-none')) {
-    //         el.remove();
-    //     }
-
-    //     const minPerSlide = 5
-    //     var next = el.nextElementSibling
-    //     while (next && !next.classList.contains('carousel-item')) {
-    //         next = next.nextElementSibling;
-    //     }
-
-    //     var spawnedCounter = 0;
-    //     var spawnedEnough = false;
-    //     while (!spawnedEnough) {
-    //         if (!next) {
-    //             // wrap carousel by using first child
-    //             next = generated_items[0]
-    //         }
-    //         let cloneChild = next.cloneNode(true)
-
-    //         if (cloneChild.children[0].classList.contains('d-none')) {
-    //             next = next.nextElementSibling
-    //             continue;
-    //         }
-
-    //         el.appendChild(cloneChild.children[0])
-    //         next = next.nextElementSibling
-    //         spawnedCounter += 1;
-    //         if (spawnedCounter >= minPerSlide - 1) {
-    //             spawnedEnough = true;
-    //         }
-    //     }
-    // }    
+    generatePagerCarousel('all'); 
 }
 
 function synchronizePagerWithProjectCarousel() {
@@ -200,30 +146,4 @@ function synchronizePagerWithProjectCarousel() {
             }
         }
     }
-
-    // pagerItems.forEach(pagerItem => {
-    //     // Get data-filter-target value from pager item
-    //     const filterTarget = parseInt(pagerItem.dataset.filterTarget);
-    //     console.log(filterTarget);
-
-    //     // Find matching project carousel item
-    //     const projectCarouselItem = projectCarousel.querySelector(`.carousel-item[data-filter-index="${filterTarget}"]`);
-
-    //     if (projectCarouselItem) {
-    //         // Get the index of the matched project carousel item among displayed slides
-    //         const displayedSlides = projectCarousel.querySelectorAll('.carousel-item');
-    //         let slideIndex = -1;
-    //         displayedSlides.forEach((slide, index) => {
-    //             if (slide === projectCarouselItem) {
-    //                 slideIndex = index;
-    //             }
-    //         });
-
-    //         // Set data-bs-slide-to attribute of pager item
-    //         if (slideIndex !== -1) {
-    //             pagerItem.setAttribute('data-bs-slide-to', slideIndex);
-    //             console.log("Setting slide index to " + slideIndex);
-    //         }
-    //     }
-    // });
 }

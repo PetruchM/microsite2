@@ -1,50 +1,25 @@
-# TODOs and Notes
+# TODOs 
 
-## 16.4.
+## Steps to completion
 
-- cernobile obrazky
-- popojizdeni na aktivni slide
-- scroll dolu kdyz rozbalis
-- nova vlnka na druhou stranu
-- navrh paticky dolu
-- jednoznakovky na konci radku NE
+- pager carousel
+spravne upravit pro jednotlive sceen sizes (i vzhledem k obsahu main carouselu)
+schovat ho na uzzsich obrazovkach
 
-- high DPI screens
+- upravit web, aby fungoval i na high dpi displays - laptopy maji casto takovy ten windows zoom
 
-## 6.3.
+- upravit pro ruzne screen sizes
 
-- secondary carousel jako sloupecek vlevo
-    na mobilu NEBUDE
-- podklad na indikatory
-- podklad na footer dole
-- sirsi modre karticky na mobilu (stejna sirka jako zluty box?)
-- vyladit veci na ruzne obrazovky
-- postranni sipky carouselu redesign?
-- pozastavovani carouselu
+- přidat obsah webu (a pak vyladit velikosti karet apod.)
 
-## 21.02. 
+- zjistit požadavky na sekci indikátorů a dál a dodělat
 
-- do léta
-- tuček 
-- dosadit obrazky 3:1 a 1:1
-- nacitaci cislo pro indikatory 
-https://codepen.io/Hyperplexed/full/oNJrgdy
-https://stackoverflow.com/questions/2540277/jquery-counter-to-count-up-to-a-target-number/2540673#2540673
-https://codepen.io/Vladim-r-Hok-/pen/qBvGWLg
-- pozastavit carousel, přehrát carousel
+- handle zoom in browser
 
-## notes
+- pristupnost pro nevidome (jsou nejake GACR guidelines na to)
 
-- vyresit ze je body sirsi nez mobil
-- scroll aby seděly karty při zvětšování, zmenšování
-- karty na mobilu pod sebou
-- on hover animace u tlačítek, indikátorů?
+## Nice to haves
 
-## inspirace
+- optimalizovat obrazky (velikost webu, loading time)
 
-- <https://alvarotrigo.com/blog/css-page-transitions/>
-
-https://codepen.io/alvarotrigo/pen/mdpYaBB
-https://codepen.io/alvarotrigo/pen/wvpbRmE
-https://codepen.io/alvarotrigo/pen/XWVwoEb
-
+- jednodussi edit a vyvtareni novych slidu (nacitat data ze souboru? python script? ...?) = zvladne to i neprogramator
