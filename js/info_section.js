@@ -12,7 +12,7 @@ function hideAllCards() {
 
     cards.forEach(card => {
         card.classList.remove("slide-down");
-        card.classList.remove("active");
+        card.classList.remove("active");      //"active" atribute is used here just as empty atribute  
     });
 
     var allInfoText = document.getElementsByClassName("info-card-text");
