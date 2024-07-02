@@ -106,6 +106,8 @@
 
 #info-overlay-container img {
     pointer-events: none;
+    animation: scrollImage 18s linear infinite alternate; /* Adjust the duration as needed */
+    animation-play-state: running; /* Initial state: running */
 }
 
 #hide-cards-butt {
