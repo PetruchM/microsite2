@@ -43,11 +43,6 @@ function slideDownCard(cardIndex) {
         oCard.classList.add("slide-down");
     });
 
-    window.scrollBy({
-        top: 500, // Scrolls down by 500px from the current position
-        behavior: 'smooth'
-    });
-    
     // toggle opacity class for all info text
     for (var i = 0; i < allInfoText.length; i++) {
         if (i == cardIndex) {
@@ -57,6 +52,9 @@ function slideDownCard(cardIndex) {
             allInfoText[i].classList.remove("opacity1");
         }
     }
+
+    const targetPosition = card.getBoundingClientRect().top;
+    window.scrollTo(0,targetPosition+500);
 }
 
 function slideDownCard1() {
