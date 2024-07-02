@@ -90,7 +90,7 @@
     pointer-events: none;
     max-height: 300px;
     overflow-y: hidden;
-
+    overflow: hidden;
     transition: all 0.5s ease-in-out;
 }
 
