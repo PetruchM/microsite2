@@ -42,6 +42,12 @@ function slideDownCard(cardIndex) {
     otherCards.forEach(oCard => {
         oCard.classList.add("slide-down");
     });
+
+    window.scrollBy({
+        top: 500, // Scrolls down by 500px from the current position
+        behavior: 'smooth'
+    });
+    
     // toggle opacity class for all info text
     for (var i = 0; i < allInfoText.length; i++) {
         if (i == cardIndex) {
