@@ -13,11 +13,11 @@
 
     transition: all 0.5s ease-in-out;
     overflow-y: hidden;
-    max-height: 300px;
+    max-height: 15vw;
 }
 
 #info-cards-container.expand {
-    max-height: 1000px;
+    max-height: 2000px;
 }
 
 .info-card {
@@ -67,7 +67,7 @@
 }
 
 #card2 {
-    margin-top: 50px;
+    margin-top: 5vw;
 }
 
 .info-card-text {
@@ -81,7 +81,7 @@
 
 #info-overlay {
     position: absolute;
-    top: 90px;
+    top: 10vw;
     width: 100%;
     pointer-events: none;
     max-height: 300px;
