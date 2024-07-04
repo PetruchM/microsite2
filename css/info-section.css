@@ -22,14 +22,10 @@
 
 .info-card {
     width: 30%;
-    max-width: 400px;
     min-width: 300px;
-    /* height: 800px; */
     background-color: var(--blue-card);
     position: relative;
-
     transition: all 0.5s ease-in-out;
-    max-height: 700px;
 }
 
 #card1.slide-down, #card3.slide-down {
