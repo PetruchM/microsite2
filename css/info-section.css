@@ -89,7 +89,6 @@
     width: 100%;
     pointer-events: none;
     max-height: 300px;
-    overflow-y: hidden;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 }
@@ -106,7 +105,7 @@
 
 #info-overlay-container img {
     pointer-events: none;
-    animation: scrollImage 18s linear infinite alternate; /* Adjust the duration as needed */
+    animation: scrollImage 90s linear infinite alternate; /* Adjust the duration as needed */
     animation-play-state: running; /* Initial state: running */
 }
 
