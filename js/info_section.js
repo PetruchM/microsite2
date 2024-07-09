@@ -52,9 +52,12 @@ function slideDownCard(cardIndex) {
             allInfoText[i].classList.remove("opacity1");
         }
     }
-
-    const targetPosition = card.getBoundingClientRect().top;
-    window.scrollTo(0,targetPosition+500);
+    window.scrollBy({
+        top: 540,
+        behavior: "smooth"
+    })
+    //const targetPosition = card.getBoundingClientRect().top;
+    //window.scrollTo(0,targetPosition+500);
 }
 
 function slideDownCard1() {
