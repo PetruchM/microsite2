@@ -17,7 +17,7 @@
 }
 
 #info-cards-container.expand {
-    max-height: 2000px;
+    max-height: 80vw;
 }
 
 .info-card {
