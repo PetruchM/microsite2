@@ -25,13 +25,19 @@ function hideAllCards() {
 function slideDownCard(cardIndex) {
     var card = cards[cardIndex]
     var otherCards = cards.filter((c, index) => index != cardIndex)
-    if (card.classList.contains("active")) {
-        hideAllCards();
-        return;
-    }
-    hideAllCards();
-
     var overlay = document.getElementById("info-overlay");
+    if (overlay.classList.contains("slide-down")) {
+        if (card.classList.contains("active")) {
+            hideAllCards();
+            return;
+        }
+        hideAllCards();
+    }else{
+        window.scrollBy({
+            top: 540,
+            behavior: "smooth"
+        })
+    }
     overlay.classList.add("slide-down");
 
     var infoCardsHolder = document.getElementById("info-cards-container");
@@ -52,10 +58,6 @@ function slideDownCard(cardIndex) {
             allInfoText[i].classList.remove("opacity1");
         }
     }
-    window.scrollBy({
-        top: 540,
-        behavior: "smooth"
-    })
     //const targetPosition = card.getBoundingClientRect().top;
     //window.scrollTo(0,targetPosition+500);
 }
