@@ -2,9 +2,6 @@
 
 ## Steps to completion
 
-- udelat si vlastni repo, nastavit mu github pages pro testovani
-(potencialne me tam pridat jako collaboratora na zacatek)
-
 - pager carousel
 spravne upravit pro jednotlive sceen sizes (i vzhledem k obsahu main carouselu)
 schovat ho na uzzsich obrazovkach
