@@ -36,6 +36,7 @@
 }
 
 .info-card-header {
+    margin: 1vh;
     display: flex;
     align-items: left center;
     justify-content: space-between;
@@ -62,7 +63,7 @@
 }
 
 .info-card-content h1 {
-    font-size: 1.2rem;
+    font-size: 2.5vh;
     font-weight: 700;
 }
 
@@ -71,11 +72,12 @@
 }
 
 .info-card-text {
-    margin: 10px;
+    margin: 1vh;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     height: 100%;
     overflow-y: auto;
+    font-size: 2vh;
 }
 
 
