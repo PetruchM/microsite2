@@ -17,7 +17,7 @@
 }
 
 #info-cards-container.expand {
-    height: 100vh;
+    height: 90vh;
 }
 
 .info-card {
@@ -51,7 +51,7 @@
 }
 
 .expand-card img {
-    width: 40px;
+    width: 3vw;
     aspect-ratio: 1/1;
     transform: translateY(-25%);
 }
