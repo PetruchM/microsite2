@@ -13,11 +13,11 @@
 
     transition: all 0.5s ease-in-out;
     overflow-y: hidden;
-    max-height: 15vw;
+    height: 25vh;
 }
 
 #info-cards-container.expand {
-    max-height: 80vw;
+    height: 100vh;
 }
 
 .info-card {
@@ -29,10 +29,10 @@
 }
 
 #card1.slide-down, #card3.slide-down {
-    margin-top: 600px;
+    margin-top: 60vh;
 }
 #card2.slide-down {
-    margin-top: 650px;
+    margin-top: 65vh;
 }
 
 .info-card-header {
@@ -67,7 +67,7 @@
 }
 
 #card2 {
-    margin-top: 5vw;
+    margin-top: 5vh;
 }
 
 .info-card-text {
@@ -81,7 +81,7 @@
 
 #info-overlay {
     position: absolute;
-    top: 10vw;
+    top: 12vh;
     width: 100%;
     pointer-events: none;
     max-height: 300px;
@@ -91,7 +91,7 @@
 
 #info-overlay.slide-down {
     position: absolute;
-    top: 650px;
+    top: 75vh;
     max-height: 500px;
 }
 
