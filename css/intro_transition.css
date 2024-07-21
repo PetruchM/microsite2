@@ -55,7 +55,7 @@
 .intro-header {
     width: 100%;
     max-width: 100vw;
-    height: 68px;
+    height: 10vh;
     margin: 0px 0px;
     padding: 0px 0px;
     z-index: 20;
@@ -79,15 +79,15 @@
 
 .intro-logo {
     object-fit: contain;
-    width: 140px;
+    height: 7vh;
     z-index: 20;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin-left: 3vw;
+    margin-top: 1.5vh;
 }
 
 .intro-column {
-    top: 250px;
-    right: 25vw;
+    top: 35vh;
+    right: 10vw;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@
 .intro-column h1 {
     color: white;
     font-weight: 700;
-    font-size: 2.2rem;
+    font-size: 5vh;
 }
 
 .intro-image {
@@ -109,19 +109,20 @@
     z-index: 15;
     position: absolute;
     top: 0px;
-    right: 60wv;
+    right: 60vw;
     color: white;
     /* background-color: white; */
     object-fit: contain;
 }
 
 .intro-button2 {
-    border-radius: 25px;
+    border-radius: 2.5vh;
     background-color: var(--yellow);
     color: var(--blue-bg);
-    width: 270px;
-    height: 60px;
-    font-size: 1.6rem;
+    width: 20vw;
+    min-width: 100px;
+    height: 8vh;
+    font-size: 3.6vh;
     font-weight: 700;
     border-color: var(--yellow);
     cursor: pointer;
@@ -175,8 +176,8 @@
 
 
 
-
-@media screen and (max-width: 1850px) and (min-width: 1451px) {
+/*useless*/
+/* @media screen and (max-width: 1850px) and (min-width: 1451px) {
     .intro-column {
         right: 15vw;
     }
@@ -192,11 +193,7 @@
     .intro-column {
         right: 4vw;
     }
-
-    .intro-image {
-        transform: translateX(-35%);
-    }
-}
+} */
 
 
 @media screen and (max-width: 768px) {
