@@ -1,7 +1,5 @@
 # TODOs 
 
-## Steps to completion
-
 - pager carousel
 spravne upravit pro jednotlive sceen sizes (i vzhledem k obsahu main carouselu)
 schovat ho na uzzsich obrazovkach
@@ -10,11 +8,11 @@ schovat ho na uzzsich obrazovkach
 
 - upravit pro ruzne screen sizes
 
+## Steps to completion
+
 - přidat obsah webu (a pak vyladit velikosti karet apod.)
 
 - zjistit požadavky na sekci indikátorů a dál a dodělat
-
-- handle zoom in browser
 
 - pristupnost pro nevidome (jsou nejake GACR guidelines na to)
 
