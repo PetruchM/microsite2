@@ -146,4 +146,8 @@
     font-size: 4vh;
 }
 
-
+@media (max-width: 965px){
+    #verticalCarousel{
+        display: none;
+    }
+}
