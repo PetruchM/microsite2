@@ -99,23 +99,24 @@ function showAllSlides() {
 
 // -------- SELECTING A NEW FILTER (OLD CODE) --------
 
-function classToName(filterClass) {
-    switch (filterClass) {
-        case 'tech':
-            return 'TECHNICKÉ VĚDY';
-        case 'unnat':
-            return 'VĚDY O NEŽIVÉ PŘÍRODĚ';
-        case 'bio':
-            return 'LÉKAŘSKÉ A BIOLOGICKÉ VĚDY';
-        case 'socio':
-            return 'SPOLEČENSKÉ A HUMANITNÍ VĚDY';
-        case 'env':
-            return 'ZEMĚDĚLSKÉ A BIOLOGICKO-<br>ENVIROMENTÁLNÍ VĚDY';
-    }
-}
+//useless
+// function classToName(filterClass) {
+//     switch (filterClass) {
+//         case 'tech':
+//             return 'TECHNICKÉ VĚDY';
+//         case 'unnat':
+//             return 'VĚDY O NEŽIVÉ PŘÍRODĚ';
+//         case 'bio':
+//             return 'LÉKAŘSKÉ A BIOLOGICKÉ VĚDY';
+//         case 'socio':
+//             return 'SPOLEČENSKÉ A HUMANITNÍ VĚDY';
+//         case 'env':
+//             return 'ZEMĚDĚLSKÉ A BIOLOGICKO ENVIROMENTÁLNÍ VĚDY';
+//     }
+// }
 
 function activateFilterLabel(filterClass) {
-    filterLabel.innerHTML = classToName(filterClass);
+    // filterLabel.innerHTML = classToName(filterClass);
     filterLabel.classList.add('label-active');
 }
 
