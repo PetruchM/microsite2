@@ -8,7 +8,7 @@
 } */
 
 .card {
-    height: 100px;
+    height: 10vh;
 }
 
 .vertical .pager-card{
@@ -16,8 +16,8 @@
 }
 
 .vertical .card-img{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -61,8 +61,8 @@
 
 #pagerCarousel, #pagerCarouselCopy {
     position: absolute;
-    top: 155px;
-    left: 170px;
+    top: 15vh;
+    left: 7vw;
     z-index: 50;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -70,7 +70,7 @@
 
 
 .vertical.carousel {
-    width: 100px;
+    width: 10vh;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -81,7 +81,7 @@
 
 .vertical.carousel .carousel-item {
     overflow: hidden;
-    width: 100px;
+    width: 10vh;
 }
 
 .vertical.carousel .carousel-item-next:not(.carousel-item-start),
@@ -99,7 +99,7 @@
     left: unset;
 
     margin-left: unset !important;
-    margin-right: 1rem;
+    margin-right: 1vh;
 
     flex-direction: column;
 }
@@ -143,7 +143,7 @@
 .card-img-overlay {
     color: white;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 4vh;
 }
 
 
