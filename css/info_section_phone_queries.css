@@ -23,4 +23,8 @@
     #card2 {
         margin-top: 0px;
     }
+
+    .expand-card img {
+        width: 5vh;
+    }
 }
