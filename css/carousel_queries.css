@@ -20,13 +20,16 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 965px) {
     #carousel-overlay {
         z-index: 100;
         position: absolute;
         top: 84%;
     }
 
+    #carousel-overlay img {
+        width: 700%;
+    }
     .bg-img {
         max-width: 100%;
     }
