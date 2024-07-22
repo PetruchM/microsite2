@@ -9,12 +9,12 @@
     .box-info1, .box-info2, .box-info3 {
         position: absolute;
         height: 60%;
-        width: 80vw;
-        max-width: 500px;
+        width: 50vw;
+        /* max-width: 500px; */
         margin: auto;
         margin-bottom: 15px;
         top: 82%;
-        left: 22vw;
+        left: 25vw;
         transition: all 0.5s ease-in-out;
     }
 
@@ -104,6 +104,7 @@
 
 @media (max-width: 800px) {
     .box-info1, .box-info2, .box-info3 {
+        width: 80vw;
         max-width: 500px;
         margin: auto;
         top: 81%;
