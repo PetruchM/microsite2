@@ -100,6 +100,10 @@
     .slide_butt3 {
         display: block;
     }
+
+    .expand-right-img {
+        width: 4vw;
+      }
 }
 
 @media (max-width: 800px) {
@@ -111,6 +115,10 @@
         left: 12vw;
         transition: all 0.5s ease-in-out;
     }
+
+    .expand-right-img {
+        width: 5vh;
+      }
 
     .info_active1, .info_active2, .info_ready2 {
         height: 68%;
