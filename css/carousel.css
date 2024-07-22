@@ -39,6 +39,7 @@
 }
 
 #carousel-overlay img {
+    width: 250%;
     animation: scrollImage 90s linear infinite alternate; /* Adjust the duration as needed */
     animation-play-state: running; /* Initial state: running */
 }
