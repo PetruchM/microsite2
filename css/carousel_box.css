@@ -139,7 +139,7 @@
   /* font-size: 1vh;  is decided on lower level.author text and .project motto*/
   /* font-weight: 400; */
   margin: 0;
-  padding: 0vh 0.7vw 15vh 1.5vw;
+  padding: 0vh 0.7vw 10vh 1.5vw;
   color: var(--blue-bg);
   max-height: 85%;
   position: relative;
