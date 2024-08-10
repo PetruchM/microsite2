@@ -24,6 +24,7 @@
     margin: 0 auto; /* Center the image horizontally */
     height: calc(100vh - 100px);
     object-fit: cover;
+    min-height: 612px;
 }
 
 
