@@ -28,7 +28,7 @@
 
 .carousel__filter-container {
     width: 100vw;
-    height: 10vh;
+    height: 7vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,7 +38,7 @@
 }
 
 .carousel__filter-button {
-    margin: 1vw;
+    margin: 0.2vw;
     overflow: hidden;
     /* border-radius: 50%; */
     border-radius: 50px;
@@ -63,8 +63,8 @@
 }
 
 .carousel__filter-button img {
-    width: 6vh;
-    height: 6vh;
+    width: 4vh;
+    height: 4vh;
     /* padding-right: 10px; */
     margin: 0;
 }
@@ -72,7 +72,7 @@
 .carousel__filter-button-detail {
     max-width: 0;
     overflow: hidden;
-    font-size: 2vh;
+    font-size: 1.4vh;
     font-weight: bold;
     text-align: left;
     visibility: hidden;

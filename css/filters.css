@@ -1,7 +1,8 @@
 .filter-header {
     width: 100%;
     max-width: 100vw; /* Limit the width to the viewport width */
-    background-color: var(--blue-bg);
+    /* background-color: var(--blue-bg); */
+    background-image: url('../images/pozadí.jpg');
     z-index: 100;
     position: absolute;
     top: 0;
