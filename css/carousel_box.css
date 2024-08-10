@@ -119,7 +119,7 @@
   padding-right: 15%;
 }
 .box-info1-content h1 {
-  font-size: 4vh;
+  font-size: 2.5vh;
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -147,7 +147,7 @@
 
 .project-motto-text {
   font-weight: 400;
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 
 .author-picture {
@@ -165,7 +165,7 @@
 }
 
 .author-text h3 {
-  font-size: 2.3vh;
+  font-size: 2vh;
   font-weight: 700;
   margin: 0;
   padding-bottom: 1vh;
@@ -173,7 +173,7 @@
 
 .author-text p{
   font-weight: 400;
-  font-size: 2vh;
+  font-size: 1.8vh;
 }
 
 .author-img-div {
@@ -183,7 +183,7 @@
 /* box 3 */
 
 .project-info-text {
-  font-size: 2vh;
+  font-size: 1.7vh;
   font-weight: 400;
   margin: 0;
   color: var(--blue-bg);
