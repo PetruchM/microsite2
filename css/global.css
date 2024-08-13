@@ -24,6 +24,19 @@ body {
     box-sizing: border-box;
 }
 
+footer{
+    height: 20vh;
+    text-align: center;
+    align-items: center;
+}
+
+footer p{
+    margin: 3% 25% 3% 25%;
+    color: #ffffff;
+    font-size: 1.5vh;
+    width: 50%;
+}
+
 * {
     font-family: "Montserrat", sans-serif;
 }
