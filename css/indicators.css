@@ -3,7 +3,7 @@
     /* background-color: yellowgreen; */
     /* margin: 0 auto; */
     width: 100%;
-    height: 250vh;
+    height: 260vh;
     background-image: url('../images/pozadí.jpg');
 }
 
@@ -11,7 +11,7 @@
     position: relative;
     background-color: var(--blue-bg);
     left: 14vw;
-    height: 250vh;
+    height: 260vh;
     width: 24vw;
     display: flex;
     flex-wrap: wrap;
@@ -21,14 +21,13 @@
 }
 
 .indicator {
-    height: 150px;
-    width: 500px;
+    height: 10%;
     color: white;
     /* background-color: black; */
-    margin: 10vh 25px 15px 25px;
-    /*display: flex;
-    text-align: left;
-    box-sizing: border-box; */
+    margin: 5vh 0 5vh 0;
+    /*display: flex;*/
+    text-align: center;
+    /*box-sizing: border-box; */
 }
 
 .indicator p{
@@ -36,41 +35,42 @@
 }
 
 .indicator-svg {
-    width: 100px;
+    width: 30%;
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .indicator-num {
-    font-size: 42px;
+    font-size: 5vh;
     font-weight: bold;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 30px;
+    padding-left: 5%;
 }
 
 .indicator-text {
-    font-size: 20px;
+    font-size: 4vh;
     line-height: 1.2;
     font-weight: 600;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 15px;
+    padding-left: 5%;
 }
 
 .white-line {
     width: 80%; 
     height: 0.2vh; 
     background-color: white; 
-    margin: 20px 0; 
+    margin: 3vh 0 3vh 0; 
 }
 
 .lower-section-logo{
     position: relative;
+    text-align: center;
 }
 
 .lower-section-logo img{
-    width: 80%;
-    
+    width: 70%;
+    margin: 15% 0 5% 0;
 }
