@@ -24,6 +24,10 @@
     height: 18%;
 }
 
+.logo-container{
+    height: 10%;
+}
+
 .indicator {
     height: 10%;
     color: white;
@@ -36,11 +40,23 @@
 }
 
 .single-indicator p{
+    font-size: 2vh;
     position: relative;
-    right: -100%;
+    width: 150%;
+    top: -10%;
+    right: -150%;
     opacity:1;
     color: #fff;
 }
+ .logo-container p{
+    position: relative;
+    font-size: 2vh;
+    width: 150%;
+    top: -80%;
+    right: -150%;
+    opacity:1;
+    color: #fff;
+ }
 
 .indicator-svg {
     width: 30%;
@@ -86,7 +102,7 @@
 .logo-slide_butt{
     position: relative;
     right: -85%;
-    top: -5%;
+    top: -30%;
     transform: translate(50%, -50%);
     color: #fff;
     border: none;
