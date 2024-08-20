@@ -25,6 +25,7 @@ body {
 }
 
 footer{
+    position: relative;
     height: 50vh;
     text-align: center;
     align-items: center;
