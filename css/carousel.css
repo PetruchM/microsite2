@@ -45,22 +45,6 @@
     animation-play-state: running; /* Initial state: running */
 }
 
-.line {
-    stroke-dasharray: 0.5vw;
-    stroke-dashoffset: 0;
-    stroke-width: 0.2vw;
-    animation: dash 5s linear infinite;
-}
-
-@keyframes dash {
-    to {
-        stroke-dashoffset: -10vw;
-    }
-}
-svg {
-    z-index: 10;
-}
-
 @keyframes scrollImage {
     from {
         transform: translateX(0);
