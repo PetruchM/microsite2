@@ -119,3 +119,9 @@
     opacity: 1;
     background-color: rgba(0,0,0,0);
 }
+
+.indicators-expand-butt-img {
+    width: 3vw;
+    aspect-ratio: 1/1;
+    background-color: rgba(0,0,0,0);
+  }
