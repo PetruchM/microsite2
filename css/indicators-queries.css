@@ -1,0 +1,11 @@
+@media (max-width: 1215px) {
+    .indicators-container{
+        left: 25vw;
+        width: 50vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    
+    }
+}
