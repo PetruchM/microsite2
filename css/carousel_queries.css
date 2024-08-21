@@ -1,10 +1,10 @@
 @media (max-width: 1000px) and (hover: none){
-    /* .bg-img {
+    .bg-img {
         max-width: 100%;
         margin: 0 auto; 
         height: calc(100vh - 30px);
         object-fit: cover;
-    } */
+    }
 
     
     /* DISABLE CAROUSEL CONTROLS */
@@ -29,8 +29,8 @@
 
     #carousel-overlay img {
         width: 700%;
-    }
+    }*/
     .bg-img {
         max-width: 100%;
-    } */
+    } 
 }
