@@ -1,4 +1,6 @@
 #projectCarousel {
+    position: relative;
+    z-index: 1;
     overflow-x: hidden;
     width: 100%;
     max-width: 100%; /* Limit the width to the viewport width */
@@ -19,13 +21,13 @@
     margin: 0;
 }
 
-.bg-img {
+/* .bg-img {
     max-width: 100%;
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 auto;
     height: calc(100vh - 100px);
     object-fit: cover;
     min-height: 612px;
-}
+} */
 
 /*
 #carousel-overlay {
