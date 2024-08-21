@@ -7,8 +7,6 @@
         left: 25vw;
         width: 50vw;
         height: 400vh;
-        display: flex;
-        flex-wrap: wrap;
         justify-content:baseline;
         align-items: unset;
     }
@@ -16,15 +14,17 @@
     .single-indicator{
         height: 70vh;
         display: block;
+        text-align: center;
     }
     
     .logo-container{
         height: 50vh;
+        text-align: center;
     }
 
     .indicator {
-        height: 40vh;
-        margin: 0 0 5vh 0;
+        height: 35vh;
+        margin: unset;
     }
 
     .lower-section-logo-img{
@@ -35,17 +35,17 @@
     .single-indicator p, .logo-container p{
         text-align: center;
         width: 80%;
-        top: 0%;
-        right: 0%;
+        top: unset;
+        right: unset;
         margin-right: auto;
         margin-left: auto;
     }
 
      .logo-slide_butt, .indicator-slide_butt {
         position: relative;
-        right: 0;
-        left: 40%;
-        top: 0%;
+        right: unset;
+        left: unset;
+        top: unset;
         text-align: center;
     }
 
