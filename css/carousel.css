@@ -27,23 +27,24 @@
     min-height: 612px;
 }
 
-
+/*
 #carousel-overlay {
     z-index: 100;
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100vw;
-    max-width: 100vw; /* Limit the width to the viewport width */
+    max-width: 100vw;
     top: 90%;
     height: 22%;
 }
 
 #carousel-overlay img {
     width: 250%;
-    animation: scrollImage 90s linear infinite alternate; /* Adjust the duration as needed */
-    animation-play-state: running; /* Initial state: running */
+    animation: scrollImage 90s linear infinite alternate;
+    animation-play-state: running;
 }
+*/
 
 @keyframes scrollImage {
     from {
