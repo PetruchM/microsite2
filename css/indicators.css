@@ -1,21 +1,61 @@
 .indicators-section {
     position: relative;
+    padding-top: 50px;
+    top: -12vh;
     width: 100%;
     height: 260vh;
     background-image: url('../images/pozadí.jpg');
+    z-index: 10;
+
+    -webkit-mask: url(#svg-mask); /* Apply SVG mask to cut the background */
+            mask: url(#svg-mask);
 }
+
+/* division that ensures consistency if the moving line */
+.moving-dashed-line{
+    position: relative;
+    /* background-color: red;
+    opacity: 0.5; */
+    top: 0vh;
+    width: 100%;
+    height: 10vh;
+    min-height: 60px;
+    z-index: 13;
+}
+
+/* This part specifies the moving dashed line. it uses the svg path */
+.line {
+    stroke-dasharray: 5px;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+    animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -100px;
+    }
+}
+svg {
+    width: 100%;
+    height: 100%;
+}
+/* end of line css */
 
 .indicators-container{
     position: relative;
     background-color: var(--blue-bg);
+    top: -10vh;
     left: 14.5vw;
     height: 260vh;
     width: 23vw;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-
+    z-index: 12;
 }
 
 .single-indicator{
@@ -30,34 +70,52 @@
     height: 10%;
     color: white;
     margin: 5vh 0 5vh 0;
-    z-index: 2;
+    z-index: 12;
     text-align: center;
 }
 
-.single-indicator p{
+.single-indicator-p {
     font-size: 2vh;
     position: relative;
     width: 150%;
-    top: -10%;
-    right: -150%;
-    opacity:1;
+    top: -20%;
+    right: -100%;
+    opacity: 0;
+    z-index: 11;
     color: #fff;
+    transition: all 1s ease; /* Add smooth transition for changes */
 }
- .logo-container p{
+
+.single-indicator-p.active {
+    right: -150%;
+    z-index: 11;
+    opacity: 1; /* The text fades out */
+}
+
+ .logo-container-p{
     position: relative;
     font-size: 2vh;
     width: 150%;
     top: -80%;
-    right: -150%;
-    opacity:1;
+    right: -100%;
+    opacity:0;
+    z-index: 11;
     color: #fff;
+    transition: all 1s ease; /* Add smooth transition for changes */
  }
+
+ .logo-container-p.active {
+    right: -150%;
+    z-index: 11;
+    opacity: 1; /* The text fades out */
+}
 
 .indicator-svg {
     width: 30%;
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
+    padding-right: 5%;
 }
 
 .indicator-num {
@@ -65,7 +123,6 @@
     font-weight: bold;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 5%;
 }
 
 .indicator-text {
@@ -74,7 +131,6 @@
     font-weight: 600;
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 5%;
 }
 
 .white-line {
@@ -91,31 +147,29 @@
 
 .lower-section-logo-img{
     width: 70%;
-    margin: 20% 0 10% 0;
+    margin: 10% 0 10% 0;
 }
 
 .logo-slide_butt{
     position: relative;
-    right: -83%;
-    top: -30%;
-    transform: translate(50%, -50%);
+    right: -92%;
+    top: -40%;
     color: #fff;
     border: none;
     cursor: pointer;
-    z-index: 10;
+    z-index: 15;
     opacity: 1;
     background-color: rgba(0,0,0,0);
 }
 
 .indicator-slide_butt{
     position: relative;
-    right: -83%;
-    top: 20%;
-    transform: translate(50%, -50%);
+    right: -92%;
+    top: 5%;
     color: #fff;
     border: none;
     cursor: pointer;
-    z-index: 10;
+    z-index: 15;
     opacity: 1;
     background-color: rgba(0,0,0,0);
 }

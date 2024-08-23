@@ -411,9 +411,9 @@
             </div>
 
             <!-- Carousel bottom overlay image -->
-            <div id="carousel-overlay">
+            <!-- <div id="carousel-overlay">
                 <img src="images/overlay_medium.png" alt="">
-            </div>
+            </div> -->
         </div>
 
         <!-- Carousel control -->
@@ -647,18 +647,35 @@
     </div> -->
 
     <!-- Indicators -->
+    <svg width="0" height="0"> <!--this svg defines the cut border of the bacground. svg itself not visible-->
+        <defs>
+            <mask id="svg-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                <rect x="0" y="0" width="1" height="1" fill="white" /> <!-- Everything white will be visible. Using standard coordinates from 0 to 1 for respponsibility -->
+                <path d="M 0 0.02 Q 0.25 0.04 0.5 0.02 T 1 0.02 L1 -0.001 L0 -0.001 Z" fill="black"/> <!-- What is black will be transparent -->
+            </mask>
+        </defs>
+    </svg>
     <div class="indicators-section">
+        <div class="moving-dashed-line">
+            <!-- viewbox ensures responsibility, the path is specified acording to need -->
+            <svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 20 Q 250 40 500 20 T 1000 20" fill="transparent" stroke="white" class="line"/>
+            </svg>
+            <!-- M 0 40 Q 250 80 500 40 T 1000 40 -->
+            <!-- M 0 0 Q 250 40 500 0 T 1000 0 -->
+        </div>
         <div class="indicators-container">
             <div class="logo-container">
                 <div class="lower-section-logo">
                     <img src="images/gacr_logo.png" class="lower-section-logo-img" alt="">
                 </div>
-                <button class="logo-slide_butt">
+                <button class="logo-slide_butt" onclick="slideDownTextLogo()">
                     <img src="images/nav_buttons/expand_right.png" class="indicators-expand-butt-img" alt="">
                 </button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                    sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                    natoque penatibus et.</p>
+                <p class="logo-container-p">Grantová agentura České republiky přes 30 let podporuje špičkový základní výzkum napříč všemi
+                    obory – od technických přes společenské vědy až po zkoumání lidských bytostí, fauny, flory a
+                    vesmíru. Každý rok poskytuje nejlepším vědcům granty v celkové hodnotě přibližně 4,5 miliardy
+                    korun – to je přes 11 % státního rozpočtu určeného na vědu a výzkum.</p>
             </div>
             <div class="white-line"></div>
 
@@ -668,12 +685,15 @@
                     <div class="indicator-num loading-effect" data-value="20 000">00 000</div>
                     <div class="indicator-text">Podpořených<br>myšlenek</div>
                 </div>
-                <button class="indicator-slide_butt">
+                <button class="indicator-slide_butt" onclick="slideDownText(0)">
                     <img src="images/nav_buttons/expand_right.png" class="indicators-expand-butt-img" alt="">
                 </button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                    sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                    natoque penatibus et.</p>
+                <p class="single-indicator-p">Grantová agentura České republiky doposud podpořila přes 20 tisíc myšlenek a projektů, které
+                    posouvají vědu kupředu a rozšiřují lidské poznání. Na myšlenkách základního výzkumu stojí všechny
+                    moderní vynálezy – bez objevu aerodynamických zákonů by nikdy nevzlétlo letadlo, bez chápání
+                    fungování buňky by neexistovaly léky a bez porozumění elektromagnetickým vlnám by nefungovaly
+                    mobilní telefony. GA ČR dává šanci vědcům z různých oborů proměnit své nápady v realitu, a tím
+                    porozumět a změnit náš svět.</p>
             </div>
             <div class="white-line"></div>
         
@@ -683,12 +703,14 @@
                     <div class="indicator-num loading-effect" data-value="99%">00%</div>
                     <div class="indicator-text">Peněz pro univerzity<br>a AV ČR</div>
                 </div>
-                <button class="indicator-slide_butt">
+                <button class="indicator-slide_butt" onclick="slideDownText(1)">
                     <img src="images/nav_buttons/expand_right.png" class="indicators-expand-butt-img" alt="">
                 </button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                    sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                    natoque penatibus et.</p>
+                <p class="single-indicator-p">Vědci v základním výzkumu jsou poháněni touhou po poznání. S každou novou hypotézou se vydávají
+                    na neprošlapanou cestu, o které netuší, kam je může zavést. Je to často cesta plná neočekávaných
+                    překážek, ale také nečekaných objevů. Útočištěm pro tyto dobrodruhy jsou obvykle univerzity a
+                    ústavy Akademie věd ČR – i proto jsou téměř všechny granty GA ČR udělovány těmto státním
+                    institucím, kde je také jistota, že jsou peníze efektivně využity.</p>
             </div>
             <div class="white-line"></div>
         
@@ -698,12 +720,14 @@
                     <div class="indicator-num loading-effect" data-value="15%">00%</div>
                     <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
                 </div>
-                <button class="indicator-slide_butt">
+                <button class="indicator-slide_butt" onclick="slideDownText(2)">
                     <img src="images/nav_buttons/expand_right.png" class="indicators-expand-butt-img" alt="">
                 </button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                    sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                    natoque penatibus et.</p>
+                <p class="single-indicator-p">Každý rok žádá o podporu několik tisíc myšlenek. Jak poznáme ty nejlepší? Hodnotí je panely složené
+                    z vědců, kteří jsou odborníky na danou oblast. V GA ČR působí přes 500 vědců z různých institucí. Aby
+                    se předešlo střetu zájmů, spolu s dalšími opatřeními, se také pravidelně mění. Vysokou odbornost a
+                    objektivitu hodnocení zajišťují zároveň zahraniční experti, kteří posuzují přibližně polovinu nejlepších
+                    návrhů projektů.</p>
             </div>
             <div class="white-line"></div>
         
@@ -713,12 +737,14 @@
                     <div class="indicator-num loading-effect" data-value="38%">00%</div>
                     <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
                 </div>
-                <button class="indicator-slide_butt">
+                <button class="indicator-slide_butt" onclick="slideDownText(3)">
                     <img src="images/nav_buttons/expand_right.png" class="indicators-expand-butt-img" alt="">
                 </button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                    sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                    natoque penatibus et.</p>
+                <p class="single-indicator-p">Vědci své objevy zveřejňují zpravidla ve vědeckých časopisech. Publikovat objev v kvalitním časopisu
+                    není nic jednoduchého – ty nejprestižnější publikují méně než 10 % zaslaných článků. Texty prochází
+                    náročným recenzním řízením, které hodnotí objev z různých hledisek, jako jsou použité metody nebo
+                    jeho význam. Vědci s podporou GA ČR provádějí ten nejlepší výzkum světové úrovně – nadprůměrně
+                    často ho také publikují ve vysoce kvalitních časopisech.</p>
             </div>
         </div>
     </div> 
@@ -730,9 +756,6 @@
                             ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
                             accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
         </p>
-        <!-- <svg xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 80 Q 95 10 180 80 T 300 80" fill="transparent" stroke="white" stroke-width="2" class="line"/>
-        </svg> -->
     </footer>   
     
   </body>
@@ -753,6 +776,7 @@
   <script src="js/intro-transition.js"></script>
   <script src="js/loading_effect.js"></script>
   <script src="js/info_section_phone.js"></script>
+  <script src="js/indicators.js"></script>
 
   <script src="js/vertical-pen.js"></script>
   
