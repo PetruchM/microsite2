@@ -2,12 +2,20 @@
 const textsNodeArr = document.querySelectorAll(".single-indicator-p");
 const texts = Array.from(textsNodeArr);
 
+
 function slideDownText(textIndex) {
     var text = texts[textIndex]
+    var imgElement = document.getElementById('indicator1');
     if (text.classList.contains("active")) {
         text.classList.remove("active");
+        if (textIndex==0){
+            imgElement.src = 'images/svgs/Lahev 1.svg';
+        }
     } else {
         text.classList.add("active");
+        if (textIndex==0){
+            imgElement.src = 'images/svgs/Lahev 2.svg';
+        }
     }
 }
 
