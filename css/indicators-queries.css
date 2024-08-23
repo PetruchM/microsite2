@@ -32,13 +32,19 @@
         margin: 10vh 0 5vh 0;
     }
 
-    .single-indicator p, .logo-container p{
+    .single-indicator-p, .logo-container-p{
         text-align: center;
         width: 80%;
         top: unset;
         right: unset;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .logo-container-p.active, .single-indicator-p.active {
+        top:20%;
+        right: unset;
+        opacity: 1;
     }
 
      .logo-slide_butt, .indicator-slide_butt {
