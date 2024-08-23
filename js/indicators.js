@@ -19,3 +19,12 @@ function slideDownTextLogo() {
         textLogo.classList.add("active");
     }
 }
+
+function scrollDown(){
+    const scrollAmount = window.innerHeight * 0.80;
+    window.scrollBy({
+        top: scrollAmount,
+        left: 0,
+        behavior: 'smooth'
+    });
+}

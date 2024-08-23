@@ -21,6 +21,7 @@
     height: 10vh;
     min-height: 60px;
     z-index: 13;
+    text-align: center;
 }
 
 /* This part specifies the moving dashed line. it uses the svg path */
@@ -41,6 +42,24 @@ svg {
     height: 100%;
 }
 /* end of line css */
+
+.slideDownButt{
+    position: relative;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    top: -40%;
+    z-index: 15;
+    opacity: 1;
+    background-color: rgba(0,0,0,0);
+}
+
+.slideDownButt img {
+    width: 3vw;
+    transform:rotate(90deg);
+    aspect-ratio: 1/1;
+    background-color: rgba(0,0,0,0);
+  }
 
 .indicators-container{
     position: relative;
