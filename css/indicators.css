@@ -4,7 +4,7 @@
     top: -15vh;
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 2;
+    aspect-ratio: 2 / 3;
     background-image: url('../images/pozadí.jpg');
     z-index: 10;
 
@@ -97,7 +97,7 @@ svg {
 .single-indicator-p {
     font-size: 2vh;
     position: relative;
-    width: 150%;
+    width: 180%;
     top: -20%;
     right: -100%;
     opacity: 0;
@@ -115,7 +115,7 @@ svg {
  .logo-container-p{
     position: relative;
     font-size: 2vh;
-    width: 150%;
+    width: 180%;
     top: -80%;
     right: -100%;
     opacity:0;
@@ -179,7 +179,7 @@ svg {
 .logo-slide_butt{
     position: relative;
     right: -92%;
-    top: -40%;
+    top: -50%;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -191,7 +191,7 @@ svg {
 .indicator-slide_butt{
     position: relative;
     right: -92%;
-    top: 5%;
+    top: 11%;
     color: #fff;
     border: none;
     cursor: pointer;
