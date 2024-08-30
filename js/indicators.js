@@ -1,6 +1,7 @@
 // JS for the lower part of website
 const textsNodeArr = document.querySelectorAll(".single-indicator-p");
 const texts = Array.from(textsNodeArr);
+const textLogo = document.querySelector(".logo-container-p");
 const imgsNodeArr = document.querySelectorAll(".indicator-svg");
 const imgs = Array.from(imgsNodeArr);
 
@@ -26,6 +27,7 @@ function changeImageSourceSmoothly(Element,newSrc) {
 }
 
 function slideDownTextLogo() {
+
     if (textLogo.classList.contains("active")) {
         textLogo.classList.remove("active");
     } else {
