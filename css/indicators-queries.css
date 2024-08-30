@@ -37,11 +37,11 @@
     }
 
     .indicator-num {
-        font-size: 3vh;
+        font-size: 180%;
     }
     
     .indicator-text {
-        font-size: 2vh;
+        font-size: 150%;
         line-height: 1.2;
     }
 
@@ -57,7 +57,7 @@
         right: unset;
         margin-right: auto;
         margin-left: auto;
-        font-size: 1vh;
+        font-size: 70%;
     }
 
     .logo-container-p.active, .single-indicator-p.active {
