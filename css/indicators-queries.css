@@ -1,12 +1,13 @@
 @media (max-width: 1215px) {
     .indicators-section {
-        height: 400vh;
+        height: auto;
+        aspect-ratio: 1 /4;
     }
     
     .indicators-container{
         left: 25vw;
         width: 50vw;
-        height: 400vh;
+        height: 100%;
         justify-content:baseline;
         align-items: unset;
     }

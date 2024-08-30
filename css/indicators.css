@@ -3,7 +3,8 @@
     padding-top: 50px;
     top: -12vh;
     width: 100%;
-    height: 260vh;
+    height: auto;
+    aspect-ratio: 1 / 2;
     background-image: url('../images/pozadí.jpg');
     z-index: 10;
 
@@ -66,7 +67,7 @@ svg {
     background-color: var(--blue-bg);
     top: -10vh;
     left: 14.5vw;
-    height: 260vh;
+    height: 100%;
     width: 23vw;
     padding-top: 10vh;
     padding-bottom: 5vh;
@@ -131,10 +132,16 @@ svg {
 
 .indicator-svg {
     width: 30%;
-    height: auto;
+    height: 300%;
     margin-top: auto;
     margin-bottom: auto;
     padding-right: 5%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.indicator-svg.fade-out {
+    opacity: 0.3;
 }
 
 .indicator-num {
