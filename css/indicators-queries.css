@@ -1,7 +1,8 @@
 @media (max-width: 1215px) {
     .indicators-section {
+        top: -20vh;
         height: auto;
-        aspect-ratio: 1 /4;
+        aspect-ratio: 1 /6;
     }
     
     .indicators-container{
@@ -13,24 +14,40 @@
     }
 
     .single-indicator{
-        height: 70vh;
+        height: 18%;
         display: block;
         text-align: center;
     }
     
     .logo-container{
-        height: 50vh;
+        height: 12%;
         text-align: center;
     }
 
     .indicator {
-        height: 35vh;
+        height: 45%;
         margin: unset;
+    }
+
+    .indicator-svg {
+        height: 40%;
+        padding-right: 5%;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+    }
+
+    .indicator-num {
+        font-size: 3vh;
+    }
+    
+    .indicator-text {
+        font-size: 2vh;
+        line-height: 1.2;
     }
 
     .lower-section-logo-img{
         width: 70%;
-        margin: 10vh 0 5vh 0;
+        margin: 0vh 0 5vh 0;
     }
 
     .single-indicator-p, .logo-container-p{
@@ -40,10 +57,10 @@
         right: unset;
         margin-right: auto;
         margin-left: auto;
+        font-size: 1vh;
     }
 
     .logo-container-p.active, .single-indicator-p.active {
-        top:20%;
         right: unset;
         opacity: 1;
     }
