@@ -1,7 +1,7 @@
 .indicators-section {
     position: relative;
     padding-top: 50px;
-    top: -12vh;
+    top: -15vh;
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 2;
@@ -14,12 +14,12 @@
 
 /* division that ensures consistency if the moving line */
 .moving-dashed-line{
-    position: relative;
+    position: absolute;
     /* background-color: red;
-    opacity: 0.5; */
-    top: -4vh;
+    opacity: 0.4; */
+    top: 0.8%;
     width: 100%;
-    height: 10vh;
+    height: 3%;
     min-height: 60px;
     z-index: 13;
     text-align: center;
@@ -49,7 +49,7 @@ svg {
     color: #fff;
     border: none;
     cursor: pointer;
-    top: -50%;
+    top: -40%;
     z-index: 15;
     opacity: 1;
     background-color: rgba(0,0,0,0);
@@ -65,7 +65,7 @@ svg {
 .indicators-container{
     position: relative;
     background-color: var(--blue-bg);
-    top: -10vh;
+    top: 0vh;
     left: 14.5vw;
     height: 100%;
     width: 23vw;
