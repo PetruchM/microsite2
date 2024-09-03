@@ -60,46 +60,50 @@ svg {
     transform:rotate(90deg);
     aspect-ratio: 1/1;
     background-color: rgba(0,0,0,0);
-  }
+}
 
 .indicators-container{
     position: relative;
     background-color: var(--blue-bg);
     top: 0vh;
     left: 14.5vw;
-    height: 100%;
     width: 23vw;
-    padding-top: 10vh;
+    padding-top: 5vh;
     padding-bottom: 5vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    box-sizing: border-box;
+    /* justify-content: space-around;
+    align-items: flex-start; */
     z-index: 12;
 }
 
 .single-indicator{
-    height: 18%;
-}
-
-.logo-container{
-    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing:content-box;
+    position: relative;
+    justify-content: center;
 }
 
 .indicator {
-    height: 10%;
+    height: 40vh;
     color: white;
+    padding: 0 5% 0 5%;
     margin: 5vh 0 5vh 0;
     z-index: 12;
     text-align: center;
+    flex-grow: 1;
 }
 
 .single-indicator-p {
     font-size: 2vh;
-    position: relative;
+    position: absolute;
+    left: 100%;
     width: 180%;
-    top: -20%;
-    right: -100%;
+    /* top: -20%;
+    right: -100%; */
     opacity: 0;
     z-index: 11;
     color: #fff;
@@ -107,33 +111,15 @@ svg {
 }
 
 .single-indicator-p.active {
-    right: -150%;
-    z-index: 11;
-    opacity: 1; /* The text fades out */
-}
-
- .logo-container-p{
-    position: relative;
-    font-size: 2vh;
-    width: 180%;
-    top: -80%;
-    right: -100%;
-    opacity:0;
-    z-index: 11;
-    color: #fff;
-    transition: all 1s ease; /* Add smooth transition for changes */
- }
-
- .logo-container-p.active {
-    right: -150%;
+    left:150%;
     z-index: 11;
     opacity: 1; /* The text fades out */
 }
 
 .indicator-svg {
     width: 30%;
-    height: 300%;
-    margin-top: auto;
+    height: 30%;
+    margin-top: 10%;
     margin-bottom: auto;
     padding-right: 5%;
     transition: opacity 0.5s ease-in-out;
@@ -161,9 +147,10 @@ svg {
 
 .white-line {
     width: 80%; 
+    height: 5vh;
     height: 0.2vh; 
     background-color: white; 
-    margin: 3vh 0 3vh 0; 
+    margin: 3vh auto 3vh auto; 
 }
 
 .lower-section-logo{
@@ -173,25 +160,12 @@ svg {
 
 .lower-section-logo-img{
     width: 70%;
-    margin: 10% 0 10% 0;
-}
-
-.logo-slide_butt{
-    position: relative;
-    right: -92%;
-    top: -50%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    z-index: 15;
-    opacity: 1;
-    background-color: rgba(0,0,0,0);
+    margin: 15vh 0 15vh 0;
 }
 
 .indicator-slide_butt{
-    position: relative;
-    right: -92%;
-    top: 11%;
+    position: absolute;
+    left: 93%;
     color: #fff;
     border: none;
     cursor: pointer;
