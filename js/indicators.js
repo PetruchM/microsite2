@@ -1,18 +1,23 @@
 // JS for the lower part of website
 const textsNodeArr = document.querySelectorAll(".single-indicator-p");
 const texts = Array.from(textsNodeArr);
+const indiNodeArr = document.querySelectorAll(".single-indicator");
+const indicators = Array.from(indiNodeArr);
 const imgsNodeArr = document.querySelectorAll(".indicator-svg");
 const imgs = Array.from(imgsNodeArr);
 
 
 function IndicatorActive(Index, imgNormal, imgActive) {
-    var textElement = texts[Index+1]
-    var imgElement = imgs[Index]
+    var textElement = texts[Index+1];
+    var indiElement = indicators[Index+1];
+    var imgElement = imgs[Index];
     if (textElement.classList.contains("active")) {
         textElement.classList.remove("active");
+        indiElement.classList.remove("active");
         changeImageSourceSmoothly(imgElement,imgNormal);
     } else {
         textElement.classList.add("active");
+        indiElement.classList.add("active");
         changeImageSourceSmoothly(imgElement,imgActive);
     }
 }
@@ -27,10 +32,13 @@ function changeImageSourceSmoothly(Element,newSrc) {
 
 function slideDownTextLogo() {
     var textLogo  = texts[0]
+    var indiElement = indicators[0];
     if (textLogo.classList.contains("active")) {
         textLogo.classList.remove("active");
+        indiElement.classList.remove("active");
     } else {
         textLogo.classList.add("active");
+        indiElement.classList.add("active");
     }
 }
 

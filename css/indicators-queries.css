@@ -8,15 +8,17 @@
     .indicators-container{
         left: 25vw;
         width: 50vw;
-        height: 100%;
         justify-content:baseline;
         align-items: unset;
     }
 
     .single-indicator{
-        height: 18%;
-        display: block;
         text-align: center;
+        transition: all 1s ease-in-out;
+    }
+
+    .single-indicator.active{
+        margin-bottom: 30vh;
     }
     
     .logo-container{
@@ -25,7 +27,7 @@
     }
 
     .indicator {
-        height: 45%;
+        height: 40vh;
         margin: unset;
     }
 
@@ -47,29 +49,31 @@
 
     .lower-section-logo-img{
         width: 70%;
-        margin: 0vh 0 5vh 0;
+        margin: 10vh 0 5vh 0;
     }
 
-    .single-indicator-p, .logo-container-p{
+    .single-indicator-p{
         text-align: center;
         width: 80%;
-        top: unset;
-        right: unset;
+        top: 30%;
+        left: 0;
+        right:0;
         margin-right: auto;
         margin-left: auto;
         font-size: 70%;
     }
 
-    .logo-container-p.active, .single-indicator-p.active {
-        right: unset;
+    .single-indicator-p.active {
+        left: 0;
+        right: 0;
+        top: 100%;
         opacity: 1;
     }
 
-     .logo-slide_butt, .indicator-slide_butt {
-        position: relative;
-        right: unset;
-        left: unset;
-        top: unset;
+    .indicator-slide_butt {
+        right: 0;
+        left: 0;
+        top: 85%;
         text-align: center;
     }
 
