@@ -25,6 +25,7 @@
   height: 130%;
   width: 100%;
   position: relative;
+  user-select: text;
 }
 .box-info1-content {
   opacity: 1;
