@@ -14,6 +14,7 @@
 
     .single-indicator{
         text-align: center;
+        flex-direction: column;
         transition: all 0.7s ease-in-out;
     }
 
@@ -27,7 +28,8 @@
     }
 
     .indicator {
-        height: 40vh;
+        width: 90%;
+        height: 25vh;
         margin: unset;
     }
 
@@ -71,9 +73,10 @@
     }
 
     .indicator-slide_butt {
+        position: relative;
         right: 0;
         left: 0;
-        top: 85%;
+        /* top: 85%; */
         text-align: center;
     }
 
