@@ -104,6 +104,11 @@
     .expand-right-img {
         width: 4vw;
       }
+
+    .project-motto-text {
+        font-weight: 400;
+        font-size: 2.3vh;
+    }
 }
 
 @media (max-width: 800px) {
