@@ -3,22 +3,29 @@ const textsNodeArr = document.querySelectorAll(".single-indicator-p");
 const texts = Array.from(textsNodeArr);
 const indiNodeArr = document.querySelectorAll(".single-indicator");
 const indicators = Array.from(indiNodeArr);
-const imgsNodeArr = document.querySelectorAll(".indicator-svg");
-const imgs = Array.from(imgsNodeArr);
+const imgs1NodeArr = document.querySelectorAll(".indicator-svg1");
+const imgs1 = Array.from(imgs1NodeArr);
+const imgs2NodeArr = document.querySelectorAll(".indicator-svg2");
+const imgs2 = Array.from(imgs2NodeArr);
 
 
-function IndicatorActive(Index, imgNormal, imgActive) {
+function IndicatorActive(Index) {
     var textElement = texts[Index+1];
     var indiElement = indicators[Index+1];
-    var imgElement = imgs[Index];
+    var img1Element = imgs1[Index];
+    var img2Element = imgs2[Index];
     if (textElement.classList.contains("active")) {
         textElement.classList.remove("active");
         indiElement.classList.remove("active");
-        changeImageSourceSmoothly(imgElement,imgNormal);
+        img1Element.style.opacity="1";
+        img2Element.style.opacity="0";
+        //changeImageSourceSmoothly(imgElement,imgNormal);
     } else {
         textElement.classList.add("active");
         indiElement.classList.add("active");
-        changeImageSourceSmoothly(imgElement,imgActive);
+        img1Element.style.opacity="0";
+        img2Element.style.opacity="1";
+        //changeImageSourceSmoothly(imgElement,imgActive);
     }
 }
 
@@ -29,6 +36,7 @@ function changeImageSourceSmoothly(Element,newSrc) {
         Element.classList.remove('fade-out');
     }, 500);
 }
+    
 
 function slideDownTextLogo() {
     var textLogo  = texts[0]
@@ -51,6 +59,7 @@ function scrollDown(){
     });
 }
 
+//changes the svg paths in the curved dashed line border and the mask that are between the two main divisions
 function updatePathBasedOnWidth() {
     const windowWidth = window.innerWidth;
 

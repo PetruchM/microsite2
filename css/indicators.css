@@ -119,15 +119,30 @@ svg {
     opacity: 1; /* The text fades out */
 }
 
-.indicator-svg {
+.indicator-img{
+    position: relative;
     width: 30%;
     height: 30%;
-    margin-top: 10%;
-    margin-bottom: auto;
+    margin: 10% auto auto auto;
     padding-right: 5%;
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
 }
+
+.indicator-svg1, .indicator-svg2  {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+.indicator-svg1{
+    opacity: 1;
+}
+.indicator-svg2 {
+    opacity: 0;
+}
+
 
 .indicator-svg.fade-out {
     opacity: 0.3;
