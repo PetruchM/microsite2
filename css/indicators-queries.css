@@ -4,6 +4,10 @@
         height: auto;
         aspect-ratio: 1 /6;
     }
+
+    .slideDownButt img {
+        width: 7vw;
+    }    
     
     .indicators-container{
         left: 25vw;
@@ -82,8 +86,21 @@
 
     .indicators-expand-butt-img {
         transform:rotate(90deg) ;
-        width: 6.5vw;
+        width: 7.5vw;
       }
+
+    .line {
+        stroke-dasharray: 20px;
+        stroke-dashoffset: 0;
+        stroke-width: 5px;
+        animation: dash 3s linear infinite;
+    }
+    
+    @keyframes dash {
+        to {
+            stroke-dashoffset: -100px;
+        }
+    }
 }
 
 @media (max-width: 800px) {
