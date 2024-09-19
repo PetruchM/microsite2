@@ -144,11 +144,6 @@ svg {
     opacity: 0;
 }
 
-
-.indicator-svg.fade-out {
-    opacity: 0.3;
-}
-
 .indicator-num {
     font-size: 5vh;
     font-weight: bold;

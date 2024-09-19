@@ -3,8 +3,6 @@ const textsNodeArr = document.querySelectorAll(".single-indicator-p");
 const texts = Array.from(textsNodeArr);
 const indiNodeArr = document.querySelectorAll(".single-indicator");
 const indicators = Array.from(indiNodeArr);
-const imgs1NodeArr = document.querySelectorAll(".indicator-svg1");
-const imgs1 = Array.from(imgs1NodeArr);
 const imgs2NodeArr = document.querySelectorAll(".indicator-svg2");
 const imgs2 = Array.from(imgs2NodeArr);
 
@@ -12,29 +10,16 @@ const imgs2 = Array.from(imgs2NodeArr);
 function IndicatorActive(Index) {
     var textElement = texts[Index+1];
     var indiElement = indicators[Index+1];
-    var img1Element = imgs1[Index];
     var img2Element = imgs2[Index];
     if (textElement.classList.contains("active")) {
         textElement.classList.remove("active");
         indiElement.classList.remove("active");
-        img1Element.style.opacity="1";
         img2Element.style.opacity="0";
-        //changeImageSourceSmoothly(imgElement,imgNormal);
     } else {
         textElement.classList.add("active");
         indiElement.classList.add("active");
-        img1Element.style.opacity="0";
         img2Element.style.opacity="1";
-        //changeImageSourceSmoothly(imgElement,imgActive);
     }
-}
-
-function changeImageSourceSmoothly(Element,newSrc) {
-    Element.classList.add('fade-out');
-    setTimeout(function() {
-        Element.src = newSrc;
-        Element.classList.remove('fade-out');
-    }, 500);
 }
     
 
