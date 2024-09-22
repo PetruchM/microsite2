@@ -1,12 +1,12 @@
 const delay = 100;
 
 document.addEventListener("DOMContentLoaded", function () {
+    // scroll to top of the page
+    window.scrollTo(0, 0);
+
     // Select relevant elements from the DOM
     const introOverlay = document.querySelector(".intro-overlay2");
     const introButton = document.querySelector(".intro-button2");
-
-    const carousel = document.getElementById("projectCarousel");
-    const projectInfo = document.getElementById("info-section");
 
     // Function to create and animate the yellow circle
     function createYellowCircle(event) {
@@ -46,9 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 500);
         }, 600);
     }
-
-    // scroll to top of the page
-    window.scrollTo(0, 0);
 
     // Add click event listener to the button
     introButton.addEventListener("click", function (event) {
