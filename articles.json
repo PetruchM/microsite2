@@ -11,10 +11,10 @@
     },
 
     {
-        "id": 0,
+        "id": 1,
         "background-img": "images/slide_bgs/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
-        "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
-        "project-motto-text": "„Jednou by náš software mohl být v malém přístroji, který přímo v terénu určí, jakou bakterií se pacient nakazil.“",
+        "title": "VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY",
+        "project-motto-text": "„Poznáváme mikrosvět, který sice přímo nevidíme a chová se podivně, ale může v budoucnu přinést obrovské objevy.“",
         "author-img": "images/einstein.png",
         "author-name": "Ing. Helena Škutková, Ph.D.",
         "author-institute": "Ústav biomedicínského inženýrství Fakulty elektrotechniky a komunikačních technologií Vysokého učení technického v Brně",
@@ -61,7 +61,7 @@
 
 
 
-    
+
 
     {
         "id": 24,
