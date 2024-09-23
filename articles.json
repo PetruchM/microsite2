@@ -1,6 +1,6 @@
 [
     {
-        "Note": "",
+        "Note": "OK1.1",
         "id": 0,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -13,7 +13,7 @@
     },
 
     {
-        "Note": "",
+        "Note": "OK1.2",
         "id": 1,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -26,7 +26,7 @@
     },
 
     {
-        "Note": "",
+        "Note": "OK1.3",
         "id": 2,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -39,7 +39,7 @@
     },
 
     {
-        "Note": "",
+        "Note": "OK1.4",
         "id": 3,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -52,7 +52,7 @@
     },
 
     {
-        "Note": "",
+        "Note": "OK1.5",
         "id": 4,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -65,7 +65,7 @@
     },
 
     {
-        "Note": "OK2",
+        "Note": "OK2.1",
         "id": 5,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -78,7 +78,7 @@
     },
 
     {
-        "Note": "",
+        "Note": "OK2.2",
         "id": 6,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -91,7 +91,7 @@
     },
 
     {
-        "Note": "Tady ten matfyzak chtěl mit u fotky popisek",
+        "Note": "OK2.3 Tady ten matfyzak chtěl mit u fotky popisek",
         "id": 7,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -104,7 +104,7 @@
     },
 
     {
-        "Note": " tady jsem dostal text, ale označen červeně asi je neco spatne",
+        "Note": "OK2.4 tady jsem dostal text, ale označen červeně asi je neco spatne",
         "id": 8,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -117,7 +117,7 @@
     },
 
     {
-        "Note": "",
+        "Note": "OK2.5",
         "id": 9,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
@@ -130,8 +130,8 @@
     },
 
     {
-        "Note": "OK3",
-        "id": 0,
+        "Note": "OK3.1",
+        "id": 10,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -143,8 +143,8 @@
     },
 
     {
-        "Note": "",
-        "id": 0,
+        "Note": "OK3.2",
+        "id": 11,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -156,8 +156,8 @@
     },
 
     {
-        "Note": "",
-        "id": 0,
+        "Note": "OK3.3",
+        "id": 12,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -169,8 +169,8 @@
     },
 
     {
-        "Note": "",
-        "id": 0,
+        "Note": "OK3.4",
+        "id": 13,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -182,8 +182,8 @@
     },
 
     {
-        "Note": "",
-        "id": 0,
+        "Note": "OK3.5",
+        "id": 14,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -195,8 +195,8 @@
     },
 
     {
-        "Note": "OK4",
-        "id": 0,
+        "Note": "OK4.1",
+        "id": 15,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -208,8 +208,8 @@
     },
 
     {
-        "Note": "OK4",
-        "id": 0,
+        "Note": "OK4.2",
+        "id": 16,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -221,8 +221,8 @@
     },
 
     {
-        "Note": "OK4",
-        "id": 0,
+        "Note": "OK4.3",
+        "id": 17,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -234,8 +234,8 @@
     },
 
     {
-        "Note": "OK4",
-        "id": 0,
+        "Note": "OK4.4",
+        "id": 18,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -247,8 +247,8 @@
     },
 
     {
-        "Note": "OK4",
-        "id": 0,
+        "Note": "OK4.5",
+        "id": 19,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -260,8 +260,8 @@
     },
 
     {
-        "Note": "OK5",
-        "id": 0,
+        "Note": "OK5.1",
+        "id": 20,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -273,8 +273,8 @@
     },
 
     {
-        "Note": "OK5",
-        "id": 0,
+        "Note": "OK5.2",
+        "id": 21,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -286,8 +286,8 @@
     },
 
     {
-        "Note": "OK5",
-        "id": 0,
+        "Note": "OK5.3",
+        "id": 22,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -299,8 +299,8 @@
     },
 
     {
-        "Note": "OK5",
-        "id": 0,
+        "Note": "OK5.4",
+        "id": 23,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -312,7 +312,7 @@
     },
 
     {
-        "Note": "OK5",
+        "Note": "OK5.5",
         "id": 24,
         "background-img": "images/articles/background/OK1-DETEKCI-BAKTERIÍ-A-VIRŮ-široký.jpg",
         "minis-img": "images/articles/minis/sodium_mini.png",
