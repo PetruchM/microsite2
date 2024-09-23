@@ -101,7 +101,7 @@
         display: block;
     }
 
-    .expand-right-img {
+    .expand-bttn-img {
         width: 4vw;
       }
 
@@ -121,7 +121,7 @@
         transition: all 0.5s ease-in-out;
     }
 
-    .expand-right-img {
+    .expand-bttn-img {
         width: 5vh;
       }
 

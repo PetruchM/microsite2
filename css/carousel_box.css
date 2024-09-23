@@ -108,11 +108,14 @@
   transform: translate(200%, 0%);
 }
 
-
-.expand-right-img {
+.expand-bttn-img {
   width: 3vw;
   aspect-ratio: 1/1;
   background-color: rgba(0,0,0,0);
+}
+
+.expand-left{
+  transform:rotate(180deg);
 }
 
 .box-info1-content {
