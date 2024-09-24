@@ -163,19 +163,19 @@
   margin-bottom: auto;
 }
 
-.author-text {
+.author-text-div {
   flex: 1;
   margin-top: 1vh;
 }
 
-.author-text h2 {
+.author-name {
   font-size: 2vh;
   font-weight: 700;
   margin: 0;
   padding-bottom: 1vh;
 }
 
-.author-text p{
+.author-institute{
   font-weight: 400;
   font-size: 1.8vh;
 }
