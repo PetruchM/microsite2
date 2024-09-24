@@ -12,12 +12,9 @@ schovat ho na uzzsich obrazovkach
 
 - přidat obsah webu (a pak vyladit velikosti karet apod.)
 
-- zjistit požadavky na sekci indikátorů a dál a dodělat
-
 - pristupnost pro nevidome (jsou nejake GACR guidelines na to)
 
 ## Nice to haves
 
 - optimalizovat obrazky (velikost webu, loading time)
 
-- jednodussi edit a vyvtareni novych slidu (nacitat data ze souboru? python script? ...?) = zvladne to i neprogramator
