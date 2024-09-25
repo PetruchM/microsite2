@@ -1,160 +1,109 @@
-const projectCarousel = document.getElementById('projectCarousel')
-
-const pcFilterContainer = document.querySelector('.carousel__filter-container');
-const pcFilterButtons = Array.from(pcFilterContainer.children);
-// add listeners to all filter buttons
-pcFilterButtons.forEach((button, index) => {
-    button.addEventListener('click', e => {
-        setFilter(button, index);
-    })
-})
-
+const articlesPerFilter=5;
+const numOfArticles=25;
+const projectCarousel = document.getElementById('projectCarousel');
+const pcFilterButtons = Array.from(document.querySelector('.carousel__filter-container').children);
 const filterLabel = document.querySelector('.carousel__filter-label');
+const filters = ['tech', 'unnat', 'bio', 'socio', 'env'];
+const filterNames = {
+   tech: 'TECHNICKÉ VĚDY',
+   unnat: 'VĚDY O NEŽIVÉ PŘÍRODĚ',
+   bio: 'LÉKAŘSKÉ A BIOLOGICKÉ VĚDY',
+   socio: 'SPOLEČENSKÉ A HUMANITNÍ VĚDY',
+   env: 'ZEMĚDĚLSKÉ A BIOLOGICKO ENVIROMENTÁLNÍ VĚDY'
+};
+let filterTimeout;
+let currentSlide = 0;  //we want to remember on which slide user ended
 
 
-var currentCategory = 'all';
+pcFilterButtons.forEach((button, index) => {
+   button.addEventListener('click', () => setFilter(button, index));
+});
 
-function filterCarousel(category) {
-    if (category == currentCategory) {
-        category = 'all';
-    }
-    if (category == 'all') {
-        console.log("showing all slides")
-        showAllSlides();
-        currentCategory = 'all';
-        return;
-    }
-
-    showAllSlides();
-    currentCategory = category; 
-    console.log("Filtering with: " + currentCategory);
-
-
-    // Find the first item with the specified category
-    var firstGoodSlide = document.querySelector('.item-flag.' + category);
-    // If an item is found, get its index
-    var index = Array.from(firstGoodSlide.parentElement.children).indexOf(firstGoodSlide);
-    $('#projectCarousel').carousel(index);
-
-    // MAIN CAROUSEL
-    setTimeout(function() {
-        // find all items with class item-flag
-        var items = document.querySelectorAll('.item-flag');
-
-        // does active slide have the category?
-        var active = projectCarousel.querySelector('.carousel-item.active');
-        var activeHasCategory = active.classList.contains(category);
-
-        // loop through each item
-        for (var i = 0; i < items.length; i++) {
-            // if the item doesn't have the category as a class, add the class hidden
-            if (!items[i].classList.contains(category)) {
-                items[i].classList.add('d-none');
-                if (!activeHasCategory) {
-                    items[i].classList.remove('active');
-                }
-                items[i].classList.remove('carousel-item');
-            }
-            else {
-                items[i].classList.remove('d-none');
-                items[i].classList.add('carousel-item');
-            }
-        }
-        // add active to the first item with class carousel-item
-        if (!activeHasCategory) {
-            console.log("manualy setting active")
-            var active = document.querySelector('.carousel-item');
-            active.classList.add('active');
-        }
-
-    }
-    , 600);
-}
-
-function showAllSlides() {
-    var items = document.querySelectorAll('.item-flag');
-    for (var i = 0; i < items.length; i++) {
-        items[i].classList.remove('d-none');
-        items[i].classList.add('carousel-item');
-    }
-}
-
-
-function classToName(filterClass) {
-    switch (filterClass) {
-        case 'tech':
-            return 'TECHNICKÉ VĚDY';
-        case 'unnat':
-            return 'VĚDY O NEŽIVÉ PŘÍRODĚ';
-        case 'bio':
-            return 'LÉKAŘSKÉ A BIOLOGICKÉ VĚDY';
-        case 'socio':
-            return 'SPOLEČENSKÉ A HUMANITNÍ VĚDY';
-        case 'env':
-            return 'ZEMĚDĚLSKÉ A BIOLOGICKO ENVIROMENTÁLNÍ VĚDY';
-    }
-}
-
-function activateFilterLabel(filterClass) {
-    filterLabel.innerHTML = classToName(filterClass);
-    filterLabel.classList.add('label-active');
-}
-
-const deactivateFitlerLabel = () => {
-    filterLabel.classList.remove('label-active');    
-}
-
-var filterTimeout;
-// sets a new filter and loads the first slide in that category
 function setFilter(button, index) {
     console.log('filter button ' + index + ' clicked');
-    // if we are activating an inactive filter
-    if (!button.classList.contains('active-filter')) {
-        // disable the previous active filter
-        var activeFilters = document.querySelectorAll('.active-filter');
-        // console.log("active filters:", activeFilters)
-        activeFilters.forEach(element => {
-            element.classList.remove('active-filter');
-        });
-        
-        // activate the new filter
-        pcFilterButtons[index].classList.add('active-filter');
-        var filterClass = "";
-        // select filter based on which button was clicked
-        switch (index) {
-            case 0:
-                filterClass = 'tech';
-                break;
-            case 1:
-                filterClass = 'unnat';
-                break;
-            case 2:
-                filterClass = 'bio';
-                break;
-            case 3:
-                filterClass = 'socio';
-                break;
-            case 4:
-                filterClass = 'env';
-                break;
-        }
-        console.log('filterClass is: ' + filterClass);
-        activateFilterLabel(filterClass);
-        // Set a new timeout
-        clearTimeout(filterTimeout);
-        filterTimeout = setTimeout(function () { deactivateFitlerLabel(); }, 3000);
-        console.log("Current filter is:", filterClass);
-        filterCarousel(filterClass);
-    } 
-    // disabeling an active filter
-    else {
-        // disable the previous active filter
-        clearTimeout(filterTimeout);
-        deactivateFitlerLabel();
-        var activeFilters = document.querySelectorAll('.active-filter');
-        activeFilters.forEach(element => {
-            element.classList.remove('active-filter');
-        });
-        filterCarousel('all');
+
+    const filterActive = button.classList.contains('active-filter');
+    const filterClass = filters[index];
+    document.querySelectorAll('.active-filter').forEach(el => el.classList.remove('active-filter'));  //find the active filter, if there is one and remove the active tag
+    clearTimeout(filterTimeout); //prevents changing filters too fast or prevents bugs ???????????????????????????????????,,
+
+    if (!filterActive) {   //if clicked filter is not active
+            button.classList.add('active-filter');  //mark this filter as active
+            filterLabel.textContent = filterNames[filterClass];  //set the filter label //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<,
+            filterLabel.classList.add('label-active'); //mark it as active
+
+            filterTimeout = setTimeout(deactivateFilterLabel, 3000);  //sets the time for the function execution to 3s
+
+            filterCarousel(filterClass,index); //makes changes in the carousel
+
+            console.log("Current filter is:", filterClass);
+
+    } else { //filter is active, disable it
+            deactivateFilterLabel();
+            filterCarousel('all',5);
     }
 }
+
+function filterCarousel(category,index) {
+    generatePagerCarouselPlain();
+    changeSlides(index);
+    activateDesiredSlide(index);
+    generatePagerCarousel(category);//-------------
+}
+
+function changeSlides(index) {
+    const slideDivisions = document.querySelectorAll('.carousel-slide');
+    let desiredArticles = [0, 1, 2, 3, 4];  //array will keep the ids of articles that corespond the the situation
+    
+    for (let i = 0; i < articlesPerFilter; i++) {
+        if (index !== articlesPerFilter) { //if it is filter with index 1 e.g
+            desiredArticles[i] = i * 5 + index; //it will be slides 1,6,11,16,21 
+        } else {                                //if all slides
+            desiredArticles[i] = ((currentSlide - 2 + i)+numOfArticles)%numOfArticles;  //then we want the current one, 2 previous and 2 next,but not go into negative
+        }
+    }
+    
+    fetch('articles.json')   //load the articles soure file
+        .then(response => response.json())
+        .then(data => {
+            let counter=0;
+            desiredArticles.forEach(id => {  //for every wanted article
+                const article = data.find(article => article.id === id); //load the article
+                const slide=slideDivisions[counter];  //in each iteration choose the next division
+                counter++
+                
+                if (article) { //set all wanted data for this article to the slide
+                    console.log(`Article for ID ${id}:`, article);
+                    
+                    slide.querySelector('.a-background-img').src = article.background_img;
+                    slide.querySelector('.a-title').innerText = article.title;
+                    slide.querySelector('.project-motto-text').innerText=article.project_motto_text;
+                    slide.querySelector('.author-img').src = article.author_img;
+                    slide.querySelector('.author-name').innerText = article.author_name;
+                    slide.querySelector('.author-institute').innerText = article.author_institute;
+                    slide.querySelector('.project-info-text').innerText = article.text;
+
+                    console.log(`Article changed successfully for ID ${id}:`, article);
+                } else {
+                    console.log(`No article found for ID ${id}`);
+                }
+            });
+        })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+function deactivateFilterLabel() {
+   filterLabel.classList.remove('label-active');
+}
+
+function activateDesiredSlide(index){  //will actiate the slide that the user will look at after filtering
+    const items = document.querySelectorAll('.carousel-slide');
+    items.forEach(item => {
+        item.classList.remove('active');
+    });
+    const activeIndex = (index === 5) ? 2 : 0;  //this index 2 or 0, refers to the desiredArticles forloop.
+    items[activeIndex].classList.add('active');
+}
+
+
+
