@@ -1,8 +1,9 @@
 const articlesPerFilter=5;
 const numOfArticles=25;
 const projectCarousel = document.getElementById('projectCarousel');
-const pcFilterButtons = Array.from(document.querySelector('.carousel__filter-container').children);
-const filterLabel = document.querySelector('.carousel__filter-label');
+const filtersDivision = document.getElementById('filter');
+const pcFilterButtons = Array.from(filtersDivision.querySelector('.carousel__filter-container').children);
+const filterLabel = filtersDivision.querySelector('.carousel__filter-label');
 const filters = ['tech', 'unnat', 'bio', 'socio', 'env'];
 const filterNames = {
    tech: 'TECHNICKÉ VĚDY',
@@ -13,6 +14,7 @@ const filterNames = {
 };
 let filterTimeout;
 let currentSlide = 0;  //we want to remember on which slide user ended
+let allSlides=true;
 
 
 pcFilterButtons.forEach((button, index) => {
@@ -24,7 +26,7 @@ function setFilter(button, index) {
 
     const filterActive = button.classList.contains('active-filter');
     const filterClass = filters[index];
-    document.querySelectorAll('.active-filter').forEach(el => el.classList.remove('active-filter'));  //find the active filter, if there is one and remove the active tag
+    filtersDivision.querySelectorAll('.active-filter').forEach(el => el.classList.remove('active-filter'));  //find the active filter, if there is one and remove the active tag
     clearTimeout(filterTimeout); //prevents changing filters too fast or prevents bugs ???????????????????????????????????,,
 
     if (!filterActive) {   //if clicked filter is not active
@@ -37,11 +39,17 @@ function setFilter(button, index) {
             filterCarousel(filterClass,index); //makes changes in the carousel
 
             console.log("Current filter is:", filterClass);
+            allSlides=false;
 
     } else { //filter is active, disable it
             deactivateFilterLabel();
             filterCarousel('all',5);
+            allSlides=true;
     }
+}
+
+function deactivateFilterLabel() {
+    filterLabel.classList.remove('label-active');
 }
 
 function filterCarousel(category,index) {
@@ -52,7 +60,7 @@ function filterCarousel(category,index) {
 }
 
 function changeSlides(index) {
-    const slideDivisions = document.querySelectorAll('.carousel-slide');
+    const slideDivisions = projectCarousel.querySelectorAll('.carousel-slide');
     let desiredArticles = [0, 1, 2, 3, 4];  //array will keep the ids of articles that corespond the the situation
     
     for (let i = 0; i < articlesPerFilter; i++) {
@@ -62,14 +70,18 @@ function changeSlides(index) {
             desiredArticles[i] = ((currentSlide - 2 + i)+numOfArticles)%numOfArticles;  //then we want the current one, 2 previous and 2 next,but not go into negative
         }
     }
-    
-    fetch('articles.json')   //load the articles soure file
+
+    changeSlidesInfo(desiredArticles,slideDivisions);
+}
+
+function changeSlidesInfo(desiredArticles,elements){
+    fetch('articles.json')   //load the articles source file
         .then(response => response.json())
         .then(data => {
             let counter=0;
             desiredArticles.forEach(id => {  //for every wanted article
                 const article = data.find(article => article.id === id); //load the article
-                const slide=slideDivisions[counter];  //in each iteration choose the next division
+                const slide=elements[counter];  //in each iteration choose the next division
                 counter++
                 
                 if (article) { //set all wanted data for this article to the slide
@@ -92,12 +104,8 @@ function changeSlides(index) {
     .catch(error => console.error('Error fetching JSON:', error))
 }
 
-function deactivateFilterLabel() {
-   filterLabel.classList.remove('label-active');
-}
-
 function activateDesiredSlide(index){  //will actiate the slide that the user will look at after filtering
-    const items = document.querySelectorAll('.carousel-slide');
+    const items = projectCarousel.querySelectorAll('.carousel-slide');
     items.forEach(item => {
         item.classList.remove('active');
     });
@@ -105,5 +113,39 @@ function activateDesiredSlide(index){  //will actiate the slide that the user wi
     items[activeIndex].classList.add('active');
 }
 
+//lower code handles changing the articles when clicking the
+const prevButton = projectCarousel.querySelector('.carousel-control-prev');
+const nextButton = projectCarousel.querySelector('.carousel-control-next');
+
+prevButton.addEventListener('click', () => {
+    console.log('Previous button clicked');
+    myCustomFunction(-1);  
+});
+
+nextButton.addEventListener('click', () => {
+    console.log('Next button clicked');
+    myCustomFunction(1);  
+});
+
+function myCustomFunction(direction) {
+    if(allSlides){
+        const activeSlide = document.querySelector('.carousel-slide.active');  //find the active slide, there must be one
+        const filterIndex = parseInt(activeSlide.getAttribute('data-filter-index')); // Convert int index to integer
+        if (filterIndex !== null && !isNaN(filterIndex)) {
+                currentSlide+=direction; //change in the current slide acording to the direction of browsing
+                const desiredArticleId=((currentSlide+(2*direction))+numOfArticles)%numOfArticles;  //calculate the desired id, it is 2 articles previous or next
+                const targetIndex=((filterIndex-(2*direction))+articlesPerFilter)%articlesPerFilter; //the index of the division that is to be updated is the "furthest" from the active slide 
+                const targetCarouselItem = projectCarousel.querySelector(`.carousel-item[data-filter-index="${targetIndex}"]`);   //find this division according to the value of data-filter-index
+                if (targetCarouselItem) {
+                    changeSlidesInfo([desiredArticleId],[targetCarouselItem]);  //change the data
+                } else {
+                    console.error(`No carousel item found for targetIndex: ${targetIndex}`);
+                }
+            
+        } else {
+            console.error('No active slide or invalid filterIndex');
+        }
+    }   
+}
 
 
