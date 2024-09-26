@@ -60,7 +60,7 @@ function filterCarousel(category,index) {
 }
 
 function changeSlides(index) {
-    const slideDivisions = projectCarousel.querySelectorAll('.carousel-slide');
+    const slideDivisions = projectCarousel.querySelectorAll('.carousel-item');
     let desiredArticles = [0, 1, 2, 3, 4];  //array will keep the ids of articles that corespond the the situation
     
     for (let i = 0; i < articlesPerFilter; i++) {
@@ -105,7 +105,7 @@ function changeSlidesInfo(desiredArticles,elements){
 }
 
 function activateDesiredSlide(index){  //will actiate the slide that the user will look at after filtering
-    const items = projectCarousel.querySelectorAll('.carousel-slide');
+    const items = projectCarousel.querySelectorAll('.carousel-item');
     items.forEach(item => {
         item.classList.remove('active');
     });
@@ -129,7 +129,7 @@ nextButton.addEventListener('click', () => {
 
 function myCustomFunction(direction) {
     if(allSlides){
-        const activeSlide = document.querySelector('.carousel-slide.active');  //find the active slide, there must be one
+        const activeSlide = document.querySelector('.carousel-item.active');  //find the active slide, there must be one
         const filterIndex = parseInt(activeSlide.getAttribute('data-filter-index')); // Convert int index to integer
         if (filterIndex !== null && !isNaN(filterIndex)) {
                 currentSlide+=direction; //change in the current slide acording to the direction of browsing
