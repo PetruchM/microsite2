@@ -113,7 +113,7 @@ function activateDesiredSlide(index){  //will actiate the slide that the user wi
     items[activeIndex].classList.add('active');
 }
 
-//lower code handles changing the articles when clicking the
+//lower code handles changing the articles when clicking the carousel buttons on sides
 const prevButton = projectCarousel.querySelector('.carousel-control-prev');
 const nextButton = projectCarousel.querySelector('.carousel-control-next');
 
