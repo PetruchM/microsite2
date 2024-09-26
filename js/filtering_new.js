@@ -119,15 +119,15 @@ const nextButton = projectCarousel.querySelector('.carousel-control-next');
 
 prevButton.addEventListener('click', () => {
     console.log('Previous button clicked');
-    myCustomFunction(-1);  
+    loadNextArticle(-1);  
 });
 
 nextButton.addEventListener('click', () => {
     console.log('Next button clicked');
-    myCustomFunction(1);  
+    loadNextArticle(1);  
 });
 
-function myCustomFunction(direction) {
+function loadNextArticle(direction) {
     if(allSlides){
         const activeSlide = document.querySelector('.carousel-item.active');  //find the active slide, there must be one
         const filterIndex = parseInt(activeSlide.getAttribute('data-filter-index')); // Convert int index to integer
