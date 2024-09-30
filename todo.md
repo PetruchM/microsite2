@@ -8,6 +8,8 @@ schovat ho na uzzsich obrazovkach
 
 - upravit pro ruzne screen sizes
 
+ - kdyz se prepne kapitola nebo se dosanu daleko v all vyberu (prepise se data) tak se zavre main carousel
+
 ## Steps to completion
 
 - přidat obsah webu (a pak vyladit velikosti karet apod.)
