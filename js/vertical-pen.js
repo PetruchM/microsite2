@@ -147,3 +147,32 @@ function synchronizePagerWithProjectCarousel() {
         }
     }
 }
+
+
+
+// Function to execute on screen click
+window.addEventListener('click', function() {
+    // Step 1: Find the active div inside projectCarousel
+    var activeElement = document.querySelector('#projectCarousel .active');
+    
+    // Step 2: Get the value of the data-filter-index attribute
+    if (activeElement) {
+        var activeIndex = activeElement.getAttribute('data-filter-index');
+
+        // Step 3: Iterate over all buttons in pagerCarouselCopy
+        var buttons = document.querySelectorAll('#pagerCarouselCopy button');
+
+        buttons.forEach(function(button) {
+            // Step 4: Check if the button's data-filter-target matches the activeIndex
+            var filterTarget = button.getAttribute('data-filter-target');
+
+            if (filterTarget === activeIndex) {
+                // Add class "a-active-card" if they match
+                button.classList.add('a-active-card');
+            } else {
+                // Remove class "a-active-card" if they don't match
+                button.classList.remove('a-active-card');
+            }
+        });
+    }
+});

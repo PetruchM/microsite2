@@ -1,14 +1,6 @@
-/* @media (max-width: 767px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    .carousel-inner .carousel-item > div:first-child {
-        display: block;
-    }
-} */
-
 .card {
-    height: 10vh;
+    width:  10vh;
+    transition: width 0.3s ease;
 }
 
 .vertical .pager-card{
@@ -48,17 +40,6 @@
   transform: translateY(0);
 }
 
-/**
- * User: Alessandro Battaglia
- * Date: 17/05/2022
- * Time: 15:24
- */
-
- /* #pagerCarousel, #pagerCarouselCopy {
-    width: 300px;
-    height: 600px;
-  } */
-
 #pagerCarousel, #pagerCarouselCopy {
     position: absolute;
     top: 15vh;
@@ -67,21 +48,21 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-
-
 .vertical.carousel {
-    width: 10vh;
+    width: 15vh;
     background-color: rgba(0, 0, 0, 0);
 }
 
-/* .vertical.carousel .carousel-inner {
-    padding-top: 60px;
-    padding-bottom: 60px;
-} */
+.vertical .carousel-inner { /*tajto asinic nedělá, doladit zarovnání na střed*/
+    justify-content: center; /* Vertically centers all items */
+    align-items: center; /* Horizontally centers items */
+}
 
 .vertical.carousel .carousel-item {
-    overflow: hidden;
-    width: 10vh;
+    justify-content: center; /* Horizontální zarovnání na střed */
+    align-items: center; /* Vertikální zarovnání na střed */
+    height: 100%; /* Zajistí, že položka vyplní dostupnou výšku */
+    width: 100%; /* Zajistí, že položka vyplní dostupnou šířku */
 }
 
 .vertical.carousel .carousel-item-next:not(.carousel-item-start),
@@ -104,16 +85,7 @@
     flex-direction: column;
 }
 
-/* .vertical.carousel .carousel-indicators [data-bs-target] {
-    height: 30px;
-    width: 3px;
-} */
 
-/* .vertical.carousel .carousel-control-prev,
-.vertical.carousel .carousel-control-next {
-    width: 100%;
-    height: 60px;
-} */
 
 .vertical.carousel .carousel-control-prev{
     width: 100%;
@@ -134,10 +106,6 @@
     transform: rotateZ(90deg);
 }
 
-/* .vertical.carousel .carousel-control-next {
-    top: unset;
-    bottom: 0;
-} */
 
 
 .card-img-overlay {
@@ -151,3 +119,49 @@
         display: none;
     }
 }
+
+/* zkoušíme */
+.vertical.carousel .a-active-card { 
+    width: 12vh;
+}
+
+/**
+ * User: Alessandro Battaglia
+ * Date: 17/05/2022
+ * Time: 15:24
+ */
+
+ /* #pagerCarousel, #pagerCarouselCopy {
+    width: 300px;
+    height: 600px;
+  } */
+
+/* .vertical.carousel .carousel-inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+} */
+
+/* .vertical.carousel .carousel-indicators [data-bs-target] {
+    height: 30px;
+    width: 3px;
+} */
+
+/* .vertical.carousel .carousel-control-prev,
+.vertical.carousel .carousel-control-next {
+    width: 100%;
+    height: 60px;
+} */
+
+/* .vertical.carousel .carousel-control-next {
+    top: unset;
+    bottom: 0;
+} */
+
+/* @media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+} */
