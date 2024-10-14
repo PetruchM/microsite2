@@ -2,6 +2,7 @@ const articlesPerFilter=5;
 const numOfArticles=25;
 const projectCarousel = document.getElementById('projectCarousel');
 const filtersDivision = document.getElementById('filter');
+const pagerCarousel = document.getElementById('pagerCarousel');
 const pcFilterButtons = Array.from(filtersDivision.querySelector('.carousel__filter-container').children);
 const filterLabel = filtersDivision.querySelector('.carousel__filter-label');
 const filters = ['tech', 'unnat', 'bio', 'socio', 'env'];
@@ -53,10 +54,10 @@ function deactivateFilterLabel() {
 }
 
 function filterCarousel(category,index) {
-    generatePagerCarouselPlain();
     changeSlides(index);
     activateDesiredSlide(index);
-    generatePagerCarousel(category);//-------------
+    generatePagerCarouselPlain();
+    generatePagerCarousel('all');//-------------
 }
 
 function changeSlides(index) {
@@ -75,6 +76,7 @@ function changeSlides(index) {
 }
 
 function changeSlidesInfo(desiredArticles,elements){
+    const pagerDivisions = pagerCarousel.querySelectorAll('.carousel-item');
     fetch('articles.json')   //load the articles source file
         .then(response => response.json())
         .then(data => {
@@ -82,6 +84,7 @@ function changeSlidesInfo(desiredArticles,elements){
             desiredArticles.forEach(id => {  //for every wanted article
                 const article = data.find(article => article.id === id); //load the article
                 const slide=elements[counter];  //in each iteration choose the next division
+                const pagerSlide=pagerDivisions[counter];
                 counter++
                 
                 if (article) { //set all wanted data for this article to the slide
@@ -94,6 +97,8 @@ function changeSlidesInfo(desiredArticles,elements){
                     slide.querySelector('.author-name').innerText = article.author_name;
                     slide.querySelector('.author-institute').innerText = article.author_institute;
                     slide.querySelector('.project-info-text').innerText = article.text;
+
+                    pagerSlide.querySelector('.img-fluid').src = article.minis_img;
 
                     console.log(`Article changed successfully for ID ${id}:`, article);
                 } else {
