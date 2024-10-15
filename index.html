@@ -352,58 +352,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="carousel-item other" data-filter-index="5">
-                <img src="images/articles/background/energy_balls.png" class="d-block bg-img a-background-img"  alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1 class="a-title">TOTO JE NADPIS SLIDU 6</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div>
-                                    <p class="project-motto-text">„Sodík nebo draslík vmezeřené ve vrstevnatých materiálech by mohly nahradit nedostatkové lithium v bateriích. Jsou levné a všude dostupné.“</p>
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text-div">
-                                    <h2 class="author-name">prof. Ing. Zdeněk Sofer, Ph.D.</h2>
-                                    <p class="author-institute">Ústav anorganické chemie, Vysoká škola chemicko-technologická v Praze</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <p class="project-info-text">
-                                    Grafen je pevný, extrémně lehký a výborně vede elektřinu. Proto se považuje za budoucí materiál pro elektroniku, 
-                                    kompozity a další aplikace. Profesoru Soferovi se podařilo syntetizoval absolutně čistý grafen bez přítomnosti 
-                                    kovových nečistot. Díky tomu prokázal zásadní vliv těchto nečistot na jeho vlastnosti.<br>
-                                    Jeho tým také vyvinul metodu, která umožňuje měnit vlastnosti grafenu a dalších materiálů. 
-                                    Zkoumá také další materiály a z nich vytvořené struktury, které obsahují například molybden, 
-                                    wolfram, chrom a další kovy ve spojení s nekovy, jako jsou síra, selen, chlor nebo brom. Zjistil, 
-                                    že by například sodík nebo draslík mohly nahradit lithium v bateriích nebo jak by další materiály 
-                                     mohly pomoci při rozkladu vody k získání vodíku pro energetické využití.
-                                </p>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>-->
         </div>
 
         <!-- Carousel control -->
@@ -420,10 +368,10 @@
 
     <!-- Small carousel for navigation -->
     <div id="verticalCarousel">
-        <div id="pagerCarousel" class="carousel slide vertical d-none" data-bs-ride="carousel" data-bs-interval="500000000">
+        <!-- <div id="pagerCarousel" class="carousel slide vertical d-none" data-bs-ride="carousel" data-bs-interval="500000000">
             <div class="carousel-inner" role="listbox">
                 
-                <div class="pager-item-flag carousel-item active tech">
+                <div class="pager-item-flag carousel-item active tech " data-index="0">
                     <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
                         <div class="card-img">
                             <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
@@ -432,7 +380,7 @@
                     </button>
                 </div>
 
-                <div class="pager-item-flag carousel-item unnat">
+                <div class="pager-item-flag carousel-item unnat" data-index="1">
                     <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
                         <div class="card-img">
                             <img src="images/articles/minis/electric_mini.png" class="img-fluid" alt="">
@@ -441,7 +389,7 @@
                     </button>
                 </div>
 
-                <div class="pager-item-flag carousel-item socio">
+                <div class="pager-item-flag carousel-item socio" data-index="2">
                     <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
                         <div class="card-img">
                             <img src="images/articles/minis/termit_mini.png" class="img-fluid" alt="">
@@ -450,7 +398,7 @@
                     </button>
                 </div>
 
-                <div class="pager-item-flag carousel-item env">
+                <div class="pager-item-flag carousel-item env" data-index="3">
                     <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-targer="3">
                         <div class="card-img">
                             <img src="images/articles/minis/string_mini.png" class="img-fluid" alt="">
@@ -459,7 +407,7 @@
                     </button>
                 </div>
 
-                <div class="pager-item-flag carousel-item bio">
+                <div class="pager-item-flag carousel-item bio" data-index="4">
                     <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="4">
                         <div class="card-img">
                             <img src="images/articles/minis/electric_mini.png" class="img-fluid" alt="">
@@ -468,20 +416,187 @@
                     </button>
                 </div>
 
-                <!-- <div class="pager-item-flag carousel-item other">
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" data-filter-target="5">
-                        <div class="card-img">
-                            <img src="images/articles/minis/balls_mini.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="card-img-overlay">6</div>
-                    </button>
-                </div> -->
-
             </div>
             <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarouselCopy" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
             <a class="carousel-control-next bg-transparent w-aut" href="#pagerCarouselCopy" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div> -->
+        <div id="pagerCarousel" class="carousel slide vertical NaN pointer-event" data-bs-ride="carousel" data-bs-interval="500000000">
+            <div class="carousel-inner" role="listbox">
+                
+                <div class="pager-item-flag carousel-item tech active" data-index="0">
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">24</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">25</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                        <div class="card-img">
+                            <img src="images/articles/minis/OK1_A.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">1</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-targer="3">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">2</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">3</div>
+                    </button>
+                </div>
+        
+                <div class="pager-item-flag carousel-item unnat" data-index="1">
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">25</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                        <div class="card-img">
+                            <img src="images/articles/minis/OK1_A.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">1</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-targer="3">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">2</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">3</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">4</div>
+                    </button>
+                </div>
+        
+                <div class="pager-item-flag carousel-item socio" data-index="2">
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                        <div class="card-img">
+                            <img src="images/articles/minis/OK1_A.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">1</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-targer="3">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">2</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">3</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">4</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">5</div>
+                    </button>
+                </div>
+        
+                <div class="pager-item-flag carousel-item env" data-index="3">
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-targer="3">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">22</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">23</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">24</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">25</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                        <div class="card-img">
+                            <img src="images/articles/minis/OK1_A.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">1</div>
+                    </button>
+                </div>
+        
+                <div class="pager-item-flag carousel-item bio" data-index="4">
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">23</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">24</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">25</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                        <div class="card-img">
+                            <img src="images/articles/minis/OK1_A.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">1</div>
+                    </button>
+                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
+                        <div class="card-img">
+                            <img src="images/articles/minis/sodium_mini.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-img-overlay">2</div>
+                    </button>
+                </div>
+        
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
@@ -630,7 +745,6 @@
   <script src="js/intro-transition.js"></script>
   <script src="js/loading_effect.js"></script>
   <script src="js/indicators.js"></script>
-
-  <script src="js/vertical-pen.js"></script>
+  <script src="js/vertical_pen_new.js"></script>
   
 </html>

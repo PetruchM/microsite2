@@ -37,14 +37,14 @@ function setFilter(button, index) {
 
             filterTimeout = setTimeout(deactivateFilterLabel, 3000);  //sets the time for the function execution to 3s
 
-            filterCarousel(filterClass,index); //makes changes in the carousel
+            filterCarousel(index); //makes changes in the carousel
 
             console.log("Current filter is:", filterClass);
             allSlides=false;
 
     } else { //filter is active, disable it
             deactivateFilterLabel();
-            filterCarousel('all',5);
+            filterCarousel(5);
             allSlides=true;
     }
 }
@@ -53,40 +53,43 @@ function deactivateFilterLabel() {
     filterLabel.classList.remove('label-active');
 }
 
-function filterCarousel(category,index) {
+function filterCarousel(index) {
     changeSlides(index);
     activateDesiredSlide(index);
-    generatePagerCarouselPlain();
-    generatePagerCarousel('all');//-------------
+    updatePagerCarousel(index,currentSlide);
+    // generatePagerCarouselPlain();
+    // generatePagerCarousel('all');//-------------
 }
 
 function changeSlides(index) {
     const slideDivisions = projectCarousel.querySelectorAll('.carousel-item');
-    let desiredArticles = [0, 1, 2, 3, 4];  //array will keep the ids of articles that corespond the the situation
-    
-    for (let i = 0; i < articlesPerFilter; i++) {
-        if (index !== articlesPerFilter) { //if it is filter with index 1 e.g
-            desiredArticles[i] = i * 5 + index; //it will be slides 1,6,11,16,21 
-        } else {                                //if all slides
-            desiredArticles[i] = ((currentSlide - 2 + i)+numOfArticles)%numOfArticles;  //then we want the current one, 2 previous and 2 next,but not go into negative
-        }
-    }
+    let desiredArticles = getDesiredArticlesIDs(index);  //array will keep the ids of articles that corespond the the situation
 
     changeSlidesInfo(desiredArticles,slideDivisions);
 }
 
+function getDesiredArticlesIDs(index){
+    let desiredArray = [0, 1, 2, 3, 4];
+    for (let i = 0; i < articlesPerFilter; i++) {
+        if (index !== articlesPerFilter) { //if it is filter with index 1 e.g, isnt 5 which
+            desiredArray[i] = i * 5 + index; //it will be slides 1,6,11,16,21 
+        } else {                                //if all slides
+            desiredArray[i] = ((currentSlide - 2 + i)+numOfArticles)%numOfArticles;  //then we want the current one, 2 previous and 2 next,but not go into negative
+        }
+    }
+    return desiredArray;
+}
+
 function changeSlidesInfo(desiredArticles,elements){
-    const pagerDivisions = pagerCarousel.querySelectorAll('.carousel-item');
     fetch('articles.json')   //load the articles source file
         .then(response => response.json())
         .then(data => {
             let counter=0;
-            desiredArticles.forEach(id => {  //for every wanted article
+            desiredArticles.forEach(id => {  //for every wanted article. But there may be just one
                 const article = data.find(article => article.id === id); //load the article
                 const slide=elements[counter];  //in each iteration choose the next division
-                const pagerSlide=pagerDivisions[counter];
                 counter++
-                
+
                 if (article) { //set all wanted data for this article to the slide
                     console.log(`Article for ID ${id}:`, article);
                     
@@ -98,8 +101,6 @@ function changeSlidesInfo(desiredArticles,elements){
                     slide.querySelector('.author-institute').innerText = article.author_institute;
                     slide.querySelector('.project-info-text').innerText = article.text;
 
-                    pagerSlide.querySelector('.img-fluid').src = article.minis_img;
-
                     console.log(`Article changed successfully for ID ${id}:`, article);
                 } else {
                     console.log(`No article found for ID ${id}`);
@@ -109,13 +110,16 @@ function changeSlidesInfo(desiredArticles,elements){
     .catch(error => console.error('Error fetching JSON:', error))
 }
 
-function activateDesiredSlide(index){  //will actiate the slide that the user will look at after filtering
+function activateDesiredSlide(index){  //will activate the slide that the user will look at after filtering
     const items = projectCarousel.querySelectorAll('.carousel-item');
-    items.forEach(item => {
-        item.classList.remove('active');
-    });
+    const pagerItems = pagerCarousel.querySelectorAll('.carousel-item'); //and in the pager too
+    for (let i = 0; i < articlesPerFilter; i++) {
+        items[i].classList.remove('active');
+        pagerItems[i].classList.remove('active');
+    }
     const activeIndex = (index === 5) ? 2 : 0;  //this index 2 or 0, refers to the desiredArticles forloop.
     items[activeIndex].classList.add('active');
+    pagerItems[0].classList.add('active');  //while filtered and unfiltered, the first item will be activated
 }
 
 //lower code handles changing the articles when clicking the carousel buttons on sides
@@ -134,10 +138,11 @@ nextButton.addEventListener('click', () => {
 
 function loadNextArticle(direction) {
     if(allSlides){
-        const activeSlide = document.querySelector('.carousel-item.active');  //find the active slide, there must be one
+        const activeSlide = projectCarousel.querySelector('.carousel-item.active');  //find the active slide, there must be one
         const filterIndex = parseInt(activeSlide.getAttribute('data-filter-index')); // Convert int index to integer
+        console.log(`${currentSlide}`)
         if (filterIndex !== null && !isNaN(filterIndex)) {
-                currentSlide+=direction; //change in the current slide acording to the direction of browsing
+                currentSlide=((currentSlide+direction)+numOfArticles)%numOfArticles; //change in the current slide acording to the direction of browsing
                 const desiredArticleId=((currentSlide+(2*direction))+numOfArticles)%numOfArticles;  //calculate the desired id, it is 2 articles previous or next
                 const targetIndex=((filterIndex-(2*direction))+articlesPerFilter)%articlesPerFilter; //the index of the division that is to be updated is the "furthest" from the active slide 
                 const targetCarouselItem = projectCarousel.querySelector(`.carousel-item[data-filter-index="${targetIndex}"]`);   //find this division according to the value of data-filter-index

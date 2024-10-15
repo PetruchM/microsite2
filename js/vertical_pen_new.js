@@ -1,237 +1,128 @@
-let pagerCarouselTemplate = document.getElementById('pagerCarousel')
-var pagerCopy = null;
-var copyNum = 0;
+let pagerCarouselTemplate = document.getElementById('pagerCarousel');
+let pagerCarouselItems = pagerCarouselTemplate.querySelectorAll('.carousel-item');
+const minisPerSlide=5;
+const minisWhenUnfiltered=9;
+currentCategory=5;
+let allSlidesHere=true;
+let currentMini=0;
 
-generatePagerCarouselPlain();
 
-function generatePagerCarousel(category) 
-{
-    console.log("Generating pager carousel with category: " + category)
+async function updatePagerCarousel(category, currentSlide){
+    console.log(category);
+    currentMini=currentSlide;
+    let articlesPaths = await getDesiredPaths(category, false,0);
 
-    // Remove pagerCopy if it already exists in the HTML
-    if (pagerCopy) {
-        pagerCopy.remove();
-    }
+    console.log("Updating pager carousel");
 
-    pagerCopy = pagerCarouselTemplate.cloneNode(true);
-    pagerCopy.setAttribute('id', 'pagerCarouselCopy');
-    pagerCopy.classList.remove('d-none');
-    copyNum += 1;
-    pagerCopy.classList.add(copyNum.toString());
-
-    // Append pagerCopy right after pagerCarouselTemplate in the body
-    pagerCarouselTemplate.insertAdjacentElement('afterend', pagerCopy);
-
-    if (category != 'all') 
-    {
-        // find all items with class item-flag
-        var fresh_items = pagerCopy.querySelectorAll('.pager-item-flag');
-
-        // does active slide have the category?
-        var active = pagerCopy.querySelector('.carousel-item.active');
-        var activeHasCategory = active.classList.contains(category);
-
-        // loop through each item
-        for (var i = 0; i < fresh_items.length; i++) {
-            // if the item doesn't have the category as a class, add the class hidden
-            if (!fresh_items[i].classList.contains(category)) {
-                fresh_items[i].children[0].classList.add('d-none');
-                if (!activeHasCategory) {
-                    fresh_items[i].classList.remove('active');
-                }
-                fresh_items[i].classList.remove('carousel-item');
-            }
-            else {
-                fresh_items[i].children[0].classList.remove('d-none');
-                fresh_items[i].classList.add('carousel-item');
-            }
-        }
-        // add active to the first item with class carousel-item
-        if (!activeHasCategory) {
-            console.log("manualy setting active")
-            var active = pagerCopy.querySelector('.carousel-item');
-            active.classList.add('active');
-        }
-    }
-
-    synchronizePagerWithProjectCarousel();
-    
-    // CLONING SLIDES
-
-    var generated_items = pagerCopy.querySelectorAll('.carousel-item');
-
-    for (var i=0; i<generated_items.length; i++) {
-        el = generated_items[i]
-
-        if (el.children[0].classList.contains('d-none')) {
-            el.remove();
-        }
-
-        const minPerSlide = 5
-        var next = el.nextElementSibling
-        while (next && !next.classList.contains('carousel-item')) {
-            next = next.nextElementSibling;
-        }
-
-        var spawnedCounter = 0;
-        var spawnedEnough = false;
-        while (!spawnedEnough) {
-            if (!next) {
-                // wrap carousel by using first child
-                next = generated_items[0]
-            }
-            let cloneChild = next.cloneNode(true)
-
-            if (cloneChild.children[0].classList.contains('d-none')) {
-                next = next.nextElementSibling
-                continue;
-            }
-
-            el.appendChild(cloneChild.children[0])
-            next = next.nextElementSibling
-            spawnedCounter += 1;
-            if (spawnedCounter >= minPerSlide - 1) {
-                spawnedEnough = true;
-            }
-        }
-    }
-
-    synchronizePagerWithProjectCarousel();
-}
-
-function generatePagerCarouselPlain() 
-{
-    console.log("Generating plain pager carousel")
-
-    generatePagerCarousel('all'); 
-}
-
-function synchronizePagerWithProjectCarousel() {
-    // Get all pager carousel items
-    const pagerItems = pagerCopy.querySelectorAll('.card');
-
-    for (var i=0; i<pagerItems.length; i++) {
-        pagerItem = pagerItems[i];
-        if (pagerItem.classList.contains('d-none')) {
-            continue;
-        }
-        // Get data-filter-target value from pager item
-        const filterTarget = parseInt(pagerItem.dataset.filterTarget);
-        // console.log(filterTarget);
-
-        // Find matching project carousel item
-        const projectCarouselItem = projectCarousel.querySelector(`.carousel-item[data-filter-index="${filterTarget}"]`);
-
-        if (projectCarouselItem) {
-            // Get the index of the matched project carousel item among displayed slides
-            const displayedSlides = projectCarousel.querySelectorAll('.carousel-item');
-            let slideIndex = -1;
-            displayedSlides.forEach((slide, index) => {
-                if (slide === projectCarouselItem) {
-                    slideIndex = index;
-                }
+    if (category!=5){ //if filtering to one of the chapters
+        //we need to change the images and overlay number
+        pagerCarouselItems.forEach(carouselItem => {
+            const buttons= carouselItem.querySelectorAll('button');
+            buttons.forEach(bttnEl => {
+                const numSlide = parseInt(bttnEl.dataset.bsSlideTo, 10);
+                bttnEl.querySelector('img').src = articlesPaths[numSlide];
+                const cardNum = numSlide + 1;
+                bttnEl.querySelector('.card-img-overlay').innerText = cardNum.toString();
             });
-
-            // Set data-bs-slide-to attribute of pager item
-            if (slideIndex !== -1) {
-                pagerItem.setAttribute('data-bs-slide-to', slideIndex);
-                // console.log("Setting slide index to " + slideIndex);
+        });
+        allSlidesHere=false;
+    }else{
+        for (let i = 0; i < minisPerSlide; i++) {
+            const carouselItem = pagerCarouselItems[((i-2)+minisPerSlide)%minisPerSlide];  //why this? because i want the data-bs-slide-to indexes work acording tot the articles
+            const buttons= carouselItem.querySelectorAll('button');
+            for (let j = 0; j < minisPerSlide; j++) {
+                const bttnEl = buttons[j];
+                const numslide=(((currentMini-4+i+j)+numOfArticles)%numOfArticles)+1;
+                bttnEl.querySelector('img').src = articlesPaths[i+j];
+                bttnEl.querySelector('.card-img-overlay').innerText = numslide.toString();
             }
         }
+        allSlidesHere=true;
     }
+    console.log("full carousel chaged")
+}
+
+async function getDesiredPaths(category, updating){
+    let articles = [];
+    let paths = [];
+    if (category != 5) {
+        for (let i = 0; i < minisPerSlide; i++) {
+            articles.push(i * 5 + category);
+        }
+    } else if (updating!=0){
+        if (updating==1){
+            for (let i = 0; i < minisPerSlide; i++) {
+                articles.push(((currentMini + i) + numOfArticles) % numOfArticles);
+            }
+        }else{
+            for (let i = 0; i < minisPerSlide; i++) {
+                articles.push(((currentMini - 4 + i) + numOfArticles) % numOfArticles);
+            }
+        }
+        
+    }else{
+        for (let i = 0; i < minisWhenUnfiltered; i++) {
+            articles.push(((currentMini - 4 + i) + numOfArticles) % numOfArticles);
+        }
+    }
+    console.log("Fetching article data...");
+    console.log(`${articles}`)
+    try {
+        const response = await fetch('articles.json');  // Load the articles source file asynchronously
+        const data = await response.json();
+
+        for (let k = 0; k < articles.length; k++) {
+            const id = articles[k];
+            const article = data.find(article => article.id === id);  // Load the article based on ID
+
+            if (article) {
+                console.log(`Article for ID ${id}:`, article);
+                paths.push(article.minis_img);  // Set the image path for the slide
+            } else {
+                console.log(`No article found for ID ${id}`);
+            }
+        }
+
+    } catch (error) {
+        console.error('Error fetching JSON:', error);
+    }
+
+    return paths;  // Return the paths after data is fetched and processed
 }
 
 
+const prevMinisButton = pagerCarousel.querySelector('.carousel-control-prev');
+const nextMinisButton = pagerCarousel.querySelector('.carousel-control-next');
 
-// var totalItems = 25; // Celkový počet článků
-// var itemsPerPage = 5; // Počet článků na stránku při vybraném filtru
-// var currentIndex = 0; // Aktuální pozice v carouselu (pro případ bez filtru)
-// var filterActive = false; // Příznak pro stav, kdy je filtr aktivní
-// var filteredItems = []; // Pole s indexy článků po vyfiltrování
+prevMinisButton.addEventListener('click', () => {
+    console.log('Previous Mini button clicked');
+    loadNextMini(-1);  
+});
 
-// function updatePagerCarousel(items) {
-//     const pagerInner = document.querySelector('#pagerCarousel .carousel-inner');
-//     pagerInner.innerHTML = ''; // Vymažeme stávající obsah
+nextMinisButton.addEventListener('click', () => {
+    console.log('Next Mini button clicked');
+    loadNextMini(1);  
+});
 
-//     items.forEach((itemIndex, i) => {
-//         const item = document.createElement('div');
-//         item.classList.add('pager-item-flag', 'carousel-item');
-//         if (i === 0) item.classList.add('active'); // Nastavíme první jako aktivní
-        
-//         const button = document.createElement('button');
-//         button.classList.add('card');
-//         button.setAttribute('type', 'button');
-//         button.setAttribute('data-bs-target', '#projectCarousel');
-//         button.setAttribute('data-bs-slide-to', itemIndex);
-//         button.setAttribute('data-filter-target', itemIndex);
-
-//         // Přidání obsahu tlačítka (thumbnail + overlay)
-//         const cardImg = document.createElement('div');
-//         cardImg.classList.add('card-img');
-//         const img = document.createElement('img');
-//         img.setAttribute('src', `images/articles/minis/article_${itemIndex + 1}.png`); // Dynamické načítání obrázků
-//         img.classList.add('img-fluid');
-//         cardImg.appendChild(img);
-
-//         const overlay = document.createElement('div');
-//         overlay.classList.add('card-img-overlay');
-//         overlay.innerText = itemIndex + 1;
-
-//         button.appendChild(cardImg);
-//         button.appendChild(overlay);
-//         item.appendChild(button);
-//         pagerInner.appendChild(item);
-//     });
-// }
-
-// function applyFilter(category) {
-//     // Vyhledáme články podle zadané kategorie
-//     filterActive = true;
-//     filteredItems = getFilteredItems(category); // Funkce, která vrátí pole indexů článků pro danou kategorii
-//     updatePagerCarousel(filteredItems); // Aktualizujeme pager carousel
-// }
-
-// function clearFilter() {
-//     // Zrušíme filtr a zobrazíme všech 25 článků
-//     filterActive = false;
-//     currentIndex = 0;
-//     loadItemsForIndex(currentIndex); // Načteme prvních 5 položek
-// }
-
-// function loadItemsForIndex(startIndex) {
-//     let items = [];
-//     for (let i = startIndex; i < startIndex + itemsPerPage; i++) {
-//         if (i >= totalItems) break;
-//         items.push(i);
-//     }
-//     updatePagerCarousel(items); // Aktualizujeme pager carousel s načtenými položkami
-// }
-
-// function moveNext() {
-//     if (filterActive) {
-//         // Procházení článků
-//         let projectCarousel = document.querySelector('#projectCarousel');
-//         let nextButton = projectCarousel.querySelector('.carousel-control-next');
-//         nextButton.click(); // Simulujeme kliknutí na tlačítko pro přechod na další článek
-//     } else {
-//         // Procházení thumbnails
-//         currentIndex = (currentIndex + itemsPerPage) % totalItems;
-//         loadItemsForIndex(currentIndex);
-//     }
-// }
-
-// function movePrev() {
-//     if (filterActive) {
-//         // Procházení článků
-//         let projectCarousel = document.querySelector('#projectCarousel');
-//         let prevButton = projectCarousel.querySelector('.carousel-control-prev');
-//         prevButton.click(); // Simulujeme kliknutí na tlačítko pro přechod na předchozí článek
-//     } else {
-//         // Procházení thumbnails
-//         currentIndex = (currentIndex - itemsPerPage + totalItems) % totalItems;
-//         loadItemsForIndex(currentIndex);
-//     }
-// }
-
-// document.querySelector('.carousel-control-next').addEventListener('click', moveNext);
-// document.querySelector('.carousel-control-prev').addEventListener('click', movePrev);
+async function loadNextMini(direction) {
+    if(allSlidesHere){
+        const activeItem = pagerCarousel.querySelector('.carousel-item.active');  //find the active slide, there must be one
+        const ItemIndex = parseInt(activeItem.dataset.index); // Convert int index to integer
+        if (ItemIndex !== null && !isNaN(ItemIndex)) {
+                currentMini=((currentMini+direction)+numOfArticles)%numOfArticles;
+                let minisPaths = await getDesiredPaths(5,true,direction);
+                const targetIndex=((ItemIndex-(2*direction))+minisPerSlide)%minisPerSlide;//the index of the division that is to be updated is the "furthest" from the active slide
+                const targetPagerCarouselItem = pagerCarousel.querySelector(`.carousel-item[data-index="${targetIndex}"]`);   //find this division according to the value of data-filter-index
+                const buttons = targetPagerCarouselItem.querySelectorAll('button');
+                for (let i = 0; i < minisPerSlide; i++) {
+                    const bttn = buttons[i] ;
+                    
+                    const numslide=(((currentMini+i)+numOfArticles)%numOfArticles)+1;
+                    bttn.querySelector('img').src = minisPaths[i];
+                    bttn.querySelector('.card-img-overlay').innerText = numslide.toString();
+                }
+        } else {
+            console.error('No active slide or invalid filterIndex');
+        }
+    }   
+}
