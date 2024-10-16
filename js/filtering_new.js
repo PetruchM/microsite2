@@ -98,8 +98,8 @@ function changeSlidesInfo(desiredArticles,elements){
                     slide.querySelector('.project-motto-text').innerText=article.project_motto_text;
                     slide.querySelector('.author-img').src = article.author_img;
                     slide.querySelector('.author-name').innerText = article.author_name;
-                    slide.querySelector('.author-institute').innerText = article.author_institute;
-                    slide.querySelector('.project-info-text').innerText = article.text;
+                    slide.querySelector('.author-institute').innerHTML = article.author_institute;
+                    slide.querySelector('.project-info-text').innerHTML = article.text.replace(/^"(.*)"$/, '$1');
 
                     console.log(`Article changed successfully for ID ${id}:`, article);
                 } else {
