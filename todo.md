@@ -20,3 +20,9 @@ schovat ho na uzzsich obrazovkach
 
 - optimalizovat obrazky (velikost webu, loading time)
 
+
+vypnout čísla
+
+vybranej na prostředek
+
+
