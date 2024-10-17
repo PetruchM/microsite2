@@ -127,34 +127,34 @@ async function loadNextMini(direction) {
     }   
 }
 
-
-// Function to execute on screen click
-window.addEventListener('click', function() {
-    // Delay execution by 0.5 seconds (500 milliseconds)
-    setTimeout(function() {
-        // Step 1: Find the active div inside projectCarousel
-        var activeElement = document.querySelector('#projectCarousel .active');
+///!!!  GACR want activa card to be the middle always
+// // Function to execute on screen click
+// window.addEventListener('click', function() {
+//     // Delay execution by 0.5 seconds (500 milliseconds)
+//     setTimeout(function() {
+//         // Step 1: Find the active div inside projectCarousel
+//         var activeElement = document.querySelector('#projectCarousel .active');
         
-        // Step 2: Get the value of the data-filter-index attribute
-        if (activeElement) {
-            var activeIndex = activeElement.getAttribute('data-filter-index');
+//         // Step 2: Get the value of the data-filter-index attribute
+//         if (activeElement) {
+//             var activeIndex = activeElement.getAttribute('data-filter-index');
 
-            // Step 3: Iterate over all buttons in pagerCarouselCopy
-            var buttons = document.querySelectorAll('#pagerCarousel button');
+//             // Step 3: Iterate over all buttons in pagerCarouselCopy
+//             var buttons = document.querySelectorAll('#pagerCarousel button');
 
-            buttons.forEach(function(button) {
-                // Step 4: Check if the button's data-filter-target matches the activeIndex
-                var filterTarget = button.getAttribute('data-filter-target');
+//             buttons.forEach(function(button) {
+//                 // Step 4: Check if the button's data-filter-target matches the activeIndex
+//                 var filterTarget = button.getAttribute('data-filter-target');
 
-                if (filterTarget === activeIndex) {
-                    // Add class "a-active-card" if they match
-                    button.classList.add('a-active-card');
-                } else {
-                    // Remove class "a-active-card" if they don't match
-                    button.classList.remove('a-active-card');
-                }
-            });
-            console.log(`${activeIndex}`)
-        }
-    }, 700);
-});
+//                 if (filterTarget === activeIndex) {
+//                     // Add class "a-active-card" if they match
+//                     button.classList.add('a-active-card');
+//                 } else {
+//                     // Remove class "a-active-card" if they don't match
+//                     button.classList.remove('a-active-card');
+//                 }
+//             });
+//             console.log(`${activeIndex}`)
+//         }
+//     }, 700);
+// });
