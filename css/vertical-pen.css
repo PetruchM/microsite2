@@ -107,12 +107,12 @@
 }
 
 
-
-.card-img-overlay {
+/* GACR dont want numbers on tha pager carousel cards */
+/* .card-img-overlay {
     color: white;
     font-weight: 800;
     font-size: 4vh;
-}
+} */
 
 @media (max-width: 965px){
     #verticalCarousel{

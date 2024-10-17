@@ -21,8 +21,8 @@ async function updatePagerCarousel(category, currentSlide){
             buttons.forEach(bttnEl => {
                 const numSlide = parseInt(bttnEl.dataset.bsSlideTo, 10);
                 bttnEl.querySelector('img').src = articlesPaths[numSlide];
-                const cardNum = numSlide + 1;
-                bttnEl.querySelector('.card-img-overlay').innerText = cardNum.toString();
+                // const cardNum = numSlide + 1; 
+                // bttnEl.querySelector('.card-img-overlay').innerText = cardNum.toString(); // GAcr dont want numbers 
             });
         });
         allSlidesHere=false;
@@ -32,10 +32,10 @@ async function updatePagerCarousel(category, currentSlide){
             const buttons= carouselItem.querySelectorAll('button');
             for (let j = 0; j < minisPerSlide; j++) {
                 const bttnEl = buttons[j];
-                const numslide=(((currentMini-4+i+j)+numOfArticles)%numOfArticles)+1;
                 bttnEl.querySelector('img').src = articlesPaths[i+j];
-                bttnEl.querySelector('.card-img-overlay').innerText = numslide.toString();
-            }
+                // const numslide=(((currentMini-4+i+j)+numOfArticles)%numOfArticles)+1;
+                // bttnEl.querySelector('.card-img-overlay').innerText = numslide.toString();  // GAcr dont want numbers 
+            } 
         }
         allSlidesHere=true;
     }
@@ -119,7 +119,7 @@ async function loadNextMini(direction) {
                     
                     const numslide=(((currentMini+i)+numOfArticles)%numOfArticles)+1;
                     bttn.querySelector('img').src = minisPaths[i];
-                    bttn.querySelector('.card-img-overlay').innerText = numslide.toString();
+                    // bttn.querySelector('.card-img-overlay').innerText = numslide.toString(); // GAcr dont want numbers 
                 }
         } else {
             console.error('No active slide or invalid filterIndex');
