@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     height: 100%;
+    top: 7vh;
     /*transform: translateX(-10px); /* TODO: this is shady */
 }
 
@@ -20,11 +21,13 @@
 }
 
 .bg-img {
-    max-width: 100%;
+    /* max-width: 100%; */
+    top: 10vh;
+    width: 100%;
     margin: 0 auto;
-    height: 75vh;
+    /* height: 95vh; */
     object-fit: cover;
-    min-height: 612px;
+    /* min-height: 612px; */
 }
 
 /*
