@@ -1,10 +1,9 @@
-let pagerCarouselTemplate = document.getElementById('pagerCarousel');
-let pagerCarouselItems = pagerCarouselTemplate.querySelectorAll('.carousel-item');
-const minisPerSlide=5;
-const minisWhenUnfiltered=9;
-currentCategory=5;
-let allSlidesHere=true;
-let currentMini=0;
+// let pagerCarouselTemplate = document.getElementById('pagerCarousel');
+// let pagerCarouselItems = pagerCarouselTemplate.querySelectorAll('.carousel-item');
+// const minisPerSlide=5;
+// const minisWhenUnfiltered=9;
+// let allSlidesHere=true;
+// let currentMini=0;
 
 
 async function updatePagerCarousel(category, currentSlide){
@@ -126,35 +125,3 @@ async function loadNextMini(direction) {
         }
     }   
 }
-
-///!!!  GACR want activa card to be the middle always
-// // Function to execute on screen click
-// window.addEventListener('click', function() {
-//     // Delay execution by 0.5 seconds (500 milliseconds)
-//     setTimeout(function() {
-//         // Step 1: Find the active div inside projectCarousel
-//         var activeElement = document.querySelector('#projectCarousel .active');
-        
-//         // Step 2: Get the value of the data-filter-index attribute
-//         if (activeElement) {
-//             var activeIndex = activeElement.getAttribute('data-filter-index');
-
-//             // Step 3: Iterate over all buttons in pagerCarouselCopy
-//             var buttons = document.querySelectorAll('#pagerCarousel button');
-
-//             buttons.forEach(function(button) {
-//                 // Step 4: Check if the button's data-filter-target matches the activeIndex
-//                 var filterTarget = button.getAttribute('data-filter-target');
-
-//                 if (filterTarget === activeIndex) {
-//                     // Add class "a-active-card" if they match
-//                     button.classList.add('a-active-card');
-//                 } else {
-//                     // Remove class "a-active-card" if they don't match
-//                     button.classList.remove('a-active-card');
-//                 }
-//             });
-//             console.log(`${activeIndex}`)
-//         }
-//     }, 700);
-// });

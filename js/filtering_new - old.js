@@ -139,7 +139,7 @@ nextButton.addEventListener('click', () => {
 function loadNextArticle(direction) {
     if(allSlides){
         const activeSlide = projectCarousel.querySelector('.carousel-item.active');  //find the active slide, there must be one
-        const filterIndex = parseInt(activeSlide.getAttribute('data-filter-index')); // Convert int index to integer
+        const filterIndex = parseInt(activeSlide.ributgetAtte('data-filter-index')); // Convert int index to integer
         console.log(`${currentSlide}`)
         if (filterIndex !== null && !isNaN(filterIndex)) {
                 currentSlide=((currentSlide+direction)+numOfArticles)%numOfArticles; //change in the current slide acording to the direction of browsing
