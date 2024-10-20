@@ -8,15 +8,15 @@ const slideDivisions = projectCarousel.querySelectorAll('.carousel-item');
 const filtersDivision = document.getElementById('filter');
 const pagerCarousel = document.getElementById('pagerCarousel');
 const pagerCarouselItems = pagerCarousel.querySelectorAll('.carousel-item');
+const pagerCarouselActiveItems = pagerCarousel.querySelectorAll('.card.active');
 const pcFilterButtons = Array.from(filtersDivision.querySelector('.carousel__filter-container').children);
 const filterLabel = filtersDivision.querySelector('.carousel__filter-label');
 const filterNames = ['TECHNICKÉ VĚDY','VĚDY O NEŽIVÉ PŘÍRODĚ','LÉKAŘSKÉ A BIOLOGICKÉ VĚDY','SPOLEČENSKÉ A HUMANITNÍ VĚDY','ZEMĚDĚLSKÉ A BIOLOGICKO ENVIROMENTÁLNÍ VĚDY']
 let filterTimeout;
 let currentSlide = 0;  //we want to remember on which slide user ended
 let allSlides=true;
-let currentMini=0;
 let isSyncing = false;
-const syncDelay = 1000;
+const syncDelay = 700;
 
 
 
@@ -57,7 +57,7 @@ function deactivateFilterLabel() {
 function filterCarousel(index) {
     changeSlides(index);
     activateDesiredSlide(index);
-    updatePagerCarousel(index,currentSlide);
+    updatePagerCarousel(index);
 }
 
 function changeSlides(index) {
@@ -119,9 +119,8 @@ function activateDesiredSlide(index){  //will activate the slide that the user w
     pagerCarouselItems[activeIndexPager].classList.add('active');  //while filtered and unfiltered, the first item will be activated
 }
 
-async function updatePagerCarousel(category, currentSlide){
+async function updatePagerCarousel(category){
     console.log(category);
-    currentMini=currentSlide;
     let articlesPaths = await getDesiredPaths(category,0);
 
     console.log("Updating pager carousel");
@@ -159,17 +158,17 @@ async function getDesiredPaths(category, updating){
     } else if (updating!=0){
         if (updating==1){
             for (let i = 0; i < minisPerSlide; i++) {
-                articles.push(((currentMini + i) + numOfArticles) % numOfArticles);
+                articles.push(((currentSlide + i) + numOfArticles) % numOfArticles);
             }
         }else{ //updating ==-1
             for (let i = 0; i < minisPerSlide; i++) {
-                articles.push(((currentMini - 4 + i) + numOfArticles) % numOfArticles);
+                articles.push(((currentSlide - 4 + i) + numOfArticles) % numOfArticles);
             }
         }
         
     }else{ //updating ==0  ->we are generating whole pager
         for (let i = 0; i < minisWhenUnfiltered; i++) {
-            articles.push(((currentMini - 4 + i) + numOfArticles) % numOfArticles);
+            articles.push(((currentSlide - 4 + i) + numOfArticles) % numOfArticles);
         }
     }
     console.log("Fetching article data...");
@@ -230,32 +229,30 @@ nextMinisButton.addEventListener('click', () => {
 function CarouselButtonClicked(carouselType, direction){
     if (!isSyncing) {
         isSyncing = true;
+        CardsDeActivation();
         if (direction==-1){
             carouselType.prev();
         }else{//==1
             carouselType.next();
         } 
-        setTimeout(() => {
-            isSyncing = false;
-        }, syncDelay);
+        
         const activeSlide = projectCarousel.querySelector('.carousel-item.active');
         const activeItem = pagerCarousel.querySelector('.carousel-item.active');
         loadNextArticle(activeSlide,direction); 
         loadNextMini(activeItem,direction);
+        setTimeout(() => {
+            CardsActivation();
+            isSyncing = false;
+        }, syncDelay);
     }
 }
 
 function CarouselButtonClickedTwice(activeItemNum,pagerItemNum,direction){ //this function is triggered only when usec clicks on edge pagerCard, do basicly the pager carousel is moved up or down twice
-    const desiredItemNum = ((activeItemNum+(2*direction))+articlesPerFilter)%articlesPerFilter;
-    const desiredPagerItemNum = ((pagerItemNum+(2*direction))+articlesPerFilter)%articlesPerFilter;
     if (!isSyncing) {
         isSyncing = true;
-        bsCarousel.to(desiredItemNum);
-        bsPagerCarousel.to(desiredPagerItemNum);
+        CardsDeActivation();
+        slideMultipleTimes(2,direction);
         
-        setTimeout(() => {
-            isSyncing = false;
-        }, syncDelay);
         for (let i = 0; i < 2; i++) {
             console.log("jednou to proslo");
             let activeSlide = slideDivisions[((activeItemNum+(i*direction))+articlesPerFilter)%articlesPerFilter]
@@ -263,7 +260,40 @@ function CarouselButtonClickedTwice(activeItemNum,pagerItemNum,direction){ //thi
             loadNextArticle(activeSlide,direction); 
             loadNextMini(activeItem,direction);
         }
+        setTimeout(() => {
+            CardsActivation();
+            isSyncing = false;
+        }, 1.8*syncDelay);
     }
+}
+
+function slideMultipleTimes(times, direction) {
+    let slideCount = 0; 
+    function slide() {
+        if (slideCount < times) {
+            console.log("jednou to proslo---------------");
+            if (direction === -1) {
+                bsPagerCarousel.prev();
+            } else {
+                bsPagerCarousel.next();
+            }
+            slideCount++;
+            // Wait for the slide transition to finish before sliding again
+            setTimeout(slide, syncDelay); // Adjust 600ms to your carousel's transition duration
+        }
+    }
+    slide();
+}
+
+function CardsDeActivation(){
+    pagerCarouselActiveItems.forEach(card => {
+        card.classList.remove('active');
+    });
+}
+function CardsActivation(){
+    pagerCarouselActiveItems.forEach(card => {
+        card.classList.add('active');
+    });
 }
 
 const pagerCarouselAllButton = pagerCarousel.querySelectorAll('.card');
@@ -273,7 +303,7 @@ pagerCarouselAllButton.forEach((button, index) => {
 
 function MovePagerCarousel(button,index){
     console.log("clicked on edge card")
-    const pagerItemNum = index/articlesPerFilter;
+    const pagerItemNum = Math.floor(index / articlesPerFilter);
     const activeItem=projectCarousel.querySelector('.carousel-item.active');
     const activeItemNum= parseInt(activeItem.getAttribute('data-filter-index'));
     const pagerButtonNum = index%articlesPerFilter;
@@ -283,12 +313,10 @@ function MovePagerCarousel(button,index){
             CarouselButtonClickedTwice(activeItemNum,pagerItemNum,-1)
             break;
         case 1:
-            bsPagerCarousel.prev();
-            CarouselButtonClicked(bsCarousel,-1);
+            CarouselButtonClicked(bsPagerCarousel,-1);
             break;
         case 3:
-            bsPagerCarousel.next();
-            CarouselButtonClicked(bsCarousel,1);
+            CarouselButtonClicked(bsPagerCarousel,1);
             break;
         case 4:
             CarouselButtonClickedTwice(activeItemNum,pagerItemNum,1)
@@ -296,8 +324,6 @@ function MovePagerCarousel(button,index){
         default:
             break;
     }
-    // pagerCarouselItems[pagerItemNum].classList.remove('active');
-    // const desiredPagerItem=pagerItemNum
 }
 
 
@@ -328,7 +354,6 @@ async function loadNextMini(activeItem,direction) {
         //const activeItem = pagerCarousel.querySelector('.carousel-item.active');  //find the active slide, there must be one
         const ItemIndex = parseInt(activeItem.getAttribute('data-index')); // Convert int index to integer
         if (ItemIndex !== null && !isNaN(ItemIndex)) {
-                currentMini=((currentMini+direction)+numOfArticles)%numOfArticles;
                 let minisPaths = await getDesiredPaths(AllSelectedIndex,direction);
                 const targetIndex=((ItemIndex-(2*direction))+minisPerSlide)%minisPerSlide;//the index of the division that is to be updated is the "furthest" from the active slide
                 const targetPagerCarouselItem = pagerCarousel.querySelector(`.carousel-item[data-index="${targetIndex}"]`);   //find this division according to the value of data-filter-index
@@ -342,48 +367,3 @@ async function loadNextMini(activeItem,direction) {
         }
     }   
 }
-
-
-
-// // Get instances of both carousels (Bootstrap carousel instances)
-// const bsCarousel1 = new bootstrap.Carousel(projectCarousel);
-// const bsCarousel2 = new bootstrap.Carousel(pagerCarousel);
-// // Variables to prevent infinite loops from event listeners
-
-// // Synchronize the second carousel when the first carousel slides
-// // Listen for the "next" or "prev" event on carousel1 and synchronize carousel2
-// projectCarousel.addEventListener('slid.bs.carousel', function(event) {
-//     if (!isSyncing) {
-//         isSyncing = true; // Prevent triggering the other carousel's event
-
-//         if (event.direction === 'left') {
-//             bsCarousel2.next(); // Move carousel2 to the next slide if carousel1 moved right (next)
-//         } else if (event.direction === 'right') {
-//             bsCarousel2.prev(); // Move carousel2 to the previous slide if carousel1 moved left (previous)
-//         }
-
-//          // Delay resetting isSyncing to allow the second carousel to finish its slide
-//          setTimeout(function() {
-//             isSyncing = false;
-//         }, syncDelay); // Adjust the delay time to match the carousel's transition duration
-//     }
-// });
-
-// // Listen for the "next" or "prev" event on carousel2 and synchronize carousel1
-// pagerCarousel.addEventListener('slid.bs.carousel', function(event) {
-//     console.log(`${event.direction}`);
-//     if (!isSyncing) {
-//         isSyncing = true; // Prevent triggering the other carousel's event
-
-//         if (event.direction === 'left') {
-//             bsCarousel1.next(); // Move carousel1 to the next slide if carousel2 moved right (next)
-//         } else if (event.direction === 'right') {
-//             bsCarousel1.prev(); // Move carousel1 to the previous slide if carousel2 moved left (previous)
-//         }
-
-//          // Delay resetting isSyncing to allow the second carousel to finish its slide
-//          setTimeout(function() {
-//             isSyncing = false;
-//         }, syncDelay); // Adjust the delay time to match the carousel's transition duration
-//     }
-// });
