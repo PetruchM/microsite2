@@ -22,5 +22,13 @@ schovat ho na uzzsich obrazovkach
 
 
 
+- Better fetching from json
+{
+  "1": { ...article data... },
+  "2": { ...article data... },
+  ...
+}
 
+
+- calculating the desiredID for articles could be done differently, i coudl store the specific id for specific filters etc.
 
