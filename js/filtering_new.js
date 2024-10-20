@@ -14,8 +14,10 @@ const filterLabel = filtersDivision.querySelector('.carousel__filter-label');
 const filterNames = ['TECHNICKÉ VĚDY','VĚDY O NEŽIVÉ PŘÍRODĚ','LÉKAŘSKÉ A BIOLOGICKÉ VĚDY','SPOLEČENSKÉ A HUMANITNÍ VĚDY','ZEMĚDĚLSKÉ A BIOLOGICKO ENVIROMENTÁLNÍ VĚDY']
 let filterTimeout;
 let currentSlide = 0;  //we want to remember on which slide user ended
+let currentFilter = 5;
 let allSlides=true;
 let isSyncing = false;
+let onPC= true;
 const syncDelay = 700;
 
 
@@ -42,11 +44,13 @@ function setFilter(button, index) {
 
             console.log("Current filter is:", index);
             allSlides=false;
+            currentFilter=index;
 
     } else { //filter is active, disable it
             deactivateFilterLabel();
             filterCarousel(AllSelectedIndex);
             allSlides=true;
+            currentFilter=5;
     }
 }
 
@@ -91,7 +95,11 @@ function changeSlidesInfo(desiredArticles,elements){
                 if (article) { //set all wanted data for this article to the slide
                     console.log(`Article for ID ${id}:`, article);
                     
-                    slide.querySelector('.a-background-img').src = article.background_img;
+                    if (onPC){
+                        slide.querySelector('.a-background-img').src = article.background_img;
+                    }else{
+                        slide.querySelector('.a-background-img').src = article.background_img_phone;
+                    }
                     slide.querySelector('.a-title').innerText = article.title;
                     slide.querySelector('.project-motto-text').innerText=article.project_motto_text;
                     slide.querySelector('.author-img').src = article.author_img;
@@ -133,7 +141,6 @@ async function updatePagerCarousel(category){
                 bttnEl.querySelector('img').src = articlesPaths[numSlide];
             });
         });
-        allSlides=false;
     }else{
         for (let i = 0; i < minisPerSlide; i++) {
             const carouselItem = pagerCarouselItems[((i-2)+minisPerSlide)%minisPerSlide];  //why this? because i want the data-bs-slide-to indexes work acording tot the articles
@@ -143,7 +150,6 @@ async function updatePagerCarousel(category){
                 bttnEl.querySelector('img').src = articlesPaths[i+j];
             } 
         }
-        allSlides=true;
     }
     console.log("full carousel chaged")
 }
@@ -366,4 +372,21 @@ async function loadNextMini(activeItem,direction) {
             console.error('No active slide or invalid filterIndex');
         }
     }   
+}
+
+
+
+function updateBackground(){
+    const windowWidth = window.innerWidth;
+    let currentOnPc;
+    if (windowWidth <1215){
+        currentOnPc=false;
+    }else{
+        currentOnPc=true;
+    }
+
+    if (currentOnPc!=onPC){
+        onPC=currentOnPc;
+        setFilter(pcFilterButtons[currentFilter%articlesPerFilter],currentFilter);
+    }
 }

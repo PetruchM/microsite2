@@ -65,9 +65,3 @@ function updatePathBasedOnWidth() {
         maskpathElement.setAttribute('d', defaultMaskPath);
     }
 }
-
-// Call the function once to set the initial path
-updatePathBasedOnWidth();
-
-// Add an event listener to call the function when the window is resized
-window.addEventListener('resize', updatePathBasedOnWidth);
