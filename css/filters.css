@@ -16,6 +16,21 @@
     margin: 0 10px; /* Adjust the margin as needed */
 }
 
+.header-logo{
+    object-fit: contain;
+    height: 100%;
+    z-index: 20;
+    margin-right: 3vw;
+    margin-top: 1.5vh;
+}
+
+.filter-header-logo{
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 4vh;
+}
+
 /*
 .filter-header::after {
     content: "";
