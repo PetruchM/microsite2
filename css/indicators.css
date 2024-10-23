@@ -143,6 +143,9 @@ svg {
 .indicator-svg2 {
     opacity: 0;
 }
+.indicator-svg2:hover {
+    opacity: 1;
+}
 
 .indicator-num {
     font-size: 5vh;
