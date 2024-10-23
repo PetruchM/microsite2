@@ -14,7 +14,7 @@ function IndicatorActive(Index) {
     if (textElement.classList.contains("active")) {
         textElement.classList.remove("active");
         indiElement.classList.remove("active");
-        img2Element.style.opacity="0";
+        // img2Element.style.opacity="0";
     } else {
         textElement.classList.add("active");
         indiElement.classList.add("active");
