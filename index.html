@@ -1,570 +1,572 @@
 <!doctype html>
 <html lang="cs">
-<head>
-    <!-- Test -->
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <head>
+        <!-- Test -->
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bs_5.3.3/bootstrap.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bs_5.3.3/bootstrap.css">
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="css/carousel_box.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/filters.css">
-    <link rel="stylesheet" href="css/pc_filters.css">
-    <link rel="stylesheet" href="css/filter_queries.css">
-    <link rel="stylesheet" href="css/carousel_box_queries.css">
-    <link rel="stylesheet" href="css/carousel_queries.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/intro_transition.css">
-    <link rel="stylesheet" href="css/indicators.css">
-    <link rel="stylesheet" href="css/indicators-queries.css">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/carousel_box.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="css/filters.css">
+        <link rel="stylesheet" href="css/pc_filters.css">
+        <link rel="stylesheet" href="css/filter_queries.css">
+        <link rel="stylesheet" href="css/carousel_box_queries.css">
+        <link rel="stylesheet" href="css/carousel_queries.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/intro_transition.css">
+        <link rel="stylesheet" href="css/indicators.css">
+        <link rel="stylesheet" href="css/indicators-queries.css">
 
-    <link rel="stylesheet" href="css/vertical-pen.css">
+        <link rel="stylesheet" href="css/vertical-pen.css">
 
-    <title>O GAČR</title>
-</head>
+        <title>O GAČR</title>
+    </head>
 
-  <body class="no-overflow">
-    <!-- Intro transition  -->
-    <div class="intro-overlay2">
-        <div class="intro-header">
-            <a href="https://gacr.cz/" target="_blank">
-                <img class="intro-logo" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
-            </a>
+    <body class="no-overflow">
+        <!-- Intro transition  -->
+        <div class="intro-overlay2">
+            <div class="intro-header">
+                <a href="https://gacr.cz/" target="_blank">
+                    <img class="intro-logo" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
+                </a>
+            </div>
+            <div class="intro-column">
+                <h1>VYDEJTE SE S NÁMI AŽ NA<br>SAMOU HRANICI POZNÁNÍ</h1>
+                <button class="intro-button2">
+                    <p>Už jdu!</p>
+                </button>
+            </div>
+            <img src="images/pngs/intro-emblem.png" class="intro-image" alt="">
         </div>
-        <div class="intro-column">
-            <h1>VYDEJTE SE S NÁMI AŽ NA<br>SAMOU HRANICI POZNÁNÍ</h1>
-            <button class="intro-button2">
-                <p>Už jdu!</p>
+
+        <!-- Slide filtering -->
+        <div id="filter" class="filter-header">
+            <div class="carousel__filter-label">
+                Soucasny filter
+            </div>
+            <div class="carousel__filter-container">
+                <div class="carousel__filter-button">                  
+                    <img src="images/filter_icons/TV_ikona.svg" alt="">
+                    <div class="carousel__filter-button-detail">
+                        TECHNICKÉ<br>VĚDY
+                    </div>
+                </div>
+                <div class="carousel__filter-button">
+                    <img src="images/filter_icons/VoNP_ikona.svg" alt="">
+                    <div class="carousel__filter-button-detail">
+                        VĚDY O NEŽIVÉ<br>PŘÍRODĚ
+                    </div>
+                </div>
+                <div class="carousel__filter-button">
+                    <img src="images/filter_icons/LaBV_ikona.svg" alt="">
+                    <div class="carousel__filter-button-detail">
+                        LÉKAŘSKÉ<br>A BIOLOGICKÉ VĚDY
+                    </div>
+                </div>
+                <div class="carousel__filter-button">
+                    <img src="images/filter_icons/SaHV_ikona.svg" alt="">
+                    <div class="carousel__filter-button-detail">
+                        SPOLEČENSKÉ<br>A HUMANITNÍ VĚDY
+                    </div>
+                </div>
+                <div class="carousel__filter-button">
+                    <img src="images/filter_icons/ZaBEV_ikona.svg" alt="">
+                    <div class="carousel__filter-button-detail">
+                        ZEMĚDĚLSKÉ A BIOLOGICKO-<br>ENVIROMENTÁLNÍ VĚDY
+                    </div>
+                </div>
+            </div>
+            <div class="filter-header-logo">
+                <a href="https://gacr.cz/" target="_blank">
+                    <img class="header-logo" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Carousel -->
+        <div id="projectCarousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item" data-filter-index="0">
+                    <img src="images/articles/background/OK4_5_b.jpg" class="d-block bg-img a-background-img" alt="...">
+                    <div class="carousel__box">
+                        <div class="box-info1">
+                            <div class="box-info1-content">
+                                <h1 class="a-title">RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI</h1>
+                            </div>
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info2">
+                            <div class="box-info2-content">
+                                <div class="project-info has-scrollbar1">
+                                    <div>
+                                        <p class="project-motto-text">„Projekt dokládá, že je stále nutné bojovat proti jakékoliv formě xenofobie a rasismu. Ne všechny komunity mají odpovídající postavení a zastoupení ve veřejném životě.“</p>
+                                    </div>
+                                    <div class="author-img-div">
+                                        <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
+                                    </div>
+                                    <div class="author-text-div">
+                                        <h2 class="author-name">Mgr. Kateřina Čapková, Ph.D.</h2>
+                                        <p class="author-institute">Ústav pro soudobé dějiny Akademie věd ČR v Praze</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info3">
+                            <div class="box-info3-content">
+                                <div class="project-info has-scrollbar1">
+                                    <p class="project-info-text">Kateřina Čapková zkoumá dějiny a současnost Židů a Romů, kteří byli během druhé světové války vystaveni rasové perzekuci. Její výzkum propojuje židovské a romské dějiny, přičemž zkoumá genocidu těchto komunit na území bývalého Československa a jejich poválečné migrace. Čapková zdůrazňuje, že akademický nezájem o romskou historii odráží diskriminaci, kterou Romové zažívají dodnes. V roce 2016 založila Pražské fórum pro romské dějiny, které podporuje výzkum a romské badatele. <br>Tým Čapkové se soustředí na propojené zkušenosti obou komunit, například jejich vzájemné vztahy v pracovních táborech a jejich roli v odboji. Jedním z výstupů je i databáze válečných svědectví Romů. Řešitelka také analyzuje poválečnou politiku vůči Romům a Židům a zdůrazňuje nutnost boje proti xenofobii a rasismu.</p>
+                                </div>
+                            </div>
+                            <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-filter-index="1">
+                    <img src="images/articles/background/OK5_5_b.jpg" class="d-block bg-img a-background-img" alt="...">
+                    <div class="carousel__box">
+                        <div class="box-info1">
+                            <div class="box-info1-content">
+                                <h1 class="a-title">VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN</h1>
+                            </div>
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info2">
+                            <div class="box-info2-content">
+                                <div class="project-info has-scrollbar1">
+                                    <div>
+                                        <p class="project-motto-text">„Zdánlivě stejná zvířata pocházející z různých lokalit mohou být ve skutečnosti jinými druhy, takže se spolu nedokáží křížit nebo se jim rodí neplodní potomci.“</p>
+                                    </div>
+                                    <div class="author-img-div">
+                                        <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
+                                    </div>
+                                    <div class="author-text-div">
+                                        <h2 class="author-name">Mgr. Miluše Vozdová, Ph.D.</h2>
+                                        <p class="author-institute">Výzkumný ústav veterinárního lékařství v Brně</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info3">
+                            <div class="box-info3-content">
+                                <div class="project-info has-scrollbar1">
+                                    <p class="project-info-text">Miluše Vozdová objevuje nové druhy zvířat pomocí genetického výzkumu. Její práce odhaluje, že zdánlivě známé druhy mohou mít výrazné genetické rozdíly, které nejsou viditelné na první pohled. Tyto rozdíly vznikají v důsledku evoluce, kdy se u některých živočichů spojují chromozomy, čímž dochází ke vzniku nových druhů. <br>Vozdová se původně zaměřila na čeleď turovitých a zkoumala chromozomy během buněčného dělení, kdy jsou dobře viditelné pod mikroskopem. Její tým potvrdil, že na pohled stejná zvířata, jako jsou různé druhy jelenů, srnců nebo daňků, mohou mít odlišný počet chromozomů, a tedy představovat různé druhy. <br>Tyto objevy jsou zásadní pro ochranu ohrožených druhů. Zvířata z různých oblastí, která vypadají podobně, se často nemohou křížit, nebo jejich potomci jsou neplodní, což komplikuje záchranné programy. Díky genetickému výzkumu lze lépe porozumět jejich evolučnímu vývoji a efektivněji zabezpečit jejich budoucnost.</p>
+                                </div>
+                            </div>
+                            <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item active" data-filter-index="2">
+                    <img src="images/articles/background/OK1_1_b.jpg" class="d-block bg-img a-background-img" alt="...">
+                    <div class="carousel__box">
+                        <div class="box-info1">
+                            <div class="box-info1-content">
+                                <h1 class="a-title">DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU</h1>
+                            </div>
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info2">
+                            <div class="box-info2-content">
+                                <div class="project-info has-scrollbar1">
+                                    <div>
+                                        <p class="project-motto-text">„Jednou by náš software mohl být v malém přístroji, který přímo v terénu určí, jakou bakterií se pacient nakazil.“</p>
+                                    </div>
+                                    <div class="author-img-div">
+                                        <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
+                                    </div>
+                                    <div class="author-text-div">
+                                        <h2 class="author-name">Ing. Helena Škutková, Ph.D.</h2>
+                                        <p class="author-institute">Ústav biomedicínského inženýrství Fakulty elektrotechniky a komunikačních technologií Vysokého učení technického v Brně</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info3">
+                            <div class="box-info3-content">
+                                <div class="project-info has-scrollbar1">
+                                    <p class="project-info-text">Běžná bakterie má kolem pěti milionů párů bází, což činí z práce s její DNA velmi složitý proces. Řešitelka projektu doktorka Škutková se inspirovala elektrokardiogramem (EKG) — grafickým zápisem elektrické aktivity srdce a v rámci výzkumu vytvořila efektivní způsob záznamu genetického kódu ve formě podobné elektrickému signálu. Takto zobrazené genomy usnadňují jejich vzájemné porovnávání a identifikaci jejich rozdílů, čímž je možné určit příbuznost různých organismů. Tento průlomový způsob záznamu tak umožňuje rychlé rozpoznání nebezpečných bakterií a virů v organismu a v budoucnu může zabránit šíření antibiotické rezistence nebo pomoci při prevenci pandemií.</p>
+                                </div>
+                            </div>
+                            <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-filter-index="3">
+                    <img src="images/articles/background/OK2_1_b.jpg" class="d-block bg-img a-background-img" alt="...">
+                    <div class="carousel__box">
+                        <div class="box-info1">
+                            <div class="box-info1-content">
+                                <h1 class="a-title">VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY</h1>
+                            </div>
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info2">
+                            <div class="box-info2-content">
+                                <div class="project-info has-scrollbar1">
+                                    <div>
+                                        <p class="project-motto-text">„Poznáváme mikrosvět, který sice přímo nevidíme a chová se podivně, ale může v budoucnu přinést obrovské objevy.“</p>
+                                    </div>
+                                    <div class="author-img-div">
+                                        <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
+                                    </div>
+                                    <div class="author-text-div">
+                                        <h2 class="author-name">prof. Mgr. Radim Filip, Ph.D.</h2>
+                                        <p class="author-institute">Přírodovědecká fakulta Univerzity Palackého v Olomouci</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info3">
+                            <div class="box-info3-content">
+                                <div class="project-info has-scrollbar1">
+                                    <p class="project-info-text">Kvantová mechanika se zabývá popisem mikroskopických objektů, jako jsou elektrony, atomy nebo třeba fotony. V současné době žijeme v době druhé kvantové revoluce, jejímž podstatným nástrojem je ne-Gaussovská koherence, která umožňuje měření pohybu atomů s menší chybovostí nebo třeba generování opravných kódů pro kvantové počítače. A právě primárně na tuto koherenci a její kvantové jevy se ve svém projekt doktor Filip a jeho tým zaměřují. <br>Jeden z přístrojů, které vědci při zkoumání kvantových jevů využívají, umí díky elektrickým polím a laserovým paprskům zchladit teplotu iontů vápníku až na absolutní nulu. Díky tomu jsou tak na obou místech výzkumu, v Brně a Olomouci, nejchladnější místa v České republice. Zde řešitel a jeho tým zkoumají jevy, na kterých bude možné stavět budoucí výzkumy a aplikace v oblasti kvantových technologií.</p>
+                                </div>
+                            </div>
+                            <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-filter-index="4">
+                    <img src="images/articles/background/OK3_1_b.jpg" class="d-block bg-img a-background-img" alt="...">
+                    <div class="carousel__box">
+                        <div class="box-info1">
+                            <div class="box-info1-content">
+                                <h1 class="a-title">SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY</h1>
+                            </div>
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info2">
+                            <div class="box-info2-content">
+                                <div class="project-info has-scrollbar1">
+                                    <div>
+                                        <p class="project-motto-text">„Je zajímavé potenciál blokování aktivity genů lépe poznat a vyzkoumat, jestli by se dala využít jako staronový doplněk do našeho imunitního systému při obraně proti virům.“</p>
+                                    </div>
+                                    <div class="author-img-div">
+                                        <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
+                                    </div>
+                                    <div class="author-text-div">
+                                        <h2 class="author-name">prof. Mgr. Petr Svoboda, Ph.D. </h2>
+                                        <p class="author-institute">Ústav molekulární genetiky Akademie věd České republiky</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
+                            </button>
+                        </div>
+                        <div class="box-info3">
+                            <div class="box-info3-content">
+                                <div class="project-info has-scrollbar1">
+                                    <p class="project-info-text">Proces, kterému se Petr Svoboda ve svém výzkumu věnuje, se nazývá RNA interference, zkráceně RNAi, při kterém speciální enzym ribonukleovou kyselinu „rozstříhá“, čímž cíleně blokuje aktivitu genů. RNAi má však i obrannou funkci — likviduje nebezpečné viry zničením jejich RNA. Tuto vrozenou formu imunity používají pouze rostliny a hmyz, u obratlovců se v průběhu evoluce vytratila. V rámci projektu je zkoumána možnost jejího znovuaktivování. V minulosti se jim již podařilo, díky genetickým úpravám, zaktivovat tuto formu obrany u myší. V současném projektu se snaží o totéž u slimákům. Vlastnosti jejich RNAi napoví, jakým směrem se ubírala evoluce u obratlovců a jak by mohla tato forma vrozené imunity být u savců obnovena. Dále projekt odpoví na otázku, jak velký rozsah antivirové ochrany může RNAi poskytnout a jak by mohla být v budoucnu v léčbě virových onemocnění uplatňována.</p></div>
+                                <p></p>
+                            </div>
+                            <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
+                                <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel control -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
             </button>
-        </div>
-        <img src="images/pngs/intro-emblem.png" class="intro-image" alt="">
-    </div>
-
-    <!-- Slide filtering -->
-    <div id="filter" class="filter-header">
-        <div class="carousel__filter-label">
-            Soucasny filter
-        </div>
-        <div class="carousel__filter-container">
-            <div class="carousel__filter-button">                  
-                <img src="images/filter_icons/TV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    TECHNICKÉ<br>VĚDY
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images/filter_icons/VoNP_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    VĚDY O NEŽIVÉ<br>PŘÍRODĚ
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images/filter_icons/LaBV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    LÉKAŘSKÉ<br>A BIOLOGICKÉ VĚDY
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images/filter_icons/SaHV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    SPOLEČENSKÉ<br>A HUMANITNÍ VĚDY
-                </div>
-            </div>
-            <div class="carousel__filter-button">
-                <img src="images/filter_icons/ZaBEV_ikona.svg" alt="">
-                <div class="carousel__filter-button-detail">
-                    ZEMĚDĚLSKÉ A BIOLOGICKO-<br>ENVIROMENTÁLNÍ VĚDY
-                </div>
-            </div>
-        </div>
-        <div class="filter-header-logo">
-            <a href="https://gacr.cz/" target="_blank">
-                <img class="header-logo" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
-            </a>
-        </div>
-    </div>
-
-    <!-- Main Carousel -->
-    <div id="projectCarousel" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item" data-filter-index="0">
-                <img src="images/articles/background/OK4_5_b.jpg" class="d-block bg-img a-background-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1 class="a-title">RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div>
-                                    <p class="project-motto-text">„Projekt dokládá, že je stále nutné bojovat proti jakékoliv formě xenofobie a rasismu. Ne všechny komunity mají odpovídající postavení a zastoupení ve veřejném životě.“</p>
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text-div">
-                                    <h2 class="author-name">Mgr. Kateřina Čapková, Ph.D.</h2>
-                                    <p class="author-institute">Ústav pro soudobé dějiny Akademie věd ČR v Praze</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <p class="project-info-text">Kateřina Čapková zkoumá dějiny a současnost Židů a Romů, kteří byli během druhé světové války vystaveni rasové perzekuci. Její výzkum propojuje židovské a romské dějiny, přičemž zkoumá genocidu těchto komunit na území bývalého Československa a jejich poválečné migrace. Čapková zdůrazňuje, že akademický nezájem o romskou historii odráží diskriminaci, kterou Romové zažívají dodnes. V roce 2016 založila Pražské fórum pro romské dějiny, které podporuje výzkum a romské badatele. <br>Tým Čapkové se soustředí na propojené zkušenosti obou komunit, například jejich vzájemné vztahy v pracovních táborech a jejich roli v odboji. Jedním z výstupů je i databáze válečných svědectví Romů. Řešitelka také analyzuje poválečnou politiku vůči Romům a Židům a zdůrazňuje nutnost boje proti xenofobii a rasismu.</p>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-filter-index="1">
-                <img src="images/articles/background/OK5_5_b.jpg" class="d-block bg-img a-background-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1 class="a-title">VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div>
-                                    <p class="project-motto-text">„Zdánlivě stejná zvířata pocházející z různých lokalit mohou být ve skutečnosti jinými druhy, takže se spolu nedokáží křížit nebo se jim rodí neplodní potomci.“</p>
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text-div">
-                                    <h2 class="author-name">Mgr. Miluše Vozdová, Ph.D.</h2>
-                                    <p class="author-institute">Výzkumný ústav veterinárního lékařství v Brně</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <p class="project-info-text">Miluše Vozdová objevuje nové druhy zvířat pomocí genetického výzkumu. Její práce odhaluje, že zdánlivě známé druhy mohou mít výrazné genetické rozdíly, které nejsou viditelné na první pohled. Tyto rozdíly vznikají v důsledku evoluce, kdy se u některých živočichů spojují chromozomy, čímž dochází ke vzniku nových druhů. <br>Vozdová se původně zaměřila na čeleď turovitých a zkoumala chromozomy během buněčného dělení, kdy jsou dobře viditelné pod mikroskopem. Její tým potvrdil, že na pohled stejná zvířata, jako jsou různé druhy jelenů, srnců nebo daňků, mohou mít odlišný počet chromozomů, a tedy představovat různé druhy. <br>Tyto objevy jsou zásadní pro ochranu ohrožených druhů. Zvířata z různých oblastí, která vypadají podobně, se často nemohou křížit, nebo jejich potomci jsou neplodní, což komplikuje záchranné programy. Díky genetickému výzkumu lze lépe porozumět jejich evolučnímu vývoji a efektivněji zabezpečit jejich budoucnost.</p>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item active" data-filter-index="2">
-                <img src="images/articles/background/OK1_1_b.jpg" class="d-block bg-img a-background-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1 class="a-title">DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div>
-                                    <p class="project-motto-text">„Jednou by náš software mohl být v malém přístroji, který přímo v terénu určí, jakou bakterií se pacient nakazil.“</p>
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text-div">
-                                    <h2 class="author-name">Ing. Helena Škutková, Ph.D.</h2>
-                                    <p class="author-institute">Ústav biomedicínského inženýrství Fakulty elektrotechniky a komunikačních technologií Vysokého učení technického v Brně</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <p class="project-info-text">Běžná bakterie má kolem pěti milionů párů bází, což činí z práce s její DNA velmi složitý proces. Řešitelka projektu doktorka Škutková se inspirovala elektrokardiogramem (EKG) — grafickým zápisem elektrické aktivity srdce a v rámci výzkumu vytvořila efektivní způsob záznamu genetického kódu ve formě podobné elektrickému signálu. Takto zobrazené genomy usnadňují jejich vzájemné porovnávání a identifikaci jejich rozdílů, čímž je možné určit příbuznost různých organismů. Tento průlomový způsob záznamu tak umožňuje rychlé rozpoznání nebezpečných bakterií a virů v organismu a v budoucnu může zabránit šíření antibiotické rezistence nebo pomoci při prevenci pandemií.</p>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-filter-index="3">
-                <img src="images/articles/background/OK2_1_b.jpg" class="d-block bg-img a-background-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1 class="a-title">VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div>
-                                    <p class="project-motto-text">„Poznáváme mikrosvět, který sice přímo nevidíme a chová se podivně, ale může v budoucnu přinést obrovské objevy.“</p>
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text-div">
-                                    <h2 class="author-name">prof. Mgr. Radim Filip, Ph.D.</h2>
-                                    <p class="author-institute">Přírodovědecká fakulta Univerzity Palackého v Olomouci</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <p class="project-info-text">Kvantová mechanika se zabývá popisem mikroskopických objektů, jako jsou elektrony, atomy nebo třeba fotony. V současné době žijeme v době druhé kvantové revoluce, jejímž podstatným nástrojem je ne-Gaussovská koherence, která umožňuje měření pohybu atomů s menší chybovostí nebo třeba generování opravných kódů pro kvantové počítače. A právě primárně na tuto koherenci a její kvantové jevy se ve svém projekt doktor Filip a jeho tým zaměřují. <br>Jeden z přístrojů, které vědci při zkoumání kvantových jevů využívají, umí díky elektrickým polím a laserovým paprskům zchladit teplotu iontů vápníku až na absolutní nulu. Díky tomu jsou tak na obou místech výzkumu, v Brně a Olomouci, nejchladnější místa v České republice. Zde řešitel a jeho tým zkoumají jevy, na kterých bude možné stavět budoucí výzkumy a aplikace v oblasti kvantových technologií.</p>
-                            </div>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-filter-index="4">
-                <img src="images/articles/background/OK3_1_b.jpg" class="d-block bg-img a-background-img" alt="...">
-                <div class="carousel__box">
-                    <div class="box-info1">
-                        <div class="box-info1-content">
-                            <h1 class="a-title">SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY</h1>
-                        </div>
-                        <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info2">
-                        <div class="box-info2-content">
-                            <div class="project-info has-scrollbar1">
-                                <div>
-                                    <p class="project-motto-text">„Je zajímavé potenciál blokování aktivity genů lépe poznat a vyzkoumat, jestli by se dala využít jako staronový doplněk do našeho imunitního systému při obraně proti virům.“</p>
-                                </div>
-                                <div class="author-img-div">
-                                    <img class="author-img" src="images/articles/authors/einstein.png" alt="Author 1">
-                                </div>
-                                <div class="author-text-div">
-                                    <h2 class="author-name">prof. Mgr. Petr Svoboda, Ph.D. </h2>
-                                    <p class="author-institute">Ústav molekulární genetiky Akademie věd České republiky</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
-                        </button>
-                    </div>
-                    <div class="box-info3">
-                        <div class="box-info3-content">
-                            <div class="project-info has-scrollbar1">
-                                <p class="project-info-text">Proces, kterému se Petr Svoboda ve svém výzkumu věnuje, se nazývá RNA interference, zkráceně RNAi, při kterém speciální enzym ribonukleovou kyselinu „rozstříhá“, čímž cíleně blokuje aktivitu genů. RNAi má však i obrannou funkci — likviduje nebezpečné viry zničením jejich RNA. Tuto vrozenou formu imunity používají pouze rostliny a hmyz, u obratlovců se v průběhu evoluce vytratila. V rámci projektu je zkoumána možnost jejího znovuaktivování. V minulosti se jim již podařilo, díky genetickým úpravám, zaktivovat tuto formu obrany u myší. V současném projektu se snaží o totéž u slimákům. Vlastnosti jejich RNAi napoví, jakým směrem se ubírala evoluce u obratlovců a jak by mohla tato forma vrozené imunity být u savců obnovena. Dále projekt odpoví na otázku, jak velký rozsah antivirové ochrany může RNAi poskytnout a jak by mohla být v budoucnu v léčbě virových onemocnění uplatňována.</p></div>
-                            <p></p>
-                        </div>
-                        <button class="slide_butt3" onclick="slideRectangle3()" aria-label="Close article">
-                            <img src="images/svgs/expand_right.svg" class="expand-bttn-img expand-left" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Carousel control -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-
-    </div>
-
-    <!-- Small carousel for navigation -->
-    <div id="secondCarousel">
-        <div id="pagerCarousel" class="carousel slide vertical NaN pointer-event" data-bs-ride="carousel" data-bs-interval="500000000">
-            <div class="carousel-inner" role="listbox">
-                
-                <div class="carousel-item active" data-index="0">
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                            <img src="images/articles/minis/OK4_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                            <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                            <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                            <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                            <img src="images/articles/minis/OK3_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                </div>
-        
-                <div class="carousel-item" data-index="1">
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                            <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                            <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                            <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                            <img src="images/articles/minis/OK3_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                            <img src="images/articles/minis/OK4_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                </div>
-        
-                <div class="carousel-item" data-index="2">
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                            <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                            <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                            <img src="images/articles/minis/OK3_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                            <img src="images/articles/minis/OK4_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                            <img src="images/articles/minis/OK5_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                </div>
-        
-                <div class="carousel-item" data-index="3">
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                            <img src="images/articles/minis/OK2_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                            <img src="images/articles/minis/OK3_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                            <img src="images/articles/minis/OK4_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                            <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                            <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                </div>
-        
-                <div class="carousel-item" data-index="4">
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                            <img src="images/articles/minis/OK3_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                            <img src="images/articles/minis/OK4_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                            <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                            <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                    <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                            <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
-                    </button>
-                </div>
-        
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Indicators -->
-    <svg width="0" height="0"> <!--this svg defines the cut border of the bacground. svg itself not visible-->
-        <defs>
-            <mask id="svg-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
-                <rect x="0" y="0" width="1" height="1" fill="white" /> <!-- Everything white will be visible. Using standard coordinates from 0 to 1 for respponsibility -->
-                <path id="maskpath" d="M 0 0.02 Q 0.25 0.04 0.5 0.02 T 1 0.02 L1 -0.001 L0 -0.001 Z" fill="black"/> <!-- What is black will be transparent -->
-            </mask>
-        </defs>
-    </svg>
-    <div class="indicators-section">
-        <div class="moving-dashed-line">
-            <!-- viewbox ensures responsibility, the path is specified acording to need -->
-            <svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                <path id="linepath" d="M 0 20 Q 250 52 500 20 T 1000 20" fill="transparent" stroke="white" class="line"/>
-            </svg>
-            <!-- M 0 40 Q 250 80 500 40 T 1000 40 -->
-            <!-- M 0 0 Q 250 40 500 0 T 1000 0 -->
-            <button class="slideDownButt" onClick="scrollDown()" aria-label="Scroll down to Interesting facts">
-                <img src="images/svgs/šipka.svg" alt="">
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
             </button>
-        </div>
-        <div class="indicators-container">
-            <div class="single-indicator">
-                <div class="lower-section-logo">
-                    <a href="https://gacr.cz/" target="_blank">
-                        <img src="images/pngs/gacr_logo.png" class="lower-section-logo-img" alt="">
-                    </a>
-                </div>
-                <button class="indicator-slide_butt" onclick="slideDownTextLogo()" aria-label="Show information about GAČR">
-                    <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                </button>
-                <p class="single-indicator-p">Grantová agentura České republiky přes 30 let podporuje špičkový základní výzkum napříč všemi
-                    obory – od technických přes společenské vědy až po zkoumání lidských bytostí, fauny, flory a
-                    vesmíru. Každý rok poskytuje nejlepším vědcům granty v celkové hodnotě přibližně 4,5 miliardy
-                    korun – to je přes 11 % státního rozpočtu určeného na vědu a výzkum.</p>
-            </div>
-            <div class="white-line"></div>
 
-            <div class="single-indicator">
-                <div class="indicator">
-                    <div class="indicator-img">
-                        <img src="images/indicators/Podporene_myslenky1.svg" alt="Indicator SVG" class="indicator-svg1">
-                        <img src="images/indicators/Podporene_myslenky2.svg" alt="Indicator SVG" class="indicator-svg2">
+        </div>
+
+        <!-- Small carousel for navigation -->
+        <div id="secondCarousel">
+            <div id="pagerCarousel" class="carousel slide vertical NaN pointer-event" data-bs-ride="carousel" data-bs-interval="500000000">
+                <div class="carousel-inner" role="listbox">
+                    
+                    <div class="carousel-item active" data-index="0">
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                                <img src="images/articles/minis/OK4_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                                <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                                <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
+                                <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                                <img src="images/articles/minis/OK3_1_a.jpg" class="img-fluid" alt="">
+                        </button>
                     </div>
-                    <div class="indicator-num loading-effect" data-value="20">00 000</div>
-                    <div class="indicator-text">Podpořených<br>myšlenek</div>
-                </div>
-                <button class="indicator-slide_butt" onclick="IndicatorActive(0)" aria-label="Článek o podpořených myšlenkách">
-                    <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                </button>
-                <p class="single-indicator-p">Grantová agentura České republiky doposud podpořila přes 20 tisíc myšlenek a projektů, které
-                    posouvají vědu kupředu a rozšiřují lidské poznání. Na myšlenkách základního výzkumu stojí všechny
-                    moderní vynálezy – bez objevu aerodynamických zákonů by nikdy nevzlétlo letadlo, bez chápání
-                    fungování buňky by neexistovaly léky a bez porozumění elektromagnetickým vlnám by nefungovaly
-                    mobilní telefony. GA ČR dává šanci vědcům z různých oborů proměnit své nápady v realitu, a tím
-                    porozumět a změnit náš svět.</p>
-            </div>
-            <div class="white-line"></div>
-        
-            <div class="single-indicator">
-                <div class="indicator">
-                    <div class="indicator-img">
-                        <img src="images/indicators/AVCR_a_univerzity1.svg" alt="Indicator SVG" class="indicator-svg1">
-                        <img src="images/indicators/AVCR_a_univerzity2.svg" alt="Indicator SVG" class="indicator-svg2">
+            
+                    <div class="carousel-item" data-index="1">
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                                <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                                <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
+                                <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                                <img src="images/articles/minis/OK3_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                                <img src="images/articles/minis/OK4_1_a.jpg" class="img-fluid" alt="">
+                        </button>
                     </div>
-                    <div class="indicator-num loading-effect" data-value="99%">00 %</div>
-                    <div class="indicator-text">Grantů pro univerzity<br>a AV ČR</div>
-                </div>
-                <button class="indicator-slide_butt" onclick="IndicatorActive(1)" aria-label="Článek o podpoře univerzit">
-                    <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                </button>
-                <p class="single-indicator-p">Vědci v základním výzkumu jsou poháněni touhou po poznání. S každou novou hypotézou se vydávají
-                    na neprošlapanou cestu, o které netuší, kam je může zavést. Je to často cesta plná neočekávaných
-                    překážek, ale také nečekaných objevů. Útočištěm pro tyto dobrodruhy jsou obvykle univerzity a
-                    ústavy Akademie věd ČR – i proto jsou téměř všechny granty GA ČR udělovány těmto státním
-                    institucím, kde je také jistota, že jsou peníze efektivně využity.</p>
-            </div>
-            <div class="white-line"></div>
-        
-            <div class="single-indicator">
-                <div class="indicator">
-                    <div class="indicator-img">
-                        <img src="images/indicators/Nejlepsich_napadu1.svg" alt="Indicator SVG" class="indicator-svg1">
-                        <img src="images/indicators/Nejlepsich_napadu2.svg" alt="Indicator SVG" class="indicator-svg2">
+            
+                    <div class="carousel-item" data-index="2">
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                                <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
+                                <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                                <img src="images/articles/minis/OK3_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                                <img src="images/articles/minis/OK4_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                                <img src="images/articles/minis/OK5_1_a.jpg" class="img-fluid" alt="">
+                        </button>
                     </div>
-                    <div class="indicator-num loading-effect" data-value="15%">00 %</div>
-                    <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
-                </div>
-                <button class="indicator-slide_butt" onclick="IndicatorActive(2)" aria-label="Článek o Rozvinutých nápadech">
-                    <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                </button>
-                <p class="single-indicator-p">Každý rok žádá o podporu několik tisíc myšlenek. Jak poznáme ty nejlepší? Hodnotí je panely složené
-                    z vědců, kteří jsou odborníky na danou oblast. V GA ČR působí přes 500 vědců z různých institucí. Aby
-                    se předešlo střetu zájmů, spolu s dalšími opatřeními, se také pravidelně mění. Vysokou odbornost a
-                    objektivitu hodnocení zajišťují zároveň zahraniční experti, kteří posuzují přibližně polovinu nejlepších
-                    návrhů projektů.</p>
-            </div>
-            <div class="white-line"></div>
-        
-            <div class="single-indicator">
-                <div class="indicator">
-                    <div class="indicator-img">
-                        <img src="images/indicators/Objevu_publikovano1.svg" alt="Indicator SVG" class="indicator-svg1">
-                        <img src="images/indicators/Objevu_publikovano2.svg" alt="Indicator SVG" class="indicator-svg2">
+            
+                    <div class="carousel-item" data-index="3">
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
+                                <img src="images/articles/minis/OK2_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                                <img src="images/articles/minis/OK3_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                                <img src="images/articles/minis/OK4_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                                <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                                <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
+                        </button>
                     </div>
-                    <div class="indicator-num loading-effect" data-value="38%">00 %</div>
-                    <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
+            
+                    <div class="carousel-item" data-index="4">
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
+                                <img src="images/articles/minis/OK3_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
+                                <img src="images/articles/minis/OK4_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
+                                <img src="images/articles/minis/OK5_5_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
+                                <img src="images/articles/minis/OK1_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
+                                <img src="images/articles/minis/OK2_1_a.jpg" class="img-fluid" alt="">
+                        </button>
+                    </div>
+            
                 </div>
-                <button class="indicator-slide_butt" onclick="IndicatorActive(3)" aria-label="Článek o publikovaných objevech">
-                    <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                </button>
-                <p class="single-indicator-p">Vědci své objevy zveřejňují zpravidla ve vědeckých časopisech. Publikovat objev v kvalitním časopisu
-                    není nic jednoduchého – ty nejprestižnější publikují méně než 10 % zaslaných článků. Texty prochází
-                    náročným recenzním řízením, které hodnotí objev z různých hledisek, jako jsou použité metody nebo
-                    jeho význam. Vědci s podporou GA ČR provádějí ten nejlepší výzkum světové úrovně – nadprůměrně
-                    často ho také publikují ve vysoce kvalitních časopisech.</p>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
             </div>
         </div>
-    </div> 
-    <footer>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
-                            sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
-                            natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
-                            ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
-                            accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
-        </p>
-    </footer>   
+
+        <!-- Indicators -->
+        <svg width="0" height="0"> <!--this svg defines the cut border of the bacground. svg itself not visible-->
+            <defs>
+                <mask id="svg-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                    <rect x="0" y="0" width="1" height="1" fill="white" /> <!-- Everything white will be visible. Using standard coordinates from 0 to 1 for respponsibility -->
+                    <path id="maskpath" d="M 0 0.02 Q 0.25 0.04 0.5 0.02 T 1 0.02 L1 -0.001 L0 -0.001 Z" fill="black"/> <!-- What is black will be transparent -->
+                </mask>
+            </defs>
+        </svg>
+        <div class="indicators-section">
+            <div class="moving-dashed-line">
+                <!-- viewbox ensures responsibility, the path is specified acording to need -->
+                <svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                    <path id="linepath" d="M 0 20 Q 250 52 500 20 T 1000 20" fill="transparent" stroke="white" class="line"/>
+                </svg>
+                <!-- M 0 40 Q 250 80 500 40 T 1000 40 -->
+                <!-- M 0 0 Q 250 40 500 0 T 1000 0 -->
+                <button class="slideDownButt" onClick="scrollDown()" aria-label="Scroll down to Interesting facts">
+                    <img src="images/svgs/šipka.svg" alt="">
+                </button>
+            </div>
+            <div class="indicators-container">
+                <div class="single-indicator">
+                    <div class="lower-section-logo">
+                        <a href="https://gacr.cz/" target="_blank">
+                            <img src="images/pngs/gacr_logo.png" class="lower-section-logo-img" alt="">
+                        </a>
+                    </div>
+                    <button class="indicator-slide_butt" onclick="slideDownTextLogo()" aria-label="Show information about GAČR">
+                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                    </button>
+                    <p class="single-indicator-p">Grantová agentura České republiky přes 30 let podporuje špičkový základní výzkum napříč všemi
+                        obory – od technických přes společenské vědy až po zkoumání lidských bytostí, fauny, flory a
+                        vesmíru. Každý rok poskytuje nejlepším vědcům granty v celkové hodnotě přibližně 4,5 miliardy
+                        korun – to je přes 11 % státního rozpočtu určeného na vědu a výzkum.</p>
+                </div>
+                <div class="white-line"></div>
+
+                <div class="single-indicator">
+                    <div class="indicator">
+                        <div class="indicator-img">
+                            <img src="images/indicators/Podporene_myslenky1.svg" alt="Indicator SVG" class="indicator-svg1">
+                            <img src="images/indicators/Podporene_myslenky2.svg" alt="Indicator SVG" class="indicator-svg2">
+                        </div>
+                        <div class="indicator-num loading-effect" data-value="20">00 000</div>
+                        <div class="indicator-text">Podpořených<br>myšlenek</div>
+                    </div>
+                    <button class="indicator-slide_butt" onclick="IndicatorActive(0)" aria-label="Článek o podpořených myšlenkách">
+                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                    </button>
+                    <p class="single-indicator-p">Grantová agentura České republiky doposud podpořila přes 20 tisíc myšlenek a projektů, které
+                        posouvají vědu kupředu a rozšiřují lidské poznání. Na myšlenkách základního výzkumu stojí všechny
+                        moderní vynálezy – bez objevu aerodynamických zákonů by nikdy nevzlétlo letadlo, bez chápání
+                        fungování buňky by neexistovaly léky a bez porozumění elektromagnetickým vlnám by nefungovaly
+                        mobilní telefony. GA ČR dává šanci vědcům z různých oborů proměnit své nápady v realitu, a tím
+                        porozumět a změnit náš svět.</p>
+                </div>
+                <div class="white-line"></div>
+            
+                <div class="single-indicator">
+                    <div class="indicator">
+                        <div class="indicator-img">
+                            <img src="images/indicators/AVCR_a_univerzity1.svg" alt="Indicator SVG" class="indicator-svg1">
+                            <img src="images/indicators/AVCR_a_univerzity2.svg" alt="Indicator SVG" class="indicator-svg2">
+                        </div>
+                        <div class="indicator-num loading-effect" data-value="99%">00 %</div>
+                        <div class="indicator-text">Grantů pro univerzity<br>a AV ČR</div>
+                    </div>
+                    <button class="indicator-slide_butt" onclick="IndicatorActive(1)" aria-label="Článek o podpoře univerzit">
+                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                    </button>
+                    <p class="single-indicator-p">Vědci v základním výzkumu jsou poháněni touhou po poznání. S každou novou hypotézou se vydávají
+                        na neprošlapanou cestu, o které netuší, kam je může zavést. Je to často cesta plná neočekávaných
+                        překážek, ale také nečekaných objevů. Útočištěm pro tyto dobrodruhy jsou obvykle univerzity a
+                        ústavy Akademie věd ČR – i proto jsou téměř všechny granty GA ČR udělovány těmto státním
+                        institucím, kde je také jistota, že jsou peníze efektivně využity.</p>
+                </div>
+                <div class="white-line"></div>
+            
+                <div class="single-indicator">
+                    <div class="indicator">
+                        <div class="indicator-img">
+                            <img src="images/indicators/Nejlepsich_napadu1.svg" alt="Indicator SVG" class="indicator-svg1">
+                            <img src="images/indicators/Nejlepsich_napadu2.svg" alt="Indicator SVG" class="indicator-svg2">
+                        </div>
+                        <div class="indicator-num loading-effect" data-value="15%">00 %</div>
+                        <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
+                    </div>
+                    <button class="indicator-slide_butt" onclick="IndicatorActive(2)" aria-label="Článek o Rozvinutých nápadech">
+                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                    </button>
+                    <p class="single-indicator-p">Každý rok žádá o podporu několik tisíc myšlenek. Jak poznáme ty nejlepší? Hodnotí je panely složené
+                        z vědců, kteří jsou odborníky na danou oblast. V GA ČR působí přes 500 vědců z různých institucí. Aby
+                        se předešlo střetu zájmů, spolu s dalšími opatřeními, se také pravidelně mění. Vysokou odbornost a
+                        objektivitu hodnocení zajišťují zároveň zahraniční experti, kteří posuzují přibližně polovinu nejlepších
+                        návrhů projektů.</p>
+                </div>
+                <div class="white-line"></div>
+            
+                <div class="single-indicator">
+                    <div class="indicator">
+                        <div class="indicator-img">
+                            <img src="images/indicators/Objevu_publikovano1.svg" alt="Indicator SVG" class="indicator-svg1">
+                            <img src="images/indicators/Objevu_publikovano2.svg" alt="Indicator SVG" class="indicator-svg2">
+                        </div>
+                        <div class="indicator-num loading-effect" data-value="38%">00 %</div>
+                        <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
+                    </div>
+                    <button class="indicator-slide_butt" onclick="IndicatorActive(3)" aria-label="Článek o publikovaných objevech">
+                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                    </button>
+                    <p class="single-indicator-p">Vědci své objevy zveřejňují zpravidla ve vědeckých časopisech. Publikovat objev v kvalitním časopisu
+                        není nic jednoduchého – ty nejprestižnější publikují méně než 10 % zaslaných článků. Texty prochází
+                        náročným recenzním řízením, které hodnotí objev z různých hledisek, jako jsou použité metody nebo
+                        jeho význam. Vědci s podporou GA ČR provádějí ten nejlepší výzkum světové úrovně – nadprůměrně
+                        často ho také publikují ve vysoce kvalitních časopisech.</p>
+                </div>
+            </div>
+        </div> 
+        <footer>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc 
+                                sed velit dignissim sodales ut. Sed enim ut sem viverra. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Eget gravida cum sociis 
+                                natoque penatibus et. Libero volutpat sed cras ornare arcu dui vivamus. Quam quisque id diam vel quam elementum pulvinar. Aliquam id diam maecenas 
+                                ultricies mi eget mauris pharetra et. Neque egestas congue quisque egestas diam in arcu cursus euismod. Ornare massa eget egestas purus viverra 
+                                accumsan in nisl nisi. Platea dictumst quisque sagittis purus sit. Sollicitudin tempor id eu nisl.
+            </p>
+        </footer>   
     
     </body>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- Bootstrap js -->
     <script src="js/bs_5-3-3/bootstrap.js"></script>
 
-    <!-- Hammer (for detecting slides, maybe not needed) -->
+    <!-- Hammer (for detecting slides, maybe not needed) --Currently needed -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
     <!-- My js -->
     <script src="js/carousel_box.js"></script>
     <script src="js/filtering_new.js"></script>
