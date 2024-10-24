@@ -12,24 +12,24 @@
     box-shadow: 0 0px 16px rgb(255, 255, 255); /* Add shadow */
 }
 
-.card .card-img {
+/* .card .card-img {
     width: 100%;
-    display: flex; /* Ensure flexbox behavior to fill the container */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-}
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+} */
 
-.card .card-img img {
+.card img {
     width: 100%; /* Set the width to 100% of its container */
     height: 100%; /* Set the height to 100% of its container */
     object-fit: cover; /* Cover the container without stretching */
     display: block; /* Remove any inline spacing */
 }
-
+/* 
 .vertical .card-img img {
-    width: 100%; /* Obrázek se přizpůsobí tlačítku */
-    height: auto; /* Udrží proporce obrázku */
-}
+    width: 100%;
+    height: auto; 
+} */
 
 .vertical > .carousel-inner .carousel-item.active,
 .vertical > .carousel-inner .carousel-item-next,
