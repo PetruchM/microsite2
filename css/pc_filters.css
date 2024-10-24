@@ -77,7 +77,6 @@
     text-align: left;
     visibility: hidden;
     margin: 4px 5px 4px 5px;
-    overflow-wrap: none;
     max-width: 0px;
     color: rgba(255, 255, 255, 0);
     transition: max-width 0.3s, color 0.35s cubic-bezier(0.830, -0.115, 0.875, -0.035), padding 0.3s, overflow-wrap 0.5s, visibility;
