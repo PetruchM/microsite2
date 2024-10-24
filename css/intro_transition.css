@@ -147,11 +147,11 @@
 
 /* new transition */
 
-.intro-button2 p {
+.intro-button2 {
     transition: opacity 0.3s ease-in-out;
 }
 
-.intro-button2.active p {
+.intro-button2.active {
     opacity: 0;
 }
 
