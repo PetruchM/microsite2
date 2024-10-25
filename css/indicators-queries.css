@@ -12,7 +12,6 @@
     .indicators-container{
         left: 25vw;
         width: 50vw;
-        align-items: baseline;
     }
 
     .single-indicator{
