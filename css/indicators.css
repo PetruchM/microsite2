@@ -1,28 +1,28 @@
 .indicators-section {
     position: relative;
-    padding-top: 50px;
-    top: -5vh;
+    /* padding-top: 50px; */
+    top: -3vh;
     width: 100%;
     height: auto;
     aspect-ratio: 2 / 3;
     background-image: url('../images/pngs/pozadí.jpg');
     z-index: 10;
-
-    -webkit-mask: url(#svg-mask); /* Apply SVG mask to cut the background */
-            mask: url(#svg-mask);
 }
 
 /* division that ensures consistency if the moving line */
 .moving-dashed-line{
-    position: absolute;
+    position: relative;
     /* background-color: red;
     opacity: 0.4; */
-    top: 0.8%;
+    top: -3vh;
     width: 100%;
-    height: 3%;
+    /* height: 3%; */
     min-height: 60px;
     z-index: 13;
     text-align: center;
+    background-image: url('../images/pngs/pozadí.jpg');
+    -webkit-mask: url(#svg-mask); /* Apply SVG mask to cut the background */
+            mask: url(#svg-mask);
 }
 
 /* This part specifies the moving dashed line. it uses the svg path */
@@ -30,6 +30,7 @@
     stroke-dasharray: 5px;
     stroke-dashoffset: 0;
     stroke-width: 2px;
+    z-index: 15;
     animation: dash 5s linear infinite;
 }
 
@@ -41,6 +42,7 @@
 svg {
     width: 100%;
     height: 100%;
+    z-index: 15;
 }
 /* end of line css */
 
@@ -62,13 +64,23 @@ svg {
     background-color: rgba(0,0,0,0);
 }
 
+.indicators-container-extension{
+    position: absolute;
+    background-color: var(--blue-bg);
+    top: 0vh;
+    left: 14.5vw;
+    width: 23vw;
+    height: 100%;
+    z-index: 1;
+}
+
 .indicators-container{
     position: relative;
     background-color: var(--blue-bg);
     top: 0vh;
     left: 14.5vw;
     width: 23vw;
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
     padding-bottom: 5vh;
     /* display: flex; */
     /* flex-wrap: wrap; */
