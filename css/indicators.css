@@ -21,8 +21,8 @@
     z-index: 13;
     text-align: center;
     background-image: url('../images/pngs/pozadí.jpg');
-    -webkit-mask: url(#svg-mask); /* Apply SVG mask to cut the background */
-            mask: url(#svg-mask);
+    /*-webkit-mask: url(#svg-mask); /* Apply SVG mask to cut the background */
+            /* mask: url(#svg-mask); */
 }
 
 /* This part specifies the moving dashed line. it uses the svg path */
