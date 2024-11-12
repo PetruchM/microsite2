@@ -6,6 +6,7 @@
     height: auto;
     aspect-ratio: 2 / 3;
     background-image: url('../images/pngs/pozadí.jpg');
+    background-size: contain;
     z-index: 10;
 }
 
@@ -16,13 +17,12 @@
     opacity: 0.4; */
     top: -3vh;
     width: 100%;
-    /* height: 3%; */
-    min-height: 60px;
+    height: 5vw;
     z-index: 13;
     text-align: center;
-    background-image: url('../images/pngs/pozadí.jpg');
-    /*-webkit-mask: url(#svg-mask); /* Apply SVG mask to cut the background */
-            /* mask: url(#svg-mask); */
+    background-image: url('../images/pngs/pozadi-short-path2.png');
+    background-position: bottom;
+    background-size: cover;
 }
 
 /* This part specifies the moving dashed line. it uses the svg path */
@@ -64,22 +64,22 @@ svg {
     background-color: rgba(0,0,0,0);
 }
 
-.indicators-container-extension{
+/* .indicators-container-extension{
     position: absolute;
     background-color: var(--blue-bg);
     top: 0vh;
-    left: 14.5vw;
-    width: 23vw;
+    left: 14.5%;
+    width: 23%;
     height: 100%;
     z-index: 1;
-}
+} */
 
 .indicators-container{
     position: relative;
     background-color: var(--blue-bg);
     top: 0vh;
-    left: 14.5vw;
-    width: 23vw;
+    left: 14.5%;
+    width: 23%;
     /* padding-top: 5vh; */
     padding-bottom: 5vh;
     /* display: flex; */
