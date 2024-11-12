@@ -88,7 +88,7 @@ function changeSlidesInfo(desiredArticles,elements){
         .then(data => {
             let counter=0;
             desiredArticles.forEach(id => {  //for every wanted article. But there may be just one
-                const article = data.find(article => article.id === id); //load the article
+                const article = data[id]; //load the article
                 const slide=elements[counter];  //in each iteration choose the next division
                 counter++
 
@@ -185,7 +185,7 @@ async function getDesiredPaths(category, updating){
 
         for (let k = 0; k < articles.length; k++) {
             const id = articles[k];
-            const article = data.find(article => article.id === id);  // Load the article based on ID
+            const article = data[id];  // Load the article based on ID
 
             if (article) {
                 console.log(`Article for ID ${id}:`, article);

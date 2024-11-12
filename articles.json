@@ -1,8 +1,8 @@
-[
+{
+    "0":
     {
         "Note": "OK1.1",
-        "id": 0,
-        "background_img": "images/articles/background/OK1_1_b.jpg",
+        "background_img": "images/articles/background/vizuály convert.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_1_c.jpg",
         "minis_img": "images/articles/minis/OK1_1_a.jpg",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -13,9 +13,9 @@
         "text": "Běžná bakterie má kolem pěti milionů párů bází, což činí z práce s její DNA velmi složitý proces. Řešitelka projektu doktorka Škutková se inspirovala elektrokardiogramem (EKG) — grafickým zápisem elektrické aktivity srdce a v rámci výzkumu vytvořila efektivní způsob záznamu genetického kódu ve formě podobné elektrickému signálu. Takto zobrazené genomy usnadňují jejich vzájemné porovnávání a identifikaci jejich rozdílů, čímž je možné určit příbuznost různých organismů. Tento průlomový způsob záznamu tak umožňuje rychlé rozpoznání nebezpečných bakterií a virů v organismu a v budoucnu může zabránit šíření antibiotické rezistence nebo pomoci při prevenci pandemií."
     },
 
+    "5":
     {
         "Note": "OK1.2",
-        "id": 5,
         "background_img": "images/articles/background/OK1_2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_2_c.jpg",
         "minis_img": "images/articles/minis/OK1_2_a.jpg",
@@ -27,9 +27,9 @@
         "text": "Grafen je pevný, extrémně lehký a výborně vede elektřinu. Proto se považuje za budoucí materiál pro elektroniku, kompozity a další aplikace. Profesoru Soferovi se podařilo syntetizoval absolutně čistý grafen bez přítomnosti kovových nečistot. Díky tomu prokázal zásadní vliv těchto nečistot na jeho vlastnosti. <br>Jeho tým také vyvinul metodu, která umožňuje měnit vlastnosti grafenu a dalších materiálů. Zkoumá také další materiály a z nich vytvořené struktury, které obsahují například molybden, wolfram, chrom a další kovy ve spojení s nekovy, jako jsou síra, selen, chlor nebo brom. Zjistil, že by například sodík nebo draslík mohly nahradit lithium v bateriích nebo jak by další materiály mohly pomoci při rozkladu vody k získání vodíku pro energetické využití."
     },
 
+    "10":
     {
         "Note": "OK1.3",
-        "id": 10,
         "background_img": "images/articles/background/OK1_3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_3_c.jpg",
         "minis_img": "images/articles/minis/OK1_3_a.jpg",
@@ -41,9 +41,9 @@
         "text": "V diplomové práci vytvořil Jan Flusser počítačový program pro úpravu rozmazaných snímků z družic. Později se přesunul k originálním metodám analýzy vizuální informace v technických i medicínských oborech. <br>S kolegy například vymysleli program pro zpracování videozáznamu z kapslové endoskopické kamery, kterou pacient spolkne a ona monitoruje stav jeho tenkého střeva. Algoritmus sám vytipuje místa s podezřením na vřed či krvácení, a lékař tak nemusí prohlížet celý záznam. Robot dokáže díky jejich metodám například rozpoznat i objekty, které vidí zešikma pod velkým úhlem nebo které jsou částečně zakryté. <br>Jiné jimi vytvořené postupy dokonce odhalují podvodníky. Určí pravost videa či fotografie a dokonce poznají, kterou konkrétní kamerou byl záznam pořízen."
     },
 
+    "15":
     {
         "Note": "OK1.4",
-        "id": 15,
         "background_img": "images/articles/background/OK1_4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_4_c.jpg",
         "minis_img": "images/articles/minis/OK1_4_a.jpg",
@@ -55,9 +55,9 @@
         "text": "Umíme rozpoznat osobu na základě jejího pohledu do foťáku nebo sledovat člověka na záběru z pouličních kamer. Algoritmy, které umožňují ve videu vyhledat jeden konkrétní objekt, už mají řadu komerčních aplikací a čím dál tím více pronikají do naší každodenní reality. <br>Informatik Jakub Lokoč možnosti vyhledávání ve videu posouvá ještě dál. Se svým týmem se zabývá obecně zadanými úlohami, při kterých hledá méně specifický objekt, například “zahradníka v modrých kalhotách, který sází květiny”. Jeho přístup je založen na postupném zpřesňování požadavku na základě zpětné vazby uživatele a hledání scén, které jsou si podobné. <br>Výzkumníci ovšem nezůstávají jen u teoretických výpočtů. Vyvinuli také aplikaci SOM Hunter, se kterou sklízí úspěchy na mezinárodních soutěžích."
     },
 
+    "20":
     {
         "Note": "OK1.5",
-        "id": 20,
         "background_img": "images/articles/background/OK1_5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_5_c.jpg",
         "minis_img": "images/articles/minis/OK1_5_a.jpg",
@@ -69,9 +69,9 @@
         "text": "Výzkumný tým vedený Jiřím Čejkou se zaměřuje na syntézu nových minerálů, zejména zeolitů, které mají velký potenciál pro chemický průmysl. Zeolity jsou přírodní nebo syntetické minerály složené z křemíku a hliníku, jejichž struktura obsahuje mikroporézní kanálky, které dokáží zachycovat molekuly plynů a kapalin. Využívají se tak jako filtry emisí, při čištění vody, ale především jako katalyzátory — zhruba polovinu všech pevných katalyzátorů v chemickém průmyslu tvoří právě zeolity. <br>Profesor Čejka objevil, že zeolity s obsahem germania jsou ve vodě nestabilní, což se rozhodl využít při vývoji nové metody syntézy zvané ADOR (Assembly-Disassembly-Organization-Reassembly). Tato metoda, která připomíná práci s legem, umožňuje manipulaci s vrstvami zeolitů a jejich přizpůsobení potřebám. Tým profesora Čejky již díky této metodě vytvořil čtrnáct nových typů zeolitů a své výsledky publikovali v prestižních vědeckých časopisech. Za svůj přínos v oblasti zeolitů získal Jiří Čejka několik ocenění."
     },
 
+    "1":
     {
         "Note": "OK2.1",
-        "id": 1,
         "background_img": "images/articles/background/OK2_1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_1_c.jpg",
         "minis_img": "images/articles/minis/OK2_1_a.jpg",
@@ -83,9 +83,9 @@
         "text": "Kvantová mechanika se zabývá popisem mikroskopických objektů, jako jsou elektrony, atomy nebo třeba fotony. V současné době žijeme v době druhé kvantové revoluce, jejímž podstatným nástrojem je ne-Gaussovská koherence, která umožňuje měření pohybu atomů s menší chybovostí nebo třeba generování opravných kódů pro kvantové počítače. A právě primárně na tuto koherenci a její kvantové jevy se ve svém projekt doktor Filip a jeho tým zaměřují. <br>Jeden z přístrojů, které vědci při zkoumání kvantových jevů využívají, umí díky elektrickým polím a laserovým paprskům zchladit teplotu iontů vápníku až na absolutní nulu. Díky tomu jsou tak na obou místech výzkumu, v Brně a Olomouci, nejchladnější místa v České republice. Zde řešitel a jeho tým zkoumají jevy, na kterých bude možné stavět budoucí výzkumy a aplikace v oblasti kvantových technologií."
     },
 
+    "6":
     {
         "Note": "OK2.2",
-        "id": 6,
         "background_img": "images/articles/background/OK2_2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_2_c.jpg",
         "minis_img": "images/articles/minis/OK2_2_a.jpg",
@@ -97,9 +97,9 @@
         "text": "S kolegy ze své výzkumné skupiny používá Tomáš Slanina reakce takzvané „klikací chemie“ (ta vynesla svým objevitelům Nobelovu cenu v roce 2022). Při nich se efektivně spojují molekulové bloky, protože na sobě mají reaktivní skupiny, které do sebe dobře zapadnou („zakliknou se“), tedy vytvoří pevnou vazbu. <br>Vznik vazeb vyvolá vědec světlem, třeba červeným, a jiným světlem se snaží vzniklé vazby zase uvolnit. Postup nazývá „Chyť a pusť“. Vytvářejí se při něm přepínače, které molekulové bloky opakovaně spojují a zase rozpojují podle potřeby. To umožňuje například doručit léčivo na přesné místo bez toho, aby nežádoucím způsobem ovlivnilo zdravou část. <br>Podobné postupy využívá Tomáš Slanina i při výzkumu v jiné oblasti – v organických solárních panelech, které dokážou lépe využívat sluneční energii."
     },
 
+    "11":
     {
         "Note": "OK2.3",
-        "id": 11,
         "background_img": "images/articles/background/OK2_3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_3_c.jpg",
         "minis_img": "images/articles/minis/OK2_3_a.jpg",
@@ -111,9 +111,9 @@
         "text": "Elektronové mikroskopy zobrazí i jednotlivé atomy. Jakoby pořídily fotografii. Nezachytí však zároveň rychlé pohyby elektronů. „Vyvíjíme proto postup ,natáčení videa‘ pohybujících se elektronů, pokud jsou ve hmotě poháněny světlem,“ popisuje Martin Kozák práci své vědecké skupiny, která používá špičkový elektronový mikroskop vyvinutý ve spolupráci s americkou firmou Thermo Fischer Scientific. <br>Vědci zkracují čas mezi pořízením snímků, které elektronový mikroskop vytváří pomocí pulzu fotonů z laseru. Tím se získané obrázky více blíží „videu“ a zachytí průběh dějů trvajících femtosekundy (miliardtiny z jedné miliontiny sekundy). <br>Cílem výzkumu je poznání dějů uvnitř hmoty také proto, aby bylo možné vyvíjet nové materiály. Třeba pro elektroniku, v níž nynější křemíkové čipy už dosahují svých limitů."
     },
 
+    "16":
     {
         "Note": "OK2.4",
-        "id": 16,
         "background_img": "images/articles/background/OK2_4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_4_c.jpg",
         "minis_img": "images/articles/minis/OK2_4_a.jpg",
@@ -125,9 +125,9 @@
         "text": "V syntetických chemických reakcích se uplatňují rozličná činidla a katalyzátory. Ty jsou často vysoce účinné a selektivní, ale mohou být problematické z hlediska životního prostředí z důvodu jejich toxicity a nebezpečnosti, nebo jsou velmi drahé a s omezenou dostupností. <br>Chemik Radek Cibulka z Vysoké školy chemicko-technologické nás přiblížil k možnosti provádět redukce v organické syntéze ekologičtější cestou pomocí světla a jednoduchých organických látek, které se běžně vyskytují v buňkách živých organismů, a které nazýváme flaviny. <br>Ovšem před tím, než budeme moci flaviny při redukcích běžně využívat, třeba v průmyslovém měřítku, čeká chemiky ještě dlouhá cesta. Budeme muset například vyřešit otázku jejich stability mimo enzym nebo fakt, že vydrží jenom omezený počet katalytických cyklů."
     },
 
+    "21":
     {
         "Note": "OK2.5",
-        "id": 21,
         "background_img": "images/articles/background/OK2_5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_5_c.jpg",
         "minis_img": "images/articles/minis/OK2_5_a.jpg",
@@ -139,9 +139,9 @@
         "text": "Projekt Kateřiny Kůsové ukázal, že křemík, u kterého se to dříve nepředpokládalo, může díky luminiscenci vyzařovat světlo, pokud je ve formě nanokrystalů — krystalů složených pouze z několika stovek atomů. Tento objev otevírá nové možnosti využití, například v počítačích. <br>Vědecký tým zjistil, že připojením metylových skupin na nanokrystaly křemíku se výrazně zlepšila jejich schopnost vyzařovat světlo. Další výzkum potvrdil, že úprava struktury nanokrystalů zvyšuje jejich efektivitu. <br>Svítící nanokrystaly by mohly umožnit přenos dat světlem, což by snížilo energetické ztráty v elektronice. Křemík je již v mikroelektronice široce používán, odpadly by tedy nutné zásadní změny výrobních procesů. Dalším příkladem použití by mohla být oblast farmakologie. Zde by křemík mohl sloužit k výzkumu působení léčiv v těle — křemík by se přidal k léčivu tak, aby bylo možné sledovat, kde léčivo v těle působí."
     },
 
+    "2":
     {
         "Note": "OK3.1",
-        "id": 2,
         "background_img": "images/articles/background/OK3_1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_1_c.jpg",
         "minis_img": "images/articles/minis/OK3_1_a.jpg",
@@ -153,9 +153,9 @@
         "text": "Proces, kterému se Petr Svoboda ve svém výzkumu věnuje, se nazývá RNA interference, zkráceně RNAi, při kterém speciální enzym ribonukleovou kyselinu „rozstříhá“, čímž cíleně blokuje aktivitu genů. RNAi má však i obrannou funkci — likviduje nebezpečné viry zničením jejich RNA. Tuto vrozenou formu imunity používají pouze rostliny a hmyz, u obratlovců se v průběhu evoluce vytratila. V rámci projektu je zkoumána možnost jejího znovuaktivování. V minulosti se jim již podařilo, díky genetickým úpravám, zaktivovat tuto formu obrany u myší. V současném projektu se snaží o totéž u slimákům. Vlastnosti jejich RNAi napoví, jakým směrem se ubírala evoluce u obratlovců a jak by mohla tato forma vrozené imunity být u savců obnovena. Dále projekt odpoví na otázku, jak velký rozsah antivirové ochrany může RNAi poskytnout a jak by mohla být v budoucnu v léčbě virových onemocnění uplatňována."
     },
 
+    "7":
     {
         "Note": "OK3.2",
-        "id": 7,
         "background_img": "images/articles/background/OK3_2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_2_c.jpg",
         "minis_img": "images/articles/minis/OK3_2_a.jpg",
@@ -167,9 +167,9 @@
         "text": "V buňkách probíhá čilý provoz. Robert Vácha se svým týmem zkoumá, jak v nich najdou navigační bílkoviny (peptidy) svůj cíl. „Zkoumáme, jak navigace v buňce funguje. Jedním z našich vzdálenějších záměrů je využít toto poznání pro cílení léků na nebezpečné bakterie a snad i na viry.“ Základem jeho práce jsou počítačové simulace. I díky podpoře Grantové agentury ČR však mohl zřídit laboratoř, kde vypočítané výsledky ověřuje experimentálně. <br>„V simulacích zkoumáme, proč se některé bílkoviny na membránu vážou a jiné ne. Na základě pochopení takové vazby pak navrhujeme nové bílkoviny. Výsledky ověřujeme v laboratoři, kde měříme, jestli se nová bílkovina na modelové membrány váže, a chová se tak stejně jako v simulacích. Pokud experimenty výsledky potvrdí, pokračujeme na komplexnějších modelech a buňkách. Ověřujeme také, zda připravené navigační peptidy nejsou toxické,“ zdůrazňuje profesor Vácha."
     },
 
+    "12":
     {
         "Note": "OK3.3",
-        "id": 12,
         "background_img": "images/articles/background/OK3_3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_3_c.jpg",
         "minis_img": "images/articles/minis/OK3_3_a.jpg",
@@ -181,9 +181,9 @@
         "text": "Mezi buňkami v těle se pohybují malinkaté transportní váčky, které fungují jako kurýři: přepravují různé molekuly a organické látky, kterými si buňky předávají informace. „Například nádorové buňky jimi ovlivňují své chování a určují, kde budou vytvářet metastázy,“ říká Andrea Gálisová, která se výzkumem těchto jevů zabývá díky podpoře Grantové agentury ČR. <br>Tito kurýři se odborně jmenují extracelulární vezikuly a jejich velikost se měří v nanometrech (miliontinách milimetru). „S kolegy se teď snažíme uměle vytvořit vezikuly, do nichž vložíme molekuly léku,“ popisuje doktorka Gálisová. „Vnesou je přesně tam, kde má lék působit, třeba do rakovinné buňky, aby ji mohl zevnitř zničit, ale nepoškodit okolní tkáň.“ <br>Pokusy zatím probíhají na laboratorních myších, aby vědci mohli poznatky bezpečně využít pro lidi."
     },
 
+    "17":
     {
         "Note": "OK3.4",
-        "id": 17,
         "background_img": "images/articles/background/OK3_4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_4_c.jpg",
         "minis_img": "images/articles/minis/OK3_4_a.jpg",
@@ -195,9 +195,9 @@
         "text": "Počet lidí s poškozeným sluchem neustále roste a rizikovou skupinou již zdaleka nejsou jen senioři, ale například i mladí lidé, kteří jsou denně vystavováni vysoké hladině hluku v centru velkých měst. Nadějí pro takové pacienty mohou být nejen technologie v podobě kochleárních implantátů nebo naslouchátek, ale v budoucnu by jim mohla také pomoci biologická léčba. <br>Molekulární bioložka Gabriela Pavlínková se ve svém výzkumu snaží pochopit, jaké molekulárně-biologické procesy se podílejí na vývoji vnitřního ucha u myší a věří, že v budoucnu bychom mohli naprogramovat kmenové buňky tak, aby nahradily chybějící neurony a senzorické vláskové buňky u pacientů s poškozeným sluchem."
     },
 
+    "22":
     {
         "Note": "OK3.5",
-        "id": 22,
         "background_img": "images/articles/background/OK3_5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_5_c.jpg",
         "minis_img": "images/articles/minis/OK3_5_a.jpg",
@@ -209,9 +209,9 @@
         "text": "Hana Polášek-Sedláčková se ve svém projektu zabývá replikací DNA, přesněji řečeno, jak je tento složitý proces v buňce regulován, aby bylo dosaženo vzniku co nejvěrnější kopie DNA. Chyby při replikaci DNA neboli mutace patří k nejčastějším příčinám vzniku rakoviny. Současná literatura uvádí, že až dvě třetiny rakovin jsou způsobeny právě chybami v replikaci DNA. <br>Projekt se zaměřuje na první kroky procesu kopírování DNA, který je řízen takzvanými pre-replikativními proteinovými komplexy, které je možné si představit jako základní stavební kameny celé replikace. „Tato regulace pre-replikativních komplexů v lidských buňkách je paradoxně jen málo prozkoumána, tím se však otevírá prostor pro naše bádání. Porozumění, jak jsou tyto ‚stavební kameny‘ replikace DNA v buňce regulovány, nám pomůže zase o něco blíže porozumět vzniku nádorového onemocnění – zejména těch, u kterých je hladina pre-replikativní komplexů zvýšena za účelem rychlého růstu nádoru,“ představuje svůj výzkum Hana Polášek-Sedláčková."
     },
 
+    "3":
     {
         "Note": "OK4.1",
-        "id": 3,
         "background_img": "images/articles/background/OK4_1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_1_c.jpg",
         "minis_img": "images/articles/minis/OK4_1_a.jpg",
@@ -223,9 +223,9 @@
         "text": "Výzkum Filipa Matějky se zaměřil na teorii racionální nepozornosti. Ta spočívá v tom, že nemůžeme věnovat pozornost všem aspektům, a proto na některé informace nebereme zřetel. Jinde však vyhodnotíme jako důležité něco, co takový vliv nemá. To může vést k chybným rozhodnutím, například v oblasti finančních investic nebo politické volby. Právě racionálním a neracionálním rozhodnutím se řešitel, spolu se svým týmem, věnoval v rámci projektu a hledal zákonitosti, které mají vliv na to, proč se lidé nerozhodují ideálně. Navzdory zdánlivě jednoduché podstatě má totiž teorie racionální nepozornosti dalekosáhlé důsledky pro jednotlivce i celou společnost. K tématu Filipa Matějku přivedl držitel Nobelovy ceny Christopher Sims, který základy této teorie položil a se kterým řešitel v USA osobně spolupracoval."
     },
 
+    "8":
     {
         "Note": "OK4.2",
-        "id": 8,
         "background_img": "images/articles/background/OK4_2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_2_c.jpg",
         "minis_img": "images/articles/minis/OK4_2_a.jpg",
@@ -237,9 +237,9 @@
         "text": "Vyučování je především komunikace. Tým Kláry Šeďové zkoumal, jak efektivně probíhá. Ve více než třech desítkách tříd pozorovatelé zaznamenávali do tabletu se speciálním softwarem, jak jsou žáci aktivní ve výuce, jak reagují na otázky učitelů, zda používají argumenty, sdělují vlastní názory nebo navazují na to, co říkali ostatní. Dlouhodobě sledovali také čtyři školní třídy videokamerami, jejichž záznamy umožnily detailnější rozbor průběhu hodin. <br>Výzkum ukázal, že žáci, kteří se při výuce zapojují do komunikace s učitelem a spolužáky, dosahují zpravidla lepších studijních výsledků a vyrovnají i znevýhodnění dané méně podporujícím rodinným zázemím. <br>Nyní pracuje tým Kláry Šeďové na navazujícím projektu. „Vedeme v něm učitele k tomu, aby vytvářeli situace, při nichž v hodině nemluví dva tři stejní žáci, ale i ti ostatní,“ shrnuje."
     },
 
+    "13":
     {
         "Note": "OK4.3",
-        "id": 13,
         "background_img": "images/articles/background/OK4_3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_3_c.jpg",
         "minis_img": "images/articles/minis/OK4_3_a.jpg",
@@ -251,9 +251,9 @@
         "text": "Při studiu informatiky byl David Šmahel správcem velké počítačové sítě a hrál počítačové hry. Pak vystudoval psychologii a již přes dvacet let zkoumá vliv komunikačních technologií na společnost. <br>Jako přehnané hodnotí obavy rodičů z používání digitálních technologií dětmi. Výsledky jeho práce a týmu okolo něj ukazují, že psychologické dopady nejsou jednoznačné ani univerzální. Záleží na individuálním nastavení dospívajícího, způsobu, jak technologie využívá a zda to dělá s rozumem. <br>Děti a dospívající se díky internetu baví, udržují vzájemné kontakty, rozvíjejí kreativitu a samozřejmě získávají informace, od fundamentálních až třeba po kuchařské recepty. „Nevyhnutelně narážejí také na nenávistné materiály nebo sexuální obsah. Rodiče a učitelé je na to musí připravit,“ zdůrazňuje David Šmahel."
     },
 
+    "18":
     {
         "Note": "OK4.4",
-        "id": 18,
         "background_img": "images/articles/background/OK4_4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_4_c.jpg",
         "minis_img": "images/articles/minis/OK4_4_a.jpg",
@@ -265,9 +265,9 @@
         "text": "Cesty, jakými se jazykové formule a vzorce předávají napříč staletími a kulturami, nám mohou napovědět, jak se vyvíjela společnost a kultura v dobách minulých. Jana Mikulová z Ústavu klasických studií Masarykovy Univerzity v Brně se v rámci výzkumu věnovala vývoji prostředků, které uvozovaly přímou řeč v latině od 1. stol. př. n. l. až do 8. stol. n. l. <br>Mapovala, jak se v průběhu staletí vyvíjelo označení přímé řeči a identifikovala také tendence, které ovlivnily historickou podobu tohoto jazyka. Jedním z nich byla snaha vzdělanců přihlásit se k tradici tzv. klasiků z 1. stol. př. n. l. a přelomu letopočtu, jejichž jazyk byl vnímán jako vzor správné výstavby latinského textu, druhým pak překlad bible do latiny ve 3. stol. n. l., který se stal v pozdějších staletích vzorem po jazykové stránce."
     },
 
+    "23":
     {
         "Note": "OK4.5",
-        "id": 23,
         "background_img": "images/articles/background/OK4_5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_5_c.jpg",
         "minis_img": "images/articles/minis/OK4_5_a.jpg",
@@ -279,9 +279,9 @@
         "text": "Kateřina Čapková zkoumá dějiny a současnost Židů a Romů, kteří byli během druhé světové války vystaveni rasové perzekuci. Její výzkum propojuje židovské a romské dějiny, přičemž zkoumá genocidu těchto komunit na území bývalého Československa a jejich poválečné migrace. Čapková zdůrazňuje, že akademický nezájem o romskou historii odráží diskriminaci, kterou Romové zažívají dodnes. V roce 2016 založila Pražské fórum pro romské dějiny, které podporuje výzkum a romské badatele. <br>Tým Čapkové se soustředí na propojené zkušenosti obou komunit, například jejich vzájemné vztahy v pracovních táborech a jejich roli v odboji. Jedním z výstupů je i databáze válečných svědectví Romů. Řešitelka také analyzuje poválečnou politiku vůči Romům a Židům a zdůrazňuje nutnost boje proti xenofobii a rasismu."
     },
 
+    "4":
     {
         "Note": "OK5.1",
-        "id": 4,
         "background_img": "images/articles/background/OK5_1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_1_c.jpg",
         "minis_img": "images/articles/minis/OK5_1_a.jpg",
@@ -293,9 +293,9 @@
         "text": "Z dat vyplývá, že klimatické změny nesvědčí „prospěšným“ houbám, tedy těm, které žijí v symbióze se svým okolím. Naopak je tomu u patogenních hub, které ničí rostliny ve svém okolí. Cílem projektu Petra Kohouta je mimo jiné pochopit vliv změny klimatu a biologických invazí na globální distribuci hub a jak změny ve výskytu hub ovlivní ekosystémové procesy. Z tohoto důvodu vytvořil on a jeho tým globální online databázi výskytu hub, kam přispívají odborníci z celého světa. Jelikož však většina dat pochází z posledních 15 let, pomáhá si řešitel laboratorními pokusy. Ty probíhají ve speciálních komůrkách, kde jsou pěstované houby vystavovány určitým teplotám a je zkoumáno, jak se jim daří."
     },
 
+    "9":
     {
         "Note": "OK5.2",
-        "id": 9,
         "background_img": "images/articles/background/OK5_2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_2_c.jpg",
         "minis_img": "images/articles/minis/OK5_2_a.jpg",
@@ -307,9 +307,9 @@
         "text": "Výzkum Zdenky Lososové se zaměřuje na to, co se děje s vegetací, když se mění struktura půdy, klima či management krajiny. Spolu se svým týmem se zabývala například zjišťováním, které rostliny zavlečené z jiného prostředí se stanou invazními, tedy nebezpečnými pro okolí, v němž se rozpínají a utlačují původní druhy. <br> Základní otázka zní, jestli se invaznímu druhu daří proto, že je jiný a díky odlišnosti lépe využívá zdroje živin než původní rostliny, anebo proto, že se podobá rostlinám, které už na daném místě rostou. Vědkyně zjistila, že invazní druhy jsou obvykle podobné původním rostlinám, ale oproti nim jsou větší, a mají proto více slunečního světla. Navíc se obvykle dobře rozmnožují, rychle vytvářejí semena s dobrou klíčivostí a nemají specifické nároky na opylovače."
     },
 
+    "14":
     {
         "Note": "OK5.3",
-        "id": 14,
         "background_img": "images/articles/background/OK5_3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_3_c.jpg",
         "minis_img": "images/articles/minis/OK5_3_a.jpg",
@@ -321,9 +321,9 @@
         "text": "Jana Voříšková už zkoumala mikroorganismy z tropické Panamy, ale více se věnuje mikroorganismům z Arktidy. Tam se vlivem globálního oteplování ohřívá dlouhodobě zmrzlá půda a aktivují se půdní mikroorganismy. Hrozí, že rozloží nahromaděnou odumřelou biomasu. Vzniklé skleníkové plyny by pak urychlily globální změnu klimatu neboli podpořily oteplování i ve středu Evropy. <br>Už třikrát byla doktorka Voříšková v Grónsku, kde s kolegy ze severských institucí stavěla plexisklové skleníky a sněhové zábrany. Pod nimi zůstává půda o několik stupňů teplejší, takže se dá ověřit, jestli tak vznikne víc skleníkových plynů. <br>Nasbírané vzorky nyní vyhodnocuje v laboratoři v Praze. Zajímá ji také, zda zkoumané mikroorganismy přežívající v extrémních podmínkách obsahují geny, které by mohly být užitečné pro moderní biotechnologie."
     },
 
+    "19":
     {
         "Note": "OK5.4",
-        "id": 19,
         "background_img": "images/articles/background/OK5_4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_4_c.jpg",
         "minis_img": "images/articles/minis/OK5_4_a.jpg",
@@ -335,9 +335,9 @@
         "text": "Zatímco křížení dvou různých biologických druhů je v říši zvířat vzácným jevem, u rostlin představuje jeden ze základních mechanismů vzniku nových druhů. Rostlinný genetik David Kopecký se zaměřil na studium genomové dominance, tedy častého jevu, kdy se v nově vzniklé rostlině stává jeden z rodičovských genomů dominantním, zatímco druhý genom je potlačován. Při výzkumu využil křížence trav kostřavy a jílku, tzv. Festulolium. <br>Výsledky výzkumu poskytují zajímavý evoluční pohled na jeden ze základních mechanismů vzniku nových rostlinných druhů a evoluce rostlin a přinášejí unikátní pohled na společné fungování dvou různých genomů v jednom jádře. Výsledky svého výzkumu také vědci přivádějí do praxe ve spolupráci se šlechtitelskou stanicí."
     },
 
+    "24":
     {
         "Note": "OK5.5",
-        "id": 24,
         "background_img": "images/articles/background/OK5_5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_5_c.jpg",
         "minis_img": "images/articles/minis/OK5_5_a.jpg",
@@ -348,4 +348,4 @@
         "author_institute": "Výzkumný ústav veterinárního lékařství v Brně",
         "text": "Miluše Vozdová objevuje nové druhy zvířat pomocí genetického výzkumu. Její práce odhaluje, že zdánlivě známé druhy mohou mít výrazné genetické rozdíly, které nejsou viditelné na první pohled. Tyto rozdíly vznikají v důsledku evoluce, kdy se u některých živočichů spojují chromozomy, čímž dochází ke vzniku nových druhů. <br>Vozdová se původně zaměřila na čeleď turovitých a zkoumala chromozomy během buněčného dělení, kdy jsou dobře viditelné pod mikroskopem. Její tým potvrdil, že na pohled stejná zvířata, jako jsou různé druhy jelenů, srnců nebo daňků, mohou mít odlišný počet chromozomů, a tedy představovat různé druhy. <br>Tyto objevy jsou zásadní pro ochranu ohrožených druhů. Zvířata z různých oblastí, která vypadají podobně, se často nemohou křížit, nebo jejich potomci jsou neplodní, což komplikuje záchranné programy. Díky genetickému výzkumu lze lépe porozumět jejich evolučnímu vývoji a efektivněji zabezpečit jejich budoucnost."
     }
-]
+}
