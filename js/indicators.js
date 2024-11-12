@@ -49,19 +49,14 @@ function updatePathBasedOnWidth() {
     const windowWidth = window.innerWidth;
 
     const linepathElement = document.getElementById('linepath');
-    const maskpathElement = document.getElementById('maskpath');
 
     const defaultLinePath = "M 0 20 Q 250 52 500 20 T 1000 20";
     const narrowLinePath = "M 0 20 Q 250 76 500 20 T 1000 20";
-    const defaultMaskPath = "M 0 0.22 Q 0.25 0.65 0.5 0.22 T 1 0.22 L1 -0.001 L0 -0.001 Z";
-    const narrowMaskPath = "M 0 0.02 Q 0.25 0.03 0.5 0.02 T 1 0.02 L1 -0.001 L0 -0.001 Z";
 
     // Change the path based on the window width
     if (windowWidth < 1215) {
         linepathElement.setAttribute('d', narrowLinePath);
-        maskpathElement.setAttribute('d', narrowMaskPath);
     } else {
         linepathElement.setAttribute('d', defaultLinePath);
-        maskpathElement.setAttribute('d', defaultMaskPath);
     }
 }
