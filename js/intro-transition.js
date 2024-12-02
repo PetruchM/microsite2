@@ -1,12 +1,10 @@
-const delay = 100;
-
 document.addEventListener("DOMContentLoaded", function () {
     // scroll to top of the page
     window.scrollTo(0, 0);
 
     // Select relevant elements from the DOM
-    const introOverlay = document.querySelector(".intro-overlay2");
-    const introButton = document.querySelector(".intro-button2");
+    const introOverlay = document.querySelector(".intro-overlay");
+    const introButton = document.querySelector(".intro-button");
 
     // Function to create and animate the yellow circle
     function createYellowCircle(event) {
@@ -18,13 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Get mouse position and calculate initial circle size and position
         const { clientX, clientY } = event;
         const circleSize = Math.max(window.innerWidth, window.innerHeight) * 2;
-        const halfSize = circleSize / 2;
 
         // Set initial size and position of the circle
         circle.style.width = `${circleSize}px`;
         circle.style.height = `${circleSize}px`;
-        circle.style.top = `${clientY - halfSize}px`;
-        circle.style.left = `${clientX - halfSize}px`;
+        circle.style.top = `${clientY - (circleSize / 2)}px`;
+        circle.style.left = `${clientX - (circleSize / 2)}px`;
 
         // Animate the circle expansion
         setTimeout(() => {

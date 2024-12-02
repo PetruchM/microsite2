@@ -1,42 +1,8 @@
-/* .intro-overlay1 {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-    display: flex;
-    overflow: hidden;
-}
-
-.intro-bar1 {
-    width: calc(10vw + 1px);
-    height: 105vh;
-    background-color: var(--blue-bg);
-    transition: transform 0.3s ease; 
-}
-
-.intro-button1 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    background-color: var(--yellow);
-    color: var(--blue-bg);
-    width: 150px;
-    height: 60px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    border-color: var(--yellow);
-    cursor: pointer;
-    transition: top 0.6s ease;
-} */
-
 .no-overflow {
     overflow: hidden;
 }
 
-
-.intro-overlay2 {
+.intro-overlay {
     position: fixed;
     max-width: 100vw;
     max-height: 100vh;
@@ -47,8 +13,6 @@
     overflow: hidden;
     background: rgb(10,61,116);
     background: linear-gradient(20deg, rgba(10,61,116,1) 0%, rgba(6,39,74,1) 45%, rgb(5, 31, 59) 100%);
-    /* background-color: var(--blue-bg); */
-
     transition: transform 0.3s ease-in;
 }
 
@@ -109,11 +73,10 @@
     top: 0px;
     right: 60vw;
     color: white;
-    /* background-color: white; */
     object-fit: contain;
 }
 
-.intro-button2 {
+.intro-button {
     border-radius: 2.5vh;
     background-color: var(--yellow);
     color: var(--blue-bg);
@@ -128,37 +91,14 @@
     margin-top: 20px;
     border: none;
     position: relative;
-}
-/* jaky clone vzdzt to ani neni vhtml */
-/* .intro-button2-clone {
-    border-radius: 25px;
-    background-color: var(--yellow);
-    width: 270px;
-    height: 60px;
-    border-color: var(--yellow);
-    margin-top: 20px;
-    border: none;
-    position: absolute;
-    transition: all 1.5s ease-in-out;
-} */
-
-
-/* new transition */
-
-.intro-button2 {
     transition: opacity 0.3s ease-in-out;
 }
 
-.intro-button2.active {
+.intro-button.active {
     opacity: 0;
 }
 
-.intro-button2-clone.active {
-    width: 105vw;
-    height: 105vh;
-}
-
-.intro-overlay2.active {
+.intro-overlay.active {
     opacity: 0;
 }
 
@@ -171,13 +111,16 @@
     z-index: 999999;
 }
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-aspect-ratio: 1/1){
     .intro-image {
         display: none;
     }
 
-    .intro-button2 {
+    .intro-logo{
+        margin-left: 8vw;
+    }
+
+    .intro-button {
         width: 35vw;
         min-width: 120px;
         height: 8vh;
@@ -186,12 +129,7 @@
         margin-top: 20px;
     }
 
-    /* .intro-overlay1 {
-        display: none;
-    } */
-
-    .intro-overlay2 {
-        /* height: 110vh; */
+    .intro-overlay {
         height: 110%;
     }
 
