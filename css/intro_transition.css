@@ -1,4 +1,4 @@
-.intro-overlay1 {
+/* .intro-overlay1 {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -11,7 +11,7 @@
     width: calc(10vw + 1px);
     height: 105vh;
     background-color: var(--blue-bg);
-    transition: transform 0.3s ease; /* Add a transition for smooth sliding down */
+    transition: transform 0.3s ease; 
 }
 
 .intro-button1 {
@@ -29,7 +29,7 @@
     border-color: var(--yellow);
     cursor: pointer;
     transition: top 0.6s ease;
-}
+} */
 
 .no-overflow {
     overflow: hidden;
@@ -129,8 +129,8 @@
     border: none;
     position: relative;
 }
-
-.intro-button2-clone {
+/* jaky clone vzdzt to ani neni vhtml */
+/* .intro-button2-clone {
     border-radius: 25px;
     background-color: var(--yellow);
     width: 270px;
@@ -140,7 +140,7 @@
     border: none;
     position: absolute;
     transition: all 1.5s ease-in-out;
-}
+} */
 
 
 /* new transition */
@@ -172,31 +172,18 @@
 }
 
 
-
-
-/*useless*/
-/* @media screen and (max-width: 1850px) and (min-width: 1451px) {
-    .intro-column {
-        right: 15vw;
-    }
-}
-
-@media screen and (max-width: 1450px) and (min-width: 1251px) {
-    .intro-column {
-        right: 6vw;
-    }
-}
-
-@media screen and (max-width: 1250px) and (min-width: 768px) {
-    .intro-column {
-        right: 4vw;
-    }
-} */
-
-
 @media screen and (max-width: 768px) {
     .intro-image {
         display: none;
+    }
+
+    .intro-button2 {
+        width: 35vw;
+        min-width: 120px;
+        height: 8vh;
+        font-size: 3.6vh;
+        font-weight: 700;
+        margin-top: 20px;
     }
 
     /* .intro-overlay1 {
