@@ -13,14 +13,12 @@
 /* division that ensures consistency if the moving line */
 .moving-dashed-line{
     position: relative;
-    /* background-color: red;
-    opacity: 0.4; */
     top: -3vh;
     width: 100%;
     height: 5vw;
     z-index: 13;
     text-align: center;
-    background-image: url('../images/pngs/pozadi-short-path2.png');
+    background-image: url('../images/pngs/pozadi-short-PC-reversed.png');
     background-position: bottom;
     background-size: cover;
 }
@@ -63,16 +61,6 @@ svg {
     aspect-ratio: 1/1;
     background-color: rgba(0,0,0,0);
 }
-
-/* .indicators-container-extension{
-    position: absolute;
-    background-color: var(--blue-bg);
-    top: 0vh;
-    left: 14.5%;
-    width: 23%;
-    height: 100%;
-    z-index: 1;
-} */
 
 .indicators-container{
     position: relative;
@@ -183,6 +171,7 @@ svg {
 }
 
 .lower-section-logo{
+    z-index: 12;
     background-color: var(--blue-bg);
     position: relative;
     text-align: center;

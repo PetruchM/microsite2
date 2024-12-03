@@ -50,7 +50,7 @@ function updatePathBasedOnWidth() {
 
     const linepathElement = document.getElementById('linepath');
 
-    const defaultLinePath = "M 0 20 Q 250 52 500 20 T 1000 20";
+    const defaultLinePath = "M 0 24 Q 250 -14 500 24 T 1000 24"; //M 0 20 Q 250 52 500 20 T 1000 20
     const narrowLinePath = "M 0 20 Q 250 76 500 20 T 1000 20";
 
     // Change the path based on the window width
