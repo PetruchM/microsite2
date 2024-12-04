@@ -1,8 +1,8 @@
-@media (max-width: 1215px) {
+@media (max-width: 1024px) or (max-aspect-ratio: 1/1){ /*so mainly for screens up to 1024px and secondly for high resolution mobile phones (so above 1024px but lower ratio)*/
     .indicators-section {
-        top: -20vh;
         height: auto;
-        aspect-ratio: 1 /6;
+        top: -1px;
+        aspect-ratio: none;
     }
 
     .slideDownButt img {
@@ -10,29 +10,52 @@
     }    
     
     .indicators-container{
-        left: 25vw;
-        width: 50vw;
+        left: 10vw;
+        width: 80vw;
     }
 
     .single-indicator{
+        height: auto;
         text-align: center;
         flex-direction: column;
         transition: all 0.7s ease-in-out;
+        display: flex;
+        justify-content: center;
+        box-sizing: none;
     }
 
-    .single-indicator.active{
-        margin-bottom: 30vh;
-    }
+    /* .single-indicator.active{
+        margin-bottom: 18vh;
+    } */
     
     .logo-container{
         height: 12%;
         text-align: center;
     }
 
+    .lower-section-logo{
+        background-color: var(--blue-bg);
+    }
+
+    .lower-section-logo-img{
+        width: 70%;
+        margin: 10vh 0 5vh 0;
+    }
+
     .indicator {
         width: 90%;
         height: 25vh;
         margin: unset;
+    }
+
+    #last-indicator{
+        height: 30vh;
+    }
+
+    .indicator-img{
+        width: 40%;
+        height: 40%;
+        margin: 5% auto 5% auto;
     }
 
     .indicator-svg {
@@ -43,17 +66,12 @@
     }
 
     .indicator-num {
-        font-size: 180%;
+        font-size: 200%;
     }
     
     .indicator-text {
-        font-size: 150%;
+        font-size: 170%;
         line-height: 1.2;
-    }
-
-    .lower-section-logo-img{
-        width: 70%;
-        margin: 10vh 0 5vh 0;
     }
 
     .single-indicator-p{
@@ -70,7 +88,7 @@
     .single-indicator-p.active {
         left: 0;
         right: 0;
-        top: 100%;
+        top: 105%;
         opacity: 1;
     }
 
@@ -85,7 +103,15 @@
     .indicators-expand-butt-img {
         transform:rotate(90deg);
         width: 7.5vw;
-      }
+    }
+
+    .moving-dashed-line{
+        position: relative;
+        height: auto;
+        text-align: center;
+        background-size: contain;
+        background-image: url('../images/pngs/pozadi-short-mobile-cropped.png');
+    }
 
     .line {
         stroke-dasharray: 20px;
@@ -98,12 +124,5 @@
         to {
             stroke-dashoffset: -100px;
         }
-    }
-}
-
-@media (max-width: 800px) {
-    .indicators-container{
-        left: 12vw;
-        width: 80vw;
     }
 }
