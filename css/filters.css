@@ -16,15 +16,15 @@
     margin: 0 10px; /* Adjust the margin as needed */
 }
 
-.header-logo{
+.header-logo-img{
     object-fit: contain;
     height: 100%;
     z-index: 20;
-    margin-right: 3vw;
-    margin-top: 1.5vh;
 }
 
-.filter-header-logo{
+.header-logo{
+    margin-right: 3vw;
+    margin-top: 1.5vh;
     position: absolute;
     top: 0;
     right:0;
