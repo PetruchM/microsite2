@@ -2,7 +2,7 @@
     .indicators-section {
         height: auto;
         top: -1px;
-        aspect-ratio: none;
+        aspect-ratio:unset;
     }
 
     .slideDownButt img {
@@ -106,10 +106,8 @@
     }
 
     .moving-dashed-line{
-        position: relative;
-        height: auto;
-        text-align: center;
-        background-size: contain;
+        height: 9vw;
+        background-size:cover;
         background-image: url('../images/pngs/pozadi-short-mobile-cropped.png');
     }
 
