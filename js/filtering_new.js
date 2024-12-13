@@ -387,13 +387,13 @@ function updateBackground(){
 
     if (currentOnPc!=onPC){
         onPC=currentOnPc;
-        if (onPC){
-            pagerCarousel.classList.add('vertical');
-            pagerCarousel.classList.remove('horizontal');
-        }else{
-            pagerCarousel.classList.remove('vertical');
-            pagerCarousel.classList.add('horizontal');
-        }
+        // if (onPC){
+        //     pagerCarousel.classList.add('vertical');
+        //     pagerCarousel.classList.remove('horizontal');
+        // }else{
+        //     pagerCarousel.classList.remove('vertical');
+        //     pagerCarousel.classList.add('horizontal');
+        // }
         setFilter(pcFilterButtons[currentFilter%articlesPerFilter],currentFilter);
     }
 }

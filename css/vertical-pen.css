@@ -12,24 +12,12 @@
     box-shadow: 0 0px 16px rgb(255, 255, 255); /* Add shadow */
 }
 
-/* .card .card-img {
-    width: 100%;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-} */
-
 .card img {
     width: 100%; /* Set the width to 100% of its container */
     height: 100%; /* Set the height to 100% of its container */
     object-fit: cover; /* Cover the container without stretching */
     display: block; /* Remove any inline spacing */
 }
-/* 
-.vertical .card-img img {
-    width: 100%;
-    height: auto; 
-} */
 
 .vertical > .carousel-inner .carousel-item.active,
 .vertical > .carousel-inner .carousel-item-next,
@@ -37,20 +25,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-    
-    .vertical > .carousel-inner .carousel-item-end.active,
-    .vertical > .carousel-inner .carousel-item-next {
-      transform: translateY(20%);
-    }
-    
-    .vertical > .carousel-inner .carousel-item-start.active, 
-    .vertical > .carousel-inner .carousel-item-prev {
-      transform: translateY(-20%);
-    }
 }
 
 .vertical > .carousel-inner .carousel-item-end,
@@ -93,18 +67,6 @@
     transform: translateY(-20%);
 }
 
-/* .vertical.carousel .carousel-indicators {
-    top: 0;
-    left: unset;
-
-    margin-left: unset !important;
-    margin-right: 1vh;
-
-    flex-direction: column;
-} */
-
-
-
 .vertical.carousel .carousel-control-prev{
     width: 100%;
     height: 60px;
@@ -125,16 +87,74 @@
 }
 
 
-/* GACR dont want numbers on tha pager carousel cards */
-/* .card-img-overlay {
-    color: white;
-    font-weight: 800;
-    font-size: 4vh;
-} */
+@media ((max-width: 1024px) or (max-aspect-ratio: 1/1)){
+    .card {
+        width: 10vw;
+    }
 
-@media (max-width: 965px){
+    .card.active {
+        width: 12vw;
+    }
+
+    .vertical > .carousel-inner .carousel-item-end,
+    .vertical > .carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+    }
+
+    .vertical > .carousel-inner .carousel-item.active,
+    .vertical > .carousel-inner .carousel-item-next,
+    .vertical > .carousel-inner .carousel-item-prev {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .vertical > .carousel-inner .carousel-item-end.active,
+    .vertical > .carousel-inner .carousel-item-next {
+      transform: translateX(0%);
+    }
+    
+    .vertical > .carousel-inner .carousel-item-start.active, 
+    .vertical > .carousel-inner .carousel-item-prev {
+      transform: translateX(0%);
+    }
+
+    #pagerCarousel {
+        top: 8vh;
+        left: 10vw;
+    }
+    
+    .vertical.carousel {
+        width: 80vw;
+        background-color: rgba(0, 0, 0, 0);
+        
+        display: flex;
+        flex-direction: row;
+    }
+
+    .vertical.carousel .carousel-control-prev{
+        position: relative;
+        width: 5vw;
+        height: unset;
+        top: unset;
+    }
+    
+    .vertical.carousel .carousel-control-next {
+        position: relative;
+        width: 5vw;
+        height: unset;
+        bottom: unset;
+    }
+
+    .vertical.carousel .carousel-control-prev-icon,
+    .vertical.carousel .carousel-control-next-icon {
+        transform: rotateZ(0deg);
+    }
+}
+
+/* @media (max-width: 1024px){
     #verticalCarousel{
         display: none;
     }
-}
+} */
 
