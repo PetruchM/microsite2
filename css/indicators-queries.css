@@ -1,110 +1,5 @@
 @media (max-width: 1024px) or (max-aspect-ratio: 1/1){ /*so mainly for screens up to 1024px and secondly for high resolution mobile phones (so above 1024px but lower ratio)*/
-    .indicators-section {
-        height: auto;
-        top: -1px;
-        aspect-ratio:unset;
-    }
-
-    .slideDownButt img {
-        width: 7vw;
-    }    
-    
-    .indicators-container{
-        left: 10vw;
-        width: 80vw;
-    }
-
-    .single-indicator{
-        height: auto;
-        text-align: center;
-        flex-direction: column;
-        transition: all 0.7s ease-in-out;
-        display: flex;
-        justify-content: center;
-        box-sizing: none;
-    }
-
-    /* .single-indicator.active{
-        margin-bottom: 18vh;
-    } */
-    
-    .logo-container{
-        height: 12%;
-        text-align: center;
-    }
-
-    .lower-section-logo{
-        background-color: var(--blue-bg);
-    }
-
-    .lower-section-logo-img{
-        width: 70%;
-        margin: 10vh 0 5vh 0;
-    }
-
-    .indicator {
-        width: 90%;
-        height: 25vh;
-        margin: unset;
-    }
-
-    #last-indicator{
-        height: 30vh;
-    }
-
-    .indicator-img{
-        width: 40%;
-        height: 40%;
-        margin: 5% auto 5% auto;
-    }
-
-    .indicator-svg {
-        height: 40%;
-        padding-right: 5%;
-        transition: opacity 0.5s ease-in-out;
-        opacity: 1;
-    }
-
-    .indicator-num {
-        font-size: 200%;
-    }
-    
-    .indicator-text {
-        font-size: 170%;
-        line-height: 1.2;
-    }
-
-    .single-indicator-p{
-        text-align: center;
-        width: 80%;
-        top: 30%;
-        left: 0;
-        right:0;
-        margin-right: auto;
-        margin-left: auto;
-        font-size: 70%;
-    }
-
-    .single-indicator-p.active {
-        left: 0;
-        right: 0;
-        top: 105%;
-        opacity: 1;
-    }
-
-    .indicator-slide_butt {
-        position: relative;
-        right: 0;
-        left: 0;
-        /* top: 85%; */
-        text-align: center;
-    }
-
-    .indicators-expand-butt-img {
-        transform:rotate(90deg);
-        width: 7.5vw;
-    }
-
+    /* transition */
     .moving-dashed-line{
         height: 9vw;
         background-size:cover;
@@ -122,5 +17,111 @@
         to {
             stroke-dashoffset: -100px;
         }
+    }
+
+    /* main */
+    .slideDownButt img {
+        width: 7vw;
+    }  
+    
+    .indicators-section {
+        height: auto;
+        top: -1px;
+        aspect-ratio:unset;
+    }
+
+    .indicators-container{
+        left: 10vw;
+        width: 80vw;
+        top: unset;
+        padding-bottom: unset;
+        box-sizing: unset;
+    }
+
+
+    /* logo */
+    .logo-container{
+        height: 12%;
+        text-align: center;
+    }
+
+    .lower-section-logo{
+        background-color: var(--blue-bg);
+    }
+
+    .lower-section-logo-img{
+        width: 70%;
+        margin: 10vh 0 5vh 0;
+    }
+
+    /* indicator */
+    .single-indicator{
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+        transition: all 0.7s ease-in-out;
+        display: flex;
+        justify-content: center;
+        box-sizing: none;
+    }
+
+    .indicator {
+        width: 90%;
+        height: auto;
+        margin: unset;
+    }
+
+    /* indictor parts */
+
+    .indicator-svg-div{
+        width: 20vw;
+        height:20vw;
+        margin: 5% auto 5% auto;
+    }
+
+    .indicator-num {
+        font-size: 8vw;
+    }
+    
+    .indicator-text {
+        font-size: 6vw;
+        line-height: 1.2;
+    }
+
+    /* indicator butt and article */
+
+    .indicator-slide_butt {
+        position: relative;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .indicators-expand-butt-img {
+        transform:rotate(90deg);
+        width: 7.5vw;
+    }
+
+    .single-indicator-p {
+        position: relative;
+        text-align: center;
+        width: 80%;
+        left: 0;
+        right: 0;
+        height: unset;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 3vw;
+        overflow: hidden; 
+        max-height: 0;
+        transition: max-height 1s ease;
+        opacity: 1;
+    }
+    
+    .single-indicator-p.active {
+        left: 0;
+        right: 0;
+        top: 0;
+        max-height: 50vh;
     }
 }
