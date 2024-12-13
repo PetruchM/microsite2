@@ -1,5 +1,5 @@
 /* @media (max-width: 726px) { */
-@media (max-width: 1215px) {
+@media (max-width: 1024px) or (max-aspect-ratio: 1/1) {
     .carousel__box {
         position: absolute;
         height: 82%;
@@ -9,17 +9,19 @@
     .box-info1, .box-info2, .box-info3 {
         position: absolute;
         height: 60%;
-        width: 50vw;
+        /* width: 50vw; */
         /* max-width: 500px; */
         margin: auto;
         margin-bottom: 15px;
         top: 82%;
-        left: 25vw;
+        /* left: 25vw; */
         transition: all 0.5s ease-in-out;
+        width: 80vw;
+        left: 10vw;
     }
 
     .box-info1-content, .box-info2-content, .box-info3-content {
-        padding-top: 40px;
+        /* padding-top: 40px; */
         padding-bottom: 15px;
         overflow-y: hidden;
     }
@@ -29,7 +31,7 @@
         padding-right: 8%;
       }
     .box-info1-content h1 {
-        font-size: 1.2rem;
+        font-size: 4vw;
         font-weight: 700;
         margin: 0;
         padding: 0;
@@ -102,7 +104,7 @@
     }
 
     .expand-bttn-img {
-        width: 4vw;
+        width: 8vw;
       }
 
     .project-motto-text {
@@ -111,7 +113,7 @@
     }
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     .box-info1, .box-info2, .box-info3 {
         width: 80vw;
         max-width: 500px;
@@ -129,15 +131,10 @@
         height: 68%;
         top: 13.5%;
     }
-}
+} */
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .box-info1-content h1 {
-        font-size: 1rem;
-        font-weight: 700;
-        margin: 0;
-        padding: 0;
-        padding-top: 10px;
-        color: var(--blue-bg);
+        font-size: 4vw;
       }
 }
