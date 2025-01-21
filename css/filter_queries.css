@@ -25,7 +25,13 @@
 
     .carousel__filter-label {
         display: block;
-        margin-left: 20px;
+        text-align: center;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+
+    .carousel__filter-label.label-active {
+        padding-top: 0px;
     }
 
     .carousel__filter-button {
