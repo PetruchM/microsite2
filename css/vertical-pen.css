@@ -86,7 +86,6 @@
     transform: rotateZ(90deg);
 }
 
-
 @media ((max-width: 1024px) or (max-aspect-ratio: 1/1)){
     .card {
         width: 10vw;
@@ -109,14 +108,14 @@
         justify-content: space-between;
     }
 
-    .vertical > .carousel-inner .carousel-item-end.active,
-    .vertical > .carousel-inner .carousel-item-next {
-      transform: translateX(0%);
+    .vertical.carousel .carousel-item-next:not(.carousel-item-start),
+    .vertical.carousel .active.carousel-item-end {
+        transform: translateX(20%);
     }
-    
-    .vertical > .carousel-inner .carousel-item-start.active, 
-    .vertical > .carousel-inner .carousel-item-prev {
-      transform: translateX(0%);
+
+    .vertical.carousel .carousel-item-prev:not(.carousel-item-end),
+    .vertical.carousel .active.carousel-item-start {
+        transform: translateX(-20%);
     }
 
     #pagerCarousel {
