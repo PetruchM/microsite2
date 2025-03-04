@@ -2,7 +2,7 @@
     "0":
     {
         "Note": "OK1.1",
-        "background_img": "images/articles/background/OK1_1_b.jpg",
+        "background_img": "images/articles/background/OK1.1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_1_c.jpg",
         "minis_img": "images/articles/minis/OK1_1_a.jpg",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
@@ -16,7 +16,7 @@
     "5":
     {
         "Note": "OK1.2",
-        "background_img": "images/articles/background/OK1_2_b.jpg",
+        "background_img": "images/articles/background/OK1.2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_2_c.jpg",
         "minis_img": "images/articles/minis/OK1_2_a.jpg",
         "title": "NOVÉ MATERIÁLY VHODNÉ NEJEN PRO ENERGETIKU",
@@ -30,7 +30,7 @@
     "10":
     {
         "Note": "OK1.3",
-        "background_img": "images/articles/background/OK1_3_b.jpg",
+        "background_img": "images/articles/background/OK1.3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_3_c.jpg",
         "minis_img": "images/articles/minis/OK1_3_a.jpg",
         "title": "AUTOMATICKÁ ANALÝZA FOTOGRAFIÍ A VIDEA UMOŽŇUJE ROBOTŮM VIDĚT",
@@ -44,7 +44,7 @@
     "15":
     {
         "Note": "OK1.4",
-        "background_img": "images/articles/background/OK1_4_b.jpg",
+        "background_img": "images/articles/background/OK1.4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_4_c.jpg",
         "minis_img": "images/articles/minis/OK1_4_a.jpg",
         "title": "VYHLEDÁVÁNÍ VE VIDEU. ZN.: RYCHLE A PŘESNĚ.",
@@ -58,7 +58,7 @@
     "20":
     {
         "Note": "OK1.5",
-        "background_img": "images/articles/background/OK1_5_b.jpg",
+        "background_img": "images/articles/background/OK1.5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK1_5_c.jpg",
         "minis_img": "images/articles/minis/OK1_5_a.jpg",
         "title": "KATALYZÁTORY SLOŽENÉ NA MÍRU JAKO LEGO",
@@ -72,7 +72,7 @@
     "1":
     {
         "Note": "OK2.1",
-        "background_img": "images/articles/background/OK2_1_b.jpg",
+        "background_img": "images/articles/background/OK2.1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_1_c.jpg",
         "minis_img": "images/articles/minis/OK2_1_a.jpg",
         "title": "VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY",
@@ -86,7 +86,7 @@
     "6":
     {
         "Note": "OK2.2",
-        "background_img": "images/articles/background/OK2_2_b.jpg",
+        "background_img": "images/articles/background/OK2.2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_2_c.jpg",
         "minis_img": "images/articles/minis/OK2_2_a.jpg",
         "title": "METODOU „CHYŤ A PUSŤ“ K PŘEPÍNAČŮM, KTERÉ MOHOU ŘÍDIT REAKCE V ŽIVÝCH ORGANISMECH",
@@ -100,7 +100,7 @@
     "11":
     {
         "Note": "OK2.3",
-        "background_img": "images/articles/background/OK2_3_b.jpg",
+        "background_img": "images/articles/background/OK2.3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_3_c.jpg",
         "minis_img": "images/articles/minis/OK2_3_a.jpg",
         "title": "VIDEO ZACHYTÍ DĚNÍ PŘÍMO MEZI ATOMY",
@@ -114,7 +114,7 @@
     "16":
     {
         "Note": "OK2.4",
-        "background_img": "images/articles/background/OK2_4_b.jpg",
+        "background_img": "images/articles/background/OK2.4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_4_c.jpg",
         "minis_img": "images/articles/minis/OK2_4_a.jpg",
         "title": "CHEMICI HLEDAJÍ ZPŮSOB, JAK NA LEVNÉ A BEZPEČNÉ SYNTETICKÉ REAKCE",
@@ -128,7 +128,7 @@
     "21":
     {
         "Note": "OK2.5",
-        "background_img": "images/articles/background/OK2_5_b.jpg",
+        "background_img": "images/articles/background/OK2.5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK2_5_c.jpg",
         "minis_img": "images/articles/minis/OK2_5_a.jpg",
         "title": "KŘEMÍK, KTERÝ SVÍTÍ, BY MOHL ZMĚNIT ELEKTRONIKU",
@@ -142,7 +142,7 @@
     "2":
     {
         "Note": "OK3.1",
-        "background_img": "images/articles/background/OK3_1_b.jpg",
+        "background_img": "images/articles/background/OK3.1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_1_c.jpg",
         "minis_img": "images/articles/minis/OK3_1_a.jpg",
         "title": "SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY",
@@ -156,7 +156,7 @@
     "7":
     {
         "Note": "OK3.2",
-        "background_img": "images/articles/background/OK3_2_b.jpg",
+        "background_img": "images/articles/background/OK3.2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_2_c.jpg",
         "minis_img": "images/articles/minis/OK3_2_a.jpg",
         "title": "DOPRAVNÍ NAVIGACE UVNITŘ BUŇKY",
@@ -170,7 +170,7 @@
     "12":
     {
         "Note": "OK3.3",
-        "background_img": "images/articles/background/OK3_3_b.jpg",
+        "background_img": "images/articles/background/OK3.3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_3_c.jpg",
         "minis_img": "images/articles/minis/OK3_3_a.jpg",
         "title": "TITĚRNÍ KURÝŘI PŘEPRAVUJÍ LÉKY",
@@ -184,7 +184,7 @@
     "17":
     {
         "Note": "OK3.4",
-        "background_img": "images/articles/background/OK3_4_b.jpg",
+        "background_img": "images/articles/background/OK3.4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_4_c.jpg",
         "minis_img": "images/articles/minis/OK3_4_a.jpg",
         "title": "BIOLOGICKÁ LÉČBA: NADĚJE PRO PACIENTY S PORUCHOU SLUCHU",
@@ -198,7 +198,7 @@
     "22":
     {
         "Note": "OK3.5",
-        "background_img": "images/articles/background/OK3_5_b.jpg",
+        "background_img": "images/articles/background/OK3.5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK3_5_c.jpg",
         "minis_img": "images/articles/minis/OK3_5_a.jpg",
         "title": "MUTACE PŘI REPLIKACE DNA ČASTO VEDOU KE VZNIKU NÁDORŮ",
@@ -212,7 +212,7 @@
     "3":
     {
         "Note": "OK4.1",
-        "background_img": "images/articles/background/OK4_1_b.jpg",
+        "background_img": "images/articles/background/OK4.1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_1_c.jpg",
         "minis_img": "images/articles/minis/OK4_1_a.jpg",
         "title": "I NEPOZORNOST MŮŽE BÝT RACIONÁLNÍ",
@@ -226,7 +226,7 @@
     "8":
     {
         "Note": "OK4.2",
-        "background_img": "images/articles/background/OK4_2_b.jpg",
+        "background_img": "images/articles/background/OK4.2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_2_c.jpg",
         "minis_img": "images/articles/minis/OK4_2_a.jpg",
         "title": "KDO VE TŘÍDĚ MLUVÍ, MÍVÁ LEPŠÍ PROSPĚCH",
@@ -240,7 +240,7 @@
     "13":
     {
         "Note": "OK4.3",
-        "background_img": "images/articles/background/OK4_3_b.jpg",
+        "background_img": "images/articles/background/OK4.3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_3_c.jpg",
         "minis_img": "images/articles/minis/OK4_3_a.jpg",
         "title": "SOCIÁLNÍ SÍTĚ NEOHROŽUJÍ DOSPÍVAJÍCÍ TOLIK, JAK SE RODIČE BOJÍ",
@@ -254,7 +254,7 @@
     "18":
     {
         "Note": "OK4.4",
-        "background_img": "images/articles/background/OK4_4_b.jpg",
+        "background_img": "images/articles/background/OK4.4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_4_c.jpg",
         "minis_img": "images/articles/minis/OK4_4_a.jpg",
         "title": "CO NÁM MŮŽE ŘÍCI PŘÍMÁ ŘEČ O SPOLEČENSKÉM A KULTURNÍM VÝVOJI?",
@@ -268,7 +268,7 @@
     "23":
     {
         "Note": "OK4.5",
-        "background_img": "images/articles/background/OK4_5_b.jpg",
+        "background_img": "images/articles/background/OK4.5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK4_5_c.jpg",
         "minis_img": "images/articles/minis/OK4_5_a.jpg",
         "title": "RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI",
@@ -282,7 +282,7 @@
     "4":
     {
         "Note": "OK5.1",
-        "background_img": "images/articles/background/OK5_1_b.jpg",
+        "background_img": "images/articles/background/OK5.1_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_1_c.jpg",
         "minis_img": "images/articles/minis/OK5_1_a.jpg",
         "title": "ZMĚNA KLIMATU ŠKODÍ „PROSPĚŠNÝM“ HOUBÁM",
@@ -296,7 +296,7 @@
     "9":
     {
         "Note": "OK5.2",
-        "background_img": "images/articles/background/OK5_2_b.jpg",
+        "background_img": "images/articles/background/OK5.2_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_2_c.jpg",
         "minis_img": "images/articles/minis/OK5_2_a.jpg",
         "title": "PŮVODNÍ VEGETACI NEJSNÁZE KONKURUJÍ ZAVLEČENÉ ROSTLINY, KTERÉ SE JÍ PODOBAJÍ",
@@ -310,7 +310,7 @@
     "14":
     {
         "Note": "OK5.3",
-        "background_img": "images/articles/background/OK5_3_b.jpg",
+        "background_img": "images/articles/background/OK5.3_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_3_c.jpg",
         "minis_img": "images/articles/minis/OK5_3_a.jpg",
         "title": "TEPLEJŠÍ ARKTIDA BY MOHLA ZMĚNIT KLIMA VE STŘEDU EVROPY",
@@ -324,7 +324,7 @@
     "19":
     {
         "Note": "OK5.4",
-        "background_img": "images/articles/background/OK5_4_b.jpg",
+        "background_img": "images/articles/background/OK5.4_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_4_c.jpg",
         "minis_img": "images/articles/minis/OK5_4_a.jpg",
         "title": "NELÍTOSTNÉ SOUPEŘENÍ RODIČOVSKÝCH GENOMŮ U KŘÍŽENCŮ ROSTLIN",
@@ -338,7 +338,7 @@
     "24":
     {
         "Note": "OK5.5",
-        "background_img": "images/articles/background/OK5_5_b.jpg",
+        "background_img": "images/articles/background/OK5.5_b.jpg",
         "background_img_phone": "images/articles/background_phone/OK5_5_c.jpg",
         "minis_img": "images/articles/minis/OK5_5_a.jpg",
         "title": "VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN",
