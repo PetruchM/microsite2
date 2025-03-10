@@ -75,6 +75,10 @@
         opacity: 0;
     }
 
+    .slide_butt1 img {
+        transform: rotate(-90deg);
+    }
+
     .slide_butt2, .slide_butt3 {
         opacity: 0;
         transition: none;
