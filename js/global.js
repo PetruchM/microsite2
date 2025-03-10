@@ -1,7 +1,7 @@
 function updatePcOrMobile(){
     updateBackground();
     updatePathBasedOnWidth();
-
+    updateCarouselCardsFunctions();
 }
 
 updatePcOrMobile();

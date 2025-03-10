@@ -69,11 +69,10 @@
         transform: translate(0%, 100%);
     }
 
-    .box-info2.hide_left {
+    /* .box-info2.hide_left {
         transform: translate(0%, 100%);
-        /* transform: translate(-100%, 0%); */
         opacity: 0;
-    }
+    } */
 
     .slide_butt1 img {
         transform: rotate(-90deg);
@@ -97,9 +96,9 @@
         opacity: 1;
     }
 
-    .box-info2.hide_left > .slide_butt2 {
+    /* .box-info2.hide_left > .slide_butt2 {
         opacity: 1;
-    }
+    } */
 
     .box-info3.info_active2 > .slide_butt3 {
         opacity: 1;
