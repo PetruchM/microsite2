@@ -114,10 +114,6 @@
   background-color: rgba(0,0,0,0);
 }
 
-.expand-left{
-  transform:rotate(180deg);
-}
-
 .box-info1-content {
   padding-left: 8%;
   padding-right: 15%;
