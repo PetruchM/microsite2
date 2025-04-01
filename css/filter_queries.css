@@ -71,10 +71,10 @@
         margin-right: 3vw;
         margin-top: unset;
         position: absolute;
-        top: unset;
+        top: 0;
         bottom: 0;
         right:0;
-        height: 100%;
+        height: 7vh;
         max-width: 15vw;
         align-items: center;
     }
