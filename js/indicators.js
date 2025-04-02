@@ -36,7 +36,7 @@ function slideDownTextLogo() {
 }
 
 function scrollDown(){
-    const scrollAmount = window.innerHeight * 0.80;
+    const scrollAmount = window.innerHeight * 0.95;
     window.scrollBy({
         top: scrollAmount,
         left: 0,
