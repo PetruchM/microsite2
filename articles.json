@@ -2,9 +2,9 @@
     "0":
     {
         "Note": "OK1.1",
-        "background_img": "images/articles/background/OK1.1_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK1_1_c.jpg",
-        "minis_img": "images/articles/minis/OK1_1_a.jpg",
+        "background_img": "images/articles/background/OK1.1_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK1_1_c.webp",
+        "minis_img": "images/articles/minis/OK1_1_a.webp",
         "title": "DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU",
         "project_motto_text": "„Jednou by náš software mohl být v malém přístroji, který přímo v terénu určí, jakou bakterií se pacient nakazil.“",
         "author_img": "images/articles/authors/OK1.1_Vitkova.png",
@@ -16,9 +16,9 @@
     "5":
     {
         "Note": "OK1.2",
-        "background_img": "images/articles/background/OK1.2_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK1_2_c.jpg",
-        "minis_img": "images/articles/minis/OK1_2_a.jpg",
+        "background_img": "images/articles/background/OK1.2_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK1_2_c.webp",
+        "minis_img": "images/articles/minis/OK1_2_a.webp",
         "title": "NOVÉ MATERIÁLY VHODNÉ NEJEN PRO ENERGETIKU",
         "project_motto_text": "„Sodík nebo draslík vmezeřené ve vrstevnatých materiálech by mohly nahradit nedostatkové lithium v bateriích. Jsou levné a všude dostupné.“",
         "author_img": "images/articles/authors/OK1.2_Sofer.png",
@@ -30,9 +30,9 @@
     "10":
     {
         "Note": "OK1.3",
-        "background_img": "images/articles/background/OK1.3_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK1_3_c.jpg",
-        "minis_img": "images/articles/minis/OK1_3_a.jpg",
+        "background_img": "images/articles/background/OK1.3_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK1_3_c.webp",
+        "minis_img": "images/articles/minis/OK1_3_a.webp",
         "title": "AUTOMATICKÁ ANALÝZA FOTOGRAFIÍ A VIDEA UMOŽŇUJE ROBOTŮM VIDĚT",
         "project_motto_text": "„Kamery jsou oči robota, ale naše rozpoznávací algoritmy jsou jeho mozkem.“",
         "author_img": "images/articles/authors/OK1.3_Flusser.png",
@@ -44,9 +44,9 @@
     "15":
     {
         "Note": "OK1.4",
-        "background_img": "images/articles/background/OK1.4_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK1_4_c.jpg",
-        "minis_img": "images/articles/minis/OK1_4_a.jpg",
+        "background_img": "images/articles/background/OK1.4_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK1_4_c.webp",
+        "minis_img": "images/articles/minis/OK1_4_a.webp",
         "title": "VYHLEDÁVÁNÍ VE VIDEU. ZN.: RYCHLE A PŘESNĚ.",
         "project_motto_text": "„S dnešními algoritmy není těžké najít v miliardě hodin videa několik relevantních sekvencí. Obtížné je najít všechny a v nich pak jednu konkrétní. A to je náš cíl.“",
         "author_img": "images/articles/authors/OK1.4_Lokoc.png",
@@ -58,9 +58,9 @@
     "20":
     {
         "Note": "OK1.5",
-        "background_img": "images/articles/background/OK1.5_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK1_5_c.jpg",
-        "minis_img": "images/articles/minis/OK1_5_a.jpg",
+        "background_img": "images/articles/background/OK1.5_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK1_5_c.webp",
+        "minis_img": "images/articles/minis/OK1_5_a.webp",
         "title": "KATALYZÁTORY SLOŽENÉ NA MÍRU JAKO LEGO",
         "project_motto_text": "„Běžně příprava nových zeolitů probíhá postupem pokus-omyl. Náš postup se dá použít k přípravě minerálů s póry podle potřeby.“",
         "author_img": "images/articles/authors/OK1.5_Čejka.png",
@@ -72,9 +72,9 @@
     "1":
     {
         "Note": "OK2.1",
-        "background_img": "images/articles/background/OK2.1_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK2_1_c.jpg",
-        "minis_img": "images/articles/minis/OK2_1_a.jpg",
+        "background_img": "images/articles/background/OK2.1_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK2_1_c.webp",
+        "minis_img": "images/articles/minis/OK2_1_a.webp",
         "title": "VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY",
         "project_motto_text": "„Poznáváme mikrosvět, který sice přímo nevidíme a chová se podivně, ale může v budoucnu přinést obrovské objevy.“",
         "author_img": "images/articles/authors/OK2.1_Filip.png",
@@ -86,9 +86,9 @@
     "6":
     {
         "Note": "OK2.2",
-        "background_img": "images/articles/background/OK2.2_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK2_2_c.jpg",
-        "minis_img": "images/articles/minis/OK2_2_a.jpg",
+        "background_img": "images/articles/background/OK2.2_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK2_2_c.webp",
+        "minis_img": "images/articles/minis/OK2_2_a.webp",
         "title": "METODOU „CHYŤ A PUSŤ“ K PŘEPÍNAČŮM, KTERÉ MOHOU ŘÍDIT REAKCE V ŽIVÝCH ORGANISMECH",
         "project_motto_text": "„Pomocí světla jsme schopni uvolnit léčivo přesně tam, kde je potřeba, například v nádoru a jeho blízkém okolí. V ostatních tkáních, kde může docházet k vedlejším účinkům použitého léčiva, jej naopak světlem zablokujeme spojením do neškodného komplexu.“",
         "author_img": "images/articles/authors/OK2.2_Slanina.png",
@@ -100,9 +100,9 @@
     "11":
     {
         "Note": "OK2.3",
-        "background_img": "images/articles/background/OK2.3_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK2_3_c.jpg",
-        "minis_img": "images/articles/minis/OK2_3_a.jpg",
+        "background_img": "images/articles/background/OK2.3_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK2_3_c.webp",
+        "minis_img": "images/articles/minis/OK2_3_a.webp",
         "title": "VIDEO ZACHYTÍ DĚNÍ PŘÍMO MEZI ATOMY",
         "project_motto_text": "„Současnou elektroniku založenou na křemíku již není možné zrychlovat. Hledáme proto nové fyzikální principy, které umožní zpracovat informace ještě rychleji.“",
         "author_img": "images/articles/authors/OK2.3_Kozak.png",
@@ -114,9 +114,9 @@
     "16":
     {
         "Note": "OK2.4",
-        "background_img": "images/articles/background/OK2.4_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK2_4_c.jpg",
-        "minis_img": "images/articles/minis/OK2_4_a.jpg",
+        "background_img": "images/articles/background/OK2.4_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK2_4_c.webp",
+        "minis_img": "images/articles/minis/OK2_4_a.webp",
         "title": "CHEMICI HLEDAJÍ ZPŮSOB, JAK NA LEVNÉ A BEZPEČNÉ SYNTETICKÉ REAKCE",
         "project_motto_text": "„První pokusy neměly příliš vysoké výtěžky, ale jak já říkám, když je výtěžek 10 %, tak proč by nemohl být 90 %.“",
         "author_img": "images/articles/authors/einstein.png",
@@ -128,9 +128,9 @@
     "21":
     {
         "Note": "OK2.5",
-        "background_img": "images/articles/background/OK2.5_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK2_5_c.jpg",
-        "minis_img": "images/articles/minis/OK2_5_a.jpg",
+        "background_img": "images/articles/background/OK2.5_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK2_5_c.webp",
+        "minis_img": "images/articles/minis/OK2_5_a.webp",
         "title": "KŘEMÍK, KTERÝ SVÍTÍ, BY MOHL ZMĚNIT ELEKTRONIKU",
         "project_motto_text": "„Svítící křemíkové nanokrystaly by mohly třeba v počítači předávat data světlem, tedy bez ztrát energie, k nimž dochází při průchodu elektřiny v čipových polích.“",
         "author_img": "images/articles/authors/OK2.5_Kusova.png",
@@ -142,9 +142,9 @@
     "2":
     {
         "Note": "OK3.1",
-        "background_img": "images/articles/background/OK3.1_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK3_1_c.jpg",
-        "minis_img": "images/articles/minis/OK3_1_a.jpg",
+        "background_img": "images/articles/background/OK3.1_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK3_1_c.webp",
+        "minis_img": "images/articles/minis/OK3_1_a.webp",
         "title": "SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY",
         "project_motto_text": "„Je zajímavé potenciál blokování aktivity genů lépe poznat a vyzkoumat, jestli by se dala využít jako staronový doplněk do našeho imunitního systému při obraně proti virům.“",
         "author_img": "images/articles/authors/OK3.1_Svoboda.png",
@@ -156,9 +156,9 @@
     "7":
     {
         "Note": "OK3.2",
-        "background_img": "images/articles/background/OK3.2_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK3_2_c.jpg",
-        "minis_img": "images/articles/minis/OK3_2_a.jpg",
+        "background_img": "images/articles/background/OK3.2_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK3_2_c.webp",
+        "minis_img": "images/articles/minis/OK3_2_a.webp",
         "title": "DOPRAVNÍ NAVIGACE UVNITŘ BUŇKY",
         "project_motto_text": "„Mezi membránami lidských buněk a membránami bakterií jsou velké rozdíly. Toho snad půjde využít při navádění antibakteriálních látek do bakterií a léčbě infekcí.“",
         "author_img": "images/articles/authors/OK3.2_Vacha.png",
@@ -170,9 +170,9 @@
     "12":
     {
         "Note": "OK3.3",
-        "background_img": "images/articles/background/OK3.3_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK3_3_c.jpg",
-        "minis_img": "images/articles/minis/OK3_3_a.jpg",
+        "background_img": "images/articles/background/OK3.3_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK3_3_c.webp",
+        "minis_img": "images/articles/minis/OK3_3_a.webp",
         "title": "TITĚRNÍ KURÝŘI PŘEPRAVUJÍ LÉKY",
         "project_motto_text": "„Uměle vytváříme částice, které dopraví léčivo přímo do nemocné buňky.“",
         "author_img": "images/articles/authors/OK3.3_Galisova.png",
@@ -184,9 +184,9 @@
     "17":
     {
         "Note": "OK3.4",
-        "background_img": "images/articles/background/OK3.4_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK3_4_c.jpg",
-        "minis_img": "images/articles/minis/OK3_4_a.jpg",
+        "background_img": "images/articles/background/OK3.4_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK3_4_c.webp",
+        "minis_img": "images/articles/minis/OK3_4_a.webp",
         "title": "BIOLOGICKÁ LÉČBA: NADĚJE PRO PACIENTY S PORUCHOU SLUCHU",
         "project_motto_text": "„Hlemýžď vnitřního ucha je výborný model pro studium, protože má jasnou strukturu. Díky tomu můžeme pozorovat dopad faktorů, které vedou k narušení buněčné struktury hlemýždě.“",
         "author_img": "images/articles/authors/OK3.4_Pavlínková.png",
@@ -198,9 +198,9 @@
     "22":
     {
         "Note": "OK3.5",
-        "background_img": "images/articles/background/OK3.5_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK3_5_c.jpg",
-        "minis_img": "images/articles/minis/OK3_5_a.jpg",
+        "background_img": "images/articles/background/OK3.5_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK3_5_c.webp",
+        "minis_img": "images/articles/minis/OK3_5_a.webp",
         "title": "MUTACE PŘI REPLIKACE DNA ČASTO VEDOU KE VZNIKU NÁDORŮ",
         "project_motto_text": "„Jak se DNA kopíruje do nových buněk, známe lépe u kvasinek než u člověka. Proto zkoumáme počáteční fázi kopírování DNA v lidské buňce, kdy může docházet k chybám a nebezpečným mutacím.“",
         "author_img": "images/articles/authors/OK3.5_Polasek-Sedlakova.png",
@@ -212,9 +212,9 @@
     "3":
     {
         "Note": "OK4.1",
-        "background_img": "images/articles/background/OK4.1_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK4_1_c.jpg",
-        "minis_img": "images/articles/minis/OK4_1_a.jpg",
+        "background_img": "images/articles/background/OK4.1_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK4_1_c.webp",
+        "minis_img": "images/articles/minis/OK4_1_a.webp",
         "title": "I NEPOZORNOST MŮŽE BÝT RACIONÁLNÍ",
         "project_motto_text": "„Hledáme zákonitosti, které ovlivňují, že se lidé nerozhodují ideálně. Snažíme se třeba určit, co se stane, když se nějaký zákon změní na racionálnější a srozumitelnější — budou pak lidé dělat méně chyb?“",
         "author_img": "images/articles/authors/OK4.1_Matějka.png",
@@ -226,9 +226,9 @@
     "8":
     {
         "Note": "OK4.2",
-        "background_img": "images/articles/background/OK4.2_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK4_2_c.jpg",
-        "minis_img": "images/articles/minis/OK4_2_a.jpg",
+        "background_img": "images/articles/background/OK4.2_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK4_2_c.webp",
+        "minis_img": "images/articles/minis/OK4_2_a.webp",
         "title": "KDO VE TŘÍDĚ MLUVÍ, MÍVÁ LEPŠÍ PROSPĚCH",
         "project_motto_text": "„Výsledky žáka často odrážejí sociální a ekonomický status jeho rodiny. Pokud se však aktivně zapojuje do komunikace při výuce, tato souvislost se rozbíjí a jeho vzdělávací výsledky bývají lepší.“",
         "author_img": "images/articles/authors/OK4.2_Šeďová.png",
@@ -240,9 +240,9 @@
     "13":
     {
         "Note": "OK4.3",
-        "background_img": "images/articles/background/OK4.3_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK4_3_c.jpg",
-        "minis_img": "images/articles/minis/OK4_3_a.jpg",
+        "background_img": "images/articles/background/OK4.3_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK4_3_c.webp",
+        "minis_img": "images/articles/minis/OK4_3_a.webp",
         "title": "SOCIÁLNÍ SÍTĚ NEOHROŽUJÍ DOSPÍVAJÍCÍ TOLIK, JAK SE RODIČE BOJÍ",
         "project_motto_text": "„Potenciální rizika používání internetu dětmi a dospívajícími nemůžeme přehlížet, ale ani je démonizovat.“",
         "author_img": "images/articles/authors/OK4.3_Smahel.png",
@@ -254,9 +254,9 @@
     "18":
     {
         "Note": "OK4.4",
-        "background_img": "images/articles/background/OK4.4_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK4_4_c.jpg",
-        "minis_img": "images/articles/minis/OK4_4_a.jpg",
+        "background_img": "images/articles/background/OK4.4_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK4_4_c.webp",
+        "minis_img": "images/articles/minis/OK4_4_a.webp",
         "title": "CO NÁM MŮŽE ŘÍCI PŘÍMÁ ŘEČ O SPOLEČENSKÉM A KULTURNÍM VÝVOJI?",
         "project_motto_text": "„Latinské jazykové vzorce se propsaly do textů v národních jazycích, které tak v sobě nesou otisk tehdejší doby a studium antických sloves souvisí s naším kulturním prostorem více, než bychom si mohli myslet.”",
         "author_img": "images/articles/authors/OK4.4_Mikulova.png",
@@ -268,9 +268,9 @@
     "23":
     {
         "Note": "OK4.5",
-        "background_img": "images/articles/background/OK4.5_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK4_5_c.jpg",
-        "minis_img": "images/articles/minis/OK4_5_a.jpg",
+        "background_img": "images/articles/background/OK4.5_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK4_5_c.webp",
+        "minis_img": "images/articles/minis/OK4_5_a.webp",
         "title": "RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI",
         "project_motto_text": "„Projekt dokládá, že je stále nutné bojovat proti jakékoliv formě xenofobie a rasismu. Ne všechny komunity mají odpovídající postavení a zastoupení ve veřejném životě.“",
         "author_img": "images/articles/authors/OK4.5_Čapková.png",
@@ -282,9 +282,9 @@
     "4":
     {
         "Note": "OK5.1",
-        "background_img": "images/articles/background/OK5.1_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK5_1_c.jpg",
-        "minis_img": "images/articles/minis/OK5_1_a.jpg",
+        "background_img": "images/articles/background/OK5.1_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK5_1_c.webp",
+        "minis_img": "images/articles/minis/OK5_1_a.webp",
         "title": "ZMĚNA KLIMATU ŠKODÍ „PROSPĚŠNÝM“ HOUBÁM",
         "project_motto_text": "„Zkoumáme houby samozřejmě i přímo v terénu, ať už v Česku nebo ve světě, avšak v přirozeném prostředí je příliš mnoho proměnných. Proto jsou kontrolované podmínky v našich laboratořích pro ověřování hypotéz o možné budoucnosti hub vhodnější.“",
         "author_img": "images/articles/authors/OK5.1_Kohout.png",
@@ -296,9 +296,9 @@
     "9":
     {
         "Note": "OK5.2",
-        "background_img": "images/articles/background/OK5.2_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK5_2_c.jpg",
-        "minis_img": "images/articles/minis/OK5_2_a.jpg",
+        "background_img": "images/articles/background/OK5.2_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK5_2_c.webp",
+        "minis_img": "images/articles/minis/OK5_2_a.webp",
         "title": "PŮVODNÍ VEGETACI NEJSNÁZE KONKURUJÍ ZAVLEČENÉ ROSTLINY, KTERÉ SE JÍ PODOBAJÍ",
         "project_motto_text": "„Pozor si musíme dávat zvláště na invazní druhy podobné původním rostlinám, které využívají stejné zdroje živin, ale jsou relativně větší, mají proto více slunečního světla, a dobře se rozmnožují.“",
         "author_img": "images/articles/authors/OK5.2_Lososova.png",
@@ -310,9 +310,9 @@
     "14":
     {
         "Note": "OK5.3",
-        "background_img": "images/articles/background/OK5.3_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK5_3_c.jpg",
-        "minis_img": "images/articles/minis/OK5_3_a.jpg",
+        "background_img": "images/articles/background/OK5.3_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK5_3_c.webp",
+        "minis_img": "images/articles/minis/OK5_3_a.webp",
         "title": "TEPLEJŠÍ ARKTIDA BY MOHLA ZMĚNIT KLIMA VE STŘEDU EVROPY",
         "project_motto_text": "„Severské mikroorganismy ještě nejsou dobře probádané a přitom mohou ovlivnit i náš život.“",
         "author_img": "images/articles/authors/OK5.3_Voriskova.png",
@@ -324,9 +324,9 @@
     "19":
     {
         "Note": "OK5.4",
-        "background_img": "images/articles/background/OK5.4_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK5_4_c.jpg",
-        "minis_img": "images/articles/minis/OK5_4_a.jpg",
+        "background_img": "images/articles/background/OK5.4_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK5_4_c.webp",
+        "minis_img": "images/articles/minis/OK5_4_a.webp",
         "title": "NELÍTOSTNÉ SOUPEŘENÍ RODIČOVSKÝCH GENOMŮ U KŘÍŽENCŮ ROSTLIN",
         "project_motto_text": "„U rostlin je mezidruhová hybridizace důležitým evolučním procesem, který rostlinné druhy formuje už několik miliónů let a dal vzniknout běžně známým druhům, jako je například pšenice nebo bavlník.“",
         "author_img": "images/articles/authors/OK5.4_Kopecky.png",
@@ -338,9 +338,9 @@
     "24":
     {
         "Note": "OK5.5",
-        "background_img": "images/articles/background/OK5.5_b.jpg",
-        "background_img_phone": "images/articles/background_phone/OK5_5_c.jpg",
-        "minis_img": "images/articles/minis/OK5_5_a.jpg",
+        "background_img": "images/articles/background/OK5.5_b.webp",
+        "background_img_phone": "images/articles/background_phone/OK5_5_c.webp",
+        "minis_img": "images/articles/minis/OK5_5_a.webp",
         "title": "VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN",
         "project_motto_text": "„Zdánlivě stejná zvířata pocházející z různých lokalit mohou být ve skutečnosti jinými druhy, takže se spolu nedokáží křížit nebo se jim rodí neplodní potomci.“",
         "author_img": "images/articles/authors/OK5.5_Vozdova.png",
