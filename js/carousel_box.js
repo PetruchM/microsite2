@@ -94,11 +94,17 @@ function slideRectangle2() {
 // }
 
 function hideAll() {
+    var button1 = document.querySelector('.carousel-item.active .slide_butt1');
+    button1.classList.remove('button_rotate_on_activation');
+
     var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
     rectangle2.classList.remove('info_active1');
     rectangle2.classList.remove('hide_left');
     var rec2content = rectangle2.querySelector('.box-info2-content');
     rec2content.classList.remove('opacity85');
+
+    var button2 = document.querySelector('.carousel-item.active .slide_butt2');
+    button2.classList.remove('button_rotate_on_activation');
 
     var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
     rectangle3.classList.remove('info_ready2');
