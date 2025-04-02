@@ -102,6 +102,7 @@ function hideAll() {
     rectangle2.classList.remove('hide_left');
     var rec2content = rectangle2.querySelector('.box-info2-content');
     rec2content.classList.remove('opacity85');
+    rec2content.querySelector('.project-info').scrollTop = 0;
 
     var button2 = document.querySelector('.carousel-item.active .slide_butt2');
     button2.classList.remove('button_rotate_on_activation');
@@ -111,6 +112,7 @@ function hideAll() {
     rectangle3.classList.remove('info_active2');
     var rec3content = rectangle3.querySelector('.box-info3-content');
     rec3content.classList.remove('opacity85');
+    rec3content.querySelector('.project-info').scrollTop = 0;
 }
 
 // function updateCarouselCardsFunctions() {
