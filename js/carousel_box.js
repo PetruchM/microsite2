@@ -39,16 +39,16 @@ Screen Resolution (X and Y): The resolution of the screen in pixels per inch (PP
 // Call the function to log display information
 logDisplayInfo();
 
-var IsPcLayout = true;
+// var IsPcLayout = true;
 
-function slideRectangleGlobal() {
-    if (IsPcLayout) {
-        slideRectangle1();
-    }
-    else{
-        slideRectangleMobile();
-    }
-}
+// function slideRectangleGlobal() {
+//     if (IsPcLayout) {
+//         slideRectangle1();
+//     }
+//     else{
+//         slideRectangleMobile();
+//     }
+// }
 
 function slideRectangle1() {
     var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
@@ -70,22 +70,22 @@ function slideRectangle2() {
     rec3content.classList.toggle('opacity85');
 }
 
-function slideRectangleMobile() {
-    var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
-    var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
-    var info2WasActive = rectangle2.classList.contains('info_active1')
-    var info3WasActive = rectangle3.classList.contains('info_active2');
+// function slideRectangleMobile() {
+//     var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
+//     var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
+//     var info2WasActive = rectangle2.classList.contains('info_active1')
+//     var info3WasActive = rectangle3.classList.contains('info_active2');
 
-    rectangle2.classList.toggle('info_active1');
-    var rec2content = rectangle2.querySelector('.box-info2-content');
-    rec2content.classList.toggle('opacity85');
+//     rectangle2.classList.toggle('info_active1');
+//     var rec2content = rectangle2.querySelector('.box-info2-content');
+//     rec2content.classList.toggle('opacity85');
 
-    if (info2WasActive || info3WasActive) {
-        rectangle3.classList.toggle('info_active2');
-        var rec3content = rectangle3.querySelector('.box-info3-content');
-        rec3content.classList.toggle('opacity85');
-    }
-}
+//     if (info2WasActive || info3WasActive) {
+//         rectangle3.classList.toggle('info_active2');
+//         var rec3content = rectangle3.querySelector('.box-info3-content');
+//         rec3content.classList.toggle('opacity85');
+//     }
+// }
 
 function hideAll() {
     var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
@@ -101,31 +101,31 @@ function hideAll() {
     rec3content.classList.remove('opacity85');
 }
 
-function updateCarouselCardsFunctions() {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-    let currentIsPcLayout;
-    if (windowWidth <1215 || windowWidth < windowHeight){
-        currentIsPcLayout=false;
-    }else{
-        currentIsPcLayout=true;
-    }
+// function updateCarouselCardsFunctions() {
+//     const windowWidth = window.innerWidth;
+//     const windowHeight = window.innerHeight;
+//     let currentIsPcLayout;
+//     if (windowWidth <1215 || windowWidth < windowHeight){
+//         currentIsPcLayout=false;
+//     }else{
+//         currentIsPcLayout=true;
+//     }
 
-    if (currentIsPcLayout!= IsPcLayout) {
-        IsPcLayout = currentIsPcLayout;
-        hideAll();
+//     if (currentIsPcLayout!= IsPcLayout) {
+//         IsPcLayout = currentIsPcLayout;
+//         hideAll();
 
-        var box2Buttons = document.querySelectorAll('.slide_butt2');
+//         var box2Buttons = document.querySelectorAll('.slide_butt2');
 
-        if (currentIsPcLayout) {
-            box2Buttons.forEach(function (button) {
-                button.setAttribute("onclick", "slideRectangle2()");
-            });
-        }
-        else{
-            box2Buttons.forEach(function (button) {
-                button.setAttribute("onclick", "hideAll()");
-            });
-        }
-    }
-}
+//         if (currentIsPcLayout) {
+//             box2Buttons.forEach(function (button) {
+//                 button.setAttribute("onclick", "slideRectangle2()");
+//             });
+//         }
+//         else{
+//             box2Buttons.forEach(function (button) {
+//                 button.setAttribute("onclick", "hideAll()");
+//             });
+//         }
+//     }
+// }
