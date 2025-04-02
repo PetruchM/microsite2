@@ -215,32 +215,35 @@ const bsPagerCarousel = new bootstrap.Carousel(pagerCarousel);
 
 prevButton.addEventListener('click', () => {
     console.log('Previous button clicked');
-    CarouselButtonClicked(bsPagerCarousel,-1);
+    CarouselButtonClicked(-1);
 });
 
 nextButton.addEventListener('click', () => {
     console.log('Next button clicked');
-    CarouselButtonClicked(bsPagerCarousel,1);
+    CarouselButtonClicked(1);
 });
 
 prevMinisButton.addEventListener('click', () => {
     console.log('Previous Mini button clicked');
-    CarouselButtonClicked(bsCarousel,-1);
+    CarouselButtonClicked(-1);
 });
 
 nextMinisButton.addEventListener('click', () => {
     console.log('Next Mini button clicked');
-    CarouselButtonClicked(bsCarousel,1); 
+    CarouselButtonClicked(1); 
 });
 
-function CarouselButtonClicked(carouselType, direction){
+function CarouselButtonClicked(direction){
+    hideAll(); //hide the card when sliding to nex carousel
     if (!isSyncing) {
         isSyncing = true;
         CardsDeActivation();
         if (direction==-1){
-            carouselType.prev();
+            bsCarousel.prev();
+            bsPagerCarousel.prev();
         }else{//==1
-            carouselType.next();
+            bsCarousel.next();
+            bsPagerCarousel.next();
         } 
         
         const activeSlide = projectCarousel.querySelector('.carousel-item.active');
@@ -255,13 +258,14 @@ function CarouselButtonClicked(carouselType, direction){
 }
 
 function CarouselButtonClickedTwice(activeItemNum,pagerItemNum,direction){ //this function is triggered only when usec clicks on edge pagerCard, do basicly the pager carousel is moved up or down twice
+    hideAll(); //hide the card when sliding to nex carousel
     if (!isSyncing) {
         isSyncing = true;
         CardsDeActivation();
         slideMultipleTimes(2,direction);
         
         for (let i = 0; i < 2; i++) {
-            console.log("jednou to proslo");
+            // console.log("jednou to proslo");
             let activeSlide = slideDivisions[((activeItemNum+(i*direction))+articlesPerFilter)%articlesPerFilter]
             let activeItem = pagerCarouselItems[((pagerItemNum+(i*direction))+minisPerSlide)%minisPerSlide]
             loadNextArticle(activeSlide,direction); 
@@ -278,7 +282,7 @@ function slideMultipleTimes(times, direction) {
     let slideCount = 0; 
     function slide() {
         if (slideCount < times) {
-            console.log("jednou to proslo---------------");
+            // console.log("jednou to proslo---------------");
             if (direction === -1) {
                 bsPagerCarousel.prev();
             } else {
@@ -320,10 +324,10 @@ function MovePagerCarousel(button,index){
             CarouselButtonClickedTwice(activeItemNum,pagerItemNum,-1)
             break;
         case 1:
-            CarouselButtonClicked(bsPagerCarousel,-1);
+            CarouselButtonClicked(-1);
             break;
         case 3:
-            CarouselButtonClicked(bsPagerCarousel,1);
+            CarouselButtonClicked(1);
             break;
         case 4:
             CarouselButtonClickedTwice(activeItemNum,pagerItemNum,1)
