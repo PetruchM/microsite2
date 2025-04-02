@@ -151,8 +151,8 @@
 }
 
 .author-img {
-  width: 10vh; /* Adjust the width of the picture as needed */
-  height: 10vh; /* Adjust the height of the picture as needed */
+  width: 14vh; /* Adjust the width of the picture as needed */
+  height: 14vh; /* Adjust the height of the picture as needed */
   border-radius: 50%;
   margin-right: 1.5vw;
   margin-top: auto;
@@ -177,7 +177,7 @@
 }
 
 .author-img-div {
-  margin: 28% 0 0 0;
+  margin: 10% 0 0 0;
 }
 
 /* box 3 */
