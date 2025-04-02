@@ -20,6 +20,10 @@
     }
 
     /* main */
+    .slideDownButt {
+        top: 8vh;
+    }
+
     .slideDownButt img {
         width: 7vw;
     }  
@@ -35,6 +39,7 @@
         width: 80vw;
         top: unset;
         padding-bottom: unset;
+        padding-top: 8vh;
         box-sizing: unset;
     }
 
