@@ -106,6 +106,7 @@ function changeSlidesInfo(desiredArticles,elements){
                     slide.querySelector('.author-name').innerText = article.author_name;
                     slide.querySelector('.author-institute').innerHTML = article.author_institute;
                     slide.querySelector('.project-info-text').innerHTML = article.text;
+                    slide.querySelector('.project-info-text-mobile').innerHTML = article.text;    
 
                     console.log(`Article changed successfully for ID ${id}:`, article);
                 } else {

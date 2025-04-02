@@ -123,6 +123,10 @@
         z-index: 3;
     }
 
+    .box-info3{
+        display: none;
+    }
+
     /* .slide_butt3 {
         display: block;
     } */
@@ -135,6 +139,12 @@
         font-weight: 400;
         font-size: 2.3vh;
     }
+
+    .project-info-text-mobile-div { 
+        /* the text of the article is visible in the second card only on mobile*/
+        /* and on mobile the third card is hidden */
+        display: unset;
+      }
 }
 
 /* @media (max-width: 800px) {

@@ -201,6 +201,11 @@
 
 }
 
+.project-info-text-mobile-div { 
+  /* the text of the article is visible in the second card only on mobile */
+  display: none;
+}
+
 
 /* sldier */
 .has-scrollbar1 {
