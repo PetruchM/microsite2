@@ -82,7 +82,10 @@
         transform: rotate(90deg);
     }
 
-    .slide_butt2, .slide_butt3 {
+    .slide_butt2{
+        display: none;
+    }
+    /* .slide_butt2, .slide_butt3 {
         opacity: 0;
         transition: none;
         left: 50%;
@@ -98,7 +101,7 @@
 
     .box-info2.info_active1 > .slide_butt2 {
         opacity: 1;
-    }
+    } */
 
     /* .box-info2.hide_left > .slide_butt2 {
         opacity: 1;
