@@ -1,37 +1,12 @@
-@media (max-width: 1024px) and (hover: none){
+/* @media (max-width: 1024px) and (hover: none){ */
+@media (max-aspect-ratio: 1/1){
     .bg-img {
-        max-width: 100%;
-        margin: 0 auto; 
         /* height: 82vh; */
         height: calc(var(--vh) * 82);
-        object-fit: cover;
     }
 
-    
     /* DISABLE CAROUSEL CONTROLS */
-    #projectCarousel.carousel-control-prev, #projectCarousel.carousel-control-next {
+    #projectCarousel .carousel-control-prev, #projectCarousel .carousel-control-next {
         display: none;
     }
-}
-
-@media (max-width: 750px){
-    /* DISABLE CAROUSEL CONTROLS */
-    #projectCarousel.carousel-control-prev, #projectCarousel.carousel-control-next {
-        width: 5%;
-    }
-}
-
-@media (max-width: 965px) {
-    /* #carousel-overlay {
-        z-index: 100;
-        position: absolute;
-        top: 84%;
-    }
-
-    #carousel-overlay img {
-        width: 700%;
-    }*/
-    .bg-img {
-        max-width: 100%;
-    } 
 }
