@@ -93,7 +93,7 @@ function changeSlidesInfo(desiredArticles,elements){
                 counter++
 
                 if (article) { //set all wanted data for this article to the slide
-                    console.log(`Article for ID ${id}:`, article);
+                    // console.log(`Article for ID ${id}:`, article);
                     
                     if (onPC){
                         slide.querySelector('.a-background-img').src = article.background_img;
@@ -340,6 +340,7 @@ function MovePagerCarousel(button,index){
 
 function loadNextArticle(activeSlide,direction) {
     if(allSlides){
+        console.log("Loading next article...");
         //const activeSlide = projectCarousel.querySelector('.carousel-item.active');  //find the active slide, there must be one
         const filterIndex = parseInt(activeSlide.getAttribute('data-filter-index')); // Convert int index to integer
         console.log(`${currentSlide}`)
@@ -357,7 +358,7 @@ function loadNextArticle(activeSlide,direction) {
         } else {
             console.error('No active slide or invalid filterIndex');
         }
-    }   
+    }
 }
 
 async function loadNextMini(activeItem,direction) {
@@ -399,6 +400,6 @@ function updateBackground(){
         //     pagerCarousel.classList.remove('vertical');
         //     pagerCarousel.classList.add('horizontal');
         // }
-        setFilter(pcFilterButtons[currentFilter%articlesPerFilter],currentFilter);
+        filterCarousel(AllSelectedIndex); //need to set the filter so that the articles are loaded again and background images are changed
     }
 }
