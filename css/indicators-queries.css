@@ -21,7 +21,8 @@
 
     /* main */
     .slideDownButt {
-        top: 8vh;
+        top: calc(var(--vh) * 8);
+        /* top: 8vh; */
     }
 
     .slideDownButt img {

@@ -119,7 +119,8 @@
     }
 
     #pagerCarousel {
-        top: 85vh;
+        /* top: 85vh; */
+        top: calc(var(--vh) * 85);
         left: 10vw;
     }
     
