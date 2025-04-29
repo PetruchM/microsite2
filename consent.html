@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Správa souhlasu s cookies</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 2rem;">
+
+    <h1>Správa souhlasu s cookies</h1>
+    <p>Na tomto webu používáme cookies blabla</p>
+
+    <div style="margin-top: 2rem;">
+        <button onclick="acceptCookies()" style="padding: 10px 20px; margin-right: 10px;">Povolit cookies</button>
+        <button onclick="rejectCookies()" style="padding: 10px 20px;">Odmítnout cookies</button>
+    </div>
+
+    <script>
+    function acceptCookies() {
+        const date = new Date();
+        date.setFullYear(date.getFullYear() + 1);
+        document.cookie = "cookie_consent=true; expires=" + date.toUTCString() + "; path=/";
+    }
+
+    function rejectCookies() {
+        const date = new Date();
+        date.setFullYear(date.getFullYear() + 1);
+        document.cookie = "cookie_consent=false; expires=" + date.toUTCString() + "; path=/";
+    }
+    </script>
+
+</body>
+</html>
