@@ -195,6 +195,14 @@ svg {
     background-color: rgba(0,0,0,0);
 }
 
+.indicator-slide_butt img {
+    transition: transform 0.5s ease; 
+}
+
+.indicator_button_rotate img{
+    transform: rotate(180deg);
+}
+
 .indicators-expand-butt-img {
     width: 3vw;
     aspect-ratio: 1/1;

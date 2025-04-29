@@ -5,19 +5,24 @@ const indiNodeArr = document.querySelectorAll(".single-indicator");
 const indicators = Array.from(indiNodeArr);
 const imgs2NodeArr = document.querySelectorAll(".indicator-svg2");
 const imgs2 = Array.from(imgs2NodeArr);
+const buttonsNodeArr = document.querySelectorAll(".indicator-slide_butt");
+const buttons = Array.from(buttonsNodeArr);
 
 
 function IndicatorActive(Index) {
     var textElement = texts[Index+1];
     var indiElement = indicators[Index+1];
     var img2Element = imgs2[Index];
+    var buttonElement = buttons[Index+1];
     if (textElement.classList.contains("active")) {
         textElement.classList.remove("active");
         indiElement.classList.remove("active");
+        buttonElement.classList.remove("indicator_button_rotate");
         // img2Element.style.opacity="0";
     } else {
         textElement.classList.add("active");
         indiElement.classList.add("active");
+        buttonElement.classList.add("indicator_button_rotate");
         img2Element.style.opacity="1";
     }
 }
@@ -26,12 +31,15 @@ function IndicatorActive(Index) {
 function slideDownTextLogo() {
     var textLogo  = texts[0]
     var indiElement = indicators[0];
+    var buttonElement = buttons[0];
     if (textLogo.classList.contains("active")) {
         textLogo.classList.remove("active");
         indiElement.classList.remove("active");
+        buttonElement.classList.remove("indicator_button_rotate");
     } else {
         textLogo.classList.add("active");
         indiElement.classList.add("active");
+        buttonElement.classList.add("indicator_button_rotate");
     }
 }
 

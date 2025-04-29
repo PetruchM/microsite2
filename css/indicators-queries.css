@@ -103,6 +103,10 @@
         text-align: center;
     }
 
+    .indicator_button_rotate img{
+        transform: rotate(-90deg);
+    }
+
     .indicators-expand-butt-img {
         transform:rotate(90deg);
         width: 7.5vw;
