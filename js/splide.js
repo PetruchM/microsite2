@@ -14,6 +14,9 @@ const splide = new Splide('#pager-carousel', {
         }
     }
     });
+
+    splide.mount();
+    setupSplideEvents();
     
     function setupSplideEvents() {
         splide.on('mounted move', highlightMiddleSlide);
@@ -73,5 +76,8 @@ const splide = new Splide('#pager-carousel', {
         }
     }
 
-    splide.mount();
-    setupSplideEvents();
+    function activateDesiredPagerSlide(filterIndex) {
+        const activePagerSlideIdx = (filterIndex === CONFIG.ALL_FILTER_INDEX) ? 0 : 3;
+        splide.go(activePagerSlideIdx);
+        highlightMiddleSlide();
+    }

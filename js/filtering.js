@@ -98,8 +98,9 @@ async function setFilter(button, index) {
 
 async function filterCarousel(index) {
   await updateSlides(index);
-  updatePagerCarousel(index);
   activateDesiredSlide(index);
+  updatePagerCarousel(index);
+  activateDesiredPagerSlide(index);
 }
 
 /* Update main slides */
@@ -140,9 +141,6 @@ function activateDesiredSlide(filterIndex) {
 
   const activeSlideIdx = (filterIndex === CONFIG.ALL_FILTER_INDEX) ? 2 : 0;
   slides[activeSlideIdx].classList.add('active');
-
-  // const activePagerIdx = (filterIndex === CONFIG.ALL_FILTER_INDEX) ? 0 : 3;
-  // pagerItems[activePagerIdx].classList.add('active');
 }
 
 
