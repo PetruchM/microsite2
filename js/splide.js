@@ -15,8 +15,11 @@ const splide = new Splide('#pager-carousel', {
     }
     });
 
-    splide.mount();
+    splide.on('mounted', () => {
+        splide.go(23);
+    });
     setupSplideEvents();
+    splide.mount();
     
     function setupSplideEvents() {
         splide.on('mounted move', highlightMiddleSlide);
@@ -41,6 +44,7 @@ const splide = new Splide('#pager-carousel', {
         });
 
         splide.mount();
+        highlightMiddleSlide();
         setupSplideEvents();
     }
 
@@ -77,7 +81,9 @@ const splide = new Splide('#pager-carousel', {
     }
 
     function activateDesiredPagerSlide(filterIndex) {
-        const activePagerSlideIdx = (filterIndex === CONFIG.ALL_FILTER_INDEX) ? 0 : 3;
+        //If the filter is set to ALL, we want to show the first slide index 23, because we want the first slide to be in the middele so last two slides are before.
+        //But if a filter is applied, we want to show the third slide (index 3, before we alsa want the first to be in the middle) . 
+        const activePagerSlideIdx = (filterIndex === CONFIG.ALL_FILTER_INDEX) ? CONFIG.TOTAL_ARTICLES-2 : CONFIG.ARTICLES_PER_FILTER -2;
         splide.go(activePagerSlideIdx);
         highlightMiddleSlide();
     }
