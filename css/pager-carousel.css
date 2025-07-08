@@ -1,0 +1,66 @@
+#pager-carousel {
+    /* height: 600px; max-width: 300px; margin: auto; */
+    position: absolute;
+    top: 15vh;
+    left: 6vw;
+    width: 16vh; /* Width of the carousel */
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5vh 0 5vh 0; /* Space for the arrows */
+}
+
+.splide__slide {
+    width: 100%;
+    transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+}
+
+.splide__slide.highlighted{
+    transform: scale(1.2);
+}
+
+.splide__slide.highlighted img{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0px 16px rgb(255, 255, 255); */
+    z-index: 100; /* Ensure highlighted slide is on top */
+}
+
+.pager-carousel-image {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.pager-carousel-image:hover {
+    transform: scale(1.05);
+}
+
+.splide__arrow {
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+@media ((max-width: 1024px) or (max-aspect-ratio: 1/1)){
+    #pager-carousel {
+        top: calc(var(--vh) * 85);
+        left: 10vw;
+        width: 75vw; /* Full width on smaller screens */
+        height: 16vw; /* Adjust height for smaller screens */
+        padding: 0 5vw 0 5vw; /* change padding on mobiles screens */
+    }
+
+    .splide__slide {
+        height: 100%; /* Adjust slide width for smaller screens */
+    }
+
+    .pager-carousel-image{
+        height: 100%;
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+}
