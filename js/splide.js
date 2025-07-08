@@ -24,26 +24,26 @@ const splide = new Splide('#pager-carousel', {
     });
 
     function highlightMiddleSlide() {
-        const slides = splide.Components.Elements.slides;
         const perPage = splide.options.perPage;
         const currentIndex = splide.index;
-        const total = slides.length;
+        const middleOffset = Math.floor(perPage / 2);
+        const targetIndex = currentIndex + middleOffset;
 
-        // Clear all highlights
-        slides.forEach(slide => {
+        // First, remove 'highlighted' from all actual DOM slide elements
+        document.querySelectorAll('.splide__slide').forEach(slide => {
             slide.classList.remove('highlighted');
         });
 
-        // Find the middle visible slide index
-        const middleOffset = Math.floor(perPage / 2);
-        const middleIndex = (currentIndex + middleOffset) % total;
+        // Use Splide's internal Slides component to get the DOM element at that index
+        const SlideObject = splide.Components.Slides.getAt(targetIndex);
 
-        slides[middleIndex].classList.add('highlighted');
-
-        // console.log("Slides:", splide.Components.Elements.slides);
-        // console.log("Index:", splide.index);
-
+        if (SlideObject && SlideObject.slide) {
+            SlideObject.slide.classList.add('highlighted');
+            console.log("Highlighting DOM slide at index", targetIndex);
+        } else {
+            console.warn("No slide found at index", targetIndex);
         }
+    }
 
     splide.on('mounted move', highlightMiddleSlide);
 
