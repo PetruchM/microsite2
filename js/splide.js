@@ -14,6 +14,33 @@ const splide = new Splide('#pager-carousel', {
         }
     }
     });
+    
+    function setupSplideEvents() {
+        splide.on('mounted move', highlightMiddleSlide);
+    }
+
+    function updatePagerCarousel(filterIndex) {
+        splide.destroy(true);
+
+        pagerItems.forEach((item) => {
+            const img = item.querySelector('img');
+            const dataID = parseInt(img.dataset.id, 10);
+            const belongsToFilter = (filterIndex === CONFIG.ALL_FILTER_INDEX) ||
+                                    (dataID % CONFIG.ARTICLES_PER_FILTER === filterIndex);
+
+            if (belongsToFilter) {
+                item.classList.add('splide__slide');
+                item.classList.remove('slide_hidden');
+            } else {
+                item.classList.remove('splide__slide');
+                item.classList.add('slide_hidden');
+            }
+        });
+
+        splide.mount();
+        setupSplideEvents();
+    }
+
 
     // Klikání na obrázky
     document.querySelectorAll('.pager-carousel-image').forEach(img => {
@@ -24,6 +51,7 @@ const splide = new Splide('#pager-carousel', {
     });
 
     function highlightMiddleSlide() {
+        console.log("Highlighting middle slide");
         const perPage = splide.options.perPage;
         const currentIndex = splide.index;
         const middleOffset = Math.floor(perPage / 2);
@@ -45,6 +73,5 @@ const splide = new Splide('#pager-carousel', {
         }
     }
 
-    splide.on('mounted move', highlightMiddleSlide);
-
     splide.mount();
+    setupSplideEvents();
