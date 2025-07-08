@@ -10,7 +10,7 @@ const splide = new Splide('#pager-carousel', {
         1023: {
         direction: 'ltr',  // na mobilech: horizontálně
         height: null,      // výška se neomezuje
-        width: '75vw',
+        width: '85vw',
         }
     }
     });

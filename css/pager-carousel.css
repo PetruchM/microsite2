@@ -48,8 +48,8 @@
 @media ((max-width: 1024px) or (max-aspect-ratio: 1/1)){
     #pager-carousel {
         top: calc(var(--vh) * 85);
-        left: 10vw;
-        width: 75vw; /* Full width on smaller screens */
+        left: 7.5vw;
+        width: 85vw; /* Full width on smaller screens */
         height: 16vw; /* Adjust height for smaller screens */
         padding: 0 5vw 0 5vw; /* change padding on mobiles screens */
     }
