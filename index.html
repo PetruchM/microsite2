@@ -11,6 +11,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bs_5.3.3/bootstrap.css">
 
+        <!-- Splide Css -->
+        <link rel="stylesheet" href="css/splide/splide.min.css">
+
         <!-- My CSS -->
         <link rel="stylesheet" href="css/carousel_box.css">
         <link rel="stylesheet" href="css/carousel.css">
@@ -25,6 +28,7 @@
         <link rel="stylesheet" href="css/indicators-queries.css">
 
         <link rel="stylesheet" href="css/vertical-pen.css">
+        <link rel="stylesheet" href="css/pager-carousel.css">
 
         <link rel="icon" href="images/pngs/gacr-favicon.png" type="image/x-icon">
 
@@ -345,114 +349,88 @@
 
         </div>
 
-        <!-- Small carousel for navigation -->
-        <div id="secondCarousel">
-            <div id="pagerCarousel" class="carousel slide vertical NaN pointer-event" data-bs-ride="carousel" data-bs-interval="500000000">
-                
-                <a class="carousel-control-prev bg-transparent w-aut"> <!--href="#pagerCarousel" role="button" data-bs-slide="prev">-->
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <div class="carousel-inner" role="listbox">
-                    
-                    <div class="carousel-item active" data-index="0">
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                                <img src="images/articles/minis/OK4_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                                <img src="images/articles/minis/OK5_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                                <img src="images/articles/minis/OK1_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                                <img src="images/articles/minis/OK2_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                                <img src="images/articles/minis/OK3_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                    </div>
-            
-                    <div class="carousel-item" data-index="1">
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                                <img src="images/articles/minis/OK5_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                                <img src="images/articles/minis/OK1_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                                <img src="images/articles/minis/OK2_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                                <img src="images/articles/minis/OK3_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                                <img src="images/articles/minis/OK4_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                    </div>
-            
-                    <div class="carousel-item" data-index="2">
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                                <img src="images/articles/minis/OK1_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                                <img src="images/articles/minis/OK2_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                                <img src="images/articles/minis/OK3_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                                <img src="images/articles/minis/OK4_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                                <img src="images/articles/minis/OK5_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                    </div>
-            
-                    <div class="carousel-item" data-index="3">
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                                <img src="images/articles/minis/OK2_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                                <img src="images/articles/minis/OK3_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                                <img src="images/articles/minis/OK4_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                                <img src="images/articles/minis/OK5_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                                <img src="images/articles/minis/OK1_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                    </div>
-            
-                    <div class="carousel-item" data-index="4">
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" data-filter-target="4">
-                                <img src="images/articles/minis/OK3_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" data-filter-target="0">
-                                <img src="images/articles/minis/OK4_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card active" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-filter-target="1">
-                                <img src="images/articles/minis/OK5_5_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-filter-target="2">
-                                <img src="images/articles/minis/OK1_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                        <button class="card" type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" data-filter-target="3">
-                                <img src="images/articles/minis/OK2_1_a.webp" class="img-fluid" alt="">
-                        </button>
-                    </div>
-            
-                </div>
-                <!-- <a class="carousel-control-prev bg-transparent w-aut" href="#pagerCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a> -->
-                <a class="carousel-control-next bg-transparent w-aut"> <!--</a> href="#pagerCarousel" role="button" data-bs-slide="next">-->
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
+        <div id="pager-carousel" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK4_5_a.webp" alt="Obrázek 24" data-id="23">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK5_5_a.webp" alt="Obrázek 25" data-id="24">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image middle_card" src="images/articles/minis/OK1_1_a.webp" alt="Obrázek 1" data-id="0">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK2_1_a.webp" alt="Obrázek 2" data-id="1">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK3_1_a.webp" alt="Obrázek 3" data-id="2">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK4_1_a.webp" alt="Obrázek 4" data-id="3">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK5_1_a.webp" alt="Obrázek 5" data-id="4">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK1_2_a.webp" alt="Obrázek 6" data-id="5">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK2_2_a.webp" alt="Obrázek 7" data-id="6">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK3_2_a.webp" alt="Obrázek 8" data-id="7">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK4_2_a.webp" alt="Obrázek 9" data-id="8">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK5_2_a.webp" alt="Obrázek 10" data-id="9">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK1_3_a.webp" alt="Obrázek 11" data-id="10">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK2_3_a.webp" alt="Obrázek 12" data-id="11">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK3_3_a.webp" alt="Obrázek 13" data-id="12">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK4_3_a.webp" alt="Obrázek 14" data-id="13">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK5_3_a.webp" alt="Obrázek 15" data-id="14">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK1_4_a.webp" alt="Obrázek 16" data-id="15">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK2_4_a.webp" alt="Obrázek 17" data-id="16">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK3_4_a.webp" alt="Obrázek 18" data-id="17">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK4_4_a.webp" alt="Obrázek 19" data-id="18">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK5_4_a.webp" alt="Obrázek 20" data-id="19">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK1_5_a.webp" alt="Obrázek 21" data-id="20">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK2_5_a.webp" alt="Obrázek 22" data-id="21">
+                    </li>
+                    <li class="splide__slide slide_template">
+                        <img class="pager-carousel-image" src="images/articles/minis/OK3_5_a.webp" alt="Obrázek 23" data-id="22">
+                    </li>
+                </ul>
             </div>
         </div>
+        
         
         <div id="lower-part">
         <!-- Indicators -->
@@ -578,12 +556,16 @@
         <!-- Bootstrap js -->
         <script src="js/bs_5-3-3/bootstrap.js"></script>
 
+        <!-- SPlide js -->
+        <script src="js/splide/splide.min.js"></script>
+        <script src="js/splide.js"></script>
+
         <!-- Hammer (for detecting slides, maybe not needed) Currently needed -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
         <!-- My js -->
         <script src="js/carousel_box.js"></script>
-        <script src="js/filtering_new.js"></script>
+        <script src="js/filtering.js"></script>
         <script src="js/swipe_detect.js"></script>
         <script src="js/intro-transition.js"></script>
         <script src="js/loading_effect.js"></script>
