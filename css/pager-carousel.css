@@ -42,7 +42,7 @@
 }
 
 .splide__arrow {
-    /* background-color: rgba(0, 0, 0, 0.6); */
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
     border-radius: 50%;
