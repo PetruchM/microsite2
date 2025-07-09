@@ -11,9 +11,7 @@ const CONFIG = {
 let articlesData;
 let currentSlide = 0;
 let currentFilter = CONFIG.ALL_FILTER_INDEX;
-let isSyncing = false;
 let onPC = window.innerWidth >= 1024;
-const syncDelay = 700;
 
 /* Load articles.json once and cache */
 async function loadArticles() {
@@ -100,7 +98,7 @@ async function filterCarousel(index) {
   await updateSlides(index);
   activateDesiredSlide(index);
   updatePagerCarousel(index);
-  activateDesiredPagerSlide(index);
+  // activateDesiredPagerSlide(index);
 }
 
 /* Update main slides */
@@ -147,88 +145,53 @@ function activateDesiredSlide(filterIndex) {
 /* Carousel navigation buttons */
 const prevButton = projectCarousel.querySelector('.carousel-control-prev');
 const nextButton = projectCarousel.querySelector('.carousel-control-next');
-const prevMinisButton = pagerCarousel.querySelector('.carousel-control-prev');
-const nextMinisButton = pagerCarousel.querySelector('.carousel-control-next');
+const prevMinisButton = pagerCarousel.querySelector('.splide__arrow--prev');
+const nextMinisButton = pagerCarousel.querySelector('.splide__arrow--next');
 
-prevButton.addEventListener('click', () => CarouselButtonClicked(-1));
-nextButton.addEventListener('click', () => CarouselButtonClicked(1));
-prevMinisButton.addEventListener('click', () => CarouselButtonClicked(-1));
-nextMinisButton.addEventListener('click', () => CarouselButtonClicked(1));
+prevButton.addEventListener('click', () => CarouselButtonClicked(-1,false));
+nextButton.addEventListener('click', () => CarouselButtonClicked(1,false));
+prevMinisButton.addEventListener('click', () => CarouselButtonClicked(-1,true));
+nextMinisButton.addEventListener('click', () => CarouselButtonClicked(1,true));
 
-function CarouselButtonClicked(direction) {
+function CarouselButtonClicked(direction,pager) {
   hideAll();
-  if (!isSyncing) {
-    isSyncing = true;
-    CardsDeActivation();
-    direction === -1 ? bsCarousel.prev() && bsPagerCarousel.prev()
-                     : bsCarousel.next() && bsPagerCarousel.next();
-
-    const activeSlide = projectCarousel.querySelector('.carousel-item.active');
-    const activeItem  = pagerCarousel.querySelector('.carousel-item.active');
-    loadNextArticle(activeSlide, direction);
-    loadNextMini(activeItem, direction);
-
-    setTimeout(() => {
-      CardsActivation();
-      isSyncing = false;
-    }, syncDelay);
+  direction === -1 ? bsCarousel.prev()
+                    : bsCarousel.next();
+  if (!pager) {
+    if (direction === -1) {
+      splide.go('<');
+    } else {
+      splide.go('>');
+    }
   }
+  const activeSlide = projectCarousel.querySelector('.carousel-item.active');
+  loadNextArticle(activeSlide, direction);
 }
 
-function CarouselButtonClickedTwice(activeSlideNum, pagerItemNum, direction) {
+function EdgePagerSlideClicked(activeSlideNum, direction) {
   hideAll();
-  if (!isSyncing) {
-    isSyncing = true;
-    CardsDeActivation();
-    slideMultipleTimes(2, direction);
-
-    for (let i = 0; i < 2; i++) {
-      const slideIdx = (activeSlideNum + i * direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER;
-      const pagerIdx = (pagerItemNum + i * direction + CONFIG.MINIS_PER_SLIDE) % CONFIG.MINIS_PER_SLIDE;
-      loadNextArticle(slides[slideIdx], direction);
-      loadNextMini(pagerItems[pagerIdx], direction);
-    }
-
-    setTimeout(() => {
-      CardsActivation();
-      isSyncing = false;
-    }, 1.8 * syncDelay);
+  direction === -1 ? splide.go('-2')
+                   : splide.go('+2');
+  bsCarousel.to((activeSlideNum + 2*direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER);
+  for (let i = 0; i < 2; i++) {
+    const slideIdx = (activeSlideNum + i * direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER;
+    loadNextArticle(slides[slideIdx], direction);
   }
-}
-
-function slideMultipleTimes(times, direction) {
-  let count = 0;
-  (function slide() {
-    if (count < times) {
-      direction === -1 ? bsPagerCarousel.prev() : bsPagerCarousel.next();
-      count++;
-      setTimeout(slide, syncDelay);
-    }
-  })();
-}
-
-function CardsDeActivation() {
-  pagerItems.forEach(item => item.classList.remove('active'));
-}
-function CardsActivation() {
-  pagerItems.forEach(item => item.classList.add('active'));
 }
 
 /* Pager cards click */
-const pagerCards = pagerCarousel.querySelectorAll('.card');
-pagerCards.forEach((btn, idx) => btn.addEventListener('click', () => {
-  const pagerItemNum = Math.floor(idx / CONFIG.ARTICLES_PER_FILTER);
+function PagerCardClicked(activeSlideId, clickedId) {
   const activeSlide = projectCarousel.querySelector('.carousel-item.active');
   const activeSlideNum = parseInt(activeSlide.getAttribute('data-filter-index'), 10);
-  const pagerBtnPos = idx % CONFIG.ARTICLES_PER_FILTER;
-  switch (pagerBtnPos) {
-    case 0: CarouselButtonClickedTwice(activeSlideNum, pagerItemNum, -1); break;
+  const pagerSlidePos = (clickedId - activeSlideId + CONFIG.TOTAL_ARTICLES) % CONFIG.TOTAL_ARTICLES;
+  switch (pagerSlidePos) {
+    case 0: EdgePagerSlideClicked(activeSlideNum, -1); break;
     case 1: CarouselButtonClicked(-1); break;
     case 3: CarouselButtonClicked(1); break;
-    case 4: CarouselButtonClickedTwice(activeSlideNum, pagerItemNum, 1); break;
+    case 4: EdgePagerSlideClicked(activeSlideNum, 1); break;
     default: break;
   }
-}));
+};
 
 /* Load next main article on edge scroll */
 function loadNextArticle(activeSlide, direction) {
@@ -239,23 +202,6 @@ function loadNextArticle(activeSlide, direction) {
     const targetIdx = (filterIdx - 2 * direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER;
     const targetSlide = slides.find(s => parseInt(s.dataset.filterIndex, 10) === targetIdx);
     if (targetSlide) changeSlidesInfo([newId], [targetSlide]);
-  }
-}
-
-/* Load next mini thumbnail on edge */
-async function loadNextMini(activeItem, direction) {
-  if (currentFilter === CONFIG.ALL_FILTER_INDEX) {
-    const idx = parseInt(activeItem.getAttribute('data-index'), 10);
-    const ids = buildIdList({ filterIndex: CONFIG.ALL_FILTER_INDEX, count: CONFIG.MINIS_PER_SLIDE, offset: 2, slide: currentSlide + direction });
-    const targetIdx = (idx - 2 * direction + CONFIG.MINIS_PER_SLIDE) % CONFIG.MINIS_PER_SLIDE;
-    const targetItem = pagerItems.find(p => parseInt(p.dataset.index, 10) === targetIdx);
-    if (targetItem) {
-      const data = await loadArticles();
-      targetItem.querySelectorAll('button').forEach((btn, i) => {
-        const article = data[ids[i]];
-        if (article) btn.querySelector('img').src = article.minis_img;
-      });
-    }
   }
 }
 

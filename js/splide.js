@@ -8,15 +8,21 @@ const splide = new Splide('#pager-carousel', {
       pagination: false,
       breakpoints: {
         1023: {
-        direction: 'ltr',  // na mobilech: horizontálně
-        height: null,      // výška se neomezuje
+        direction: 'ltr',
+        height: null,
         width: '85vw',
         }
     }
     });
 
     splide.on('mounted', () => {
-        splide.go(23);
+        setTimeout(() => {
+            splide.go('-2');
+        }, 200);
+        setTimeout(() => {
+            splide.refresh();
+            highlightMiddleSlide();
+        }, 400);
     });
     setupSplideEvents();
     splide.mount();
@@ -42,20 +48,22 @@ const splide = new Splide('#pager-carousel', {
                 item.classList.add('slide_hidden');
             }
         });
-
+        splide.on('mounted', () => {
+                setupSplideEvents();
+                activateDesiredPagerSlide(filterIndex);
+        });
         splide.mount();
-        highlightMiddleSlide();
-        setupSplideEvents();
     }
 
-
+    //#########tohle funguje popuze pro žádný filtr
     // Klikání na obrázky
-    document.querySelectorAll('.pager-carousel-image').forEach(img => {
-      img.addEventListener('click', () => {
-        alert("Klikl jsi na obrázek " + img.dataset.id);
-        // nebo přesměrování: window.location.href = `detail.html?id=${img.dataset.id}`;
-      });
-    });
+    // document.querySelector('#pager-carousel').addEventListener('click', (event) => {
+    //     const img = event.target.closest('.pager-carousel-image');
+
+    //     if (img) {
+    //         PagerCardClicked(splide.index, img.dataset.id);
+    //     }
+    // });
 
     function highlightMiddleSlide() {
         console.log("Highlighting middle slide");
@@ -81,9 +89,13 @@ const splide = new Splide('#pager-carousel', {
     }
 
     function activateDesiredPagerSlide(filterIndex) {
-        //If the filter is set to ALL, we want to show the first slide index 23, because we want the first slide to be in the middele so last two slides are before.
-        //But if a filter is applied, we want to show the third slide (index 3, before we alsa want the first to be in the middle) . 
-        const activePagerSlideIdx = (filterIndex === CONFIG.ALL_FILTER_INDEX) ? CONFIG.TOTAL_ARTICLES-2 : CONFIG.ARTICLES_PER_FILTER -2;
-        splide.go(activePagerSlideIdx);
-        highlightMiddleSlide();
+        //There was a problem with the pager carousel not updating correctly, when filtered on mobile phones, the splide is rebuild but as a horizontal one.
+        //That coused problems with the function splide.go() which caused that the slides were not visible so we need to wait like this
+        setTimeout(() => {
+            splide.go('-2');
+        }, 200);
+        setTimeout(() => {
+            splide.refresh();
+            highlightMiddleSlide();
+        }, 400);
     }
