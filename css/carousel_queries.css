@@ -6,7 +6,7 @@
     }
 
     /* DISABLE CAROUSEL CONTROLS */
-    #projectCarousel .carousel-control-prev, #projectCarousel .carousel-control-next {
+    /* #projectCarousel .carousel-control-prev, #projectCarousel .carousel-control-next {
         display: none;
-    }
+    } */
 }
