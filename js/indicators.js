@@ -18,7 +18,7 @@ function IndicatorActive(Index) {
         textElement.classList.remove("active");
         indiElement.classList.remove("active");
         buttonElement.classList.remove("indicator_button_rotate");
-        // img2Element.style.opacity="0";
+        img2Element.style.opacity="0";
     } else {
         textElement.classList.add("active");
         indiElement.classList.add("active");
