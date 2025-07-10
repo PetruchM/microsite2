@@ -38,6 +38,10 @@ footer p{
     width: 50%;
 }
 
+footer p a {
+    color: white;
+}
+
 * {
     font-family: "Montserrat", sans-serif;
 }
