@@ -15,3 +15,8 @@ hammer.on('swiperight', function(ev) {
   // $(projectCarousel).carousel('prev');
   CarouselButtonClicked(-1);
 });
+
+
+projectCarousel.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+}, { passive: false });
