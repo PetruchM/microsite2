@@ -7,9 +7,6 @@
     height: 100%;
     top: 7vh;
     /*transform: translateX(-10px); /* TODO: this is shady */
-
-    touch-action: pan-x;
-    overscroll-behavior: contain;
 }
 
 #projectCarousel .carousel-inner {

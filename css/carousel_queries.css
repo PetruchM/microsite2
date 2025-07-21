@@ -6,7 +6,9 @@
     }
 
     /* DISABLE CAROUSEL CONTROLS */
-    /* #projectCarousel .carousel-control-prev, #projectCarousel .carousel-control-next {
-        display: none;
-    } */
+    #projectCarousel {
+        touch-action: pan-x;
+        overscroll-behavior: contain;
+        overflow: hidden;
+    }
 }
