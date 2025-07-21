@@ -11,7 +11,7 @@ const CONFIG = {
 let articlesData;
 let currentSlide = 0;
 let currentFilter = CONFIG.ALL_FILTER_INDEX;
-let onPC = window.innerWidth >= 1024;
+let onPC = true;
 
 /* Load articles.json once and cache */
 async function loadArticles() {
