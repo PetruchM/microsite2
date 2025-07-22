@@ -15,17 +15,22 @@ const splide = new Splide('#pager-carousel', {
     }
     });
 
-    splide.on('mounted', () => {
-        setTimeout(() => {
-            splide.go('-2');
-        }, 200);
-        setTimeout(() => {
-            splide.refresh();
-            highlightMiddleSlide();
-        }, 400);
-    });
-    setupSplideEvents();
+    // splide.on('mounted', () => {
+    //     setTimeout(() => {
+    //         splide.go('-2');
+    //     }, 200);
+    //     setTimeout(() => {
+    //         splide.refresh();
+    //         highlightMiddleSlide();
+    //     }, 400);
+    // });
+    // setupSplideEvents();
     splide.mount();
+
+    function splideFirstSetup(){
+        const allFilterIndex = 5;
+        updatePagerCarousel(allFilterIndex)
+    }
     
     function setupSplideEvents() {
         splide.on('mounted move', highlightMiddleSlide);
