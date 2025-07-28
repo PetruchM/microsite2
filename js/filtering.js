@@ -11,7 +11,7 @@ const CONFIG = {
 let articlesData;
 let currentSlide = 0;
 let currentFilter = CONFIG.ALL_FILTER_INDEX;
-let onPC = true;
+let onPC;
 
 /* Load articles.json once and cache */
 async function loadArticles() {
@@ -207,7 +207,7 @@ function loadNextArticle(activeSlide, direction) {
 
 /* Handle window resize for background image switch */
 
-function updateBackground(){
+function updateCarousels(){
   const nowPC = window.innerWidth >= 1024;
   if (nowPC !== onPC) {
     onPC = nowPC;

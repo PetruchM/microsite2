@@ -1,5 +1,5 @@
 function updatePcOrMobile(){
-    updateBackground();
+    updateCarousels();
     updatePathBasedOnWidth();
     setVh();
     // updateCarouselCardsFunctions();
