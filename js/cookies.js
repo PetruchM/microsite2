@@ -1,35 +1,47 @@
-//cookies functioning for now
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days*864e5).toUTCString();
+  document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+}
+
+function getCookie(name) {
+  return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
+}
+
 function acceptCookies() {
-    //na 1 rok
-    const date = new Date();
-    date.setFullYear(date.getFullYear() + 1);
-    document.cookie = "cookie_consent=true; expires=" + date.toUTCString() + "; path=/";
-
-    // schovej banner
-    document.getElementById('cookie-banner').style.display = 'none';
-
-    loadGoogleAnalytics();
+  setCookie('cookieConsent', 'accepted', 365);
+  document.getElementById('cookie-banner').style.display = 'none';
+  loadAnalytics();
 }
 
-if (document.cookie.includes('cookie_consent=true')) {
-    // document.getElementById('cookie-banner').style.display = 'none';
-    loadGoogleAnalytics();
+function declineCookies() {
+  setCookie('cookieConsent', 'declined', 365);
+  document.getElementById('cookie-banner').style.display = 'none';
 }
-
-function rejectCookies() {}
 
 function openSettings() {
     document.querySelector('.cookies-details').style.display = 'block';
     document.querySelector('.coookies-links').style.display = 'block';
-
+    document.querySelector('#cookie-banner').style.display = 'block';
 }
-function loadGoogleAnalytics() {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
-        a=s.createElement(o), m=s.getElementsByTagName(o)[0];
-        a.async=1; a.src=g; m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-XXXXXXXXX-Y', 'auto'); // Vojta mi musí dát svůj kód
-    ga('send', 'pageview');
+function loadAnalytics() {
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-S450HLZK61";
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-S450HLZK61'); // nahraď svým GA ID
 }
+
+window.addEventListener('load', () => {
+  const consent = getCookie('cookieConsent');
+  if (consent === 'accepted') {
+    loadAnalytics();
+  } else if (!consent) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+});
