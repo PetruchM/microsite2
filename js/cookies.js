@@ -36,7 +36,6 @@ function loadAnalytics() {
   gtag('js', new Date());
   gtag('config', 'G-S450HLZK61'); // nahraď svým GA ID
 }
-loadAnalytics();
 window.addEventListener('load', () => {
   const consent = getCookie('cookieConsent');
   if (consent === 'accepted') {
