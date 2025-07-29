@@ -16,6 +16,7 @@ function acceptCookies() {
 function declineCookies() {
   setCookie('cookieConsent', 'declined', 365);
   document.getElementById('cookie-banner').style.display = 'none';
+  loadAnalytics();
 }
 
 function openSettings() {
