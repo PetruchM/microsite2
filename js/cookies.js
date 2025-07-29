@@ -16,7 +16,6 @@ function acceptCookies() {
 function declineCookies() {
   setCookie('cookieConsent', 'declined', 365);
   document.getElementById('cookie-banner').style.display = 'none';
-  loadAnalytics();
 }
 
 function openSettings() {
@@ -37,7 +36,7 @@ function loadAnalytics() {
   gtag('js', new Date());
   gtag('config', 'G-S450HLZK61'); // nahraď svým GA ID
 }
-
+loadAnalytics();
 window.addEventListener('load', () => {
   const consent = getCookie('cookieConsent');
   if (consent === 'accepted') {
