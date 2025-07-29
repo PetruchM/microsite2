@@ -1,0 +1,19 @@
+#cookie-banner{
+    position: fixed;
+    z-index: 100000;
+    bottom: 0; 
+    width: 100%; 
+    background-color: var(--blue-bg);
+    color: white;
+    padding: 1rem; 
+    text-align: left; 
+    border-top: 1px solid #ddd;
+}
+
+.cookies-details {
+    display: none;
+}
+
+.coookies-links {
+    display: none;
+}
