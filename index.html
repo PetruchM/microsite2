@@ -51,10 +51,32 @@
             </div>
             <img src="images/pngs/intro-emblem.png" class="intro-image" alt="">
         </div>
+
         <!--cookies-->
         <div id="cookie-banner" style="position: fixed; z-index: 100000;bottom: 0; width: 100%; background: #f8f9fa; padding: 1rem; text-align: center; border-top: 1px solid #ddd;">
-            Tento web používá cookies pro analýzu návštěvnosti. 
-            <button onclick="acceptCookies()" style="margin-left:10px;">Souhlasím</button>
+            <h1>Tento web používá cookies pouze pro analýzu návštěvnosti. </h1>
+            <div class="cookies-details">
+                <p>Abychom poskytli co nejlepší služby, používáme k ukládání a/nebo přístupu k informacím o zařízení, technologie jako jsou soubory cookies. Souhlas s těmito technologiemi nám umožní zpracovávat údaje, jako je chování při procházení nebo jedinečná ID na tomto webu. Nesouhlas nebo odvolání souhlasu může nepříznivě ovlivnit určité vlastnosti a funkce.</p>
+                <div>
+                    <h2>Funkční</h2>
+                    <h3>Vždy aktivní</h3>
+                    <p>Technické uložení nebo přístup je nezbytně nutný pro legitimní účel umožnění použití konkrétní služby, kterou si odběratel nebo uživatel výslovně vyžádal, nebo pouze za účelem provedení přenosu sdělení prostřednictvím sítě elektronických komunikací.</p>
+                </div>
+                <div>
+                    <h2>Statistiky</h2>
+                    <h3>Volitelné. Pomáhají nám zlepšovat web.</h3>
+                    <p>Technické uložení nebo přístup, který se používá výhradně pro anonymní statistické účely. Bez předvolání, dobrovolného plnění ze strany vašeho Poskytovatele internetových služeb nebo dalších záznamů od třetí strany nelze informace, uložené nebo získané pouze pro tento účel, obvykle použít k vaší identifikaci.</p>
+                </div>
+                <p>Tento web nevyužívá marketingové cookies.</p>
+            </div>
+            <button onclick="acceptCookies()" style="margin-left:10px;">Přijmout</button>
+            <button onclick="rejectCookies()" style="margin-left:10px;">Odmítnout vše</button>
+            <button onclick="openSettings()" style="margin-left:10px;">Nastavení a podrobnosti</button>
+            <div class="coookies-links">
+                <a class="cookie-statement" href="https://gacr.cz/cookie-policy-eu/" data-relative_url="">Zásady cookies</a>
+                <a class="privacy-statement" href="https://gacr.cz/uredni-deska/ochrana-osobnich-udaju-a-gdpr-v-grantove-agenture-ceske-republiky/" data-relative_url="">Ochrana osobních údajů a GDPR v&nbsp;Grantové agentuře České republiky</a>
+                <a class="impressum" href="https://gacr.cz/povinne-zverejnovane-informace/" data-relative_url="">Povinně zveřejňované informace</a>
+			</div>
         </div>
 
         <!-- Slide filtering -->
