@@ -26,7 +26,7 @@ function openSettings() {
 
 function loadAnalytics() {
   const script = document.createElement('script');
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-S450HLZK61";
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX";
   script.async = true;
   document.head.appendChild(script);
 
@@ -34,7 +34,7 @@ function loadAnalytics() {
   function gtag(){ dataLayer.push(arguments); }
   window.gtag = gtag;
   gtag('js', new Date());
-  gtag('config', 'G-S450HLZK61'); // nahraď svým GA ID
+  gtag('config', 'G-XXXXXXXX');
 }
 window.addEventListener('load', () => {
   const consent = getCookie('cookieConsent');
