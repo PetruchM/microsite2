@@ -89,6 +89,7 @@ async function setFilter(button, index) {
     await filterCarousel(index);
   } else {
     filterLabel.classList.remove('label-active');
+    currentSlide = 0;///temporary set to 0, reseting
     currentFilter = CONFIG.ALL_FILTER_INDEX;
     await filterCarousel(CONFIG.ALL_FILTER_INDEX);
   }
