@@ -54,8 +54,8 @@
         </section>
 
         <!--cookies-->
-        <div id="cookie-banner">
-            <h1>Tento web používá cookies pouze pro analýzu návštěvnosti. </h1>
+        <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookies-title" tabindex="-1">
+            <h1 id="cookies-title">Tento web používá cookies pouze pro analýzu návštěvnosti. </h1>
             <div class="cookies-details">
                 <p>Abychom poskytli co nejlepší služby, používáme k ukládání a/nebo přístupu k informacím o zařízení, technologie jako jsou soubory cookies. Souhlas s těmito technologiemi nám umožní zpracovávat údaje, jako je chování při procházení nebo jedinečná ID na tomto webu. Nesouhlas nebo odvolání souhlasu může nepříznivě ovlivnit určité vlastnosti a funkce.</p>
                 <div>
@@ -126,10 +126,10 @@
 
 
         <!-- Main Carousel -->
-        <div id="projectCarousel" class="carousel slide carousel-fade">
+        <section id="projectCarousel" class="carousel slide carousel-fade" aria-label="Přehlídka výzkumných projektů">
             <div class="carousel-inner">
                 <!-- Slide 1 -->
-                <div class="carousel-item" data-filter-index="0">
+                <div class="carousel-item" data-filter-index="0" role="group" aria-label="Projekt">
                     <img src="images/articles/background/OK4.5_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
@@ -175,7 +175,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="1">
+                <div class="carousel-item" data-filter-index="1" role="group" aria-label="Projekt">
                     <img src="images/articles/background/OK5.5_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
@@ -221,7 +221,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item active" data-filter-index="2">
+                <div class="carousel-item active" data-filter-index="2" role="group" aria-label="Projekt">
                     <img src="images/articles/background/OK1.1_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
@@ -267,7 +267,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="3">
+                <div class="carousel-item" data-filter-index="3" role="group" aria-label="Projekt">
                     <img src="images/articles/background/OK2.1_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
@@ -313,7 +313,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="4">
+                <div class="carousel-item" data-filter-index="4" role="group" aria-label="Projekt">
                     <img src="images/articles/background/OK3.1_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
@@ -378,7 +378,7 @@
             <span class="visually-hidden">Next</span>
             </button>
 
-        </div>
+        </section>
 
         <div id="pager-carousel" class="splide">
             <div class="splide__arrows splide__arrows--ltr">
@@ -477,113 +477,113 @@
         
         <div id="lower-part">
         <!-- Indicators -->
-        <div class="moving-dashed-line">
-            <svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-                <path id="linepath" d="M 0 24 Q 250 -14 500 24 T 1000 24" fill="transparent" stroke="white" class="line"/>
-            </svg>
-            <button class="slideDownButt" onClick="scrollDown()" aria-label="Scroll down to Interesting facts">
-                <img src="images/svgs/šipka.svg" alt="">
-            </button>
-        </div>
-        <div class="indicators-section">
-            <div class="indicators-container">
-                <div class="single-indicator">
-                    <div class="lower-section-logo">
-                        <a href="https://gacr.cz/" target="_blank">
-                            <img src="images/pngs/gacr_logo.png" class="lower-section-logo-img" alt="">
-                        </a>
-                    </div>
-                    <button class="indicator-slide_butt" onclick="slideDownTextLogo()" aria-label="Show information about GAČR">
-                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                    </button>
-                    <p class="single-indicator-p">Grantová agentura České republiky přes 30 let podporuje špičkový základní výzkum napříč všemi
-                        obory – od technických přes společenské vědy až po zkoumání lidských bytostí, fauny, flory a
-                        vesmíru. Každý rok poskytuje nejlepším vědcům granty v celkové hodnotě přibližně 4,5 miliardy
-                        korun – to je přes 11 % státního rozpočtu určeného na vědu a výzkum.</p>
-                </div>
-                <div class="white-line"></div>
-
-                <div class="single-indicator">
-                    <div class="indicator">
-                        <div class="indicator-svg-div">
-                            <img src="images/indicators/Podporene_myslenky1.svg" alt="Indicator SVG" class="indicator-svg1">
-                            <img src="images/indicators/Podporene_myslenky2.svg" alt="Indicator SVG" class="indicator-svg2">
-                        </div>
-                        <div class="indicator-num loading-effect" data-value="20">00 000</div>
-                        <div class="indicator-text">Podpořených<br>myšlenek</div>
-                    </div>
-                    <button class="indicator-slide_butt" onclick="IndicatorActive(0)" aria-label="Článek o podpořených myšlenkách">
-                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                    </button>
-                    <p class="single-indicator-p">Grantová agentura České republiky doposud podpořila přes 20 tisíc myšlenek a projektů, které
-                        posouvají vědu kupředu a rozšiřují lidské poznání. Na myšlenkách základního výzkumu stojí všechny
-                        moderní vynálezy – bez objevu aerodynamických zákonů by nikdy nevzlétlo letadlo, bez chápání
-                        fungování buňky by neexistovaly léky a bez porozumění elektromagnetickým vlnám by nefungovaly
-                        mobilní telefony. GA ČR dává šanci vědcům z různých oborů proměnit své nápady v realitu, a tím
-                        porozumět a změnit náš svět.</p>
-                </div>
-                <div class="white-line"></div>
-            
-                <div class="single-indicator">
-                    <div class="indicator">
-                        <div class="indicator-svg-div">
-                            <img src="images/indicators/AVCR_a_univerzity1.svg" alt="Indicator SVG" class="indicator-svg1">
-                            <img src="images/indicators/AVCR_a_univerzity2.svg" alt="Indicator SVG" class="indicator-svg2">
-                        </div>
-                        <div class="indicator-num loading-effect" data-value="99%">00 %</div>
-                        <div class="indicator-text">Grantů pro univerzity<br>a AV ČR</div>
-                    </div>
-                    <button class="indicator-slide_butt" onclick="IndicatorActive(1)" aria-label="Článek o podpoře univerzit">
-                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                    </button>
-                    <p class="single-indicator-p">Vědci v základním výzkumu jsou poháněni touhou po poznání. S každou novou hypotézou se vydávají
-                        na neprošlapanou cestu, o které netuší, kam je může zavést. Je to často cesta plná neočekávaných
-                        překážek, ale také nečekaných objevů. Útočištěm pro tyto dobrodruhy jsou obvykle univerzity a
-                        ústavy Akademie věd ČR – i proto jsou téměř všechny granty GA ČR udělovány těmto státním
-                        institucím, kde je také jistota, že jsou peníze efektivně využity.</p>
-                </div>
-                <div class="white-line"></div>
-            
-                <div class="single-indicator">
-                    <div class="indicator">
-                        <div class="indicator-svg-div">
-                            <img src="images/indicators/Nejlepsich_napadu1.svg" alt="Indicator SVG" class="indicator-svg1">
-                            <img src="images/indicators/Nejlepsich_napadu2.svg" alt="Indicator SVG" class="indicator-svg2">
-                        </div>
-                        <div class="indicator-num loading-effect" data-value="15%">00 %</div>
-                        <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
-                    </div>
-                    <button class="indicator-slide_butt" onclick="IndicatorActive(2)" aria-label="Článek o Rozvinutých nápadech">
-                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                    </button>
-                    <p class="single-indicator-p">Každý rok žádá o podporu několik tisíc myšlenek. Jak poznáme ty nejlepší? Hodnotí je panely složené
-                        z vědců, kteří jsou odborníky na danou oblast. V GA ČR působí přes 500 vědců z různých institucí. Aby
-                        se předešlo střetu zájmů, spolu s dalšími opatřeními, se také pravidelně mění. Vysokou odbornost a
-                        objektivitu hodnocení zajišťují zároveň zahraniční experti, kteří posuzují přibližně polovinu nejlepších
-                        návrhů projektů.</p>
-                </div>
-                <div class="white-line"></div>
-            
-                <div class="single-indicator">
-                    <div class="indicator">
-                        <div class="indicator-svg-div">
-                            <img src="images/indicators/Objevu_publikovano1.svg" alt="Indicator SVG" class="indicator-svg1">
-                            <img src="images/indicators/Objevu_publikovano2.svg" alt="Indicator SVG" class="indicator-svg2">
-                        </div>
-                        <div class="indicator-num loading-effect" data-value="38%">00 %</div>
-                        <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
-                    </div>
-                    <button class="indicator-slide_butt" onclick="IndicatorActive(3)" aria-label="Článek o publikovaných objevech">
-                        <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
-                    </button>
-                    <p class="single-indicator-p">Vědci své objevy zveřejňují zpravidla ve vědeckých časopisech. Publikovat objev v kvalitním časopisu
-                        není nic jednoduchého – ty nejprestižnější publikují méně než 10 % zaslaných článků. Texty prochází
-                        náročným recenzním řízením, které hodnotí objev z různých hledisek, jako jsou použité metody nebo
-                        jeho význam. Vědci s podporou GA ČR provádějí ten nejlepší výzkum světové úrovně – nadprůměrně
-                        často ho také publikují ve vysoce kvalitních časopisech.</p>
-                </div>
+            <div class="moving-dashed-line">
+                <svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                    <path id="linepath" d="M 0 24 Q 250 -14 500 24 T 1000 24" fill="transparent" stroke="white" class="line"/>
+                </svg>
+                <button class="slideDownButt" onClick="scrollDown()" aria-label="Scroll down to Interesting facts">
+                    <img src="images/svgs/šipka.svg" alt="">
+                </button>
             </div>
-        </div> 
+            <section class="indicators-section" aria-label="Indikátory výzkumu">
+                <div class="indicators-container">
+                    <article class="single-indicator" aria-label="Informace o GA ČR">
+                        <div class="lower-section-logo">
+                            <a href="https://gacr.cz/" target="_blank">
+                                <img src="images/pngs/gacr_logo.png" class="lower-section-logo-img" alt="Logo Grantové agentury ČR">
+                            </a>
+                        </div>
+                        <button class="indicator-slide_butt" onclick="slideDownTextLogo()" aria-label="Otevřít článek">
+                            <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                        </button>
+                        <p class="single-indicator-p">Grantová agentura České republiky přes 30 let podporuje špičkový základní výzkum napříč všemi
+                            obory – od technických přes společenské vědy až po zkoumání lidských bytostí, fauny, flory a
+                            vesmíru. Každý rok poskytuje nejlepším vědcům granty v celkové hodnotě přibližně 4,5 miliardy
+                            korun – to je přes 11 % státního rozpočtu určeného na vědu a výzkum.</p>
+                    </article>
+                    <div class="white-line"></div>
+
+                    <article class="single-indicator" aria-label="Článek o podpořených myšlenkách">
+                        <div class="indicator">
+                            <div class="indicator-svg-div">
+                                <img src="images/indicators/Podporene_myslenky1.svg" alt="Indicator SVG" class="indicator-svg1">
+                                <img src="images/indicators/Podporene_myslenky2.svg" alt="Indicator SVG" class="indicator-svg2">
+                            </div>
+                            <div class="indicator-num loading-effect" data-value="20">00 000</div>
+                            <div class="indicator-text">Podpořených<br>myšlenek</div>
+                        </div>
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(0)" aria-label="Otevřít článek">
+                            <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                        </button>
+                        <p class="single-indicator-p">Grantová agentura České republiky doposud podpořila přes 20 tisíc myšlenek a projektů, které
+                            posouvají vědu kupředu a rozšiřují lidské poznání. Na myšlenkách základního výzkumu stojí všechny
+                            moderní vynálezy – bez objevu aerodynamických zákonů by nikdy nevzlétlo letadlo, bez chápání
+                            fungování buňky by neexistovaly léky a bez porozumění elektromagnetickým vlnám by nefungovaly
+                            mobilní telefony. GA ČR dává šanci vědcům z různých oborů proměnit své nápady v realitu, a tím
+                            porozumět a změnit náš svět.</p>
+                    </article>
+                    <div class="white-line"></div>
+                
+                    <article class="single-indicator" aria-label="Článek o podpoře univerzit">
+                        <div class="indicator">
+                            <div class="indicator-svg-div">
+                                <img src="images/indicators/AVCR_a_univerzity1.svg" alt="Indicator SVG" class="indicator-svg1">
+                                <img src="images/indicators/AVCR_a_univerzity2.svg" alt="Indicator SVG" class="indicator-svg2">
+                            </div>
+                            <div class="indicator-num loading-effect" data-value="99%">00 %</div>
+                            <div class="indicator-text">Grantů pro univerzity<br>a AV ČR</div>
+                        </div>
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(1)" aria-label="Otevřít článek">
+                            <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                        </button>
+                        <p class="single-indicator-p">Vědci v základním výzkumu jsou poháněni touhou po poznání. S každou novou hypotézou se vydávají
+                            na neprošlapanou cestu, o které netuší, kam je může zavést. Je to často cesta plná neočekávaných
+                            překážek, ale také nečekaných objevů. Útočištěm pro tyto dobrodruhy jsou obvykle univerzity a
+                            ústavy Akademie věd ČR – i proto jsou téměř všechny granty GA ČR udělovány těmto státním
+                            institucím, kde je také jistota, že jsou peníze efektivně využity.</p>
+                    </article>
+                    <div class="white-line"></div>
+                
+                    <article class="single-indicator" aria-label="Článek o Rozvinutých nápadech">
+                        <div class="indicator">
+                            <div class="indicator-svg-div">
+                                <img src="images/indicators/Nejlepsich_napadu1.svg" alt="Indicator SVG" class="indicator-svg1">
+                                <img src="images/indicators/Nejlepsich_napadu2.svg" alt="Indicator SVG" class="indicator-svg2">
+                            </div>
+                            <div class="indicator-num loading-effect" data-value="15%">00 %</div>
+                            <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
+                        </div>
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(2)" aria-label="Otevřít článek">
+                            <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                        </button>
+                        <p class="single-indicator-p">Každý rok žádá o podporu několik tisíc myšlenek. Jak poznáme ty nejlepší? Hodnotí je panely složené
+                            z vědců, kteří jsou odborníky na danou oblast. V GA ČR působí přes 500 vědců z různých institucí. Aby
+                            se předešlo střetu zájmů, spolu s dalšími opatřeními, se také pravidelně mění. Vysokou odbornost a
+                            objektivitu hodnocení zajišťují zároveň zahraniční experti, kteří posuzují přibližně polovinu nejlepších
+                            návrhů projektů.</p>
+                    </article>
+                    <div class="white-line"></div>
+                
+                    <article class="single-indicator" aria-label="Článek o publikovaných objevech">
+                        <div class="indicator">
+                            <div class="indicator-svg-div">
+                                <img src="images/indicators/Objevu_publikovano1.svg" alt="Indicator SVG" class="indicator-svg1">
+                                <img src="images/indicators/Objevu_publikovano2.svg" alt="Indicator SVG" class="indicator-svg2">
+                            </div>
+                            <div class="indicator-num loading-effect" data-value="38%">00 %</div>
+                            <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
+                        </div>
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(3)" aria-label="Otevřít článek">
+                            <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
+                        </button>
+                        <p class="single-indicator-p">Vědci své objevy zveřejňují zpravidla ve vědeckých časopisech. Publikovat objev v kvalitním časopisu
+                            není nic jednoduchého – ty nejprestižnější publikují méně než 10 % zaslaných článků. Texty prochází
+                            náročným recenzním řízením, které hodnotí objev z různých hledisek, jako jsou použité metody nebo
+                            jeho význam. Vědci s podporou GA ČR provádějí ten nejlepší výzkum světové úrovně – nadprůměrně
+                            často ho také publikují ve vysoce kvalitních časopisech.</p>
+                    </article>
+                </div>
+            </section> 
         </div>
         <footer>
             <p><a href="consent.html">Souhlas o zpracování dat</a></p>
