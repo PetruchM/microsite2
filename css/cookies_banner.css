@@ -3,8 +3,8 @@
     position: fixed;
     z-index: 100000;
     bottom: 0;
-    width: 98%;
-    margin: 1rem;
+    width: 98vw;
+    margin: 1vw;
     border-radius: 2vw;
     background-color: var(--blue-bg);
     color: white;
@@ -14,7 +14,7 @@
 }
 
 #cookie-banner h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #cookie-banner h2 {
@@ -28,6 +28,15 @@
 #cookie-banner div p {
     font-size: 1rem;
     margin: 0.5rem 1rem;
+}
+
+.cookies-buttons {
+    right:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
 }
 
 #cookie-banner button {
@@ -67,9 +76,8 @@
         font-size: 0.9rem;
     }
 
-    #cookie-banner button {
-        width: 80%;
-        margin: 0.5rem 0;
+    .cookies-buttons {
+        margin-left: unset;
     }
 
     .cookies-details, .coookies-links {
