@@ -41,6 +41,6 @@ window.addEventListener('load', () => {
   if (consent === 'accepted') {
     loadAnalytics();
   } else if (!consent) {
-    document.getElementById('cookie-banner').style.display = 'block';
+    document.getElementById('cookie-banner').style.display = 'flex';
   }
 });
