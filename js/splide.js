@@ -60,15 +60,14 @@ const splide = new Splide('#pager-carousel', {
         splide.mount();
     }
 
-    //#########tohle funguje popuze pro žádný filtr
     // Klikání na obrázky
-    // document.querySelector('#pager-carousel').addEventListener('click', (event) => {
-    //     const img = event.target.closest('.pager-carousel-image');
+    document.querySelector('#pager-carousel').addEventListener('click', (event) => {
+        const img = event.target.closest('.pager-carousel-image');
 
-    //     if (img) {
-    //         PagerCardClicked(splide.index, img.dataset.id);
-    //     }
-    // });
+        if (img) {
+            PagerCardClicked(img.dataset.id);
+        }
+    });
 
     function highlightMiddleSlide() {
         console.log("Highlighting middle slide");

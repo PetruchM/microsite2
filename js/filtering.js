@@ -12,6 +12,7 @@ let articlesData;
 let currentSlide = 0;
 let currentFilter = CONFIG.ALL_FILTER_INDEX;
 let onPC;
+let currentPagerSlide = 0;
 
 /* Load articles.json once and cache */
 async function loadArticles() {
@@ -66,8 +67,7 @@ const filterNames = [
 const hideLabel = debounce(() => filterLabel.classList.remove('label-active'), 3000);
 
 /* Initialize Bootstrap carousel */
-const bsCarousel = new bootstrap.Carousel(projectCarousel);
-// const bsPagerCarousel = new bootstrap.Carousel(pagerCarousel);
+const bsCarousel = new bootstrap.Carousel(projectCarousel)
 
 /* Event listeners for filter buttons */
 pcFilterButtons.forEach((btn, idx) => {
@@ -78,6 +78,7 @@ async function setFilter(button, index) {
   const wasActive = button.classList.contains('active-filter');
   filtersDivision.querySelectorAll('.active-filter').forEach(el => el.classList.remove('active-filter'));
   clearTimeout();
+  currentPagerSlide= 0; // Reset pager slide on filter change
 
   if (!wasActive) {
     button.classList.add('active-filter');
@@ -143,7 +144,7 @@ function activateDesiredSlide(filterIndex) {
 }
 
 
-/* Carousel navigation buttons */
+/* Carousels sliding handeling */
 const prevButton = projectCarousel.querySelector('.carousel-control-prev');
 const nextButton = projectCarousel.querySelector('.carousel-control-next');
 const prevMinisButton = pagerCarousel.querySelector('.splide__arrow--prev');
@@ -170,26 +171,34 @@ function CarouselButtonClicked(direction,pager) {
 }
 
 function EdgePagerSlideClicked(activeSlideNum, direction) {
+  console.log("Edge pager slide clicked with direction:", direction);
   hideAll();
   direction === -1 ? splide.go('-2')
                    : splide.go('+2');
-  bsCarousel.to((activeSlideNum + 2*direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER);
-  for (let i = 0; i < 2; i++) {
+  bsCarousel.to((activeSlideNum + 2*direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER); //move 2 slides forward/backward
+  for (let i = 0; i < 2; i++) { //load new in advance next/previous 2 articles
     const slideIdx = (activeSlideNum + i * direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER;
     loadNextArticle(slides[slideIdx], direction);
   }
 }
 
 /* Pager cards click */
-function PagerCardClicked(activeSlideId, clickedId) {
+function PagerCardClicked(clickedId) {
+  // console.log("Pager card clicked with ID:", clickedId);
+  // console.log("Current pager slide:", currentPagerSlide);
   const activeSlide = projectCarousel.querySelector('.carousel-item.active');
   const activeSlideNum = parseInt(activeSlide.getAttribute('data-filter-index'), 10);
-  const pagerSlidePos = (clickedId - activeSlideId + CONFIG.TOTAL_ARTICLES) % CONFIG.TOTAL_ARTICLES;
+  if (currentFilter !== CONFIG.ALL_FILTER_INDEX) { //if filtered the all possible id belong to one ressidual class so we devide os that the values are 0-4
+    clickedId = Math.floor(clickedId/CONFIG.ARTICLES_PER_FILTER);
+  }
+  let pagerSlidePos = (clickedId -currentPagerSlide + CONFIG.TOTAL_ARTICLES) % CONFIG.TOTAL_ARTICLES;
+  pagerSlidePos =  pagerSlidePos % CONFIG.ARTICLES_PER_FILTER; // Ensure it's within 0-4 range, because if the carousel is not filtered we work with values 0-24
+  currentPagerSlide = clickedId;
   switch (pagerSlidePos) {
-    case 0: EdgePagerSlideClicked(activeSlideNum, -1); break;
-    case 1: CarouselButtonClicked(-1); break;
-    case 3: CarouselButtonClicked(1); break;
-    case 4: EdgePagerSlideClicked(activeSlideNum, 1); break;
+    case 3: EdgePagerSlideClicked(activeSlideNum, -1); break; //two backward
+    case 4: CarouselButtonClicked(-1); break;
+    case 1: CarouselButtonClicked(1); break;
+    case 2: EdgePagerSlideClicked(activeSlideNum, 1); break; //two forward
     default: break;
   }
 };
