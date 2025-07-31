@@ -5,6 +5,7 @@ const splide = new Splide('#pager-carousel', {
       perPage: 5,
       perMove: 1,
       wheel: false,
+      drag: false, //fragging mause or sliding temporarily disabled
       pagination: false,
       breakpoints: {
         1023: {
