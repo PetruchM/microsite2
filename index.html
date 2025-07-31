@@ -81,33 +81,33 @@
         </div>
 
         <!-- Slide filtering -->
-        <div id="filter" class="filter-header" role="navigation">
+        <div id="filter" class="filter-header" role="navigation" aria-label="Filtry pro výběr okruhů projektů">
             <div class="carousel__filter-container">
-                <div class="carousel__filter-button">                  
+                <div class="carousel__filter-button" tabindex="0" aria-label="Technické vědy">                  
                     <img src="images/filter_icons/TV_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
                         TECHNICKÉ<br>VĚDY
                     </div>
                 </div>
-                <div class="carousel__filter-button">
+                <div class="carousel__filter-button" tabindex="0" aria-label="Vědy o neživé přírodě">
                     <img src="images/filter_icons/VoNP_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
                         VĚDY O NEŽIVÉ<br>PŘÍRODĚ
                     </div>
                 </div>
-                <div class="carousel__filter-button">
+                <div class="carousel__filter-button" tabindex="0" aria-label="Lékařské a biologické vědy">
                     <img src="images/filter_icons/LaBV_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
                         LÉKAŘSKÉ<br>A BIOLOGICKÉ VĚDY
                     </div>
                 </div>
-                <div class="carousel__filter-button">
+                <div class="carousel__filter-button" tabindex="0" aria-label="Společenské a humanitní vědy">
                     <img src="images/filter_icons/SaHV_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
                         SPOLEČENSKÉ<br>A HUMANITNÍ VĚDY
                     </div>
                 </div>
-                <div class="carousel__filter-button">
+                <div class="carousel__filter-button" tabindex="0" aria-label="Zemědělské a biologicko-environmentální vědy">
                     <img src="images/filter_icons/ZaBEV_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
                         ZEMĚDĚLSKÉ A BIOLOGICKO-<br>ENVIROMENTÁLNÍ VĚDY
@@ -116,7 +116,7 @@
             </div>
             <div class="header-logo">
                 <a href="https://gacr.cz/" target="_blank">
-                    <img class="header-logo-img" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
+                    <img class="header-logo-img" src="images/pngs/gacr_logo.png" alt="Logo GA ČR">
                 </a>
             </div>
             <div class="carousel__filter-label">
@@ -129,14 +129,14 @@
         <section id="projectCarousel" class="carousel slide carousel-fade" aria-label="Přehlídka výzkumných projektů">
             <div class="carousel-inner">
                 <!-- Slide 1 -->
-                <div class="carousel-item" data-filter-index="0" role="group" aria-label="Projekt">
+                <div class="carousel-item" data-filter-index="0" role="group" aria-labelledby="a-title">
                     <img src="images/articles/background/OK4.5_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
                                 <h1 class="a-title">RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Otevřít popis článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -147,7 +147,7 @@
                                         <p class="project-motto-text">„Projekt dokládá, že je stále nutné bojovat proti jakékoliv formě xenofobie a rasismu. Ne všechny komunity mají odpovídající postavení a zastoupení ve veřejném životě.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK4.5_Čapková.png" alt="Author 1">
+                                        <img class="author-img" src="images/articles/authors/OK4.5_Čapková.png" alt="Autor článku">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">Mgr. Kateřina Čapková, Ph.D.</h2>
@@ -158,7 +158,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Otevřít text článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -175,14 +175,14 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="1" role="group" aria-label="Projekt">
+                <div class="carousel-item" data-filter-index="1" role="group" aria-labelledby="a-title">
                     <img src="images/articles/background/OK5.5_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
                                 <h1 class="a-title">VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Otevřít popis článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -193,7 +193,7 @@
                                         <p class="project-motto-text">„Zdánlivě stejná zvířata pocházející z různých lokalit mohou být ve skutečnosti jinými druhy, takže se spolu nedokáží křížit nebo se jim rodí neplodní potomci.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK5.5_Vozdova.png" alt="Author 1">
+                                        <img class="author-img" src="images/articles/authors/OK5.5_Vozdova.png" alt="Autor článku">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">Mgr. Miluše Vozdová, Ph.D.</h2>
@@ -204,7 +204,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Otevřít text článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -221,14 +221,14 @@
                     </div>
                 </div>
 
-                <div class="carousel-item active" data-filter-index="2" role="group" aria-label="Projekt">
+                <div class="carousel-item active" data-filter-index="2" role="group" aria-labelledby="a-title">
                     <img src="images/articles/background/OK1.1_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
                                 <h1 class="a-title">DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Otevřít popis článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -239,7 +239,7 @@
                                         <p class="project-motto-text">„Jednou by náš software mohl být v malém přístroji, který přímo v terénu určí, jakou bakterií se pacient nakazil.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK1.1_Vitkova.png" alt="Author 1">
+                                        <img class="author-img" src="images/articles/authors/OK1.1_Vitkova.png" alt="Autor článku">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">Ing. Helena Vítková, Ph.D.</h2>
@@ -250,7 +250,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Otevřít text článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -267,14 +267,14 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="3" role="group" aria-label="Projekt">
+                <div class="carousel-item" data-filter-index="3" role="group" aria-labelledby="a-title">
                     <img src="images/articles/background/OK2.1_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
                                 <h1 class="a-title">VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Otevřít popis článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -285,7 +285,7 @@
                                         <p class="project-motto-text">„Poznáváme mikrosvět, který sice přímo nevidíme a chová se podivně, ale může v budoucnu přinést obrovské objevy.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK2.1_Filip.png" alt="Author 1">
+                                        <img class="author-img" src="images/articles/authors/OK2.1_Filip.png" alt="Autor článku">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">prof. Mgr. Radim Filip, Ph.D.</h2>
@@ -296,7 +296,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Otevřít text článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -313,14 +313,14 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="4" role="group" aria-label="Projekt">
+                <div class="carousel-item" data-filter-index="4" role="group" aria-labelledby="a-title">
                     <img src="images/articles/background/OK3.1_b.webp" class="d-block bg-img a-background-img" alt="...">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
                                 <h1 class="a-title">SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Open article">
+                            <button class="slide_butt1" onclick="slideRectangle1()" aria-label="Otevřít popis článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -331,7 +331,7 @@
                                         <p class="project-motto-text">„Je zajímavé potenciál blokování aktivity genů lépe poznat a vyzkoumat, jestli by se dala využít jako staronový doplněk do našeho imunitního systému při obraně proti virům.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK3.1_Svoboda.png" alt="Author 1">
+                                        <img class="author-img" src="images/articles/authors/OK3.1_Svoboda.png" alt="Autor článku">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">prof. Mgr. Petr Svoboda, Ph.D. </h2>
@@ -342,7 +342,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Expand article">
+                            <button class="slide_butt2" onclick="slideRectangle2()" aria-label="Otevřít text článku">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
@@ -361,7 +361,7 @@
             </div>
 
             <!-- Carousel control -->
-            <button class="carousel-control-prev" type="button">
+            <button class="carousel-control-prev" type="button" aria-label="Přejít na předchozí článek">
                 <span class="carousel-arrow">
                     <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -369,7 +369,7 @@
                 </span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button">
+            <button class="carousel-control-next" type="button" aria-label="Přejít na následující článek">
                 <span class="carousel-arrow">
                     <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -382,12 +382,12 @@
 
         <div id="pager-carousel" class="splide">
             <div class="splide__arrows splide__arrows--ltr">
-                <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous slide">
+                <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Přejít na předchozí obrázek">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
                         <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="white"></path>
                     </svg>
                 </button>
-                <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide">
+                <button class="splide__arrow splide__arrow--next" type="button" aria-label="Přejít na následující obrázek">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
                         <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z" fill="white"></path>
                     </svg>
@@ -481,7 +481,7 @@
                 <svg viewBox="0 0 1000 40" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                     <path id="linepath" d="M 0 24 Q 250 -14 500 24 T 1000 24" fill="transparent" stroke="white" class="line"/>
                 </svg>
-                <button class="slideDownButt" onClick="scrollDown()" aria-label="Scroll down to Interesting facts">
+                <button class="slideDownButt" onClick="scrollDown()" aria-label="Přejít níže na indikátory výzkumu">
                     <img src="images/svgs/šipka.svg" alt="">
                 </button>
             </div>
@@ -493,7 +493,7 @@
                                 <img src="images/pngs/gacr_logo.png" class="lower-section-logo-img" alt="Logo Grantové agentury ČR">
                             </a>
                         </div>
-                        <button class="indicator-slide_butt" onclick="slideDownTextLogo()" aria-label="Otevřít článek">
+                        <button class="indicator-slide_butt" onclick="slideDownTextLogo()" aria-label="Otevřít popis článku">
                             <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
                         </button>
                         <p class="single-indicator-p">Grantová agentura České republiky přes 30 let podporuje špičkový základní výzkum napříč všemi
@@ -506,13 +506,13 @@
                     <article class="single-indicator" aria-label="Článek o podpořených myšlenkách">
                         <div class="indicator">
                             <div class="indicator-svg-div">
-                                <img src="images/indicators/Podporene_myslenky1.svg" alt="Indicator SVG" class="indicator-svg1">
-                                <img src="images/indicators/Podporene_myslenky2.svg" alt="Indicator SVG" class="indicator-svg2">
+                                <img src="images/indicators/Podporene_myslenky1.svg" alt="" class="indicator-svg1">
+                                <img src="images/indicators/Podporene_myslenky2.svg" alt="" class="indicator-svg2">
                             </div>
-                            <div class="indicator-num loading-effect" data-value="20">00 000</div>
+                            <div class="indicator-num loading-effect" aria-label="20 000" data-value="20">00 000</div>
                             <div class="indicator-text">Podpořených<br>myšlenek</div>
                         </div>
-                        <button class="indicator-slide_butt" onclick="IndicatorActive(0)" aria-label="Otevřít článek">
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(0)" aria-label="Otevřít popis článku">
                             <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
                         </button>
                         <p class="single-indicator-p">Grantová agentura České republiky doposud podpořila přes 20 tisíc myšlenek a projektů, které
@@ -527,13 +527,13 @@
                     <article class="single-indicator" aria-label="Článek o podpoře univerzit">
                         <div class="indicator">
                             <div class="indicator-svg-div">
-                                <img src="images/indicators/AVCR_a_univerzity1.svg" alt="Indicator SVG" class="indicator-svg1">
-                                <img src="images/indicators/AVCR_a_univerzity2.svg" alt="Indicator SVG" class="indicator-svg2">
+                                <img src="images/indicators/AVCR_a_univerzity1.svg" alt="" class="indicator-svg1">
+                                <img src="images/indicators/AVCR_a_univerzity2.svg" alt="" class="indicator-svg2">
                             </div>
-                            <div class="indicator-num loading-effect" data-value="99%">00 %</div>
+                            <div class="indicator-num loading-effect" aria-label="99 %" data-value="99%">00 %</div>
                             <div class="indicator-text">Grantů pro univerzity<br>a AV ČR</div>
                         </div>
-                        <button class="indicator-slide_butt" onclick="IndicatorActive(1)" aria-label="Otevřít článek">
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(1)" aria-label="Otevřít popis článku">
                             <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
                         </button>
                         <p class="single-indicator-p">Vědci v základním výzkumu jsou poháněni touhou po poznání. S každou novou hypotézou se vydávají
@@ -547,13 +547,13 @@
                     <article class="single-indicator" aria-label="Článek o Rozvinutých nápadech">
                         <div class="indicator">
                             <div class="indicator-svg-div">
-                                <img src="images/indicators/Nejlepsich_napadu1.svg" alt="Indicator SVG" class="indicator-svg1">
-                                <img src="images/indicators/Nejlepsich_napadu2.svg" alt="Indicator SVG" class="indicator-svg2">
+                                <img src="images/indicators/Nejlepsich_napadu1.svg" alt="" class="indicator-svg1">
+                                <img src="images/indicators/Nejlepsich_napadu2.svg" alt="" class="indicator-svg2">
                             </div>
-                            <div class="indicator-num loading-effect" data-value="15%">00 %</div>
+                            <div class="indicator-num loading-effect" aria-label="15 %" data-value="15%">00 %</div>
                             <div class="indicator-text">Nejlepších nápadů<br>podpořeno</div>
                         </div>
-                        <button class="indicator-slide_butt" onclick="IndicatorActive(2)" aria-label="Otevřít článek">
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(2)" aria-label="Otevřít popis článku">
                             <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
                         </button>
                         <p class="single-indicator-p">Každý rok žádá o podporu několik tisíc myšlenek. Jak poznáme ty nejlepší? Hodnotí je panely složené
@@ -567,13 +567,13 @@
                     <article class="single-indicator" aria-label="Článek o publikovaných objevech">
                         <div class="indicator">
                             <div class="indicator-svg-div">
-                                <img src="images/indicators/Objevu_publikovano1.svg" alt="Indicator SVG" class="indicator-svg1">
-                                <img src="images/indicators/Objevu_publikovano2.svg" alt="Indicator SVG" class="indicator-svg2">
+                                <img src="images/indicators/Objevu_publikovano1.svg" alt="" class="indicator-svg1">
+                                <img src="images/indicators/Objevu_publikovano2.svg" alt="" class="indicator-svg2">
                             </div>
-                            <div class="indicator-num loading-effect" data-value="38%">00 %</div>
+                            <div class="indicator-num loading-effect" aria-label="38 %" data-value="38%">00 %</div>
                             <div class="indicator-text">Objevů publikováno v nejprestižnějších<br>vědeckých časopisech</div>
                         </div>
-                        <button class="indicator-slide_butt" onclick="IndicatorActive(3)" aria-label="Otevřít článek">
+                        <button class="indicator-slide_butt" onclick="IndicatorActive(3)" aria-label="Otevřít popis článku">
                             <img src="images/svgs/expand_right.svg" class="indicators-expand-butt-img" alt="">
                         </button>
                         <p class="single-indicator-p">Vědci své objevy zveřejňují zpravidla ve vědeckých časopisech. Publikovat objev v kvalitním časopisu
