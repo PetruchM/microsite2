@@ -1,6 +1,6 @@
 # TODOs 
 
-
+- sjednotit media podminky pro mobily, zvlast prozkoumat mod "zobrazení pro počítač na mobilech"
 ## Steps to completion
 
 
