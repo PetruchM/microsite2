@@ -30,13 +30,13 @@
     stroke-dasharray: 5px;
     stroke-dashoffset: 0;
     stroke-width: 2px;
-    z-index: 15;
-    animation: dash 5s linear infinite;
+    will-change: stroke-dashoffset;
+    animation: dash 0.5s linear infinite;
 }
 
 @keyframes dash {
     to {
-        stroke-dashoffset: -100px;
+        stroke-dashoffset: -10px;
     }
 }
 svg {
