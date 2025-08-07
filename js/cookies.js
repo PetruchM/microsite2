@@ -22,6 +22,12 @@ function openSettings() {
     document.querySelector('.cookies-details').style.display = 'block';
     document.querySelector('.coookies-links').style.display = 'block';
     document.querySelector('#cookie-banner').style.display = 'block';
+    document.querySelector('#cookie-setting-button').textContent = 'Uložit předvolby';
+    document.querySelector('#cookie-setting-button').onclick = saveSettings;
+}
+
+function saveSettings() {
+  console.log('Settings saved');
 }
 
 function loadAnalytics() {
@@ -44,3 +50,9 @@ window.addEventListener('load', () => {
     document.getElementById('cookie-banner').style.display = 'flex';
   }
 });
+
+
+const toggle = document.getElementById('toggleSwitch');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+  });
