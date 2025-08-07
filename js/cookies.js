@@ -26,7 +26,8 @@ function openSettings() {
     document.querySelector('#cookie-setting-button').onclick = saveSettings;
 }
 
-function saveSettings() {
+function saveSettings() {///////////////////úúúupravit
+  acceptCookies();
   console.log('Settings saved');
 }
 
@@ -52,7 +53,7 @@ window.addEventListener('load', () => {
 });
 
 
-const toggle = document.getElementById('toggleSwitch');
+const toggle = document.getElementById('toggleSwitch');//////////////
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
   });
