@@ -1,7 +1,16 @@
+:root {
+    --yellow: #ffc20e;
+    --yellow85: rgba(255, 194, 14, 0.85);
+    --yellow75: rgba(255, 194, 14, 0.75);
+    --blue-bg: #06274a;
+    --brighter-blue: #0a3d74;
+    --blue-card: #4292b6;
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--blue-bg);
+    background-color: white;
     overflow-x: hidden;
 }
 

@@ -1,0 +1,55 @@
+
+.cookies-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookies-buttons button {
+    border-radius: 2.5vh;
+    background-color: var(--yellow);
+    color: var(--blue-bg);
+    cursor: pointer;
+    border: none;
+}
+
+
+@media (max-width: 1024px) or (max-aspect-ratio: 1/1) {
+    
+}
+
+
+
+
+.switch {
+    position: relative;
+    width: clamp(40px, 10vw, 60px);
+    aspect-ratio: 2 / 1;
+    background-color: #fbbfa7;
+    border: 0.25em solid #205cdd;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 35%;
+    height: 80%;
+    background-color: #d65f5f;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.switch.active {
+    background-color: #a1f0b9;
+}
+
+.switch.active::before {
+    transform: translateX(140%);
+    background-color: #3fbf74;
+}

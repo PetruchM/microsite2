@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Správa souhlasu s cookies</title>
+    <link rel="icon" href="images/pngs/gacr-favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/consent-page.css">
 </head>
-<body style="font-family: Arial, sans-serif; margin: 2rem;">
+<body>
+<div class="header_access">
+ <a href="https://gacr.cz/" target="_blank">
+    <img src="images/pngs/gacr_logo.png" alt="Logo GAČR">
+ </a>
+</div>
+<div class="content">
 
     <h1>Správa souhlasu s cookies</h1>
-    <p>Na tomto webu používáme cookies blabla</p>
-
-    <div style="margin-top: 2rem;">
-        <button onclick="acceptCookies()" style="padding: 10px 20px; margin-right: 10px;">Povolit cookies</button>
-        <button onclick="rejectCookies()" style="padding: 10px 20px;">Odmítnout cookies</button>
-    </div>
-
-    <script>
-    function acceptCookies() {
-        const date = new Date();
-        date.setFullYear(date.getFullYear() + 1);
-        document.cookie = "cookie_consent=true; expires=" + date.toUTCString() + "; path=/";
-    }
-
-    function rejectCookies() {
-        const date = new Date();
-        date.setFullYear(date.getFullYear() + 1);
-        document.cookie = "cookie_consent=false; expires=" + date.toUTCString() + "; path=/";
-    }
-    </script>
+    <h2 id="cookies-title">Tento web používá cookies pouze pro analýzu návštěvnosti. </h2>
+        <div class="cookies-details">
+            <p>Abychom poskytli co nejlepší služby, používáme k ukládání a/nebo přístupu k informacím o zařízení, technologie jako jsou soubory cookies. Souhlas s těmito technologiemi nám umožní zpracovávat údaje, jako je chování při procházení nebo jedinečná ID na tomto webu. Nesouhlas nebo odvolání souhlasu může nepříznivě ovlivnit určité vlastnosti a funkce.</p>
+            <div>
+                <h2>Funkční (Vždy aktivní)</h2>
+                <p>Technické uložení nebo přístup je nezbytně nutný pro legitimní účel umožnění použití konkrétní služby, kterou si odběratel nebo uživatel výslovně vyžádal, nebo pouze za účelem provedení přenosu sdělení prostřednictvím sítě elektronických komunikací.</p>
+            </div>
+            <div>
+                <h2>Statistiky (Volitelné. Pomáhají nám zlepšovat web.)</h2>
+                <div class="switch active" id="toggleSwitch"></div>
+                <p>Technické uložení nebo přístup, který se používá výhradně pro anonymní statistické účely. Bez předvolání, dobrovolného plnění ze strany vašeho Poskytovatele internetových služeb nebo dalších záznamů od třetí strany nelze informace, uložené nebo získané pouze pro tento účel, obvykle použít k vaší identifikaci.</p>
+            </div>
+            <p>Tento web nevyužívá marketingové cookies.</p>
+        </div>
+        <div class="cookies-buttons">
+            <button onclick="acceptCookies()" style="margin-left:10px;">Přijmout</button>
+            <button onclick="declineCookies()" style="margin-left:10px;">Odmítnout vše</button>
+            <button id="cookie-setting-button"onclick="openSettings()" style="margin-left:10px;">Uložit předvolby</button>
+        </div>
+        <div class="coookies-links">
+            <a class="cookie-statement" href="cookie-policy.html" data-relative_url="">Zásady cookies</a>
+            <a class="privacy-statement" href="ochrana-osobnich-udaju-a-gdpr.html" data-relative_url="">Ochrana osobních údajů a GDPR v&nbsp;Grantové agentuře České republiky</a>
+            <a class="impressum" href="povinne-zverejnovane-informace.html" data-relative_url="">Povinně zveřejňované informace</a>
+        </div>
+</div>
+    <script src="js/cookies.js"></script>
 
 </body>
 </html>
