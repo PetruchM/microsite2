@@ -89,33 +89,33 @@
 
 
 .switch {
-      position: relative;
-      width: 4vw;
-      height: 2vw;
-      background-color: #fbbfa7;
-      border: 4px solid #205cdd;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+    position: relative;
+    width: clamp(40px, 10vw, 60px);
+    aspect-ratio: 2 / 1;
+    background-color: #fbbfa7;
+    border: 0.25em solid #205cdd;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    .switch::before {
-      content: "";
-      position: absolute;
-      top: 0.2vw;
-      left: 0.2vw;
-      width: 1vw;
-      height: 1vw;
-      background-color: #d65f5f;
-      border-radius: 50%;
-      transition: transform 0.3s;
-    }
+.switch::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 35%;
+    height: 80%;
+    background-color: #d65f5f;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
 
-    .switch.active {
-      background-color: #a1f0b9;
-    }
+.switch.active {
+    background-color: #a1f0b9;
+}
 
-    .switch.active::before {
-      transform: translateX(2vw);
-      background-color: #3fbf74;
-    }
+.switch.active::before {
+    transform: translateX(140%);
+    background-color: #3fbf74;
+}
