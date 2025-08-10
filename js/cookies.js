@@ -26,9 +26,19 @@ function openSettings() {
     document.querySelector('#cookie-setting-button').onclick = saveSettings;
 }
 
-function saveSettings() {///////////////////úúúupravit
-  acceptCookies();
+const toggle = document.getElementById('toggleSwitch');
+
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+  });
+
+function saveSettings() {
   console.log('Settings saved');
+  if (toggle.classList.contains('active')) {
+    acceptCookies();
+  } else {
+    declineCookies();
+  }
 }
 
 function loadAnalytics() {
@@ -51,9 +61,3 @@ window.addEventListener('load', () => {
     document.getElementById('cookie-banner').style.display = 'flex';
   }
 });
-
-
-const toggle = document.getElementById('toggleSwitch');//////////////
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-  });
