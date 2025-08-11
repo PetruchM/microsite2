@@ -29,12 +29,116 @@ body{
 
 .content{
     position: relative;
-    left: 2vw;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    width: 96%;
 }
 
 * {
     font-family: "Montserrat", sans-serif;
 }
+
+
+/* ----- contentgrafie – základ ----- */
+:root {
+  --text: #121212;
+  --muted: #5d5d5d;
+  --bg: #ffffff;
+  --accent: #0f62fe;
+
+  /* vertikální rytmus a šířka řádku */
+  --leading: 1.6;
+  --measure: 65ch;
+
+  /* škálování nadpisů (fluidní) */
+  --h1: clamp(1.8rem, 1.2rem + 2.4vw, 2.8rem);
+  --h2: clamp(1.25rem, 0.9rem + 1.2vw, 1.8rem);
+  --h3: clamp(1.05rem, 0.9rem + 0.6vw, 1.25rem);
+
+  /* mezery (8px scale) */
+  --space-1: .25rem; /* 4px */
+  --space-2: .5rem;  /* 8px */
+  --space-3: .75rem; /* 12px */
+  --space-4: 1rem;   /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem;   /* 32px */
+}
+
+.content {
+  color: var(--text);
+  background: var(--bg);
+  line-height: var(--leading);
+  letter-spacing: 0.01em;
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-6) var(--space-4);
+
+  /* CZ: povolit dělení slov a uvozovky */
+  hyphens: auto;
+  hanging-punctuation: first;
+}
+
+/* ----- Odstavce ----- */
+.content p {
+  margin: 0 0 var(--space-4);
+  color: var(--text);
+}
+
+/* ----- Nadpisy ----- */
+.content h1,
+.content h2,
+.content h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0; /* reset */
+  letter-spacing: -0.01em;
+}
+
+.content h1 {
+  font-size: var(--h1);
+  margin-block: 0 0;              /* nahoře nic, ať první nadpis nepřidává mezeru */
+  padding-block-end: var(--space-3);
+  border-bottom: 1px solid color-mix(in oklab, var(--text) 15%, transparent);
+}
+
+.content h2 {
+  font-size: var(--h2);
+  margin-block: var(--space-5) var(--space-2);
+}
+
+.content h3 {
+  font-size: var(--h3);
+  margin-block: var(--space-4) var(--space-2);
+  color: var(--text);
+}
+
+/* ----- Sousedící contentgrafické mezery (vertikální rytmus) ----- */
+.content h1 + p,
+.content h2 + p,
+.content h3 + p { margin-top: var(--space-2); }
+
+.content p + h2,
+.content p + h3 { margin-top: var(--space-5); }
+
+/* ----- Odkazy ----- */
+.content a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.08em;
+}
+
+/* ----- Obrázky/tabulky/lists (když by byly) ----- */
+.content img,
+.content table,
+.content blockquote,
+.content ul,
+.content ol {
+  margin-block: var(--space-4);
+}
+
+/* Nepřesahovat obsah */
+.content :where(img, table) { max-width: 100%; }
+

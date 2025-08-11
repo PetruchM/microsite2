@@ -7,6 +7,8 @@
 }
 
 .cookies-buttons button {
+    width: 20%;
+    aspect-ratio: 3 / 1;
     border-radius: 2.5vh;
     background-color: var(--yellow);
     color: var(--blue-bg);
@@ -24,7 +26,7 @@
 
 .switch {
     position: relative;
-    width: clamp(40px, 10vw, 60px);
+    width: clamp(20px, 5vw, 30px);
     aspect-ratio: 2 / 1;
     background-color: #fbbfa7;
     border: 0.25em solid #205cdd;
