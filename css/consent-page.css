@@ -16,6 +16,14 @@
     border: none;
 }
 
+.cookies-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 2vh;
+}
 
 @media (max-width: 1024px) or (max-aspect-ratio: 1/1) {
     
