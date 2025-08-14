@@ -37,22 +37,6 @@
     </head>
 
     <body class="no-overflow">
-        <!-- Intro transition  -->
-        <section class="intro-overlay" role="dialog" aria-label="Uvítání">
-            <div class="intro-header">
-                <a href="https://gacr.cz/" target="_blank">
-                    <img class="intro-logo" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
-                </a>
-            </div>
-            <div class="intro-column">
-                <h1>VYDEJTE SE S NÁMI AŽ NA<br>SAMOU HRANICI POZNÁNÍ</h1>
-                <button class="intro-button" aria-label="Začít prohlížet projekty">
-                    Už jdu!
-                </button>
-            </div>
-            <img src="images/pngs/intro-emblem.png" class="intro-image" alt="">
-        </section>
-
         <!--cookies-->
         <div id="cookie-banner" role="region" aria-labelledby="cookies-title">
             <h2 id="cookies-title">Tento web používá cookies pouze pro analýzu návštěvnosti. </h2>
@@ -81,9 +65,25 @@
 			</div>
         </div>
 
+        <!-- Intro transition  -->
+        <section class="intro-overlay" role="dialog" aria-label="Uvítání">
+            <div class="intro-header">
+                <a href="https://gacr.cz/" target="_blank">
+                    <img class="intro-logo" src="images/pngs/gacr_logo.png" alt="Logo GAČR">
+                </a>
+            </div>
+            <div class="intro-column">
+                <h1>VYDEJTE SE S NÁMI AŽ NA<br>SAMOU HRANICI POZNÁNÍ</h1>
+                <button class="intro-button" aria-label="Začít prohlížet projekty">
+                    Už jdu!
+                </button>
+            </div>
+            <img src="images/pngs/intro-emblem.png" class="intro-image" alt="">
+        </section>
+
         <!-- Slide filtering -->
-        <nav id="filter" class="filter-header" role="navigation" aria-label="Filtry pro výběr okruhů projektů">
-            <div class="carousel__filter-container">
+        <header id="filter" class="filter-header" role="navigation" aria-label="Filtry pro výběr okruhů projektů">
+            <nav class="carousel__filter-container">
                 <div class="carousel__filter-button" tabindex="0" aria-label="Technické vědy">                  
                     <img src="images/filter_icons/TV_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
@@ -114,7 +114,7 @@
                         ZEMĚDĚLSKÉ A BIOLOGICKO-<br>ENVIROMENTÁLNÍ VĚDY
                     </div>
                 </div>
-            </div>
+            </nav>
             <div class="header-logo">
                 <a href="https://gacr.cz/" target="_blank">
                     <img class="header-logo-img" src="images/pngs/gacr_logo.png" alt="Logo GA ČR">
@@ -123,7 +123,7 @@
             <div class="carousel__filter-label">
                 Soucasny filter
             </div>
-        </nav>
+        </header>
 
 
         <!-- Main Carousel -->
@@ -131,7 +131,7 @@
             <div class="carousel-inner">
                 <!-- Slide 1 -->
                 <div class="carousel-item" data-filter-index="0" role="group" aria-labelledby="a-title">
-                    <img src="images/articles/background/OK4.5_b.webp" class="d-block bg-img a-background-img" alt="...">
+                    <img src="images/articles/background/OK4.5_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
@@ -148,7 +148,7 @@
                                         <p class="project-motto-text">„Projekt dokládá, že je stále nutné bojovat proti jakékoliv formě xenofobie a rasismu. Ne všechny komunity mají odpovídající postavení a zastoupení ve veřejném životě.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK4.5_Čapková.png" alt="Autor článku">
+                                        <img class="author-img" src="images/articles/authors/OK4.5_Čapková.png" alt="" aria-labelledby="author-name">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">Mgr. Kateřina Čapková, Ph.D.</h2>
@@ -174,7 +174,7 @@
                 </div>
 
                 <div class="carousel-item" data-filter-index="1" role="group" aria-labelledby="a-title">
-                    <img src="images/articles/background/OK5.5_b.webp" class="d-block bg-img a-background-img" alt="...">
+                    <img src="images/articles/background/OK5.5_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
@@ -191,7 +191,7 @@
                                         <p class="project-motto-text">„Zdánlivě stejná zvířata pocházející z různých lokalit mohou být ve skutečnosti jinými druhy, takže se spolu nedokáží křížit nebo se jim rodí neplodní potomci.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK5.5_Vozdova.png" alt="Autor článku">
+                                        <img class="author-img" src="images/articles/authors/OK5.5_Vozdova.png" alt="" aria-labelledby="author-name">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">Mgr. Miluše Vozdová, Ph.D.</h2>
@@ -217,7 +217,7 @@
                 </div>
 
                 <div class="carousel-item active" data-filter-index="2" role="group" aria-labelledby="a-title">
-                    <img src="images/articles/background/OK1.1_b.webp" class="d-block bg-img a-background-img" alt="...">
+                    <img src="images/articles/background/OK1.1_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
@@ -234,7 +234,7 @@
                                         <p class="project-motto-text">„Jednou by náš software mohl být v malém přístroji, který přímo v terénu určí, jakou bakterií se pacient nakazil.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK1.1_Vitkova.png" alt="Autor článku">
+                                        <img class="author-img" src="images/articles/authors/OK1.1_Vitkova.png" alt="" aria-labelledby="author-name">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">Ing. Helena Vítková, Ph.D.</h2>
@@ -260,7 +260,7 @@
                 </div>
 
                 <div class="carousel-item" data-filter-index="3" role="group" aria-labelledby="a-title">
-                    <img src="images/articles/background/OK2.1_b.webp" class="d-block bg-img a-background-img" alt="...">
+                    <img src="images/articles/background/OK2.1_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
@@ -277,7 +277,7 @@
                                         <p class="project-motto-text">„Poznáváme mikrosvět, který sice přímo nevidíme a chová se podivně, ale může v budoucnu přinést obrovské objevy.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK2.1_Filip.png" alt="Autor článku">
+                                        <img class="author-img" src="images/articles/authors/OK2.1_Filip.png" alt="" aria-labelledby="author-name">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">prof. Mgr. Radim Filip, Ph.D.</h2>
@@ -303,7 +303,7 @@
                 </div>
 
                 <div class="carousel-item" data-filter-index="4" role="group" aria-labelledby="a-title">
-                    <img src="images/articles/background/OK3.1_b.webp" class="d-block bg-img a-background-img" alt="...">
+                    <img src="images/articles/background/OK3.1_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
@@ -320,7 +320,7 @@
                                         <p class="project-motto-text">„Je zajímavé potenciál blokování aktivity genů lépe poznat a vyzkoumat, jestli by se dala využít jako staronový doplněk do našeho imunitního systému při obraně proti virům.“</p>
                                     </div>
                                     <div class="author-img-div">
-                                        <img class="author-img" src="images/articles/authors/OK3.1_Svoboda.png" alt="Autor článku">
+                                        <img class="author-img" src="images/articles/authors/OK3.1_Svoboda.png" alt="" aria-labelledby="author-name">
                                     </div>
                                     <div class="author-text-div">
                                         <h2 class="author-name">prof. Mgr. Petr Svoboda, Ph.D. </h2>
