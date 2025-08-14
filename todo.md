@@ -12,6 +12,8 @@
 
 - vyčistit  nepotřebné
 
+- po overly scrool nahoru a kolečko ma zacatek na tlacitku ne na kurzoru
+
 
 
 
