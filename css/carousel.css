@@ -35,6 +35,13 @@
     margin-right: 10%;
 }
 
+.carousel-control-next:focus-visible .carousel-arrow,
+.carousel-control-prev:focus-visible .carousel-arrow {
+  outline: 3px solid var(--blue-bg);
+  outline-offset: 4px;
+}
+
+
 .bg-img {
     /* max-width: 100%; */
     top: 10vh;
