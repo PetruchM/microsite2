@@ -12,8 +12,6 @@
 
 - vyčistit  nepotřebné
 
-- při vrácení na halvni stranku at se už nezorbezí intro overlay
-
 
 
 
