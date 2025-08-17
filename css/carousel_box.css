@@ -8,7 +8,6 @@
   position: absolute;    
   height: 100%;
   width: 24vw;
-  /* top: 14%; */
   left: 14vw;
   padding: 0.5vw;
   transition: all 0.5s ease-in-out;
@@ -49,7 +48,6 @@
   top: 50%;
   right: 0;
   transform: translate(50%, -50%);
-  /*padding: 10px;  does this change something?*/
   color: #fff;
   border: none;
   cursor: pointer;
@@ -77,31 +75,12 @@
   /* button img rotation smooth */
 }
 
-/* .slide_butt3 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  padding: 0.5vw;
-  background-color: rgba(0,0,0,0);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  display: none;
-  z-index: 10;
-} */
-
 .button_rotate_on_activation img{
   transform: rotate(180deg);
 }
 
 .info_active1 {
   transform: translate(100%, 0%);
-}
-
-.opacity75 {
-  background-color: var(--yellow75);
-  opacity: 1;
 }
 
 .opacity85 {
@@ -135,18 +114,7 @@
   color: var(--blue-bg);
 }
 
-/* box 2 */
-/* what is this for? there are no h1 under info 2 or 3 boxes */
-/* .box-info2-content h1, .box-info3-content h1 {
-  font-size: 1.6rem;
-  padding-left: 25px;
-  padding-top: 5px;
-  color: var(--blue-bg);
-} */
-
 .project-info {
-  /* font-size: 1vh;  is decided on lower level.author text and .project motto*/
-  /* font-weight: 400; */
   margin: 0;
   padding: 0vh 0.7vw 10vh 1.5vw;
   color: var(--blue-bg);
