@@ -97,6 +97,7 @@ async function setFilter(button, index) {
 }
 
 async function filterCarousel(index) {
+  hideAll();
   await updateSlides(index);
   activateDesiredSlide(index);
   updatePagerCarousel(index);
