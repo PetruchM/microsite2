@@ -1,4 +1,4 @@
-@media (max-width: 1024px) or (max-aspect-ratio: 1/1){ /*so mainly for screens up to 1024px and secondly for high resolution mobile phones (so above 1024px but lower ratio)*/
+@media (max-width: 50em) or (max-aspect-ratio: 1/1){ /*so mainly for screens up to 1024px and secondly for high resolution mobile phones (so above 1024px but lower ratio)*/
     /* transition */
     .moving-dashed-line{
         height: 9vw;

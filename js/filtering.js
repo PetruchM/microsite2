@@ -218,7 +218,7 @@ function loadNextArticle(activeSlide, direction) {
 /* Handle window resize for background image switch */
 
 function updateCarousels(){
-  const nowPC = window.innerWidth >= 1024;
+  const nowPC = window.innerWidth >= 800;
   if (nowPC !== onPC) {
     onPC = nowPC;
     filterCarousel(currentFilter);

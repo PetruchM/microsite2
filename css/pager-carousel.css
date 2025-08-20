@@ -55,7 +55,7 @@
         bottom: 2vh
     }
 
-@media ((max-width: 1024px) or (max-aspect-ratio: 1/1)){
+@media ((max-width: 50em) or (max-aspect-ratio: 1/1)){
     #pager-carousel {
         top: calc(var(--vh) * 85);
         left: 7.5vw;

@@ -61,7 +61,7 @@
 }
 
 
-@media (max-width: 1024px) or (max-aspect-ratio: 1/1) {
+@media (max-width: 50em) or (max-aspect-ratio: 1/1) {
     #cookie-banner {
         flex-direction: column;
         align-items: center;

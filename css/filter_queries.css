@@ -1,5 +1,5 @@
 /* phone filters */
-@media (max-width: 1023px) {
+@media (max-width: 50em) {
     .slide-content img {
         height: 350px !important;
         object-fit: cover;

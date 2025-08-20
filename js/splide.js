@@ -8,7 +8,7 @@ const splide = new Splide('#pager-carousel', {
       drag: false, //fragging mause or sliding temporarily disabled
       pagination: false,
       breakpoints: {
-        1023: {
+        800: {
         direction: 'ltr',
         height: null,
         width: '85vw',

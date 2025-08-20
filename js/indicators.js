@@ -63,7 +63,7 @@ function updatePathBasedOnWidth() {
     const narrowLinePath = "M 0 20 Q 250 -40 500 20 T 1000 20";
 
     // Change the path based on the window width
-    if (windowWidth < 1024) {
+    if (windowWidth < 800) {
         linepathElement.setAttribute('d', narrowLinePath);
     } else {
         linepathElement.setAttribute('d', defaultLinePath);
