@@ -31,7 +31,7 @@
         padding-right: 8%;
       }
     .box-info1-content h1 {
-        font-size: 4vw;
+        font-size: clamp(1.1rem, 1rem + 1vw, 1.6rem);
         font-weight: 700;
         margin: 0;
         padding: 0;
@@ -69,11 +69,6 @@
         transform: translate(0%, 100%);
     }
 
-    /* .box-info2.hide_left {
-        transform: translate(0%, 100%);
-        opacity: 0;
-    } */
-
     .slide_butt1 img {
         transform: rotate(-90deg);
     }
@@ -85,31 +80,6 @@
     .slide_butt2{
         display: none;
     }
-    /* .slide_butt2, .slide_butt3 {
-        opacity: 0;
-        transition: none;
-        left: 50%;
-        right: unset;
-        top:0;
-        display: block;
-        transform: translate(-50%, -50%);
-    }
-
-    .slide_butt2 img, .slide_butt3 img {
-        transform: rotate(90deg);
-    }
-
-    .box-info2.info_active1 > .slide_butt2 {
-        opacity: 1;
-    } */
-
-    /* .box-info2.hide_left > .slide_butt2 {
-        opacity: 1;
-    } */
-
-    /* .box-info3.info_active2 > .slide_butt3 {
-        opacity: 1;
-    } */
 
     .box-info3.info_active1 {
         opacity: 0;
@@ -137,11 +107,11 @@
 
     .project-motto-text {
         font-weight: 400;
-        font-size: 2.3vh;
+        font-size: clamp(0.9rem, 1rem + 1vw, 1.5rem);
     }
 
     .project-info-text-mobile {
-        font-size: 1.5vh;
+        font-size: clamp(0.7rem, 0.8rem + 0.5vw, 1.1rem);
         margin-top: 2vh;
     }
 
@@ -150,27 +120,19 @@
         /* and on mobile the third card is hidden */
         display: unset;
       }
+
+      .author-name {
+        font-size: clamp(0.8rem, 0.9rem + 0.5vw, 1.2rem);
+        font-weight: 700;
+        margin: 0;
+        padding-bottom: 1vh;
+        }
+
+        .author-institute{
+        font-weight: 400;
+        font-size: clamp(0.7rem, 0.8rem + 0.5vw, 1.1rem);
+        }
 }
-
-/* @media (max-width: 800px) {
-    .box-info1, .box-info2, .box-info3 {
-        width: 80vw;
-        max-width: 500px;
-        margin: auto;
-        top: 81%;
-        left: 10vw;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .expand-bttn-img {
-        width: 5vh;
-      }
-
-    .info_active1, .info_active2, .info_ready2 {
-        height: 68%;
-        top: 13.5%;
-    }
-} */
 
 @media (max-width: 400px) {
     .box-info1-content h1 {
