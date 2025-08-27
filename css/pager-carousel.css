@@ -83,3 +83,15 @@
         right: 0vw
     }
 }
+
+@media ((max-width: 50em) and (min-aspect-ratio: 1/1)){
+    #pager-carousel {
+        top: 100vw;
+    }
+
+    @media (max-width: 30em){
+        #pager-carousel {
+            top: 120vw;
+        }
+    }
+}
