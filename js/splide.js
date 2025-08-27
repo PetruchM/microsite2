@@ -56,6 +56,7 @@ const splide = new Splide('#pager-carousel', {
                 highlightMiddleSlide();
         });
         splide.mount();
+        setTimeout(() => { splide.refresh(); }, 500);  // Refresh after a short delay to ensure proper layout after the start slide change
     }
 
     // Klikání na obrázky
