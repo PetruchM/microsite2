@@ -1,5 +1,6 @@
 const splide = new Splide('#pager-carousel', {
       type: 'loop',
+      speed:500,
       direction: 'ttb', 
       height: '60vh',
       perPage: 5,
@@ -7,6 +8,7 @@ const splide = new Splide('#pager-carousel', {
       wheel: false,
       drag: false, //fragging mause or sliding temporarily disabled
       pagination: false,
+      waitForTransition: true,
       breakpoints: {
         800: {
         direction: 'ltr',
@@ -15,17 +17,6 @@ const splide = new Splide('#pager-carousel', {
         }
     }
     });
-
-    // splide.on('mounted', () => {
-    //     setTimeout(() => {
-    //         splide.go('-2');
-    //     }, 200);
-    //     setTimeout(() => {
-    //         splide.refresh();
-    //         highlightMiddleSlide();
-    //     }, 400);
-    // });
-    // setupSplideEvents();
     splide.mount();
 
     function splideFirstSetup(){
@@ -39,6 +30,12 @@ const splide = new Splide('#pager-carousel', {
 
     function updatePagerCarousel(filterIndex) {
         splide.destroy(true);
+
+        if (filterIndex === CONFIG.ALL_FILTER_INDEX) {
+            splide.options = {start: 23};
+        } else {
+            splide.options = {start: 3};
+        }
 
         pagerItems.forEach((item) => {
             const img = item.querySelector('img');
@@ -56,7 +53,7 @@ const splide = new Splide('#pager-carousel', {
         });
         splide.on('mounted', () => {
                 setupSplideEvents();
-                activateDesiredPagerSlide(filterIndex);
+                highlightMiddleSlide();
         });
         splide.mount();
     }
@@ -91,16 +88,4 @@ const splide = new Splide('#pager-carousel', {
         } else {
             console.warn("No slide found at index", targetIndex);
         }
-    }
-
-    function activateDesiredPagerSlide(filterIndex) {
-        //There was a problem with the pager carousel not updating correctly, when filtered on mobile phones, the splide is rebuild but as a horizontal one.
-        //That coused problems with the function splide.go() which caused that the slides were not visible so we need to wait like this
-        setTimeout(() => {
-            splide.go('-2');
-        }, 200);
-        setTimeout(() => {
-            splide.refresh();
-            highlightMiddleSlide();
-        }, 400);
     }

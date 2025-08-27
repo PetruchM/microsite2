@@ -14,6 +14,11 @@
     /* background-color: red; */
 }
 
+#projectCarousel .carousel-item {
+  transition-duration: 0,5s;           /* změníš délku */
+  transition-timing-function: ease-in-out;
+}
+
 #projectCarousel .carousel-control-next, #projectCarousel .carousel-control-prev {
     height: 80vh;
     width: 5%;

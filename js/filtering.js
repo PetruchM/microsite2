@@ -151,12 +151,28 @@ const nextButton = projectCarousel.querySelector('.carousel-control-next');
 const prevMinisButton = pagerCarousel.querySelector('.splide__arrow--prev');
 const nextMinisButton = pagerCarousel.querySelector('.splide__arrow--next');
 
+const COOLDOWN_MS = 600;
+let locked = false;
+let unlockTimer = null;
+
 prevButton.addEventListener('click', () => CarouselButtonClicked(-1,false));
 nextButton.addEventListener('click', () => CarouselButtonClicked(1,false));
 prevMinisButton.addEventListener('click', () => CarouselButtonClicked(-1,true));
 nextMinisButton.addEventListener('click', () => CarouselButtonClicked(1,true));
 
-function CarouselButtonClicked(direction,pager) {
+function CarouselButtonClicked(direction, pager) {
+  if (locked) return;      // během cooldownu ignoruj
+
+  locked = true;
+  try {
+    runSync(direction, pager);
+  } finally {
+    // minimální cooldown – další pokusy se ignorují
+    clearTimeout(unlockTimer);
+    unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
+  }
+}
+function runSync(direction, pager) {
   hideAll();
   direction === -1 ? bsCarousel.prev()
                     : bsCarousel.next();
