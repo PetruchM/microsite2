@@ -58,7 +58,7 @@ const filterLabel = filtersDivision.querySelector('.carousel__filter-label');
 const filterNames = [
   'TECHNICKÉ VĚDY',
   'VĚDY O NEŽIVÉ PŘÍRODĚ',
-  'LÉKAŘSKÉÉ A BIOLOGICKÉ VĚDY',
+  'LÉKAŘSKÉ A BIOLOGICKÉ VĚDY',
   'SPOLEČENSKÉ A HUMANITNÍ VĚDY',
   'ZEMĚDĚLSKÉ A BIOLOGICKO ENVIROMENTÁLNÍ VĚDY',
 ];
