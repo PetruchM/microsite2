@@ -106,7 +106,7 @@ svg {
 }
 
 .single-indicator-p {
-    font-size: 2vh;
+    font-size: 0.9em;
     position: absolute;
     left: 100%;
     width: 180%;
