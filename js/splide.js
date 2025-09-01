@@ -23,9 +23,14 @@ const splide = new Splide('#pager-carousel', {
         const allFilterIndex = 5;
         updatePagerCarousel(allFilterIndex)
     }
-    
+
+    let timeoutId; // pro zpožděné spuštění checkingSynchro
     function setupSplideEvents() {
-        splide.on('mounted move', highlightMiddleSlide);
+        splide.on('mounted move', () => {
+            highlightMiddleSlide();
+            clearTimeout(timeoutId); // zruší předchozí časovač
+            timeoutId = setTimeout(checkingSynchro, 1500); // nastaví nový
+        });
     }
 
     function updatePagerCarousel(filterIndex) {
