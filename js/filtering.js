@@ -128,6 +128,8 @@ async function changeSlidesInfo(ids, elements) {
       slide.querySelector('.author-institute').innerHTML  = article.author_institute;
       slide.querySelector('.project-info-text').innerHTML = article.text;
       slide.querySelector('.project-info-text-mobile').innerHTML = article.text;
+
+      slide.setAttribute('data-id', id);
     });
   } catch (err) {
     console.error('Failed loading articles:', err);
@@ -149,7 +151,7 @@ const nextButton = projectCarousel.querySelector('.carousel-control-next');
 const prevMinisButton = pagerCarousel.querySelector('.splide__arrow--prev');
 const nextMinisButton = pagerCarousel.querySelector('.splide__arrow--next');
 
-const COOLDOWN_MS = 600;
+const COOLDOWN_MS = 700;
 let locked = false;
 let unlockTimer = null;
 
@@ -157,6 +159,40 @@ prevButton.addEventListener('click', () => CarouselButtonClicked(-1,false));
 nextButton.addEventListener('click', () => CarouselButtonClicked(1,false));
 prevMinisButton.addEventListener('click', () => CarouselButtonClicked(-1,true));
 nextMinisButton.addEventListener('click', () => CarouselButtonClicked(1,true));
+
+function checkingSynchro() {
+    const activeSlide = projectCarousel.querySelector('.carousel-item.active');
+    const activeArticleIndex = parseInt(activeSlide.getAttribute('data-id'), 10);
+    if (GetCurrentPagerSlideIndex() !== activeArticleIndex) {
+      if (locked) return;      // během cooldownu ignoruj
+
+      locked = true;
+      try {
+        SynchronizePager(activeArticleIndex);
+      } finally {
+        // minimální cooldown – další pokusy se ignorují
+        clearTimeout(unlockTimer);
+        unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
+      }
+    }
+}
+
+function SynchronizePager(activeArticleIndex){
+  let currentPagerSlide = GetCurrentPagerSlideIndex();
+  if (currentFilter !== CONFIG.ALL_FILTER_INDEX) { //if filtered the all possible id belong to one ressidual class so we devide os that the values are 0-4
+    activeArticleIndex = Math.floor(activeArticleIndex/CONFIG.ARTICLES_PER_FILTER);
+    currentPagerSlide = Math.floor(currentPagerSlide/CONFIG.ARTICLES_PER_FILTER);
+  }
+  let pagerSlidePos = (activeArticleIndex -currentPagerSlide + CONFIG.TOTAL_ARTICLES) % CONFIG.TOTAL_ARTICLES;
+  pagerSlidePos =  pagerSlidePos % CONFIG.ARTICLES_PER_FILTER; // Ensure it's within 0-4 range, because if the carousel is not filtered we work with values 0-24
+  switch (pagerSlidePos) {
+    case 3: splide.go('-2'); break; //two backward
+    case 4: splide.go('-1'); break;
+    case 1: splide.go('+1'); break;
+    case 2: splide.go('+2'); break; //two forward
+    default: break;
+  }
+};
 
 function CarouselButtonClicked(direction, pager) {
   if (locked) return;      // během cooldownu ignoruj
@@ -169,6 +205,9 @@ function CarouselButtonClicked(direction, pager) {
     clearTimeout(unlockTimer);
     unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
   }
+  setTimeout(() => {
+    checkingSynchro();
+  }, 1000);
 }
 function runSync(direction, pager) {
   hideAll();
@@ -186,15 +225,27 @@ function runSync(direction, pager) {
 }
 
 function EdgePagerSlideClicked(activeSlideNum, direction) {
-  console.log("Edge pager slide clicked with direction:", direction);
-  hideAll();
-  direction === -1 ? splide.go('-2')
-                   : splide.go('+2');
-  bsCarousel.to((activeSlideNum + 2*direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER); //move 2 slides forward/backward
-  for (let i = 0; i < 2; i++) { //load new in advance next/previous 2 articles
-    const slideIdx = (activeSlideNum + i * direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER;
-    loadNextArticle(slides[slideIdx], direction);
+  if (locked) return;      // během cooldownu ignoruj
+
+  locked = true;
+  try {
+    console.log("Edge pager slide clicked with direction:", direction);
+    hideAll();
+    direction === -1 ? splide.go('-2')
+                    : splide.go('+2');
+    bsCarousel.to((activeSlideNum + 2*direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER); //move 2 slides forward/backward
+    for (let i = 0; i < 2; i++) { //load new in advance next/previous 2 articles
+      const slideIdx = (activeSlideNum + i * direction + CONFIG.ARTICLES_PER_FILTER) % CONFIG.ARTICLES_PER_FILTER;
+      loadNextArticle(slides[slideIdx], direction);
+    }
+  } finally {
+    // minimální cooldown – další pokusy se ignorují
+    clearTimeout(unlockTimer);
+    unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
   }
+  setTimeout(() => {
+    checkingSynchro();
+  }, 1000);
 }
 
 /* Pager cards click */

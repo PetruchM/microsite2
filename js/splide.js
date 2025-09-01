@@ -1,6 +1,6 @@
 const splide = new Splide('#pager-carousel', {
       type: 'loop',
-      speed:500,
+      speed:700,
       direction: 'ttb', 
       height: '60vh',
       perPage: 5,
