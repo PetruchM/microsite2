@@ -55,6 +55,7 @@ svg {
     z-index: 15;
     opacity: 1;
     background-color: rgba(0,0,0,0);
+    transition: transform 0.3s ease;
 }
 
 .slideDownButt img {
@@ -62,6 +63,19 @@ svg {
     transform:rotate(90deg);
     aspect-ratio: 1/1;
     background-color: rgba(0,0,0,0);
+}
+
+.slideDownButt.active {
+    transform: rotate(180deg);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.slideDownButt.highlight {
+  animation: pulse 1.5s infinite;
 }
 
 .indicators-container{

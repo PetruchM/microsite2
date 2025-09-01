@@ -43,14 +43,33 @@ function slideDownTextLogo() {
     }
 }
 
-function scrollDown(){
-    const scrollAmount = window.innerHeight * 0.95;
-    window.scrollBy({
-        top: scrollAmount,
-        left: 0,
-        behavior: 'smooth'
-    });
+function scrollIndicators(button){
+    if (button.classList.contains("active")) {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        const scrollAmount = window.innerHeight * 0.95;
+        window.scrollBy({
+            top: scrollAmount,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
 }
+
+const button = document.querySelector(".slideDownButt");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= window.innerHeight * 0.2) {
+        button.classList.remove("highlight");
+        button.classList.add("active");
+    } else {
+        button.classList.remove("active");
+    }
+});
 
 //changes the svg paths in the curved dashed line border and the mask that are between the two main divisions
 function updatePathBasedOnWidth() {
