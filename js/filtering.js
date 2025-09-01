@@ -154,6 +154,7 @@ const nextMinisButton = pagerCarousel.querySelector('.splide__arrow--next');
 const COOLDOWN_MS = 700;
 let locked = false;
 let unlockTimer = null;
+let timeoutId; // pro zpožděné spuštění checkingSynchro
 
 prevButton.addEventListener('click', () => CarouselButtonClicked(-1,false));
 nextButton.addEventListener('click', () => CarouselButtonClicked(1,false));
@@ -205,9 +206,6 @@ function CarouselButtonClicked(direction, pager) {
     clearTimeout(unlockTimer);
     unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
   }
-  setTimeout(() => {
-    checkingSynchro();
-  }, 1000);
 }
 function runSync(direction, pager) {
   hideAll();
@@ -243,9 +241,6 @@ function EdgePagerSlideClicked(activeSlideNum, direction) {
     clearTimeout(unlockTimer);
     unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
   }
-  setTimeout(() => {
-    checkingSynchro();
-  }, 1000);
 }
 
 /* Pager cards click */
@@ -268,6 +263,8 @@ function PagerCardClicked(clickedId) {
     case 2: EdgePagerSlideClicked(activeSlideNum, 1); break; //two forward
     default: break;
   }
+  clearTimeout(timeoutId); // zruší předchozí časovač
+  timeoutId = setTimeout(checkingSynchro, 1000); // nastaví nový
 };
 
 /* Load next main article on edge scroll */
