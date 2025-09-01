@@ -68,6 +68,12 @@ const splide = new Splide('#pager-carousel', {
         }
     });
 
+    function GetCurrentPagerSlideIndex(){
+        const slides = document.querySelectorAll('.splide__slide.is-visible');
+        const img = slides[2].querySelector('img');
+        return img.dataset.id;
+    }
+
     function highlightMiddleSlide() {
         console.log("Highlighting middle slide");
         const perPage = splide.options.perPage;

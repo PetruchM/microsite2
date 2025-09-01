@@ -12,7 +12,6 @@ let articlesData;
 let currentSlide = 0;
 let currentFilter = CONFIG.ALL_FILTER_INDEX;
 let onPC;
-let currentPagerSlide = 0;
 
 /* Load articles.json once and cache */
 async function loadArticles() {
@@ -78,7 +77,6 @@ async function setFilter(button, index) {
   const wasActive = button.classList.contains('active-filter');
   filtersDivision.querySelectorAll('.active-filter').forEach(el => el.classList.remove('active-filter'));
   clearTimeout();
-  currentPagerSlide= 0; // Reset pager slide on filter change
 
   if (!wasActive) {
     button.classList.add('active-filter');
@@ -205,12 +203,13 @@ function PagerCardClicked(clickedId) {
   // console.log("Current pager slide:", currentPagerSlide);
   const activeSlide = projectCarousel.querySelector('.carousel-item.active');
   const activeSlideNum = parseInt(activeSlide.getAttribute('data-filter-index'), 10);
+  let currentPagerSlide = GetCurrentPagerSlideIndex();
   if (currentFilter !== CONFIG.ALL_FILTER_INDEX) { //if filtered the all possible id belong to one ressidual class so we devide os that the values are 0-4
     clickedId = Math.floor(clickedId/CONFIG.ARTICLES_PER_FILTER);
+    currentPagerSlide = Math.floor(currentPagerSlide/CONFIG.ARTICLES_PER_FILTER);
   }
   let pagerSlidePos = (clickedId -currentPagerSlide + CONFIG.TOTAL_ARTICLES) % CONFIG.TOTAL_ARTICLES;
   pagerSlidePos =  pagerSlidePos % CONFIG.ARTICLES_PER_FILTER; // Ensure it's within 0-4 range, because if the carousel is not filtered we work with values 0-24
-  currentPagerSlide = clickedId;
   switch (pagerSlidePos) {
     case 3: EdgePagerSlideClicked(activeSlideNum, -1); break; //two backward
     case 4: CarouselButtonClicked(-1); break;
