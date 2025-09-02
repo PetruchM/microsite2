@@ -22,12 +22,13 @@ const splide = new Splide('#pager-carousel', {
     function splideFirstSetup(){
         const allFilterIndex = 5;
         updatePagerCarousel(allFilterIndex)
+        setTimeout(() => { splide.refresh(); }, 500);
     }
 
     let timeoutId; // pro zpožděné spuštění checkingSynchro
     function setupSplideEvents() {
-        splide.on('mounted move', () => {
-            highlightMiddleSlide();
+        splide.on('move', () => {
+            setTimeout(highlightMiddleSlide, 100);
             clearTimeout(timeoutId); // zruší předchozí časovač
             timeoutId = setTimeout(checkingSynchro, 1500); // nastaví nový
         });
@@ -56,12 +57,13 @@ const splide = new Splide('#pager-carousel', {
                 item.classList.add('slide_hidden');
             }
         });
-        splide.on('mounted', () => {
-                setupSplideEvents();
-                highlightMiddleSlide();
-        });
         splide.mount();
-        setTimeout(() => { splide.refresh(); }, 500);  // Refresh after a short delay to ensure proper layout after the start slide change
+        setupSplideEvents();
+        setTimeout(() => { 
+            splide.refresh(); 
+            console.log("refresh"); 
+            highlightMiddleSlide();
+        }, 500);  // Refresh after a short delay to ensure proper layout after the start slide change
     }
 
     // Klikání na obrázky
@@ -96,7 +98,6 @@ const splide = new Splide('#pager-carousel', {
 
         if (SlideObject && SlideObject.slide) {
             SlideObject.slide.classList.add('highlighted');
-            console.log("Highlighting DOM slide at index", targetIndex);
         } else {
             console.warn("No slide found at index", targetIndex);
         }

@@ -88,13 +88,13 @@ async function setFilter(button, index) {
     await filterCarousel(index);
   } else {
     filterLabel.classList.remove('label-active');
-    currentSlide = 0;///temporary set to 0, reseting
     currentFilter = CONFIG.ALL_FILTER_INDEX;
     await filterCarousel(CONFIG.ALL_FILTER_INDEX);
   }
 }
 
 async function filterCarousel(index) {
+  currentSlide = 0;
   hideAll();
   await updateSlides(index);
   activateDesiredSlide(index);
@@ -151,7 +151,7 @@ const nextButton = projectCarousel.querySelector('.carousel-control-next');
 const prevMinisButton = pagerCarousel.querySelector('.splide__arrow--prev');
 const nextMinisButton = pagerCarousel.querySelector('.splide__arrow--next');
 
-const COOLDOWN_MS = 700;
+const COOLDOWN_MS = 800;
 let locked = false;
 let unlockTimer = null;
 
@@ -164,6 +164,7 @@ function checkingSynchro() {
     const activeSlide = projectCarousel.querySelector('.carousel-item.active');
     const activeArticleIndex = parseInt(activeSlide.getAttribute('data-id'), 10);
     if (GetCurrentPagerSlideIndex() !== activeArticleIndex) {
+      if (locked) return;      // během cooldownu ignoruj
       SynchronizePager(activeArticleIndex);
     }
 }
@@ -269,10 +270,11 @@ function loadNextArticle(activeSlide, direction) {
 
 /* Handle window resize for background image switch */
 
-function updateCarousels(){
+async function updateCarousels(){
   const nowPC = window.innerWidth >= 800;
   if (nowPC !== onPC) {
     onPC = nowPC;
-    filterCarousel(currentFilter);
+    console.log("Switching to", onPC ? "PC" : "Mobile", "mode");
+    await filterCarousel(currentFilter);
   }
 }
