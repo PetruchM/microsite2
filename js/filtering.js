@@ -164,16 +164,7 @@ function checkingSynchro() {
     const activeSlide = projectCarousel.querySelector('.carousel-item.active');
     const activeArticleIndex = parseInt(activeSlide.getAttribute('data-id'), 10);
     if (GetCurrentPagerSlideIndex() !== activeArticleIndex) {
-      if (locked) return;      // během cooldownu ignoruj
-
-      locked = true;
-      try {
-        SynchronizePager(activeArticleIndex);
-      } finally {
-        // minimální cooldown – další pokusy se ignorují
-        clearTimeout(unlockTimer);
-        unlockTimer = setTimeout(() => { locked = false; }, COOLDOWN_MS);
-      }
+      SynchronizePager(activeArticleIndex);
     }
 }
 
