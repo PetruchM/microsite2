@@ -67,6 +67,7 @@ svg {
 }
 
 .slideDownButt.active {
+    bottom: 3.5vh;
     transform: rotate(180deg);
 }
 

@@ -60,14 +60,17 @@ function scrollIndicators(button){
     }
 }
 
-const button = document.querySelector(".slideDownButt");
+const button = document.querySelector(".slideDownButt.one");
+const button2 = document.querySelector(".slideDownButt.second");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= window.innerHeight * 0.2) {
         button.classList.remove("highlight");
         button.classList.add("active");
+        button2.style.display = "inline-block";
     } else {
         button.classList.remove("active");
+        button2.style.display = "none";
     }
 });
 
