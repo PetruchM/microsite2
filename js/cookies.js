@@ -7,15 +7,19 @@ function getCookie(name) {
   return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
 }
 
+function hideBanner() {
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+
 function acceptCookies() {
   setCookie('cookieConsent', 'accepted', 365);
-  document.getElementById('cookie-banner').style.display = 'none';
   loadAnalytics();
+  hideBanner();
 }
 
 function declineCookies() {
   setCookie('cookieConsent', 'declined', 365);
-  document.getElementById('cookie-banner').style.display = 'none';
+  hideBanner();
 }
 
 function openSettings() {
@@ -34,6 +38,7 @@ toggle.addEventListener('click', () => {
 
 function saveSettings() {
   console.log('Settings saved');
+  showCookieNotice('Nastavení cookies bylo uloženo.');
   if (toggle.classList.contains('active')) {
     acceptCookies();
   } else {
@@ -61,3 +66,20 @@ window.addEventListener('load', () => {
     document.getElementById('cookie-banner').style.display = 'flex';
   }
 });
+
+
+// Toast notification for cookie settings
+let cookieToastTimer;
+  function showCookieNotice(message, duration = 4000){
+    const el = document.getElementById('cookie-toast');
+    if (!el) return;
+
+    clearTimeout(cookieToastTimer);
+
+    el.textContent = message;
+    el.classList.add('show');
+
+    cookieToastTimer = setTimeout(() => {
+      el.classList.remove('show');
+    }, duration); 
+  }
