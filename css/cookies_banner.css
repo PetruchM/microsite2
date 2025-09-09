@@ -90,6 +90,7 @@
 
     #cookie-banner h1, #cookie-banner h2, #cookie-banner h3 {
         font-size: 1.2rem;
+        margin-bottom: 0.5rem;
     }
 
     #cookie-banner div p {
