@@ -26,6 +26,7 @@ function openSettings() {
     document.querySelector('.cookies-details').style.display = 'block';
     document.querySelector('.coookies-links').style.display = 'block';
     document.querySelector('#cookie-banner').style.display = 'block';
+    document.querySelector('#cookie-banner').classList.add('expanded');
     document.querySelector('#cookie-setting-button').textContent = 'Uložit předvolby';
     document.querySelector('#cookie-setting-button').onclick = saveSettings;
 }
