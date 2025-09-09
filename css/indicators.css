@@ -47,11 +47,12 @@ svg {
 /* end of line css */
 
 .slideDownButt{
-    position: relative;
+    position: fixed;
     color: #fff;
     border: none;
     cursor: pointer;
-    top: -40%;
+    bottom: 0.5vh;
+    left: 48.5vw;
     z-index: 15;
     opacity: 1;
     background-color: rgba(0,0,0,0);
