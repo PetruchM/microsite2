@@ -1,15 +1,10 @@
 # TODOs 
 
-- navrhnout cookies lištu
-
-- dokočit texty cookies
-
-- pristupnost pro nevidome (jsou nejake GACR guidelines na to)
+- přidat alt k background obrázkům
  
-
 - vyčistit  nepotřebné
 
-- po overly scrool nahoru a kolečko ma zacatek na tlacitku ne na kurzoru
+- po overlay transition  - scrool nahoru a kolečko ma zacatek na tlacitku ne na kurzoru
 
 
 - pristupnost 
