@@ -60,19 +60,46 @@ function scrollIndicators(button){
     }
 }
 
-const button = document.querySelector(".slideDownButt.one");
-const button2 = document.querySelector(".slideDownButt.second");
+const slideDownButtFirst = document.querySelector(".slideDownButt.first");
+const slideDownButtSecond = document.querySelector(".slideDownButt.second");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= window.innerHeight * 0.2) {
-        button.classList.remove("highlight");
-        button.classList.add("active");
-        button2.style.display = "inline-block";
+        slideDownButtSecond.classList.remove("highlight");
+        slideDownButtFirst.classList.remove("hidden");
     } else {
-        button.classList.remove("active");
-        button2.style.display = "none";
+        slideDownButtFirst.classList.add("hidden");
     }
 });
+
+(function () {
+  const footer = document.querySelector('footer');
+  if (!footer) return;
+
+  const root = document.documentElement;
+  const gapPx = 8; // mezera nad footerem v px
+
+  function updateArrowOffset() {
+    const rect = footer.getBoundingClientRect();
+    // kolik footer „leze“ do viewportu
+    const overlap = Math.max(0, window.innerHeight - rect.top);
+    // když se footer objeví, zvedni šipky o overlap + mezeru
+    root.style.setProperty('--avoid-footer', (overlap ? overlap + gapPx : 0) + 'px');
+
+    if (slideDownButtSecond) {
+      const hide = overlap > 0;
+      slideDownButtSecond.classList.toggle('hidden', hide);
+      slideDownButtSecond.setAttribute('aria-hidden', hide ? 'true' : 'false');
+      // zajistí, že nepůjde omylem focusnout klávesnicí
+      if (hide) slideDownButtSecond.setAttribute('tabindex', '-1'); else slideDownButtSecond.removeAttribute('tabindex');
+    }
+
+  }
+
+  updateArrowOffset();
+  window.addEventListener('scroll', updateArrowOffset, { passive: true });
+  window.addEventListener('resize', updateArrowOffset);
+})();
 
 //changes the svg paths in the curved dashed line border and the mask that are between the two main divisions
 function updatePathBasedOnWidth() {

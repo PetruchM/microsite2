@@ -45,6 +45,9 @@ svg {
     z-index: 15;
 }
 /* end of line css */
+:root{
+  --avoid-footer: 0px;    /* dynamická rezerva nad footerem (doplní JS) */
+}
 
 .slideDownButt{
     position: fixed;
@@ -55,7 +58,7 @@ svg {
     left: 48.5vw;
     z-index: 15;
     opacity: 1;
-    background-color: rgba(0,0,0,0);
+    background: transparent;
     transition: transform 0.3s ease;
 }
 
@@ -63,11 +66,11 @@ svg {
     width: 3vw;
     transform:rotate(90deg);
     aspect-ratio: 1/1;
-    background-color: rgba(0,0,0,0);
+    background: transparent;
 }
 
-.slideDownButt.active {
-    bottom: 3.5vh;
+.slideDownButt.first {
+    bottom: calc(3.5vh + var(--avoid-footer));
     transform: rotate(180deg);
 }
 
@@ -78,6 +81,11 @@ svg {
 
 .slideDownButt.highlight {
   animation: pulse 1.5s infinite;
+}
+
+.slideDownButt.hidden{
+  opacity: 0;
+  pointer-events: none;
 }
 
 .indicators-container{
