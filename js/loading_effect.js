@@ -11,7 +11,7 @@ const observer = new IntersectionObserver((entries) => {  //intersection observe
 
             const interval = setInterval(() => {
                 currentValue = Math.min(currentValue + targetValueNum / maxIterations, targetValueNum);
-                target.innerText = currentValue.toFixed(0) + (target.dataset.value.includes("%") ? " %" : " 000");  //special condition for my use, if the number was percentage or if it was in thousants, the str is changed
+                target.innerText = currentValue.toFixed(0) + (target.dataset.value.includes("%") ? " %" : " 000+");  //special condition for my use, if the number was percentage or if it was in thousants, the str is changed
 
                 if (currentValue >= targetValueNum) {
                     clearInterval(interval);  //end when rrached desired value
