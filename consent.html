@@ -30,8 +30,8 @@
     </div>
     <p>Tento web nevyužívá marketingové cookies.</p>
     <div class="cookies-buttons">
-        <button onclick="saveSettings()" style="margin-left:10px;">Přijmout</button>
-        <button onclick="saveSettings(); showCookieNotice('Nastavení cookies bylo uloženo.')" style="margin-left:10px;">Odmítnout vše</button>
+        <button onclick="saveSettings(true)" style="margin-left:10px;">Přijmout</button>
+        <button onclick="saveSettings(false)" style="margin-left:10px;">Odmítnout vše</button>
         <button id="cookie-setting-button"onclick="saveSettings()" style="margin-left:10px;">Uložit předvolby</button>
     </div>
     <div id="cookie-toast" class="cookie-toast" role="status" aria-live="polite"></div>
@@ -42,6 +42,7 @@
     </div>
 </section>
     <script src="js/cookies.js"></script>
+    <script src="js/consent_page_cookies.js"></script>
 
 </body>
 </html>

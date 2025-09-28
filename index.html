@@ -38,7 +38,7 @@
 
     <body class="no-overflow">
         <!--cookies-->
-        <div id="cookie-banner" role="region" aria-labelledby="cookies-title">
+        <div id="cookie-banner" style="display: none;" role="region" aria-labelledby="cookies-title">
             <h2 id="cookies-title">Tento web používá cookies pouze pro analýzu návštěvnosti. </h2>
             <div class="cookies-details">
                 <p>Abychom poskytli co nejlepší služby, používáme k ukládání a/nebo přístupu k informacím o zařízení, technologie jako jsou soubory cookies. Souhlas s těmito technologiemi nám umožní zpracovávat údaje, jako je chování při procházení nebo jedinečná ID na tomto webu. Nesouhlas nebo odvolání souhlasu může nepříznivě ovlivnit určité vlastnosti a funkce.</p>
@@ -54,8 +54,8 @@
                 <p>Tento web nevyužívá marketingové cookies.</p>
             </div>
             <div class="cookies-buttons">
-                <button onclick="acceptCookies()">Přijmout</button>
-                <button onclick="declineCookies()">Odmítnout vše</button>
+                <button onclick="acceptCookies() ; hideBanner()">Přijmout</button>
+                <button onclick="declineCookies(); hideBanner()">Odmítnout vše</button>
                 <button id="cookie-setting-button"onclick="openSettings()">Nastavení a podrobnosti</button>
             </div>
             <div class="coookies-links">
@@ -606,6 +606,7 @@
         <script src="js/indicators.js"></script>
         <script src="js/global.js"></script>
         <script src="js/cookies.js"></script>
+        <script src="js/main_page_cookies.js"></script>
 
     </body>
   
