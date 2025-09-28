@@ -1,5 +1,4 @@
-@media (max-width: 50em) or (max-aspect-ratio: 1/1){ /*so mainly for screens up to 1024px and secondly for high resolution mobile phones (so above 1024px but lower ratio)*/
-    /* transition */
+@media (max-width:800px){
     .moving-dashed-line{
         height: 9vw;
         background-size:cover;
@@ -18,12 +17,26 @@
             stroke-dashoffset: -40px;
         }
     }
+}
+
+@media (max-width: 50em) or (max-aspect-ratio: 7/5){ /*so mainly for screens up to 1024px and secondly for high resolution mobile phones (so above 1024px but lower ratio)*/
 
     /* main */
     .slideDownButt {
-        /* top: calc(var(--vh) * 8); */
         bottom: 0.5vh;
-        left: 46.5vw;
+        inset-inline: auto;
+        margin-inline: 0;
+        left: unset;
+        right: 1vw;
+    }
+
+    .slideDownButt.highlight{
+        inset-inline: 0;
+        margin-inline: auto;
+    }
+
+    .slideDownButt.first {
+        bottom: calc(max(30px,3.5vh + var(--avoid-footer)));
     }
 
     .slideDownButt img {

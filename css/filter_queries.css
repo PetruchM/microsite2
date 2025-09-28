@@ -58,7 +58,7 @@
 
 }
 
-@media (max-aspect-ratio: 1/1){
+@media (max-aspect-ratio: 7/5){
     .header-logo-img{
         object-fit: contain;
         height: unset;

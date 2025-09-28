@@ -44,7 +44,7 @@ function slideDownTextLogo() {
 }
 
 function scrollIndicators(button){
-    if (button.classList.contains("active")) {
+    if (button.classList.contains("first")) {
         window.scrollTo({
             top: 0,
             left: 0,

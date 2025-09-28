@@ -1,23 +1,21 @@
-const splide = new Splide('#pager-carousel', {
-      type: 'loop',
-      speed:700,
-      direction: 'ttb', 
-      height: '60vh',
-      perPage: 5,
-      perMove: 1,
-      wheel: false,
-      drag: false, //fragging mause or sliding temporarily disabled
-      pagination: false,
-      waitForTransition: true,
-      breakpoints: {
-        800: {
-        direction: 'ltr',
-        height: null,
-        width: '85vw',
-        }
-    }
-    });
-    splide.mount();
+const base = {
+    type: 'loop',
+    speed: 700,
+    wheel: false,
+    drag: false,
+    pagination: false,
+    waitForTransition: true,
+  };
+
+  const vertical = { direction: 'ttb', height: '60vh', width: null, perPage: 5, perMove: 1 };
+  const horizontal = { direction: 'ltr', height: null, width: '85vw', perPage: 5, perMove: 1 };
+
+  const isWideAspect = window.matchMedia('(max-aspect-ratio: 7/5)').matches;
+  const isNarrowWidth = window.matchMedia('(max-width: 800px)').matches;
+
+  const mode = (isWideAspect || isNarrowWidth) ? horizontal : vertical;
+
+  const splide = new Splide('#pager-carousel', { ...base, ...mode }).mount();
 
     function splideFirstSetup(){
         const allFilterIndex = 5;

@@ -1,5 +1,5 @@
 /* @media (max-width: 726px) { */
-@media (max-width: 50em) or (max-aspect-ratio: 1/1) {
+@media (max-width: 50em) or (max-aspect-ratio: 7/5) {
     .carousel__box {
         position: absolute;
         height: 82%;
