@@ -34,8 +34,16 @@ footer{
 footer p{
     margin: 1vh 25vw 1vh 25vw;
     color: #ffffff;
-    font-size: 1.5vh;
+    font-size: clamp(0.5rem, 0.5vw + 0.4rem, 4rem);
     width: 50%;
+}
+
+@media (max-width: 50em) or (max-aspect-ratio: 7/5){
+    footer p{
+        margin: 1vh 15vw 1vh 15vw;
+        width: 70%;
+        font-size: clamp(0.7rem, 1vw + 0.4rem, 2rem);
+    }
 }
 
 footer p a {
