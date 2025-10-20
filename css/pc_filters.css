@@ -38,16 +38,14 @@
 }
 
 .carousel__filter-button {
-    margin: 0.2vw;
     overflow: hidden;
-    /* border-radius: 50%; */
-    border-radius: 50px;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgb(6, 6, 68); */
+    background-color: transparent;
+    border: none;
     transition: background-color 1s;
 }
 

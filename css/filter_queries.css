@@ -56,6 +56,11 @@
         transition: max-height 0.5s, height 0.5s;
     }
 
+    .carousel__filter-container{
+        width: 80vw;
+        left: 0;
+    }
+
 }
 
 @media (max-aspect-ratio: 7/5){
