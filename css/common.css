@@ -17,13 +17,14 @@ body{
 .header_access{
     top: 0px;
     height: 10vh;
+    width: 100vw;
     background-color: rgb(10,61,116);
 }
 
 .header_access img {
     height: 70%;
     position: relative;
-    left: 1vw;
+    left: 4vw;
     top: 15%;
 }
 
@@ -78,7 +79,6 @@ body{
 
   /* CZ: povolit dělení slov a uvozovky */
   hyphens: auto;
-  hanging-punctuation: first;
 }
 
 /* ----- Odstavce ----- */

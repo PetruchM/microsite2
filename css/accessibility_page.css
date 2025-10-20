@@ -5,23 +5,10 @@ body{
     overflow-x: hidden;
 }
 
-.header_access{
-    top: 0px;
-    height: 10vh;
-    background-color: rgb(10,61,116);
-}
-
-.header_access img {
-    height: 70%;
-    position: relative;
-    left: 1vw;
-    top: 15%;
-}
 
 .content{
     position: relative;
-    left: 2vw;
-    width: 100%;
+    width: 96%;
     display: flex;
     flex-direction: column;
 }
