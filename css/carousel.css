@@ -15,7 +15,7 @@
 }
 
 #projectCarousel .carousel-item {
-  transition-duration: 0,5s;           /* změníš délku */
+  transition-duration: 0.5s;           /* změníš délku */
   transition-timing-function: ease-in-out;
 }
 
