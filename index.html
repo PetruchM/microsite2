@@ -56,7 +56,7 @@
             <div class="cookies-buttons">
                 <button onclick="acceptCookies() ; hideBanner()">Přijmout</button>
                 <button onclick="declineCookies(); hideBanner()">Odmítnout vše</button>
-                <button id="cookie-setting-button"onclick="openSettings()">Nastavení a podrobnosti</button>
+                <button id="cookie-setting-button" onclick="openSettings()">Nastavení a podrobnosti</button>
             </div>
             <div class="coookies-links">
                 <a class="cookie-statement" href="cookie-policy.html" data-relative_url="">Zásady cookies</a>
@@ -82,8 +82,8 @@
         </section>
 
         <!-- Slide filtering -->
-        <header id="filter" class="filter-header" role="navigation" aria-label="Filtry pro výběr okruhů projektů">
-            <nav class="carousel__filter-container">
+        <header id="filter" class="filter-header">
+            <nav class="carousel__filter-container" role="navigation" aria-label="Filtry pro výběr okruhů projektů">
                 <div class="carousel__filter-button" tabindex="0" aria-label="Technické vědy">                  
                     <img src="images/filter_icons/TV_ikona.svg" alt="">
                     <div class="carousel__filter-button-detail">
@@ -130,18 +130,18 @@
         <section id="projectCarousel" class="carousel slide carousel-fade" aria-label="Přehlídka výzkumných projektů">
             <div class="carousel-inner">
                 <!-- Slide 1 -->
-                <div class="carousel-item" data-filter-index="0" role="group" aria-labelledby="a-title" data-id="23">
+                <div class="carousel-item" data-filter-index="0" role="group" aria-labelledby="title-al1" data-id="23">
                     <img src="images/articles/background/OK4.5_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
-                                <h1 class="a-title">RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI</h1>
+                                <h1 id="title-al1" class="a-title">RASISMUS A XENOFOBIE OHROŽUJÍ ZDRAVÍ SPOLEČNOSTI</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2" aria-expanded="false">
+                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2-al1" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info2" inert aria-hidden="true">
+                        <div id="box2-al1" class="box-info2" inert aria-hidden="true">
                             <div class="box-info2-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <div>
@@ -159,11 +159,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="card3" aria-expanded="false">
+                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="box3-al1" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info3" inert aria-hidden="true">
+                        <div id="box3-al1" class="box-info3" inert aria-hidden="true">
                             <div class="box-info3-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <p class="project-info-text">Kateřina Čapková zkoumá dějiny a současnost Židů a Romů, kteří byli během druhé světové války vystaveni rasové perzekuci. Její výzkum se zaměřuje na propojenost válečných a poválečných zkušeností židovských a romských komunit na území bývalého Československa. Příkladem jsou vzájemné vztahy Židů a Romů v pracovních a koncentračních táborech, nebo v partyzánském hnutí. Čapková zdůrazňuje, že akademický nezájem o romskou historii odráží diskriminaci, kterou Romové v české společnosti zažívají dodnes. V roce 2016 proto založila Pražské <a href="https://www.romanihistories.org" style="color: black;">fórum pro romské dějiny</a>, které podporuje výzkum a romské badatele. Od roku 2025 je fórum jedním z výzkumných center Filozofické fakulty UK. <br>Jedním z výstupů jejího projektu je i <a href="http://www.svedectviromu.cz" style="color: black;">databáze válečných svědectví Romů</a>. Řešitelka také analyzuje poválečnou politiku vůči Romům a Židům a zdůrazňuje nutnost boje proti xenofobii a rasismu.</p>
@@ -173,18 +173,18 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="1" role="group" aria-labelledby="a-title" data-id="24">
+                <div class="carousel-item" data-filter-index="1" role="group" aria-labelledby="title-al2" data-id="24">
                     <img src="images/articles/background/OK5.5_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
-                                <h1 class="a-title">VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN</h1>
+                                <h1 id="title-al2" class="a-title">VÝZKUM CHROMOZOMŮ UKAZUJE, ŽE NENÍ JELEN JAKO JELEN</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2" aria-expanded="false">
+                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2-al2" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info2" inert aria-hidden="true">
+                        <div id="box2-al2" class="box-info2" inert aria-hidden="true">
                             <div class="box-info2-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <div>
@@ -202,11 +202,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="card3" aria-expanded="false">
+                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="box3-al2" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info3" inert aria-hidden="true">
+                        <div id="box3-al2" class="box-info3" inert aria-hidden="true">
                             <div class="box-info3-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <p class="project-info-text">Miluše Vozdová objevuje nové druhy zvířat pomocí genetického výzkumu. Její práce odhaluje, že zdánlivě známé druhy mohou mít výrazné genetické rozdíly, které nejsou viditelné na první pohled. Tyto rozdíly vznikají v důsledku evoluce, kdy se u některých živočichů spojují chromozomy, čímž dochází ke vzniku nových druhů. <br>Vozdová se původně zaměřila na čeleď turovitých a zkoumala chromozomy během buněčného dělení, kdy jsou dobře viditelné pod mikroskopem. Její tým potvrdil, že na pohled stejná zvířata, jako jsou různé druhy jelenů, srnců nebo daňků, mohou mít odlišný počet chromozomů, a tedy představovat různé druhy. <br>Tyto objevy jsou zásadní pro ochranu ohrožených druhů. Zvířata z různých oblastí, která vypadají podobně, se často nemohou křížit, nebo jejich potomci jsou neplodní, což komplikuje záchranné programy. Díky genetickému výzkumu lze lépe porozumět jejich evolučnímu vývoji a efektivněji zabezpečit jejich budoucnost.</p>
@@ -216,18 +216,18 @@
                     </div>
                 </div>
 
-                <div class="carousel-item active" data-filter-index="2" role="group" aria-labelledby="a-title" data-id="0">
+                <div class="carousel-item active" data-filter-index="2" role="group" aria-labelledby="title-al3" data-id="0">
                     <img src="images/articles/background/OK1.1_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
-                                <h1 class="a-title">DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU</h1>
+                                <h1 id="title-al3" class="a-title">DETEKCI BAKTERIÍ A VIRŮ UMOŽNÍ ZAZNAMENÁNÍ GENETICKÉHO KÓDU PODOBNÝM ZPŮSOBEM JAKO U ELEKTRICKÉHO SIGNÁLU</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2" aria-expanded="false">
+                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2-al3" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info2" inert aria-hidden="true">
+                        <div id="box2-al3" class="box-info2" inert aria-hidden="true">
                             <div class="box-info2-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <div>
@@ -245,11 +245,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="card3" aria-expanded="false">
+                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="box3-al3" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info3" inert aria-hidden="true">
+                        <div id="box3-al3" class="box-info3" inert aria-hidden="true">
                             <div class="box-info3-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <p class="project-info-text">Běžná bakterie má kolem pěti milionů párů bází, což činí z práce s její DNA velmi složitý proces. Řešitelka projektu doktorka Škutková se inspirovala elektrokardiogramem (EKG) — grafickým zápisem elektrické aktivity srdce a v rámci výzkumu vytvořila efektivní způsob záznamu genetického kódu ve formě podobné elektrickému signálu. Takto zobrazené genomy usnadňují jejich vzájemné porovnávání a identifikaci jejich rozdílů, čímž je možné určit příbuznost různých organismů. Tento průlomový způsob záznamu tak umožňuje rychlé rozpoznání nebezpečných bakterií a virů v organismu a v budoucnu může zabránit šíření antibiotické rezistence nebo pomoci při prevenci pandemií.</p>
@@ -259,18 +259,18 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="3" role="group" aria-labelledby="a-title" data-id="1">
+                <div class="carousel-item" data-filter-index="3" role="group" aria-labelledby="title-al4" data-id="1">
                     <img src="images/articles/background/OK2.1_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
-                                <h1 class="a-title">VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY</h1>
+                                <h1 id="title-al4" class="a-title">VÝZKUM NOVÝCH KVANTOVÝCH JEVŮ NA NEJCHLADNĚJŠÍCH MÍSTECH ČESKÉ REPUBLIKY</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2" aria-expanded="false">
+                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2-al4" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info2" inert aria-hidden="true">
+                        <div id="box2-al4" class="box-info2" inert aria-hidden="true">
                             <div class="box-info2-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <div>
@@ -288,11 +288,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="card3" aria-expanded="false">
+                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="box3-al4" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info3" inert aria-hidden="true">
+                        <div id="box3-al4" class="box-info3" inert aria-hidden="true">
                             <div class="box-info3-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <p class="project-info-text">Kvantová mechanika se zabývá popisem mikroskopických objektů, jako jsou elektrony, atomy nebo třeba fotony. V současné době žijeme v době druhé kvantové revoluce, jejímž podstatným nástrojem je ne-Gaussovská koherence, která umožňuje měření pohybu atomů s menší chybovostí nebo třeba generování opravných kódů pro kvantové počítače. A právě primárně na tuto koherenci a její kvantové jevy se ve svém projekt doktor Filip a jeho tým zaměřují. <br>Jeden z přístrojů, které vědci při zkoumání kvantových jevů využívají, umí díky elektrickým polím a laserovým paprskům zchladit teplotu iontů vápníku až na absolutní nulu. Díky tomu jsou tak na obou místech výzkumu, v Brně a Olomouci, nejchladnější místa v České republice. Zde řešitel a jeho tým zkoumají jevy, na kterých bude možné stavět budoucí výzkumy a aplikace v oblasti kvantových technologií.</p>
@@ -302,18 +302,18 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" data-filter-index="4" role="group" aria-labelledby="a-title" data-id="2">
+                <div class="carousel-item" data-filter-index="4" role="group" aria-labelledby="title-al5" data-id="2">
                     <img src="images/articles/background/OK3.1_b.webp" class="d-block bg-img a-background-img" alt="" role="presentation">
                     <div class="carousel__box">
                         <div class="box-info1">
                             <div class="box-info1-content">
-                                <h1 class="a-title">SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY</h1>
+                                <h1 id="title-al5" class="a-title">SLIMÁCI POMOHOU K LEPŠÍMU POZNÁNÍ ZANIKLÉ FORMY IMUNITY</h1>
                             </div>
-                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2" aria-expanded="false">
+                            <button class="slide_butt1" onclick="slideSecondCard()" aria-label="Otevřít popis článku" aria-controls="box2-al5" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info2" inert aria-hidden="true">
+                        <div id="box2-al5" class="box-info2" inert aria-hidden="true">
                             <div class="box-info2-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <div>
@@ -331,11 +331,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="card3" aria-expanded="false">
+                            <button class="slide_butt2" onclick="slideThirdCard()" aria-label="Otevřít text článku" aria-controls="box3-al5" aria-expanded="false">
                                 <img src="images/svgs/expand_right.svg" class="expand-bttn-img" alt="">
                             </button>
                         </div>
-                        <div class="box-info3" inert aria-hidden="true">
+                        <div id="box3-al5" class="box-info3" inert aria-hidden="true">
                             <div class="box-info3-content">
                                 <div class="project-info has-scrollbar1" tabindex="0">
                                     <p class="project-info-text">Proces, kterému se Petr Svoboda ve svém výzkumu věnuje, se nazývá RNA interference, zkráceně RNAi, při kterém speciální enzym ribonukleovou kyselinu „rozstříhá“, čímž cíleně blokuje aktivitu genů. RNAi má však i obrannou funkci — likviduje nebezpečné viry zničením jejich RNA. Tuto vrozenou formu imunity používají pouze rostliny a hmyz, u obratlovců se v průběhu evoluce vytratila. V rámci projektu je zkoumána možnost jejího znovuaktivování. V minulosti se jim již podařilo, díky genetickým úpravám, zaktivovat tuto formu obrany u myší. V současném projektu se snaží o totéž u slimákům. Vlastnosti jejich RNAi napoví, jakým směrem se ubírala evoluce u obratlovců a jak by mohla tato forma vrozené imunity být u savců obnovena. Dále projekt odpoví na otázku, jak velký rozsah antivirové ochrany může RNAi poskytnout a jak by mohla být v budoucnu v léčbě virových onemocnění uplatňována.</p>
