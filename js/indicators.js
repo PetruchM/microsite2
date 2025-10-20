@@ -14,6 +14,8 @@ function IndicatorActive(Index) {
     var indiElement = indicators[Index+1];
     var img2Element = imgs2[Index];
     var buttonElement = buttons[Index+1];
+    const on = buttonElement.getAttribute('aria-pressed') === 'true';
+    buttonElement.setAttribute('aria-pressed', String(!on));
     if (textElement.classList.contains("active")) {
         textElement.classList.remove("active");
         indiElement.classList.remove("active");
@@ -32,6 +34,8 @@ function slideDownTextLogo() {
     var textLogo  = texts[0]
     var indiElement = indicators[0];
     var buttonElement = buttons[0];
+    const on = buttonElement.getAttribute('aria-pressed') === 'true';
+    buttonElement.setAttribute('aria-pressed', String(!on));
     if (textLogo.classList.contains("active")) {
         textLogo.classList.remove("active");
         indiElement.classList.remove("active");

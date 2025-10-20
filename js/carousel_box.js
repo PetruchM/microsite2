@@ -21,6 +21,7 @@ function slideSecondCard() {
 
   var button1 = document.querySelector('.carousel-item.active .slide_butt1');
   button1.classList.toggle('button_rotate_on_activation');
+  button1.setAttribute('aria-expanded', String(rectangle2.classList.contains('info_active1')));
 
   var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
   rectangle3.classList.toggle('info_ready2'); // jen přesun, stále zůstane inert
@@ -56,6 +57,7 @@ function slideThirdCard() {
 
   var button2 = document.querySelector('.carousel-item.active .slide_butt2');
   button2.classList.toggle('button_rotate_on_activation');
+  button2.setAttribute('aria-expanded', String(rectangle3.classList.contains('info_active2')));
 
   // A11y: card3 on/off
   var isActive3 = rectangle3.classList.contains('info_active2');
@@ -72,6 +74,7 @@ function slideThirdCard() {
 function hideAll() {
   var button1 = document.querySelector('.carousel-item.active .slide_butt1');
   button1.classList.remove('button_rotate_on_activation');
+  button1.setAttribute('aria-expanded', 'false');
 
   var rectangle2 = document.querySelector('.carousel-item.active .box-info2');
   rectangle2.classList.remove('info_active1');
@@ -82,6 +85,7 @@ function hideAll() {
 
   var button2 = document.querySelector('.carousel-item.active .slide_butt2');
   button2.classList.remove('button_rotate_on_activation');
+  button2.setAttribute('aria-expanded', 'false');
 
   var rectangle3 = document.querySelector('.carousel-item.active .box-info3');
   rectangle3.classList.remove('info_ready2');
