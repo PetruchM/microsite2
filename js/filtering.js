@@ -121,6 +121,7 @@ async function changeSlidesInfo(ids, elements) {
 
       const bgKey = onPC ? 'background_img' : 'background_img_phone';
       slide.querySelector('.a-background-img').src       = article[bgKey];
+      slide.querySelector('.a-background-img').alt       = article.img_description;
       slide.querySelector('.a-title').innerText          = article.title;
       slide.querySelector('.project-motto-text').innerText = article.project_motto_text;
       slide.querySelector('.author-img').src              = article.author_img;
