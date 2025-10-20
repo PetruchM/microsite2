@@ -6,7 +6,6 @@
     margin: 0;
     height: 100%;
     top: 7vh;
-    /*transform: translateX(-10px); /* TODO: this is shady */
 }
 
 #projectCarousel .carousel-inner {
@@ -15,7 +14,6 @@
 }
 
 #projectCarousel .carousel-item {
-  transition-duration: 0.5s;           /* změníš délku */
   transition-timing-function: ease-in-out;
 }
 
@@ -48,14 +46,11 @@
 
 
 .bg-img {
-    /* max-width: 100%; */
     top: 10vh;
     width: 100%;
     margin: 0 auto;
     height: 90vh;
-    /* max-height: 90vh; */
     object-fit: cover;
-    /* min-height: 612px; */
 }
 
 @keyframes scrollImage {
