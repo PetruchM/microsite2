@@ -12,13 +12,25 @@ function saveSettings(consent) {
     toggle.classList.add('active');
   } else if (consent === false) {
     declineCookies();
+    deleteGACookies();
     toggle.classList.remove('active');
   } else {
     if (toggle.classList.contains('active')) {
         acceptCookies();
     } else {
         declineCookies();
+        deleteGACookies();
     }
+    }
+}
+
+function deleteGACookies() {
+  const cookies = document.cookie.split("; ");
+    for (const c of cookies) {
+      const name = c.split("=")[0];
+      if (name.startsWith('_ga') || name.startsWith('_gid') || name.startsWith('_gat')) {
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+      }
     }
 }
 
