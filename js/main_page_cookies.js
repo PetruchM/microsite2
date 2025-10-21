@@ -40,6 +40,8 @@ function loadAnalytics() {
   window.gtag = gtag;
   gtag('js', new Date());
   gtag('config', 'G-JJ07GZQFYR');
+
+  console.log('Google Analytics loaded');
 }
 
 window.addEventListener('load', () => {
