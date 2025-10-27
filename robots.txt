@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /cookie-policy.html
+Disallow: /accesibility.html
+Disallow: /consent.html
+Sitemap: https://zakladnivyzkum.cz/sitemap.xml
